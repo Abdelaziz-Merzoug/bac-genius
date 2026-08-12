@@ -1,0 +1,29 @@
+# Environment / secrets
+.env
+
+# Data artifacts (raw scraped/ingested content is not versioned)
+data/raw/*
+!data/raw/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pkl
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Tooling / IDE
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

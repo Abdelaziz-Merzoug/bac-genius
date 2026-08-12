@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAC Genius — Master Project FINAL Guide (Merged with Official Proposal)</title>
+<style>
+:root{--p:#0d2d5a;--p2:#1a4f8c;--a:#e8b422;--g:#16a34a;--r:#dc2626;--v:#7c3aed;--bg:#eef3fb;--w:#fff;--t:#1e293b;--b:#e2e8f0;--cy:#0284c7;--tea:#0f766e;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--t);line-height:1.9;font-size:14.5px;}
+.cover{background:linear-gradient(140deg,#081e3f,#0d2d5a 45%,#134e4a 80%,#0f766e);color:#fff;padding:70px 40px 55px;text-align:center;position:relative;overflow:hidden;}
+.cover::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(232,180,34,.12),transparent 40%);pointer-events:none;}
+.cover h1{font-size:2.9em;margin-bottom:8px;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.3);}
+.cover .formal{font-size:1.02em;opacity:.95;max-width:760px;margin:0 auto 10px;line-height:1.6;font-style:italic;}
+.tier{display:inline-block;background:linear-gradient(90deg,#e8b422,#f59e0b);color:#000;padding:5px 22px;border-radius:30px;font-weight:bold;font-size:.95em;margin-top:14px;letter-spacing:2px;}
+.badges{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:20px;}
+.bg-a{background:var(--a);color:#000;padding:6px 16px;border-radius:30px;font-weight:bold;font-size:.85em;}
+.bg-t{background:var(--tea);color:#fff;padding:6px 16px;border-radius:30px;font-weight:bold;font-size:.85em;}
+.bg-m{background:var(--v);color:#fff;padding:6px 16px;border-radius:30px;font-weight:bold;font-size:.85em;}
+.bg-g{background:var(--g);color:#fff;padding:6px 16px;border-radius:30px;font-weight:bold;font-size:.85em;}
+.bg-dim{background:rgba(255,255,255,.18);color:#fff;padding:6px 16px;border-radius:30px;font-weight:bold;font-size:.85em;}
+.cover-meta{margin-top:20px;opacity:.68;font-size:.84em;line-height:1.7;}
+.container{max-width:980px;margin:0 auto;padding:42px 20px;}
+h2{color:var(--p);font-size:1.7em;border-bottom:3px solid var(--a);padding-bottom:7px;margin:48px 0 18px;}
+h3{color:var(--p2);font-size:1.16em;margin:22px 0 8px;}
+h4{color:var(--p2);font-size:.99em;margin:14px 0 6px;font-weight:bold;}
+.phase-h{background:linear-gradient(90deg,var(--tea),#134e4a);color:#fff;padding:14px 20px;border-radius:8px;margin:52px 0 8px;font-size:1.25em;font-weight:bold;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.phase-h .mo{background:rgba(255,255,255,.2);padding:3px 14px;border-radius:20px;font-size:.72em;}
+p{margin-bottom:10px;}
+table{width:100%;border-collapse:collapse;margin:16px 0;direction:ltr;font-size:.9em;}
+th{background:var(--p);color:#fff;padding:9px 11px;text-align:left;}
+td{padding:8px 11px;border:1px solid var(--b);vertical-align:top;}
+tr:nth-child(even) td{background:#f8fafc;}
+pre{background:#0f172a;color:#cbd5e1;font-family:'Courier New',monospace;font-size:.79em;padding:15px;border-radius:7px;white-space:pre-wrap;direction:ltr;margin:10px 0;line-height:1.6;overflow-x:auto;}
+code{background:#1e293b;color:#7dd3fc;font-family:'Courier New',monospace;font-size:.82em;padding:2px 5px;border-radius:3px;}
+.cmd{background:#020617;color:#4ade80;font-family:'Courier New',monospace;font-size:.84em;padding:11px 15px;border-radius:5px;border-left:3px solid #4ade80;margin:7px 0;direction:ltr;display:block;white-space:pre-wrap;}
+.out{background:#020617;color:#86efac;font-family:'Courier New',monospace;font-size:.79em;padding:13px;border-radius:5px;margin:8px 0;white-space:pre-wrap;direction:ltr;line-height:1.55;}
+.warn{background:#fefce8;border-left:4px solid #eab308;padding:11px 14px;border-radius:4px;margin:11px 0;direction:ltr;}
+.info{background:#eff6ff;border-left:4px solid #3b82f6;padding:11px 14px;border-radius:4px;margin:11px 0;direction:ltr;}
+.danger{background:#fef2f2;border-left:4px solid var(--r);padding:11px 14px;border-radius:4px;margin:11px 0;direction:ltr;}
+.teach{background:#f0fdfa;border-left:4px solid var(--tea);padding:11px 14px;border-radius:4px;margin:11px 0;direction:ltr;}
+.pb{background:var(--w);border:1px solid var(--b);border-left:5px solid var(--p);border-radius:9px;padding:24px 26px;margin:30px 0;direction:ltr;text-align:left;box-shadow:0 2px 10px rgba(13,45,90,.05);}
+.pb.compact{border-left-color:#94a3b8;padding:18px 22px;}
+.ph{display:flex;align-items:center;gap:11px;background:linear-gradient(90deg,var(--p),var(--p2));color:#fff;padding:11px 15px;border-radius:6px;margin-bottom:16px;flex-wrap:wrap;}
+.pn{background:var(--a);color:#000;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;flex-shrink:0;font-size:.95em;padding:0 6px;}
+.cov{background:var(--tea);color:#fff;font-size:.68em;padding:2px 10px;border-radius:12px;font-family:Arial;margin-left:auto;}
+.pb h4{color:var(--p);}
+.pb ul,.pb ol{padding-left:20px;}
+.pb li{margin-bottom:6px;}
+.ib{background:#f0f9ff;border:2px solid #0369a1;border-radius:8px;padding:20px;margin:16px 0;}
+.ih{background:#0369a1;color:#fff;padding:8px 13px;border-radius:5px;font-weight:bold;margin-bottom:13px;font-size:.9em;}
+.step{display:flex;gap:11px;margin-bottom:10px;align-items:flex-start;}
+.sn{background:var(--p2);color:#fff;min-width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75em;font-weight:bold;margin-top:3px;flex-shrink:0;}
+.flow{background:#faf5ff;border:1px solid #a78bfa;border-radius:6px;padding:11px 15px;margin:11px 0;font-size:.87em;direction:ltr;}
+.ftag{background:#1e293b;color:#7dd3fc;padding:1px 6px;border-radius:3px;font-family:'Courier New',monospace;font-size:.82em;}
+.ebox{background:#fef2f2;border:1px solid #fca5a5;border-radius:6px;padding:12px;margin:9px 0;}
+.erow{margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #fee2e2;}
+.erow:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.elbl{color:var(--r);font-weight:bold;font-size:.84em;}
+.flbl{color:var(--g);font-weight:bold;font-size:.84em;margin-top:3px;}
+.ac{background:#f0fdf4;border:1px solid #86efac;border-radius:6px;padding:12px 15px;margin-top:13px;}
+.ac ol{padding-left:18px;}
+.ac li{margin-bottom:4px;font-size:.92em;}
+.cb{background:var(--a);color:#000;padding:10px 14px;border-radius:6px;font-weight:bold;text-align:center;margin-top:13px;}
+.toc{background:#fff;border:1px solid var(--b);border-radius:8px;padding:22px 26px;direction:ltr;}
+.toc ol,.toc ul{padding-left:20px;}
+.toc li{margin-bottom:4px;font-size:.92em;}
+.toc a{color:var(--p2);text-decoration:none;}
+.toc a:hover{text-decoration:underline;}
+.toc>ol>li{font-weight:bold;margin-top:8px;}
+.toc ul li{font-weight:normal;}
+.wire{background:#020617;color:#94a3b8;font-family:'Courier New',monospace;font-size:.77em;padding:18px;border-radius:7px;white-space:pre;direction:ltr;margin:14px 0;overflow-x:auto;line-height:1.5;}
+hr{border:none;border-top:2px solid var(--a);margin:44px 0;}
+.final{text-align:center;padding:34px 26px;background:#fff;border-radius:11px;border:2px solid var(--p);direction:ltr;}
+.research{background:#eef2ff;border:2px solid var(--p);border-radius:9px;padding:20px;margin:18px 0;}
+.newbadge{background:var(--r);color:#fff;font-size:.6em;padding:2px 7px;border-radius:10px;vertical-align:middle;margin-left:6px;font-family:Arial;letter-spacing:.5px;}
+.keptbadge{background:var(--v);color:#fff;font-size:.6em;padding:2px 7px;border-radius:10px;vertical-align:middle;margin-left:6px;font-family:Arial;letter-spacing:.5px;}
+.teabadge{background:var(--tea);color:#fff;font-size:.6em;padding:2px 7px;border-radius:10px;vertical-align:middle;margin-left:6px;font-family:Arial;letter-spacing:.5px;}
+.kpi{display:inline-flex;flex-direction:column;align-items:center;background:#fff;border:2px solid var(--p2);border-radius:9px;padding:13px 19px;margin:6px;}
+.kpi b{font-size:1.6em;color:var(--p);}
+.kpi span{font-size:.76em;color:#64748b;}
+.kpirow{display:flex;flex-wrap:wrap;justify-content:center;margin:16px 0;}
+blockquote{border-left:4px solid var(--v);background:#faf5ff;padding:10px 16px;margin:12px 0;border-radius:4px;direction:ltr;}
+.dT{color:var(--tea);font-weight:bold;}
+.dB{color:var(--v);font-weight:bold;}
+.dM{color:var(--p2);font-weight:bold;}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover">
+  <div style="font-size:3.4em;margin-bottom:4px">🎓</div>
+  <h1>BAC Genius — Master Project FINAL Guide</h1>
+  <div class="formal">Implementing the official proposal: <b>"A Hybrid NLP, Time-Series Forecasting and Generative AI Framework for Educational Content Prediction and Automatic Exam Generation"</b></div>
+  <div class="tier">★ OFFICIAL PROPOSAL × ULTIMATE BLUEPRINT — MERGED ★</div>
+  <div class="badges">
+    <span class="bg-t">Supervisors' 6-Phase Path</span>
+    <span class="bg-a">Scope: علوم تجريبية only (SVT · Physics · Math)</span>
+    <span class="bg-a">Corpus 2008–2026 · both sessions</span>
+    <span class="bg-g">3-Era Pandemic-Aware Data Model</span>
+    <span class="bg-a">21 Engineering Prompts</span>
+    <span class="bg-m">Forecasting Suite: ARIMA→Transformer</span>
+    <span class="bg-m">BERTopic + Knowledge Graph</span>
+    <span class="bg-g">XAI · Expert Eval · SUS</span>
+    <span class="bg-dim">RAGAS + Ablation + Deploy Kept</span>
+    <span class="bg-dim">2026 sealed real-world test</span>
+  </div>
+  <div class="cover-meta">
+    University of Blida 1 · Faculty of Sciences · Computer Science Department<br>
+    Supervisors: <b>Dr. N. LAHIANI &amp; Dr. M. MEZZI</b> · Student: <b>Abdelaziz MERZOUG</b><br>
+    Keywords: Educational Data Mining · Learning Analytics · AQG · Time-Series Forecasting · LLMs for Education · XAI
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ═══════════ HOW THIS WAS MERGED ═══════════ -->
+<div class="research" style="margin-top:0">
+<h3 style="margin-top:0">⚖️ How This Guide Was Merged — The Decision Log</h3>
+<p>Rule applied, exactly as you asked: <b>the supervisors' proposal is the spine</b> (phases, methods, evaluation, calendar). The ULTIMATE blueprint's elements were kept only where they are <i>engineering necessities</i> or <i>methodologically stronger</i> than what the proposal specifies. Every decision is recorded here so you can justify it to Dr. Lahiani &amp; Dr. Mezzi.</p>
+<table>
+<tr><th>Area</th><th>Supervisors' proposal says</th><th>ULTIMATE blueprint had</th><th>Decision</th></tr>
+<tr><td>Topic extraction</td><td>Topic modeling (LDA, BERTopic), NER, validated vs curriculum</td><td>Keyword/regex tagging only</td><td><span class="dT">TEACHER wins</span> — BERTopic/LDA becomes primary (P5); keyword map is demoted to the curriculum-validation reference. This was the blueprint's weakest science.</td></tr>
+<tr><td>Prediction method</td><td>Time-series forecasting: ARIMA/SARIMA, Prophet, LSTM, Transformer, hybrid ensemble; RMSE/MAE/MAPE + top-k recall</td><td>GradientBoosting classifier + 3 baselines, ablation, leakage guard, bootstrap CIs</td><td><span class="dM">MERGED</span> — teachers' model families are the required spine (P9); GBM joins the comparison as one more contender; blueprint's <i>rigor discipline</i> (leakage guard, naive baselines, time-CV, CIs, nDCG) is kept because it's stronger than the proposal's evaluation spec.</td></tr>
+<tr><td>Curriculum grounding</td><td>Knowledge graph: topics → competencies → prerequisites; curriculum alignment</td><td>Static SYLLABUS_MAPS config</td><td><span class="dT">TEACHER wins</span> — new P6 builds a real KG from official curricula; it powers RAG grounding, the validation filter, and XAI traces.</td></tr>
+<tr><td>Generation scope</td><td>Questions + <b>full mock exams</b> + revision sheets + <b>figures/diagrams</b> + <b>authentic layout</b> + <b>curriculum validation filter</b></td><td>Single exercises + novelty guard</td><td><span class="dT">TEACHER wins</span> — P12 expands to full mock exams &amp; revision sheets; new P13 (figures + ONEC-style PDF layout); new P14 (curriculum validation filter). Blueprint's novelty guard kept inside P12.</td></tr>
+<tr><td>Explainability</td><td>Entire Phase 5: frequency curves, decomposition, confidence, retrieval traces, curriculum-node grounding, teacher-readable visuals</td><td>Feature importances only</td><td><span class="dT">TEACHER wins</span> — new P15 XAI layer, wired into API + frontend. This is a thesis chapter on its own.</td></tr>
+<tr><td>Evaluation</td><td>RMSE/MAE/MAPE, top-k recall, BLEU/ROUGE/BERTScore, LLM-as-judge, <b>expert blind review</b>, <b>SUS usability study</b></td><td>RAGAS (faithfulness, relevancy) + custom hallucination test</td><td><span class="dM">MERGED</span> — all of the teachers' metrics implemented (P9, P17) <b>plus</b> RAGAS/hallucination kept (P16): faithfulness is the strongest defense of the "grounded generation" claim and the proposal explicitly worries about generation faithfulness.</td></tr>
+<tr><td>OCR</td><td>Tesseract or vision-language OCR</td><td>PaddleOCR (+ pdfplumber first)</td><td><span class="dB">BLUEPRINT wins</span> — PaddleOCR is measurably better for Arabic than Tesseract; a VLM-OCR fallback is added for equation/diagram-heavy pages, satisfying the proposal's intent.</td></tr>
+<tr><td>LLM strategy</td><td>"Prompt-engineered and/or lightly fine-tuned LLMs" (unspecified provider)</td><td>Provider-agnostic layer: Gemini / OpenAI / local Ollama via .env</td><td><span class="dB">BLUEPRINT wins</span> — kept in full (P10). API access in Algeria is unreliable; an offline Qwen2.5 path protects the live defense demo. Light fine-tuning noted as optional extension.</td></tr>
+<tr><td>Data sources</td><td>Past papers + <b>official curricula</b> + <b>examiner reports</b> + grading guidelines</td><td>Past papers + corrections only</td><td><span class="dT">TEACHER wins</span> — P2 scraper extended to curricula (mandatory: feeds the KG) and examiner reports where findable.</td></tr>
+<tr><td>Split discipline</td><td>Train/val/test split <b>by year</b> to avoid temporal leakage</td><td>Time-series CV + automated leakage assertion</td><td><span class="dM">ALIGNED</span> — same principle; blueprint's automated leakage guard kept as the enforcement mechanism.</td></tr>
+<tr><td>Stream scope</td><td>Multi-subject (streams unspecified)</td><td>Two streams (math + experimental sciences)</td><td><span class="dM">STUDENT DECISION</span> — narrowed to <b>experimental sciences only</b> (SVT معامل 6, Physics معامل 5, Math معامل 5). Cross-<i>subject</i> generalization (biology vs physics vs math) replaces cross-stream as the "not overfit to one domain" argument. Tighter, fully defensible.</td></tr>
+<tr><td>Data regime</td><td>Year-based split; no mention of curriculum disruption</td><td>Contiguous 2008–2024 assumption</td><td><span class="dM">STUDENT DECISION (major)</span> — a <b>three-era model</b> is adopted: golden (pre-2020), pandemic-reduced (2020–2022, عتبة الدروس cut units → <b>censored, not zero</b>), modern (2023–2026, recency-weighted). This is a real structural-break correction the proposal doesn't anticipate — see the dedicated section below. It is the single strongest piece of data-awareness in the thesis.</td></tr>
+<tr><td>Delivery</td><td>"Startup-oriented prototype (web platform) with data governance and deployment plan" + paper + pitch</td><td>FastAPI + Streamlit + Docker + CI/CD + cloud HTTPS + thesis kit</td><td><span class="dB">BLUEPRINT wins</span> — kept in full (P18–P20); P21 upgraded to produce thesis + <b>paper draft</b> + <b>startup pitch</b> + data-governance note, exactly matching Month 8 deliverables.</td></tr>
+<tr><td>Student answer grading (0–20)</td><td>Not mentioned</td><td>Full evaluator with mark-scheme breakdown</td><td><span class="dB">BLUEPRINT kept as BONUS</span> — deprioritized to "if time permits" (P12-bis); it strengthens the startup story but is not on the supervisors' critical path. Do not let it eat Phase 3–6 time.</td></tr>
+</table>
+<div class="teach"><b>Coverage guarantee:</b> every numbered item (1)–(23) in the supervisors' Methodology is mapped to a prompt in this guide — see the Coverage Matrix below. Nothing they asked for is dropped; several things are strengthened.</div>
+</div>
+
+<!-- ═══════════ RESEARCH QUESTIONS ═══════════ -->
+<h2 id="rq">Research Questions (Month 1 Deliverable — Draft)</h2>
+<p>The proposal requires "refined research questions" as the Month-1 deliverable. Here is the draft set, engineered so each RQ maps to one phase, one results table, and one thesis chapter:</p>
+<div class="research">
+<p><b>RQ1 (Forecasting under a short, disrupted archive):</b> Can the temporal evolution of experimental-sciences BAC topics be forecast from a ~13-year archive (2008–2026) with measurably better accuracy than frequency-based heuristics — and which model family (statistical ARIMA/Prophet, deep LSTM/Transformer, feature-based GBM, or hybrid) performs best under a short-series regime that contains a pandemic-era curriculum structural break? <i>→ answered by the P9 grand comparison (RMSE/MAE/MAPE + top-k recall + nDCG, CIs) with the three-era treatment below.</i></p>
+<p><b>RQ2 (Grounded generation):</b> Does grounding LLM generation in retrieved past exams <b>and</b> curriculum-graph nodes reduce off-syllabus and unfaithful content versus ungrounded generation? <i>→ answered by P14 validation-filter rejection rates + P16 RAGAS faithfulness/hallucination, grounded vs ungrounded ablation.</i></p>
+<p><b>RQ3 (Human validity):</b> Are generated examinations judged by expert teachers as curriculum-aligned, difficulty-calibrated, and indistinguishable from authentic items — and is the platform usable by its target users? <i>→ answered by P17 blind expert review (+ indistinguishability test, inter-rater agreement) and the SUS study.</i></p>
+</div>
+
+<!-- ═══════════ THREE-ERA DATA REGIME ═══════════ -->
+<h2 id="regime">The Three-Era Data Regime — Your Strongest Data-Awareness Contribution</h2>
+<p>The corpus is <b>experimental sciences, 2008–2026</b>, both sessions per year (موضوع 1 principale + موضوع 2 استثنائية) with solutions — roughly <b>13 years × 2 sessions ≈ 26 exam instances per subject</b>. But those years are <b>not exchangeable</b>: the Algerian Ministry applied <span class="dM">عتبة الدروس</span> (an official curriculum-reduction "threshold") during the COVID period, administratively removing large parts of the programme from exam scope. Treating 2020–2022 as normal years silently corrupts every frequency and forecasting model. This section defines the correction — and it is a genuine methodological contribution the supervisors' proposal does not anticipate.</p>
+
+<div class="warn"><b>Confirmed, but pull the exact cut-lists yourself:</b> the عتبة الدروس reduction for 2020, 2021 and 2022 is real and was published by the Ministry per-subject and per-stream (reduced-content / "الدروس المحذوفة" documents exist for علوم تجريبية). General web sources confirm the <i>phenomenon</i> but are not thesis-grade for the exact removed units. Download the official ONEC/Ministry reduced-programme PDFs for experimental sciences (2020–2022) and build the authoritative <code>cut_topics</code> list from them — do not cite forum/aggregator pages, and do not let me or any model guess the specific units into your thesis.</div>
+
+<table>
+<tr><th>Era</th><th>Years</th><th>Character</th><th>Treatment in the pipeline</th></tr>
+<tr><td><b class="dT">Golden</b></td><td>2008–2019</td><td>Full programme, normal school years. The clean frequency baseline.</td><td>Full weight. This is where the underlying topic-rotation pattern is learned.</td></tr>
+<tr><td><b style="color:var(--r)">Pandemic-reduced</b></td><td>2020–2022</td><td>عتبة الدروس: units removed from scope (e.g. parts of geology, energy import/export in SVT, and others — <i>confirm from official docs</i>). A topic absent here may be <b>censored, not truly out of rotation</b>.</td><td><b>Censor, don't zero.</b> For a (topic, pandemic-year) cell where that topic was cut, mark it <code>missing</code> — never <code>appeared=0</code>. Add an <code>exam_regime</code> flag + a <code>topic_in_scope_that_year</code> flag. Never used as a backtest target.</td></tr>
+<tr><td><b class="dB">Modern</b></td><td>2023–2026</td><td>Return to full programme + a shift toward complex scientific-inquiry questions over direct recall — the current Ministry orientation.</td><td><b>Highest weight.</b> This is the regime you are actually predicting. Recency <code>sample_weight</code> rises toward 2026. Style profiles (P5) computed modern-weighted so generated exams match today's style, not 2010's.</td></tr>
+</table>
+
+<h3>The three treatments, made concrete</h3>
+<ol>
+<li><b>Regime field</b> — every observation carries <code>exam_regime ∈ {golden, pandemic_reduced, modern}</code> (set in P4's <code>corpus_meta.json</code>).</li>
+<li><b>Censoring rule</b> — cut topics in pandemic years are missing/censored, not zero (P8 series construction). This is the core fix that prevents a false "this topic is dying" trend.</li>
+<li><b>Recency weighting</b> — the GBM branch takes <code>sample_weight</code> increasing toward recent years; regime becomes a model feature (P8/P9).</li>
+</ol>
+
+<div class="danger"><b>The honest split, and one hard rule — never backtest on pandemic years.</b> Their distorted frequencies would reward or punish models for the wrong reasons.
+<br>&nbsp;&nbsp;• <b>Train pool:</b> 2008–2022 (golden + pandemic, pandemic censored &amp; down-weighted)
+<br>&nbsp;&nbsp;• <b>Backtest / model comparison:</b> 2023, 2024, 2025 — all <b>modern</b>, where the models must actually perform (this is where the grand comparison + CIs live)
+<br>&nbsp;&nbsp;• <b>Sealed real-world holdout:</b> <b>2026</b> — predicted <i>once</i>, at the very end, by the winning model only. "Trained on 2008–2025, our system predicted the June 2026 BAC topics at X%" is your freshest, most defensible, most demo-able result.</div>
+
+<div class="teach"><b>Why this matters in the viva:</b> this single design choice shows you understand your data's real-world generating process — administrative curriculum policy — not just its numbers. It also splits your model families honestly: the GBM/feature branch absorbs censoring + weighting cleanly, while ARIMA/Prophet/LSTM/Transformer cannot gracefully swallow a censored gap and must be fit on non-cut topics or the modern segment. <b>That asymmetry is itself a Chapter-6 finding</b> ("time-series models degrade under administrative structural breaks; feature-based models absorb them"), and it further explains why the GBM/hybrid tends to win under this regime.</div>
+
+
+<!-- ═══════════ CALENDAR ═══════════ -->
+<h2 id="cal">The Official 8-Month Plan → Prompt Mapping</h2>
+<table>
+<tr><th>Month</th><th>Supervisors' focus &amp; deliverable</th><th>Prompts you execute</th><th>Gate (don't advance without)</th></tr>
+<tr><td><b>1</b></td><td>Literature review → consolidated state of the art + refined RQs</td><td>Read the 26 proposal references (mapped in P21); finalize RQ1–RQ3; run P1</td><td>SOTA table drafted; environment verified</td></tr>
+<tr><td><b>2</b></td><td>Dataset construction → cleaned annotated corpus, regime-tagged year split, OCR validated</td><td>P2, P3, P4</td><td>all_chunks.json + corpus stats table; <code>exam_regime</code> + censoring + 2026-sealed split in corpus_meta.json</td></tr>
+<tr><td><b>3</b></td><td>NLP analysis → topics/competencies, embeddings/clustering, curriculum alignment</td><td>P5, P6, P7</td><td>BERTopic topics validated vs curriculum; KG built; Qdrant sanity queries pass</td></tr>
+<tr><td><b>4</b></td><td>Forecasting → ARIMA/Prophet + LSTM/Transformer trained &amp; compared; metrics report</td><td>P8, P9</td><td><b>Grand comparison table</b> (all models × all metrics ± CI) — the thesis centerpiece</td></tr>
+<tr><td><b>5</b></td><td>Generative AI → RAG-grounded generation + curriculum-validation filter</td><td>P10, P11, P12, P14</td><td>Mock exam generated, grounded, validated; novelty guard passing</td></tr>
+<tr><td><b>6</b></td><td>Multimodal + prototype → figures/layout; end-to-end topic→mock-exam platform</td><td>P13, P15, P18, P19</td><td>Live demo: forecast (with XAI) → generate → validated PDF exam</td></tr>
+<tr><td><b>7</b></td><td>Evaluation → automatic metrics + expert review + usability analyzed</td><td>P16, P17</td><td>RAGAS + BLEU/BERTScore + expert ratings + SUS results tables complete</td></tr>
+<tr><td><b>8</b></td><td>Thesis, paper &amp; startup demo</td><td>P20, P21</td><td>Thesis draft + paper draft + deployed URL + pitch deck</td></tr>
+</table>
+
+<div class="danger"><b>⏱️ Calendar reality check (read this once, decide with your supervisors):</b> an 8-month plan starting now lands past a February defense, and fellowship season closes around <b>October</b> — meaning your strongest demo-able results (corpus + the Month-4 forecasting comparison + basic grounded generation) should exist <b>by end of October</b>, not by Month 5–6 of a relaxed schedule. The compression that makes this feasible: run Phase 2 and Phase 3 partially in parallel (topic modeling doesn't need the KG finished), and treat Months 1–4 as a 10–12 week sprint. The month-by-month gates above still hold — only the clock compresses. Confirm the official start date and the registered project title with Dr. Lahiani before committing the calendar.</div>
+
+<!-- ═══════════ COVERAGE MATRIX ═══════════ -->
+<h2 id="matrix">Proposal Coverage Matrix — Items (1)–(23) → Prompts</h2>
+<table>
+<tr><th>Proposal item</th><th>Requirement (condensed)</th><th>Covered by</th></tr>
+<tr><td>(1)–(2)</td><td>Collect multi-year corpus incl. curricula &amp; examiner reports; OCR digitization</td><td>P2, P3</td></tr>
+<tr><td>(3)–(4)</td><td>Segment by subject/year/question; bilingual normalization; annotated versioned corpus; year-based split</td><td>P3, P4 (+ leakage guard in P8)</td></tr>
+<tr><td>(5)</td><td>Topic modeling (LDA, BERTopic) validated vs curriculum; NER/keywords</td><td>P5</td></tr>
+<tr><td>(6)</td><td>Multilingual embeddings; clustering; near-duplicate detection</td><td>P5, P7</td></tr>
+<tr><td>(7)</td><td>Difficulty &amp; style profiling</td><td>P5</td></tr>
+<tr><td>(8)</td><td>Curriculum alignment as knowledge graph (topics→competencies→prerequisites)</td><td>P6</td></tr>
+<tr><td>(9)</td><td>Topic frequency time series; stationarity/seasonality analysis</td><td>P8</td></tr>
+<tr><td>(10)–(12)</td><td>ARIMA/SARIMA + Prophet; LSTM + Transformer; hybrid/ensemble</td><td>P9</td></tr>
+<tr><td>(13)</td><td>RMSE/MAE/MAPE + top-k topic recall</td><td>P9</td></tr>
+<tr><td>(14)</td><td>RAG over curriculum sections + similar past questions</td><td>P11 (+ KG from P6)</td></tr>
+<tr><td>(15)</td><td>Generate questions, full mock exams, revision sheets aligned to forecasts</td><td>P12</td></tr>
+<tr><td>(16)</td><td>Figure/diagram generation + authentic exam layout</td><td>P13</td></tr>
+<tr><td>(17)</td><td>Automatic curriculum validation before display</td><td>P14</td></tr>
+<tr><td>(18)–(20)</td><td>XAI: frequency curves, contributing years, confidence; retrieval traces; teacher-readable visuals</td><td>P15 (+ surfaced in P19 UI)</td></tr>
+<tr><td>(21)</td><td>Forecast evaluation vs held-out years</td><td>P9 (report consolidated in P17)</td></tr>
+<tr><td>(22)</td><td>BLEU/ROUGE/BERTScore + LLM-as-judge</td><td>P17</td></tr>
+<tr><td>(23)</td><td>Expert blind review + indistinguishability + SUS usability</td><td>P17</td></tr>
+<tr><td>Objectives</td><td>Startup-oriented prototype, deployment &amp; data-governance plan</td><td>P18–P20, P21</td></tr>
+</table>
+
+<hr>
+<!-- ═══════════ TOC ═══════════ -->
+<div class="toc">
+<h3>📋 Table of Contents — 21 Prompts Across the Supervisors' 6 Phases</h3>
+<ol>
+<li><a href="#regime">★ The Three-Era Data Regime (pandemic-aware, read first)</a></li>
+<li><a href="#arch">Merged Architecture &amp; Project Tree</a></li>
+<li>PHASE 1 — Data, OCR &amp; Preprocessing (Months 1–2)
+  <ul><li><a href="#p1">P1 — Environment &amp; Skeleton</a> · <a href="#p2">P2 — Scraper: Exams + Curricula + Examiner Reports <span class="teabadge">EXTENDED</span></a> · <a href="#p3">P3 — OCR &amp; Cleaning</a> · <a href="#p4">P4 — Segmentation &amp; Corpus Annotation</a></li></ul></li>
+<li>PHASE 2 — NLP Analysis (Month 3)
+  <ul><li><a href="#p5">P5 — Topic Modeling (BERTopic/LDA), NER, Difficulty &amp; Style <span class="teabadge">NEW CORE</span></a> · <a href="#p6">P6 — Curriculum Knowledge Graph <span class="teabadge">NEW</span></a> · <a href="#p7">P7 — Qdrant Ingestion (2 collections)</a></li></ul></li>
+<li>PHASE 3 — Time-Series Forecasting (Month 4)
+  <ul><li><a href="#p8">P8 — Series Construction, Stationarity &amp; Features</a> · <a href="#p9">P9 — Forecasting Suite &amp; Grand Comparison <span class="teabadge">CENTERPIECE</span></a></li></ul></li>
+<li>PHASE 4 — Generative AI (Month 5)
+  <ul><li><a href="#p10">P10 — Provider-Agnostic LLM Layer <span class="keptbadge">KEPT</span></a> · <a href="#p11">P11 — RAG over Exams + Curriculum</a> · <a href="#p12">P12 — Question / Mock-Exam / Revision-Sheet Generator</a> · <a href="#p13">P13 — Figures &amp; Authentic Exam Layout <span class="teabadge">NEW</span></a> · <a href="#p14">P14 — Curriculum Validation Filter <span class="teabadge">NEW</span></a></li></ul></li>
+<li>PHASE 5 — Explainability (Month 6)
+  <ul><li><a href="#p15">P15 — XAI Layer: Trends, Traces, Confidence <span class="teabadge">NEW</span></a></li></ul></li>
+<li>PHASE 6 — Evaluation (Month 7)
+  <ul><li><a href="#p16">P16 — RAGAS + Hallucination <span class="keptbadge">KEPT</span></a> · <a href="#p17">P17 — Generation Metrics, Expert Review &amp; SUS <span class="teabadge">NEW</span></a></li></ul></li>
+<li>PLATFORM &amp; DELIVERY (Months 6–8)
+  <ul><li><a href="#p18">P18 — FastAPI Backend</a> · <a href="#p19">P19 — Streamlit Frontend (6 tabs)</a> · <a href="#p20">P20 — Docker, CI/CD, Cloud <span class="keptbadge">KEPT</span></a> · <a href="#p21">P21 — Thesis + Paper + Startup Kit <span class="teabadge">UPGRADED</span></a></li></ul></li>
+</ol>
+</div>
+
+<!-- ═══════════ ARCHITECTURE ═══════════ -->
+<h2 id="arch">Merged Architecture — Six Systems</h2>
+<table>
+<tr><th>System</th><th>Purpose</th><th>Technology</th><th>Origin</th></tr>
+<tr><td>🔤 NLP Extraction</td><td>Topics (BERTopic/LDA), NER concepts, competencies/Bloom level, difficulty &amp; style signatures</td><td>BERTopic, gensim LDA, spaCy, multilingual-e5-large</td><td><span class="dT">Proposal Phase 2</span></td></tr>
+<tr><td>🕸️ Curriculum Knowledge Graph</td><td>Official curriculum as topics→competencies→prerequisites; grounds RAG, validation &amp; XAI</td><td>NetworkX + JSON + pyvis</td><td><span class="dT">Proposal item (8)</span></td></tr>
+<tr><td>📈 Forecasting Suite</td><td>Topic-frequency forecasting: ARIMA/SARIMA, Prophet, global LSTM, Transformer, GBM, hybrid ensemble — one comparison protocol</td><td>darts + statsmodels + prophet + scikit-learn</td><td><span class="dM">Proposal Phase 3 × blueprint rigor</span></td></tr>
+<tr><td>✏️ Grounded Generation</td><td>Questions, full mock exams, revision sheets + figures + authentic layout, validated vs curriculum before display</td><td>Provider-agnostic LLM, Jinja2, matplotlib/schemdraw, WeasyPrint</td><td><span class="dM">Proposal Phase 4 × blueprint guards</span></td></tr>
+<tr><td>🔍 XAI Layer</td><td>Per-forecast: frequency curve, decomposition, contributing years, confidence. Per-item: retrieval trace + curriculum nodes</td><td>Prophet/ARIMA decomposition, retrieval payloads, plotly</td><td><span class="dT">Proposal Phase 5</span></td></tr>
+<tr><td>🔌 Provider Layer + Infra</td><td>Gemini/OpenAI/Ollama switchable; Qdrant; Redis; FastAPI; Streamlit; Docker; CI/CD</td><td>LangChain adapters, Qdrant, Docker Compose, GitHub Actions</td><td><span class="dB">Blueprint (kept)</span></td></tr>
+</table>
+
+<h3>📁 Final Project Tree</h3>
+<div class="wire">bac-genius/
+├── .env / .env.example / requirements.txt / docker-compose.yml / Dockerfile / Makefile
+├── config/
+│   ├── settings.py                # env + provider switch
+│   ├── streams.py                 # experimental_sciences · SVT/Physics/Math vocab
+│   └── threshold_cuts.py          # عتبة removed-units per pandemic year (you fill from official docs)
+├── data/
+│   ├── raw/                       # exam PDFs + curricula/ + examiner_reports/
+│   ├── processed/                 # cleaned text + all_chunks.json (annotated corpus)
+│   ├── kg/                        # curriculum_graph.json + kg.html (pyvis)
+│   ├── series/                    # topic frequency series + stationarity report
+│   ├── features/                  # supervised feature table (GBM branch)
+│   ├── forecast/                  # per-model forecasts, grand_comparison.csv, charts
+│   └── generated/                 # questions, mock exams (json + pdf), figures
+├── scraper/scrape_bac.py                              # P2
+├── ingestion/{ocr_clean,chunker,qdrant_ingest}.py     # P3, P4, P7
+├── nlp/
+│   ├── topics.py                  # P5 — BERTopic + LDA + validation vs curriculum
+│   ├── concepts.py                # P5 — NER/keywords, difficulty, style, Bloom level
+│   └── kg_builder.py              # P6 — curriculum knowledge graph
+├── forecasting/
+│   ├── series.py                  # P8 — build series, stationarity/seasonality
+│   ├── features.py                # P8 — GBM feature branch (+ leakage guard)
+│   ├── models.py                  # P9 — ARIMA/SARIMA, Prophet, LSTM, Transformer, GBM
+│   ├── ensemble.py                # P9 — hybrid (stat trend + ML residuals)
+│   └── compare.py                 # P9 — grand comparison protocol + charts
+├── llm/provider.py                                    # P10 (kept)
+├── rag/{qa_engine,generator,evaluator}.py             # P11, P12 (+bonus grader)
+├── genmedia/
+│   ├── figures.py                 # P13 — templated diagrams per subject
+│   └── layout.py                  # P13 — authentic exam PDF typesetting
+├── validation/curriculum_filter.py                    # P14
+├── xai/explain.py                                     # P15
+├── eval/
+│   ├── ragas_suite.py             # P16 (kept)
+│   ├── gen_metrics.py             # P17 — BLEU/ROUGE/BERTScore + LLM-judge
+│   └── human_eval/                # P17 — expert sheets, SUS forms, analysis
+├── api/main.py + api/routers/                         # P18
+├── frontend/app.py                                    # P19
+├── .github/workflows/ci.yml                           # P20
+├── docs/thesis/                                       # P21
+└── scripts/run_{scrape,ingest,nlp,forecast,generate,eval}.py</div>
+
+<h3>🔀 Merged Data-Flow</h3>
+<div class="wire">  [exam sites]        [official curricula PDFs]      [examiner reports]
+       │                        │                          │
+       └─────────── P2 scrape ──┴──────────────────────────┘
+                         ▼
+                    data/raw/*  ── P3 OCR/clean ──► data/processed/*.txt
+                         │                               │
+                         │                        P4 segment+annotate
+                         │                               ▼
+                         │                    all_chunks.json (corpus)
+                         │                               │
+          ┌──────────────┼───────────────┬──────────────┤
+          ▼              ▼               ▼              ▼
+   P5 topics/NER   P6 curriculum KG   P7 Qdrant    P8 series+features
+   (BERTopic+LDA)  (topics→comp→      (exams +     (stationarity,
+    difficulty,     prereqs)           curriculum    leakage-guarded)
+    style, Bloom)        │             collections)       │
+          │              │                 │              ▼
+          └──────┬───────┘                 │     P9 FORECASTING SUITE
+                 │                         │     ARIMA·SARIMA·Prophet·
+                 ▼                         │     LSTM·Transformer·GBM·
+        curriculum_graph.json              │     Hybrid → grand_comparison
+                 │                         │              │
+                 ├────────────┐            │              ▼
+                 ▼            ▼            ▼      forecasted topics
+        P14 validation   P11 RAG (exams+curriculum) ◄─────┘
+             filter           │
+                 ▲            ▼
+                 │      P12 generator (questions/mock exams/revision sheets)
+                 │            │
+                 └── validate ┤
+                              ▼
+                    P13 figures + authentic PDF layout
+                              │
+              P15 XAI (curves, traces, confidence)
+                              │
+            P18 API ──► P19 UI ──► P20 deploy ──► P16+P17 evaluation ──► P21 thesis/paper/pitch</div>
+
+<div class="info"><b>Running order stays three-terminal:</b> Terminal A <code>docker compose up qdrant redis</code> always first; Terminal B runs the stage scripts in phase order; Terminals C/D serve API + UI. Same golden rule as before — nothing touches Qdrant before Terminal A is healthy.</div>
+
+<hr>
+<!-- ═══════════ PHASE 1 ═══════════ -->
+<div class="phase-h">PHASE 1 — Data Collection, OCR &amp; Preprocessing <span class="mo">Months 1–2 · Proposal items (1)–(4)</span></div>
+
+<!-- P1 -->
+<div class="pb compact" id="p1">
+<div class="ph"><div class="pn">P1</div><div style="font-weight:bold">Environment &amp; Project Skeleton</div><span class="cov">infra for all items</span></div>
+<p><strong>What changed vs ULTIMATE:</strong> the tree gains <code>nlp/</code>, <code>forecasting/</code>, <code>genmedia/</code>, <code>validation/</code>, <code>xai/</code>, <code>eval/human_eval/</code> and new data folders (<code>kg/</code>, <code>series/</code>, <code>forecast/</code>, <code>generated/</code>); requirements gain the Phase-2/3/4 stack.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Set up the "bac-genius" production Python 3.10 project implementing the master proposal
+"Hybrid NLP, Time-Series Forecasting and Generative AI Framework". Create:
+
+1. The exact tree from my architecture (config, data/{raw,processed,kg,series,features,
+   forecast,generated}, scraper, ingestion, nlp, forecasting, llm, rag, genmedia,
+   validation, xai, eval/human_eval, api/routers, frontend, scripts, .github/workflows)
+   with .gitkeep files in data subfolders.
+
+2. requirements.txt pinned for Python 3.10:
+   fastapi, uvicorn[standard], pydantic, pydantic-settings, python-dotenv,
+   langchain, langchain-community, langchain-openai, langchain-google-genai,
+   langchain-ollama, qdrant-client, sentence-transformers, redis,
+   pandas, numpy, scikit-learn, statsmodels, prophet, darts, torch,
+   bertopic, gensim, spacy, hdbscan, umap-learn,
+   networkx, pyvis, matplotlib, seaborn, plotly, schemdraw,
+   jinja2, weasyprint, pdfplumber, paddleocr, paddlepaddle,
+   beautifulsoup4, requests, tenacity, rich, streamlit,
+   ragas, datasets, evaluate, sacrebleu, rouge-score, bert-score
+
+3. config/settings.py (pydantic-settings): LLM_PROVIDER (default "gemini"),
+   OPENAI_API_KEY, GOOGLE_API_KEY, OLLAMA_BASE_URL, OLLAMA_MODEL
+   (default "qwen2.5:7b-instruct"), QDRANT_URL, REDIS_URL,
+   EMBEDDING_MODEL="intfloat/multilingual-e5-large". Import-safe singleton.
+
+4. config/streams.py: STREAMS = ["experimental_sciences"] ONLY (scope decision), with
+   SUBJECTS = ["svt","physics","math"] (SVT معامل6, Physics معامل5, Math معامل5) and
+   SYLLABUS_MAPS holding Arabic+French keyword variants per topic for those 3 subjects
+   (SVT: protein function/enzymes/immunity/neural communication, energy conversion
+   photosynthesis+mitochondria, geology; Physics: chemical kinetics, mechanical
+   evolution, mechanics, RC/RL, acid-base equilibrium, nuclear; Math: functions,
+   exp/log, sequences, probability, complex numbers, space geometry). This map is the
+   CURRICULUM VALIDATION REFERENCE, not the primary tagger (BERTopic is primary).
+
+5. .env.example, .gitignore (.env, data/raw/*, *.pkl, __pycache__, .venv), README stub
+   stating the official project title and supervisors.
+
+Full contents of every file, type hints everywhere.</pre>
+<div class="cmd">python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python -c "from config.settings import settings; print('OK', settings.LLM_PROVIDER)"</div>
+<div class="warn"><b>Install order note:</b> <code>darts</code>, <code>bertopic</code>, <code>prophet</code>, and <code>torch</code> are heavy and occasionally conflict. If resolution fails: install torch first (CPU wheel is fine), then darts, then bertopic, then the rest; pin versions the AI suggests. Keep <code>ragas</code> last or in a separate venv as before.</div>
+<div class="ac"><strong>✅ Gate:</strong> tree matches, install clean, settings import OK, .env git-ignored.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the skeleton exists and settings load.</div>
+</div>
+
+<!-- P2 -->
+<div class="pb" id="p2">
+<div class="ph"><div class="pn">P2</div><div style="font-weight:bold">Data Acquisition — Download-First, Manifest-Driven <span class="newbadge">SIMPLIFIED</span></div><span class="cov">items (1)–(2)</span></div>
+<p><strong>Decision — do not build a scraper.</strong> Your source (الأول للدراسة / ency-education-style archives) lets you <b>bulk-download</b> the full experimental-sciences set with both sessions + solutions. For 3 subjects × ~13 years × 2 sessions × 2 (topic+solution) that's roughly <b>150–250 files — an afternoon of clicking</b> versus multi-day fights with fragile HTML scrapers that break the moment a site changes. "Automated collection pipeline" is worth nothing in a viva. So: download by hand, then run a tiny script that builds the manifest from filenames. If your supervisors specifically want a scraper documented, build it <i>after</i> the data is on disk.</p>
+<h4>Three source families to download into <code>data/raw/</code>:</h4>
+<div class="ib">
+<div class="ih">📥 DOWNLOAD CHECKLIST</div>
+<div class="step"><div class="sn">A</div><div><b>Past exams + solutions (2008–2026, both sessions).</b> Subjects: SVT, Physics, Math (the 3 scientific subjects — languages/humanities optional and low-value for topic prediction). Sessions: principale (موضوع 1) + rattrapage/استثنائية (موضوع 2), each with its solution. Drop in <code>data/raw/exams/</code>. Name loosely — the manifest script parses whatever pattern the site uses.</div></div>
+<div class="step"><div class="sn">B</div><div><b>Official curricula/programmes (MANDATORY).</b> The official 3AS programme PDF for each of SVT/Physics/Math (Ministry/ONEC, mirrored on the same sites). These feed the Knowledge Graph (P6) and RAG grounding (P11). Drop in <code>data/raw/curricula/</code>. Only ~3 files — get them.</div></div>
+<div class="step"><div class="sn">C</div><div><b>عتبة الدروس reduced-programme docs for 2020, 2021, 2022 (experimental sciences).</b> <span class="newbadge">NEW — required for the 3-era model</span> The official "الدروس المحذوفة / المحتوى المخفف" documents specifying which units were removed each pandemic year. Drop in <code>data/raw/curriculum_threshold/</code>. These are what let P8 <b>censor</b> cut topics instead of misreading them as zeros. Get the official Ministry/ONEC versions — not forum posts.</div></div>
+<div class="step"><div class="sn">D</div><div><b>Examiner reports / barèmes (optional).</b> Official correction scales strengthen P12's mark-scheme realism. Drop in <code>data/raw/examiner_reports/</code>. Missing is fine.</div></div>
+</div>
+<h4>Then copy this prompt to your AI assistant (the only code here):</h4>
+<pre>Write ingestion/build_manifest.py for bac-genius. It scans data/raw/{exams,curricula,
+curriculum_threshold,examiner_reports}/ and produces data/raw/manifest.json — one record
+per file: {filename, path, family (A/B/C/D), subject (svt|physics|math|other),
+year (int|null), session (principale|rattrapage|null), type (exam|solution|programme|
+threshold|barème), lang_guess}. Parse subject/year/session from the filename with tolerant
+regex + a small alias map (Arabic and French subject names → svt|physics|math; Arabic-
+Indic digits → int). Print a coverage table: per subject, which (year, session) pairs have
+BOTH exam and solution, and FLAG missing cells so I know exactly what to re-download.
+Also validate every file is a real PDF (magic bytes) and report any HTML/0-byte junk.
+Full file + scripts/run_manifest.py.</pre>
+<div class="cmd">python scripts/run_manifest.py</div>
+<div class="out">Scanned data/raw/ → 214 files
+Family A exams: SVT 24/26 sessions complete | Physics 25/26 | Math 26/26
+  missing: SVT 2011 rattrapage, SVT 2013 rattrapage  → re-download
+Family B curricula: 3/3 ✓   Family C عتبة: 2020 ✓ 2021 ✓ 2022 ✓   Family D barèmes: 4
+manifest.json written (214 records) · 0 junk files</div>
+<div class="ebox">
+<div class="erow"><div class="elbl">❌ SVT files look bundled (all subjects in one PDF)</div><div class="flbl">✅ Check packaging on 3 files first (see P4). If one PDF holds all subjects for a year, P4 splits by subject before by exercise; if it's one-PDF-per-subject (typical on these sites), P4 is simpler.</div></div>
+<div class="erow"><div class="elbl">❌ Filename parsing misses some years</div><div class="flbl">✅ Print the unparsed filenames, extend the alias/regex map. 20 minutes, not a scraper.</div></div>
+</div>
+<div class="ac"><strong>✅ Gate (Month-2 depends on this):</strong> all 3 subjects have exams+solutions for most of 2008–2026 (gaps flagged), 3 curricula present, <b>the 3 عتبة documents present</b>, manifest complete and PDF-validated.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the manifest is built and the coverage table shows your real corpus.</div>
+</div>
+
+<!-- P3 -->
+<div class="pb compact" id="p3">
+<div class="ph"><div class="pn">P3</div><div style="font-weight:bold">OCR &amp; Cleaning (Arabic-aware)</div><span class="cov">items (2)–(3)</span></div>
+<p><strong>What changed vs ULTIMATE:</strong> unchanged core (pdfplumber first → PaddleOCR fallback → Arabic normalization → clean_manifest.json + quality report), with two additions: it now also processes <code>curricula/</code> and <code>examiner_reports/</code> folders, and it flags <b>equation/diagram-heavy pages</b> for the optional vision-language OCR pass the proposal mentions.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write ingestion/ocr_clean.py exactly as specified in my previous pipeline (pdfplumber
+first; PaddleOCR lang="arabic"/"fr"/"en" fallback for scanned pages; Arabic Unicode
+normalization; zero-width strip; RTL artifact fix; paragraph preservation; resumable;
+rich progress; clean_manifest.json with {source_pdf, txt_path, method, char_count,
+language_guess, is_correction, family}; end-of-run quality report), with these deltas:
+
+1. Also process data/raw/curricula/ and data/raw/examiner_reports/ (family from
+   manifest), writing to data/processed/curricula/ and data/processed/examiner_reports/.
+2. Add a page-level flag "complex_layout": true when a page has very low text yield
+   but high image area (likely equations/figures). Write these to
+   data/processed/vlm_ocr_queue.json — an optional second pass can send ONLY these
+   pages to a vision-language model via llm/provider (stub the function, implement
+   pass-through for now).
+3. language_guess by Arabic-vs-Latin character ratio, as before.
+Full file.</pre>
+<div class="cmd">python -m ingestion.ocr_clean</div>
+<div class="out">Direct text: 96 | OCR: 41 | curricula: 8 ✓ | flagged complex_layout pages: 37 → vlm_ocr_queue.json</div>
+<div class="ac"><strong>✅ Gate:</strong> Arabic readable in spot checks; curricula text extracted (KG depends on it); complex pages queued, not lost.</div>
+<div class="cb">Say <strong>"Continue"</strong> when clean text exists for all three families.</div>
+</div>
+
+<!-- P4 -->
+<div class="pb compact" id="p4">
+<div class="ph"><div class="pn">P4</div><div style="font-weight:bold">Segmentation &amp; Annotated Corpus</div><span class="cov">items (3)–(4)</span></div>
+<p><strong>What changed:</strong> chunking logic is the same (question-boundary split, solution pairing, session kept), but the corpus now encodes the <b>three-era regime</b>, the <b>censoring flag</b>, and the <b>2026-sealed split</b> — this is where the pandemic-awareness becomes machine-readable for every later phase.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write ingestion/chunker.py + ingestion/topic_extractor.py + scripts/run_ingest.py.
+Split each exam on "Exercice N/التمرين N/Partie A-B"; pair solutions by question number
+(Arabic-Indic↔Latin digit normalization); IF a raw PDF bundles multiple subjects, split
+by subject first (detect subject headers) then by exercise.
+
+Per-chunk metadata schema:
+{chunk_id, subject (svt|physics|math), stream:"experimental_sciences", year, session
+ (principale|rattrapage), topic_kw (PROVISIONAL keyword tag — P5 overwrites),
+ difficulty (heuristic prior), bloom (later), language, has_solution, source,
+ exam_regime, topic_in_scope} where:
+   exam_regime = "golden" if year<=2019, "pandemic_reduced" if 2020<=year<=2022,
+                 else "modern"
+   topic_in_scope = False ONLY when the chunk's topic appears in the عتبة "removed
+     units" list for that pandemic year (read data/raw/curriculum_threshold/ parsed
+     to config/threshold_cuts.py: {year: {subject: [removed_topic_kw,...]}} — build
+     this dict FROM the official docs; leave clearly-marked TODO entries for any year
+     you haven't transcribed yet rather than guessing). For golden/modern years it's True.
+
+Aggregate to data/processed/all_chunks.json + a tagging report (%general).
+
+Corpus versioning — data/processed/corpus_meta.json:
+{version:"2.0.0", built_at, n_chunks, counts per subject/year/session/regime,
+ split:{
+   train_years:[2008..2022],           # golden + pandemic (pandemic censored+weighted)
+   backtest_years:[2023,2024,2025],     # MODERN only — model comparison lives here
+   holdout_year:2026                    # SEALED — touched once, at the very end
+ },
+ rule:"never backtest on pandemic_reduced years"}
+This split is THE canonical object every later phase imports — no phase hard-codes years.
+
+Also chunk curricula → data/processed/curriculum_chunks.json
+{section_id, subject, stream, unit, text} split on unit/chapter headings.
+Full files.</pre>
+<div class="warn"><b>config/threshold_cuts.py is yours to fill from official docs.</b> The builder reads it to set <code>topic_in_scope</code>. Transcribe the عتبة removed-units per subject/year from the Ministry PDFs you downloaded in P2-C. Where you haven't transcribed a year yet, leave a <code># TODO verify</code> entry — the pipeline runs, and those cells stay conservatively marked so you never silently mislabel.</div>
+<div class="cmd">python scripts/run_ingest.py</div>
+<div class="out">932 exam chunks (SVT 291 · Physics 328 · Math 313) | 176 curriculum sections
+regime counts: golden 512 · pandemic_reduced 118 (censored: 34) · modern 302
+corpus v2.0.0 · split: train 2008–2022 / backtest 2023–2025 / holdout 2026 SEALED ✓</div>
+<div class="ac"><strong>✅ Gate = Month-2 deliverable:</strong> annotated corpus + stats table + <code>exam_regime</code>/<code>topic_in_scope</code> set + 2026-sealed split frozen in corpus_meta v2.0.0.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the regime-tagged corpus and sealed split are frozen.</div>
+</div>
+<!-- ═══════════ PHASE 2 ═══════════ -->
+<div class="phase-h">PHASE 2 — NLP Analysis <span class="mo">Month 3 · Proposal items (5)–(8)</span></div>
+
+<!-- P5 -->
+<div class="pb" id="p5">
+<div class="ph"><div class="pn">P5</div><div style="font-weight:bold">Topic Modeling, NER, Difficulty &amp; Style Profiling <span class="newbadge">NEW CORE</span></div><span class="cov">items (5)–(7)</span></div>
+<p><strong>Context:</strong> This replaces keyword tagging as the scientific method. The supervisors require <b>unsupervised topic modeling (BERTopic + LDA) validated against curriculum-defined lists</b>, NER/keyword extraction, near-duplicate detection, and difficulty/style profiling. Your thesis Chapter on NLP methodology is written from this prompt's outputs.</p>
+<div class="research"><b>Why BERTopic beats keywords in a viva:</b> keyword tags assume you already know the topics; BERTopic <i>discovers</i> them from embeddings, and the validation step (mapping discovered clusters onto the official curriculum vocabulary from <code>config/streams.py</code>) becomes a measurable result: "N of M curriculum topics recovered unsupervised, agreement κ=…". LDA runs as the classical baseline the committee expects to see compared.</div>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write nlp/topics.py and nlp/concepts.py for bac-genius.
+
+==== nlp/topics.py ====
+1. Load all_chunks.json. Embed chunk texts with intfloat/multilingual-e5-large
+   ("passage: " prefix) — reuse one shared embedding helper.
+2. BERTopic pipeline: UMAP (n_neighbors=15, metric=cosine) + HDBSCAN
+   (min_cluster_size tuned per subject) + class-based TF-IDF, run PER SUBJECT
+   (topics differ per subject; do not pool subjects).
+3. LDA baseline: gensim LDA per subject on lemmatized tokens (French+Arabic aware
+   tokenization; strip stopwords for both languages), n_topics = number of curriculum
+   topics for that subject.
+4. CURRICULUM VALIDATION: map each discovered BERTopic cluster to the closest
+   curriculum topic from SYLLABUS_MAPS by (a) keyword overlap and (b) embedding
+   similarity between cluster representative docs and curriculum topic keyword strings.
+   Output per subject: coverage (curriculum topics recovered / total), purity of
+   clusters, and a confusion-style mapping table. Chunks get final "topic" =
+   mapped curriculum topic (fallback to topic_kw when cluster is unmapped).
+5. Near-duplicate detection: cosine > 0.95 across different years → mark
+   "recycled_from": [chunk_ids]. (Recycled questions are themselves a finding.)
+6. Update all_chunks.json in place (topic, topic_source: "bertopic"|"keyword",
+   recycled_from) and write data/processed/topic_report.json + two thesis figures:
+   topics_per_subject.png (BERTopic topic sizes) and curriculum_coverage.png.
+
+==== nlp/concepts.py ====
+7. NER/keywords: spaCy fr_core_news_md for French chunks + a curated Arabic domain
+   keyword extractor (regex/gazetteer from SYLLABUS_MAPS); store "concepts": [...] per chunk.
+8. Difficulty profiling: upgrade the heuristic to a small classifier — features:
+   length, #sub-questions, imperative verbs ("démontrer/برهن" vs "calculer/احسب"),
+   presence of proof keywords; train on the heuristic labels + hand-corrected sample
+   of 100 chunks (write the 100-sample CSV template for me to correct).
+9. Bloom level per chunk: map command verbs → Bloom levels (remember→create) with a
+   bilingual verb table; store "bloom": level.
+10. Style signature per subject: avg length, sub-question count distribution,
+    formulaic openings — saved to data/processed/style_profiles.json (used by P12 to
+    imitate authentic style and by P17's expert-review analysis). COMPUTE THESE
+    MODERN-WEIGHTED (from exam_regime=="modern", i.e. 2023–2026) so generated exams
+    match the CURRENT Ministry style — inquiry-based questions — not 2010-era phrasing.
+    Keep an all-years profile too, for comparison in the thesis.
+Also scripts/run_nlp.py chaining topics → concepts. Full files.</pre>
+<div class="ib">
+<div class="ih">📋 IMPLEMENTATION GUIDE</div>
+<div class="step"><div class="sn">1</div><div>Run per-subject; inspect <code>topic_report.json</code>. The number to watch: <b>curriculum coverage</b>. Physics should recover most mécanique/ondes/nucléaire clusters unsupervised. If coverage is low, tune HDBSCAN min_cluster_size down.</div></div>
+<div class="step"><div class="sn">2</div><div>Hand-correct the 100-sample difficulty CSV (30 minutes) and retrain — this turns a heuristic into a defensible "weakly-supervised classifier".</div></div>
+<div class="step"><div class="sn">3</div><div>Screenshot both PNGs — they're Chapter-4 figures. The recycled-questions list is a bonus results paragraph.</div></div>
+<div class="cmd">python scripts/run_nlp.py</div>
+<div class="out">physics_chemistry: 11 BERTopic clusters → 9/9 curriculum topics recovered (coverage 100%, purity .87)
+mathematics: 12 clusters → 8/9 recovered (coniques merged into geometrie) — noted
+Recycled (cos>0.95): 23 question pairs across years ← thesis finding
+all_chunks.json updated: topic_source = bertopic 84% | keyword-fallback 16%</div>
+<div class="ebox">
+<div class="erow"><div class="elbl">❌ HDBSCAN makes one giant cluster + noise</div><div class="flbl">✅ Chunks too short/too few per subject — raise UMAP n_neighbors, lower min_cluster_size, and confirm you ran per-subject not pooled.</div></div>
+<div class="erow"><div class="elbl">❌ Arabic tokenization garbage in LDA</div><div class="flbl">✅ Use a simple whitespace+punctuation tokenizer with an Arabic stopword list; don't force a French lemmatizer onto Arabic text.</div></div>
+<div class="erow"><div class="elbl">❌ Cluster↔curriculum mapping ambiguous</div><div class="flbl">✅ Report it honestly in the mapping table (e.g. "coniques merged into geometrie") — messy reality documented beats fake 100% coverage.</div></div>
+</div>
+</div>
+<div class="ac"><strong>✅ Gate:</strong> topic_report shows coverage/purity per subject; all_chunks topics now BERTopic-validated; difficulty classifier trained; style profiles saved.</div>
+<div class="cb">Say <strong>"Continue"</strong> when discovered topics are validated against the curriculum.</div>
+</div>
+
+<!-- P6 -->
+<div class="pb" id="p6">
+<div class="ph"><div class="pn">P6</div><div style="font-weight:bold">Curriculum Knowledge Graph <span class="newbadge">NEW</span></div><span class="cov">item (8)</span></div>
+<p><strong>Context:</strong> The proposal's item (8): curriculum as a lightweight graph of <b>topics → competencies → prerequisites</b>. This graph is used three times downstream: RAG grounding (P11 retrieves curriculum nodes), the validation filter (P14 checks generated content lies inside the syllabus subtree), and XAI traceability (P15 shows which node grounds each generated question).</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write nlp/kg_builder.py for bac-genius.
+
+1. Input: data/processed/curricula/*.txt (official programmes, from P3) +
+   curriculum_chunks.json (P4) + SYLLABUS_MAPS.
+2. Build a directed graph (networkx.DiGraph) with three node types:
+   - Topic nodes: {id, subject, stream, ar_name, fr_name, source_section_id}
+   - Competency nodes: extracted from curriculum text imperative statements
+     ("l'élève doit être capable de …" / "يكون المتعلم قادراً على …") via regex +
+     verb detection; attach Bloom level using the P5 verb table.
+   - Prerequisite edges: Topic→Topic when the programme orders units sequentially
+     (unit N is prerequisite of unit N+1 within a subject) + explicit mentions
+     ("s'appuie sur", "prérequis").
+   Edges: Topic --has_competency--> Competency, Topic --prerequisite_of--> Topic.
+3. Every node stores its source text span (section_id + char offsets) — this is the
+   traceability the proposal demands.
+4. Save: data/kg/curriculum_graph.json (node-link format) + a pyvis interactive
+   visualization data/kg/kg.html (thesis figure + defense demo) + kg_stats printed
+   (nodes/edges per subject).
+5. Query helpers (used by P11/P14/P15):
+   get_node(topic), get_competencies(topic), get_prerequisites(topic),
+   in_syllabus(text, subject, stream) -> (bool, best_node, similarity) using e5
+   embeddings of node texts (cache them).
+Full file + a __main__ demo querying two topics.</pre>
+<div class="ib">
+<div class="ih">📋 IMPLEMENTATION GUIDE</div>
+<div class="step"><div class="sn">1</div><div>Open <code>kg.html</code> in a browser — you should see subject clusters with topic chains and competency leaves. This single visual will carry a lot of weight in the defense.</div></div>
+<div class="step"><div class="sn">2</div><div>Competency extraction will be imperfect on OCR'd curricula — hand-fix the worst nodes directly in a small overrides JSON the builder merges last. Document the manual-correction count honestly.</div></div>
+<div class="cmd">python -m nlp.kg_builder</div>
+<div class="out">KG built: 47 topic nodes, 156 competency nodes, 38 prerequisite edges (5 subjects × 2 streams)
+in_syllabus("étude d'une fonction logarithmique", math, sci) → (True, "fonctions", 0.83) ✓
+Saved: curriculum_graph.json + kg.html</div>
+<div class="ebox"><div class="erow"><div class="elbl">❌ Few competencies extracted</div><div class="flbl">✅ The regex misses your curricula's phrasing — print 5 raw sections, adapt the patterns to the actual formulas used ("القدرات المستهدفة", "compétences visées"...).</div></div></div>
+</div>
+<div class="ac"><strong>✅ Gate:</strong> kg.html renders; in_syllabus() returns sensible nodes; every node traces to a source span.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the KG exists and query helpers work.</div>
+</div>
+
+<!-- P7 -->
+<div class="pb compact" id="p7">
+<div class="ph"><div class="pn">P7</div><div style="font-weight:bold">Qdrant Ingestion — Two Collections</div><span class="cov">item (6) + RAG backbone</span></div>
+<p><strong>What changed vs ULTIMATE:</strong> same e5 embedding discipline ("passage:"/"query:" prefixes, 1024-dim, cosine, payload indexes, batch upserts, sanity queries) — but now <b>two collections</b>: <code>bac_chunks</code> (exam questions, enriched with the P5 fields topic_source/concepts/bloom/recycled_from) and <code>curriculum_sections</code> (from curriculum_chunks.json, payload includes KG node ids), so P11 can ground on both.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write ingestion/qdrant_ingest.py as in my previous pipeline (e5-large 1024-dim cosine,
+"passage: " prefix helper, batches of 64, payload indexes on subject/stream/year/topic,
+--recreate flag, rich progress, post-ingest sanity queries in FR and AR), extended to:
+1. Collection "bac_chunks": all exam chunks with the FULL updated metadata from P5
+   (topic, topic_source, concepts, bloom, difficulty, recycled_from, session...).
+2. Collection "curriculum_sections": curriculum_chunks.json entries; payload
+   {subject, stream, unit, kg_node_ids (from P6 by matching section_id), text}.
+3. Sanity query 3 (new): "دراسة الدوال الأسية" against curriculum_sections filtered to
+   mathematics — must return the exponential-functions unit.
+Full file.</pre>
+<div class="cmd"># Terminal A: docker compose up qdrant redis
+python -m ingestion.qdrant_ingest --recreate</div>
+<div class="out">bac_chunks: 1,284 pts ✓ | curriculum_sections: 214 pts ✓ | 3/3 sanity queries pass</div>
+<div class="ac"><strong>✅ Gate = Month-3 deliverable complete:</strong> topics validated (P5), KG live (P6), both collections queryable (P7).</div>
+<div class="cb">Say <strong>"Continue"</strong> when both collections pass their sanity queries.</div>
+</div>
+
+<!-- ═══════════ PHASE 3 ═══════════ -->
+<div class="phase-h">PHASE 3 — Time-Series Forecasting of Topic Tendencies <span class="mo">Month 4 · Proposal items (9)–(13)</span></div>
+
+<!-- P8 -->
+<div class="pb" id="p8">
+<div class="ph"><div class="pn">P8</div><div style="font-weight:bold">Series Construction, Stationarity Analysis &amp; Feature Branch</div><span class="cov">item (9) + leakage guard</span></div>
+<p><strong>Context:</strong> The proposal frames prediction as <b>forecasting topic-frequency time series</b> — so the first artifact is the series themselves plus the stationarity/seasonality analysis it explicitly requires. The blueprint's supervised feature table survives as the input to the GBM contender and keeps its automated <b>leakage guard</b>, now bound to the canonical year split from P4.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write forecasting/series.py and forecasting/features.py.
+
+==== forecasting/series.py ====
+1. From all_chunks.json build, per (subject, topic), the yearly series 2008–2026 of:
+   appearance (0/1), question_count, total_points_weight if detectable. Sessions:
+   principale+rattrapage OR'd for appearance, summed for counts, but ALSO keep a
+   per-session series (≈doubles temporal resolution — note the sessions-within-a-year
+   are correlated, so it is not independent doubling).
+2. CENSORING (the core 3-era fix): for a (topic, year) where exam_regime=="pandemic_
+   reduced" AND topic_in_scope==False, write appeared = NaN (censored) — NEVER 0.
+   Attach exam_regime to every row.
+3. Stationarity & seasonality per series (on the non-censored points): ADF, KPSS,
+   autocorrelation lags 1–5; classify {stationary?, dominant_cycle?}. Note where too
+   few points remain to test (expected for short/sparse series).
+4. Save data/series/topic_series.parquet (subject, topic, year, session, appeared,
+   count, exam_regime, censored) + stationarity_report.csv + series_grid.png
+   (small-multiples of the 12 highest-variance series, censored years shaded, ADF
+   p-values annotated).
+
+==== forecasting/features.py ====  (GBM branch)
+For each (topic, target_year) where target_year is in backtest_years ∪ {holdout_year}
+∪ earlier fittable years: freq_all, freq_last3, freq_last5, gap_since_last,
+appeared_lastyr, streak, trend_slope, count_last3, rolling_std, periodicity — computed
+ONLY from years &lt; target_year AND ignoring censored cells (a censored year does not
+count as an absence). PLUS regime features: is_pandemic_year(target_year),
+n_censored_in_history. Label = appeared(target_year).
+- SAMPLE WEIGHTS: w = recency_weight(target_year) — rising toward recent years
+  (e.g. linear or exp so 2024–2026 dominate) — saved alongside for the models to use.
+- The split years MUST come from corpus_meta.json (train 2008–2022, backtest
+  2023–2025, holdout 2026). NEVER build a training row that peeks at ≥ target_year.
+- Keep the automated LEAKAGE CHECK assertion (assert every feature's source years
+  &lt; target_year AND holdout 2026 never appears in any training row); print
+  "LEAKAGE CHECK: PASSED".
+- Save data/features/prediction_features.parquet (+ sample_weight col) +
+  correlation-vs-label table.
+Full files with docstrings (quoted in the thesis methodology).</pre>
+<div class="cmd">python -m forecasting.series && python -m forecasting.features</div>
+<div class="out">Series built: 63 topic-series (SVT 19 · Physics 22 · Math 22) | censored cells: 34
+stationary: 41 | too-few-points to test: 12 | series_grid.png saved (thesis Fig 4.x)
+Feature table: 604 rows | recency weights applied (2024–26 ×2.0) | top corr: appeared_lastyr .44
+LEAKAGE CHECK: PASSED ✓ (split = corpus_meta v2.0.0, holdout 2026 sealed)</div>
+<div class="ac"><strong>✅ Gate:</strong> series built with pandemic cells censored (not zeroed); features recency-weighted, regime-aware, leakage-clean; 2026 never in any training row.</div>
+<div class="cb">Say <strong>"Continue"</strong> when series + features are built, censoring is applied, and the leakage check passes.</div>
+</div>
+
+<!-- P9 -->
+<div class="pb" id="p9">
+<div class="ph"><div class="pn">P9</div><div style="font-weight:bold">Forecasting Suite &amp; Grand Comparison — The Thesis Centerpiece <span class="newbadge">CENTERPIECE</span></div><span class="cov">items (10)–(13),(21)</span></div>
+<p><strong>Context:</strong> The supervisors specify the exact model families: statistical (ARIMA/SARIMA, Prophet), deep (LSTM, Transformer), and hybrid ensembles — compared with RMSE/MAE/MAPE plus a domain top-k recall. The blueprint contributes the discipline that makes the comparison bulletproof: naive baselines, time-based backtesting on the canonical split, ranking metrics (P@K/nDCG), and bootstrap confidence intervals. Result: <b>one grand table, eight contenders, all metrics</b> — Chapter 5's centerpiece and the answer to RQ1.</p>
+<div class="research">
+<h4>The eight contenders</h4>
+<table>
+<tr><th>#</th><th>Model</th><th>Family</th><th>Why it's in</th></tr>
+<tr><td>B1</td><td>Always-Top-K (frequency)</td><td>Naive</td><td>The "you don't need ML" strawman — must be beaten</td></tr>
+<tr><td>B2</td><td>Last-Year-Repeat</td><td>Naive</td><td>Tests pure persistence</td></tr>
+<tr><td>M1</td><td>ARIMA / SARIMA</td><td>Statistical</td><td>Proposal-required; interpretable decomposition feeds XAI</td></tr>
+<tr><td>M2</td><td>Prophet</td><td>Statistical</td><td>Proposal-required; trend/changepoint plots feed XAI</td></tr>
+<tr><td>M3</td><td>Global LSTM</td><td>Deep</td><td>Proposal-required; trained GLOBALLY across all topic series (DeepAR-style pooling) — the only honest way to attempt deep learning on ~13 points/series</td></tr>
+<tr><td>M4</td><td>Small Transformer (or N-BEATS)</td><td>Deep</td><td>Proposal-required; same global pooling; darts provides both</td></tr>
+<tr><td>M5</td><td>GradientBoosting on features</td><td>ML (kept)</td><td>Blueprint's contender — absorbs censoring + recency weights; often the small-data winner</td></tr>
+<tr><td>M6</td><td>Hybrid: Prophet trend + GBM residuals</td><td>Ensemble</td><td>Proposal item (12) — "statistical for trend, ML for residuals"</td></tr>
+</table>
+<p><b>Pre-registered honesty (state this before you see results):</b> ~13 annual points per series (≈26 sessions) with a censored pandemic gap is a hostile regime for ARIMA/deep models. Expect statistical and especially deep models to struggle and the GBM/hybrid to win. That is <i>not</i> failure — it's a documented small-data + structural-break finding, fully aligned with the DeepAR/N-BEATS papers the supervisors cited (which pool precisely because single short series starve deep nets). Report exactly what happens.</p>
+<div class="teach"><b>Two-track honesty on the censored gap.</b> The GBM/hybrid branch reads the P8 feature table, which already ignores censored cells and carries recency weights — clean. The statistical/deep models operate on the raw series and <i>cannot</i> gracefully swallow a NaN gap at 2020–2022: for those models, fit only on non-cut topics, or on the modern contiguous segment, or linearly interpolate the censored point AND report which you did. Document this asymmetry — it's a Chapter-6 finding, not a defect.</div>
+<div class="warn"><b>The coarse-topic trap — read before defining topics.</b> Some topics (mechanics, functions, exp/log) appear on essentially every Algerian BAC, so at coarse granularity the AlwaysTopK baseline is near-unbeatable and the ML earns nothing. The signal lives at finer grain: <i>which sub-topic</i>, or which of several rotating question-types. Run the comparison at sub-topic/question-type level where prediction is non-trivial — otherwise you'll prove only that frequent things are frequent.</div>
+</div>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write forecasting/models.py, forecasting/ensemble.py, forecasting/compare.py and
+scripts/run_forecast.py. Use the darts library as the unified TimeSeries API where
+possible (ARIMA, Prophet wrapper, RNNModel for LSTM, NBEATS/TransformerModel),
+statsmodels for SARIMA detail + decomposition, sklearn for the GBM branch (reads
+data/features/prediction_features.parquet).
+
+==== models.py ====
+- Wrappers exposing ONE interface: fit(train_series_dict) and
+  predict_scores(subject, stream, target_year) -> dict{topic: score in [0,1]}.
+  * Statistical models (ARIMA/SARIMA, Prophet): fit per topic-series on years <
+    target_year; score = forecasted frequency/probability for target_year (clip 0–1).
+  * Deep models (LSTM, NBEATS or Transformer): ONE GLOBAL model per subject+stream
+    trained on ALL topic series jointly (darts multi-series training) with topic as
+    static covariate; small architectures (hidden 32, epochs≤300, early stopping on
+    the val years from corpus_meta split). Seed everything.
+  * GBM: as previously specified (HistGradientBoosting; predict_proba;
+    feature_importances saved as PNG).
+- Naive baselines B1, B2 as callables with the same interface.
+
+==== ensemble.py ====
+- Hybrid M6: Prophet forecasts the trend per series; a GBM learns residuals from the
+  P8 features; final score = clipped sum. Document the design in the docstring.
+
+==== compare.py ====
+- BACKTEST on MODERN years only: for each backtest_year in [2023, 2024, 2025], each
+  model trains on strictly-prior years (censored cells ignored, recency weights on)
+  and predicts that year. NEVER backtest on 2020–2022 (pandemic) — hard rule from
+  corpus_meta. The model comparison + CIs live entirely on these 3 modern years.
+- Metrics per (model, subject, year):
+  * Forecasting: RMSE, MAE, MAPE on predicted-vs-actual topic frequencies
+  * Ranking: Precision@3, Precision@5, nDCG@5, top-k topic recall (k=3,5), MAP
+  * Bootstrap 95% CI on nDCG@5 and top-3 recall across years×topics
+- FINAL SEALED HOLDOUT: after the winner is chosen from the backtest, retrain it on
+  2008–2025 and predict 2026 ONCE. Report holdout metrics separately as the headline
+  real-world result. This is the only time 2026 is touched.
+- Outputs: data/forecast/grand_comparison.csv (tidy),
+  a publication table printed with rich (rows=8 models, grouped columns),
+  grand_comparison_chart.png (grouped bars, nDCG@5 ± CI per subject),
+  data/forecast/holdout_2026.json (winner's 2026 prediction vs actual + metrics),
+  data/forecast/predictions_2027.json (winner's forward prediction for the NEXT
+  session, with the evidence fields XAI needs: topic history, trend direction,
+  last-seen year).
+- Verdict lines per subject: backtest winner + margin vs best naive + the 2026 holdout
+  score + one-line interpretation.
+Also scripts/run_forecast.py with subcommands train/predict/compare/holdout. Full files.</pre>
+<div class="ib">
+<div class="ih">📋 IMPLEMENTATION GUIDE</div>
+<div class="step"><div class="sn">1</div><div>Run <code>compare</code> for physics first (densest data). Read the verdict. Then SVT and math.</div></div>
+<div class="step"><div class="sn">2</div><div>Sanity-read M1/M2: Prophet's trend for a topic should track the raw series in P8's grid. Nonsense (negative frequencies) → clip, and check the series had enough non-censored non-zero years.</div></div>
+<div class="step"><div class="sn">3</div><div>Deep models: if unstable, shrink to hidden 16. Tune ONLY on backtest years, never peek at 2026. The split object enforces this — don't override it.</div></div>
+<div class="step"><div class="sn">4</div><div><b>Holdout last:</b> only after the winner is fixed, run <code>holdout</code> to predict 2026. That single number — "trained on 2008–2025, predicted the June 2026 BAC" — is your headline. Screenshot the chart + rich table (Fig 5.1 / Table 5.1) and keep <code>predictions_2027.json</code> for the demo + XAI.</div></div>
+<div class="cmd">python scripts/run_forecast.py compare   # backtest on 2023–2025
+python scripts/run_forecast.py holdout   # winner only, predict sealed 2026</div>
+<div class="out">GRAND COMPARISON — physics / experimental_sciences (backtest 2023–2025, modern only)
+Model                RMSE   MAE   P@3   top3rec  nDCG@5 (95% CI)
+B1 AlwaysTopK        .30    .23   .61   .59      .688 [.60,.76]
+B2 LastYearRepeat    .34    .27   .54   .52      .620 [.54,.70]
+M1 SARIMA            .28    .22   .63   .61      .699 [.61,.78]
+M2 Prophet           .27    .21   .65   .63      .710 [.62,.79]
+M3 Global-LSTM       .31    .24   .58   .56      .659 [.57,.74]   ← data-starved
+M4 N-BEATS           .30    .23   .60   .59      .676 [.59,.76]   ← data-starved
+M5 GBM(features) ⭐   .25    .19   .72   .69      .771 [.69,.85]
+M6 Prophet+GBM  ⭐    .24    .18   .73   .70      .779 [.70,.86]  ← WINS backtest
+Verdict: hybrid beats best naive by +.091 nDCG@5 (wide CI, 3 modern yrs); deep starved as pre-registered.
+── SEALED HOLDOUT ── winner M6 retrained on 2008–2025, predicting 2026:
+  top-3 recall 0.67 · nDCG@5 0.74 · "predicted the June-2026 exam's topics" ✓
+Saved: grand_comparison.csv + chart + holdout_2026.json + predictions_2027.json</div>
+<div class="ebox">
+<div class="erow"><div class="elbl">❌ darts install/torch conflicts</div><div class="flbl">✅ Install torch (CPU) first, then darts. If a specific darts model fights your env, swap it for the statsmodels/sklearn equivalent and note it — the comparison protocol matters more than any one library.</div></div>
+<div class="erow"><div class="elbl">❌ Prophet fails on all-zero or 2-point series</div><div class="flbl">✅ Skip degenerate series per model (min 5 non-zero years for statistical fits) and report n per cell. Never silently average over failures.</div></div>
+<div class="erow"><div class="elbl">❌ Deep models beat everything suspiciously</div><div class="flbl">✅ Almost certainly leakage or test-tuning. Re-verify the split source is corpus_meta.json and val-only tuning. Suspicious wins die in vivas.</div></div>
+<div class="erow"><div class="elbl">❌ Huge CIs on the backtest</div><div class="flbl">✅ Expected — 3 modern backtest years is thin by design (you refuse to test on pandemic years). That IS the small-data story; report it, and let the single sealed-2026 holdout carry the concrete real-world claim.</div></div>
+</div>
+</div>
+<div class="ac"><strong>✅ Gate = Month-4 deliverable (and your October demo asset):</strong> grand_comparison.csv + chart (8 contenders × all metrics ± CI, backtest on modern years); <b>holdout_2026.json</b> = the winner's sealed real-world score; predictions_2027.json for the demo. You can explain every number and defend the censoring/weighting choices.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the grand comparison exists and you can defend it.</div>
+</div>
+<!-- ═══════════ PHASE 4 ═══════════ -->
+<div class="phase-h">PHASE 4 — Generative AI for Exam Content <span class="mo">Month 5 · Proposal items (14)–(17)</span></div>
+
+<!-- P10 -->
+<div class="pb compact" id="p10">
+<div class="ph"><div class="pn">P10</div><div style="font-weight:bold">Provider-Agnostic LLM Layer <span class="keptbadge">KEPT FROM BLUEPRINT</span></div><span class="cov">enables items (14)–(17)</span></div>
+<p><strong>Unchanged from ULTIMATE — kept in full because it's an engineering necessity the proposal doesn't address:</strong> one <code>get_llm()</code> / <code>get_structured_llm(schema)</code> / <code>get_embeddings()</code> factory over Gemini / OpenAI / local Ollama (Qwen2.5), switched by one <code>.env</code> line, with JSON-fallback parsing for Ollama, e5 embeddings as the retrieval default, lazy singletons, and <code>health_check()</code>. The proposal's "lightly fine-tuned LLMs" option is noted as a P12 extension if time permits (LoRA on generated+real question pairs) — do not attempt before the core loop works.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write llm/provider.py exactly as previously specified for bac-genius: LLM_PROVIDER
+switch ("gemini"|"openai"|"ollama") → ChatGoogleGenerativeAI gemini-1.5-flash /
+ChatOpenAI gpt-4o-mini / ChatOllama settings.OLLAMA_MODEL; get_structured_llm(schema)
+using with_structured_output where supported and a robust JSON-instructed fallback
+(strip fences, json.loads, tenacity retry 1) for ollama; get_embeddings() returning the
+shared multilingual-e5-large wrapper ("query: " prefix helper); lazy singletons;
+health_check() -> (ok, provider, latency_ms); __main__ demo: health check + one Arabic
++ one French question. Full file.</pre>
+<div class="cmd">python -m llm.provider   # test with LLM_PROVIDER=ollama, then =gemini</div>
+<div class="ac"><strong>✅ Gate:</strong> provider switch works from .env; offline Ollama path alive (your defense-day insurance).</div>
+<div class="cb">Say <strong>"Continue"</strong> when both a cloud and the local provider pass health_check.</div>
+</div>
+
+<!-- P11 -->
+<div class="pb" id="p11">
+<div class="ph"><div class="pn">P11</div><div style="font-weight:bold">RAG over Exams + Curriculum (Traceable Grounding)</div><span class="cov">item (14)</span></div>
+<p><strong>Context:</strong> The proposal's RAG explicitly grounds on <b>curriculum sections AND stylistically similar past questions</b>. So retrieval now hits both Qdrant collections, and every answer carries a machine-readable <b>trace</b> (which exam chunks + which curriculum/KG nodes) — the raw material P15's XAI displays and P14's validator checks.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write rag/qa_engine.py for bac-genius, upgrading my previous BacRAG:
+
+1. Class BacRAG.answer(question, subject, stream, language="auto", k_exams=4,
+   k_curriculum=2) -> dict.
+2. Dual retrieval with e5 "query: " prefix:
+   a) bac_chunks filtered subject+stream → top k_exams,
+   b) curriculum_sections filtered subject+stream → top k_curriculum,
+      and expand each hit with its kg_node_ids → attach competencies from the KG
+      (nlp/kg_builder query helpers).
+3. System prompt: BAC tutor for the Algerian {stream}; answer ONLY from provided
+   excerpts; cite exam year for facts like (BAC 2019) and curriculum unit like
+   [Programme: fonctions]; refuse when excerpts lack the answer; show steps; respond
+   in {language} (auto-detect AR/FR/EN by char-ratio).
+4. Return {answer, trace: {exam_sources:[{chunk_id, year, topic, score}],
+   curriculum_sources:[{section_id, unit, kg_nodes, score}]}, language_used}.
+   The trace is MANDATORY and complete — downstream XAI depends on it.
+5. Conversation buffer (last N turns). Graceful empty-retrieval handling. LCEL chain.
+6. __main__ demo: one FR physics question + one AR math question; print answers and
+   full traces.
+Full file.</pre>
+<div class="cmd">python -m rag.qa_engine</div>
+<div class="out">Q (FR): "Comment résoudre un pendule simple ?"
+A: ... (BAC 2018, BAC 2015) [Programme: oscillations mécaniques]
+trace: exam_sources 2 | curriculum_sources 1 (kg: mecanique→3 competencies) ✓ refusal test ✓</div>
+<div class="ac"><strong>✅ Gate:</strong> answers cite years AND curriculum units; traces complete; out-of-corpus questions refused.</div>
+<div class="cb">Say <strong>"Continue"</strong> when dual-grounded, traceable answers work in both languages.</div>
+</div>
+
+<!-- P12 -->
+<div class="pb" id="p12">
+<div class="ph"><div class="pn">P12</div><div style="font-weight:bold">Generator — Questions, Full Mock Exams &amp; Revision Sheets</div><span class="cov">item (15)</span></div>
+<p><strong>Context:</strong> The proposal scales generation up from single exercises to three product types, <b>aligned to forecasted topics</b> (P9's predictions_2027.json) and target difficulty. The blueprint's novelty guard and structured-output discipline are kept; the style profiles from P5 make outputs imitate authentic exam voice.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write rag/generator.py for bac-genius.
+
+Pydantic models:
+- Exercise {statement, given_data[], sub_questions[], topic, difficulty, language,
+  expected_solution, mark_scheme[], bloom_targets[], curriculum_nodes[]}
+- MockExam {header:{subject, stream, duration, total_points, session_label},
+  exercises: list[Exercise], layout_notes}
+- RevisionSheet {topic, key_concepts[], formulas[], worked_example, common_traps[],
+  past_appearances[]}
+
+Class ContentGenerator:
+1. generate_exercise(subject, stream, topic, difficulty, language): retrieve 2–3 real
+   anchors (bac_chunks, same topic) + 1–2 curriculum sections; inject the P5 style
+   profile (length, sub-question distribution, formulaic openings) into the prompt;
+   get_structured_llm(Exercise); fill curriculum_nodes from the retrieved KG ids.
+   NOVELTY GUARD kept: embed statement, cosine vs anchors > 0.92 → regenerate (≤2).
+2. generate_mock_exam(subject, stream, target_year): topics = top-k from
+   data/forecast/predictions_2027.json weighted by score; assemble 3–4 exercises
+   matching the authentic exam structure for that subject (use style profile:
+   exercise count, points distribution); return MockExam.
+3. generate_revision_sheet(subject, stream, topic): grounded on curriculum section +
+   best past questions; past_appearances from the topic's series (years list).
+4. Every generated object is passed through validation/curriculum_filter.validate()
+   (P14) BEFORE being returned; attach the validation verdict.
+5. Save all outputs under data/generated/ (json). __main__: one exercise (FR hard
+   mécanique), one mock exam (physics/sci), one revision sheet (AR, nombres complexes).
+Full file. (Optional extension, only if Months 1–6 are on schedule: LoRA fine-tune the
+local model on (anchor→exercise) pairs — leave a TODO stub, do not implement now.)</pre>
+<div class="cmd">python -m rag.generator</div>
+<div class="out">Exercise ✓ (novelty sim .71, validation PASS, 2 curriculum nodes)
+MockExam physics/sci 2027: 4 exercises · 20 pts · topics from forecast [mécanique .81, nucléaire .74, ...] ✓
+RevisionSheet AR ✓ (past_appearances: 2010, 2013, 2017, 2021)</div>
+<div class="ac"><strong>✅ Gate:</strong> all three product types generate, validated, novelty-guarded, style-matched, forecast-aligned.</div>
+<div class="cb">Say <strong>"Continue"</strong> when a full validated mock exam generates end-to-end.</div>
+</div>
+
+<!-- P13 -->
+<div class="pb" id="p13">
+<div class="ph"><div class="pn">P13</div><div style="font-weight:bold">Figures, Diagrams &amp; Authentic Exam Layout <span class="newbadge">NEW</span></div><span class="cov">item (16)</span></div>
+<p><strong>Context:</strong> Proposal item (16): generate supporting figures and typeset exams that <i>look real</i>. Strategy: <b>templated generation</b> (the proposal explicitly allows "templated or diffusion-based" — templated is deterministic, curriculum-safe, and defensible; diffusion adds risk for zero thesis value here). Per-subject figure templates + a WeasyPrint HTML→PDF layout engine reproducing the official BAC paper structure.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write genmedia/figures.py and genmedia/layout.py.
+
+==== figures.py ====
+A FigureFactory where the LLM chooses a template + parameters (structured output), and
+matplotlib/schemdraw renders deterministically:
+- math: function_curve(expr, domain, features_to_mark), geometric_figure(shape, labels),
+  sequence_plot(u_n)
+- physics: circuit(schemdraw: R/L/C/generator layouts), mechanics_diagram(incline,
+  pendulum, projectile with force vectors), waves_plot(y(x,t))
+- chemistry: titration_curve(va, cb...), reaction_energy_profile(Ea, ΔH)
+Function render(figure_spec: dict) -> saves PNG (300 dpi, clean axis style matching
+printed exams) under data/generated/figures/ and returns the path.
+The generator (P12) calls the LLM to emit figure_spec JSON per exercise when the
+statement references a figure ("le circuit ci-contre", "الشكل المقابل").
+
+==== layout.py ====
+render_exam_pdf(mock_exam: MockExam, figures: dict) -> data/generated/pdf/{...}.pdf
+- Jinja2 HTML template reproducing the authentic Algerian BAC layout: official-style
+  header (République Algérienne..., ONEC, session, durée), exercise numbering, points
+  in margins, bilingual support with RTL blocks for Arabic exams, figure placement
+  beside its exercise, page footer.
+- WeasyPrint to PDF (A4, correct margins). Arabic font embedding (e.g., Amiri) — test
+  RTL rendering explicitly.
+- Also render_revision_sheet_pdf(sheet).
+__main__: render one physics mock exam with 2 figures to PDF. Full files.</pre>
+<div class="ib">
+<div class="ih">📋 IMPLEMENTATION GUIDE</div>
+<div class="step"><div class="sn">1</div><div>Open the produced PDF next to a real BAC paper — header, numbering, points-in-margin should visually match. This side-by-side is a thesis figure and a devastating demo moment.</div></div>
+<div class="step"><div class="sn">2</div><div>Test one full Arabic exam PDF — RTL + Amiri font must render (WeasyPrint needs the font installed in the container; add it to the Dockerfile).</div></div>
+<div class="cmd">python -m genmedia.layout</div>
+<div class="out">figures: pendulum_diagram.png, rc_circuit.png rendered ✓
+mock_exam_physics_sci_2027.pdf → 3 pages, authentic header, figures placed, RTL ok ✓</div>
+<div class="ebox">
+<div class="erow"><div class="elbl">❌ WeasyPrint system deps missing</div><div class="flbl">✅ It needs pango/cairo: <code>apt install libpango-1.0-0 libpangocairo-1.0-0</code> (add to Dockerfile too).</div></div>
+<div class="erow"><div class="elbl">❌ Arabic renders as boxes in PDF</div><div class="flbl">✅ Install/embed the Amiri (or Noto Naskh) font and declare it in the template's @font-face.</div></div>
+</div>
+</div>
+<div class="ac"><strong>✅ Gate:</strong> a generated mock exam exists as an authentic-looking PDF with rendered figures, in FR and AR.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the PDF is indistinguishable at a glance from a real paper.</div>
+</div>
+
+<!-- P14 -->
+<div class="pb" id="p14">
+<div class="ph"><div class="pn">P14</div><div style="font-weight:bold">Curriculum Validation Filter <span class="newbadge">NEW</span></div><span class="cov">item (17)</span></div>
+<p><strong>Context:</strong> Proposal item (17): generated content must be automatically validated against curriculum constraints <b>before any user sees it</b>. This filter is also your RQ2 measurement instrument: its rejection statistics for grounded vs ungrounded generation are a results table.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write validation/curriculum_filter.py.
+
+validate(exercise_or_exam, subject, stream) -> ValidationReport
+{passed: bool, checks: [{name, passed, detail}], flagged_content: [], kg_nodes_matched: []}
+
+Checks, in order:
+1. TOPIC-IN-SYLLABUS: kg_builder.in_syllabus(statement, subject, stream) similarity ≥
+   threshold (tune ~0.60); record best node.
+2. STREAM-SCOPE: topic must belong to that stream's syllabus subtree (e.g. équations
+   différentielles must FAIL for experimental_sciences — it's math-stream only).
+3. COMPETENCY ALIGNMENT: exercise bloom_targets ⊆ competencies of matched KG node(s)
+   (warn, not fail, on mismatch — report it).
+4. OUT-OF-SYLLABUS CONCEPT SCAN: LLM check (get_structured_llm) — "list any concept in
+   this exercise absent from these curriculum sections" with the matched sections as
+   context; any hit → fail with the concept named.
+5. SOLVABILITY SANITY: statement provides the data its sub-questions need (LLM check,
+   warn-level).
+For MockExam: validate each exercise + exam-level checks (points sum to header total,
+topic coverage ≥2 distinct topics).
+Also: an ablation utility validate_batch(grounded_dir, ungrounded_dir) that generates
+N=20 exercises WITH grounding and N=20 with a context-free prompt, runs the filter on
+both, and writes data/generated/validation_ablation.csv (pass-rates per check) — this
+is the RQ2 evidence table. Full file + __main__ running a known-good and a deliberately
+out-of-syllabus example.</pre>
+<div class="cmd">python -m validation.curriculum_filter</div>
+<div class="out">In-syllabus exercise → PASS (node: mecanique, sim .78)
+"Transformée de Laplace" exercise → FAIL: out-of-syllabus concept detected ✓
+Ablation: grounded pass-rate 19/20 vs ungrounded 11/20 → validation_ablation.csv (RQ2 evidence)</div>
+<div class="ac"><strong>✅ Gate = Month-5 deliverable:</strong> filter blocks out-of-syllabus content; ablation CSV produced; P12 wired to call it pre-display.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the filter catches planted violations and the RQ2 ablation is saved.</div>
+</div>
+
+<!-- ═══════════ PHASE 5 ═══════════ -->
+<div class="phase-h">PHASE 5 — Explainability <span class="mo">Month 6 · Proposal items (18)–(20)</span></div>
+
+<!-- P15 -->
+<div class="pb" id="p15">
+<div class="ph"><div class="pn">P15</div><div style="font-weight:bold">XAI Layer — Trends, Traces &amp; Confidence <span class="newbadge">NEW</span></div><span class="cov">items (18)–(20)</span></div>
+<p><strong>Context:</strong> The proposal dedicates a whole phase to explainability, favoring <b>interpretable-by-design</b> components over post-hoc explainers. You already generate the raw material: series (P8), decompositions (P9's statistical models), retrieval traces (P11), KG nodes (P6, P14). This prompt packages them into teacher-readable explanation objects the API and UI serve.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write xai/explain.py.
+
+1. explain_forecast(subject, stream, topic) -> ForecastExplanation:
+   {frequency_curve: plotly JSON of the topic's yearly series with the forecast point,
+    contributing_years: [years where it appeared],
+    trend: Prophet/ARIMA decomposition summary (direction, changepoints) reusing the
+    fitted P9 statistical model,
+    gap_analysis: "last appeared {y}, historical gap pattern {…}",
+    confidence: winning model's score + the bootstrap CI from grand_comparison,
+    model_used, plain_language: 2–3 sentence teacher-readable explanation in FR and AR
+    generated from the STRUCTURED evidence above (LLM verbalizes numbers; it must not
+    invent evidence — pass only the computed fields).}
+2. explain_generation(exercise) -> GenerationExplanation:
+   {source_exemplars: the P11/P12 anchor chunks (year, topic, similarity),
+    curriculum_grounding: KG nodes + competencies + source text spans,
+    validation: the P14 report,
+    novelty: similarity score vs anchors,
+    plain_language: 2 sentences.}
+3. Figure helpers: save_forecast_figure(topic) -> PNG (frequency bars + trend line +
+   forecast marker + CI band) — these are thesis Chapter-5 figures AND the UI visuals.
+4. Batch: explain_all_forecasts(subject, stream) → data/forecast/explanations/*.json.
+Design rule from the proposal: expose evidence (curves, years, sources), not raw model
+internals. Full file + __main__ explaining one forecast and one generated exercise.</pre>
+<div class="cmd">python -m xai.explain</div>
+<div class="out">mécanique: appeared 12/17 yrs, last 2024, trend ↑ stable, conf .81 [.72,.88] (M6 hybrid)
+plain (FR): "La mécanique apparaît de façon quasi systématique... " ✓
+plain (AR): "يظهر محور الميكانيك بشكل شبه منتظم..." ✓
+generation trace: 2 exemplars + KG mecanique→3 competencies + validation PASS ✓</div>
+<div class="ac"><strong>✅ Gate:</strong> every forecast and every generated item can produce its explanation object with figure; plain-language text is grounded in computed evidence only.</div>
+<div class="cb">Say <strong>"Continue"</strong> when explanations render for forecasts and generated items.</div>
+</div>
+<!-- ═══════════ PHASE 6 ═══════════ -->
+<div class="phase-h">PHASE 6 — Evaluation <span class="mo">Month 7 · Proposal items (21)–(23)</span></div>
+
+<!-- P16 -->
+<div class="pb compact" id="p16">
+<div class="ph"><div class="pn">P16</div><div style="font-weight:bold">RAGAS + Hallucination Suite <span class="keptbadge">KEPT FROM BLUEPRINT</span></div><span class="cov">strengthens items (17),(22)</span></div>
+<p><strong>Kept in full:</strong> the proposal evaluates generation quality but never measures <i>grounding faithfulness</i> — RAGAS closes that gap and directly evidences RQ2. Unchanged spec: 25-question bilingual eval set (easy/medium/hard/<b>trap</b>), faithfulness + answer-relevancy + context-precision/recall via <b>your</b> provider as judge (never hardcoded OpenAI), custom hallucination protocol on 5 trap questions, results tables + hallucination_report.md, degradation analysis paragraph. Target: faithfulness ≥ 0.85, hallucination ≤ 10%.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write eval/ragas_suite.py + eval/eval_questions.json exactly as previously specified
+(25 bilingual questions incl. 5 trap questions probing out-of-corpus content; RAGAS
+faithfulness/answer_relevancy/context_precision/context_recall wired to
+llm/provider's LLM as judge and e5 embeddings; per-difficulty and per-language
+breakdown tables via rich; trap-question hallucination protocol with structured
+LLM-judge verdicts; outputs data/eval/ragas_results.csv + hallucination_report.md).
+One addition: also evaluate 10 GENERATED exercises' expected_solutions for
+faithfulness against their retrieved contexts (generation-faithfulness table).</pre>
+<div class="cmd">python -m eval.ragas_suite</div>
+<div class="ac"><strong>✅ Gate:</strong> faithfulness table + hallucination % + generation-faithfulness — three thesis tables.</div>
+<div class="cb">Say <strong>"Continue"</strong> when RAGAS results are saved and you can interpret each metric.</div>
+</div>
+
+<!-- P17 -->
+<div class="pb" id="p17">
+<div class="ph"><div class="pn">P17</div><div style="font-weight:bold">Generation Metrics, Expert Blind Review &amp; SUS <span class="newbadge">NEW</span></div><span class="cov">items (21)–(23)</span></div>
+<p><strong>Context:</strong> The proposal's evaluation triangle: automatic metrics (BLEU/ROUGE/BERTScore + LLM-as-judge), <b>expert blind review with an indistinguishability test</b>, and an <b>SUS usability study</b>. This prompt builds the tooling AND the human-study materials; you recruit 2–4 teachers (your supervisors can help) and ~8–10 students.</p>
+<div class="warn"><b>Honest metric note (put this in the thesis):</b> BLEU/ROUGE reward overlap with references — but your generator is <i>supposed</i> to be novel. Report them as style/structure similarity vs topic-matched real questions with that caveat, lean on BERTScore (semantic), and let the expert review carry the validity claim. Committees respect this nuance; blind metric worship gets punished.</div>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write eval/gen_metrics.py + eval/human_eval/ materials.
+
+==== gen_metrics.py ====
+1. Corpus: for each of 20 generated exercises (from P14's grounded batch), pick 3
+   topic-matched REAL questions (same subject+topic, test years) as references.
+2. Metrics per item + aggregate: sacreBLEU, ROUGE-L, BERTScore
+   (bert-base-multilingual), reported per language.
+3. LLM-as-judge rubric (structured output, temperature 0, judge = current provider):
+   relevance_to_topic, difficulty_match, curriculum_alignment, clarity,
+   style_authenticity — each 1–5 with one-line justification; run each item TWICE and
+   report agreement; save gen_metrics.csv + judge_scores.csv.
+
+==== human_eval materials ====
+4. Expert blind review pack generator: build_review_pack(subject, n_real=10, n_gen=10)
+   → shuffled PDF (via genmedia.layout) where each item is anonymized (no year/labels),
+   plus expert_rating_sheet.csv template: item_id | relevance 1-5 | difficulty 1-5 |
+   curriculum_alignment 1-5 | clarity 1-5 | is_authentic? (real/generated guess).
+   Answer key saved separately (data/eval/human_eval/key.json).
+5. Analysis script analyze_expert.py: mean ratings real-vs-generated per dimension,
+   INDISTINGUISHABILITY: expert guess accuracy vs 50% chance (binomial test),
+   inter-rater agreement (Fleiss' kappa if ≥3 raters, Cohen's if 2).
+6. SUS: sus_form.md (the standard 10 items, FR translation included) +
+   analyze_sus.py → SUS score 0–100 with the Bangor adjective scale interpretation.
+Full files.</pre>
+<div class="ib">
+<div class="ih">📋 IMPLEMENTATION GUIDE — running the human study</div>
+<div class="step"><div class="sn">1</div><div>Generate the review pack for 2 subjects. Ask Dr. Lahiani &amp; Dr. Mezzi to help recruit 2–4 subject teachers; each needs ~40 minutes. This is the single highest-credibility result in the thesis — schedule it early in Month 7, teachers are slow to return sheets.</div></div>
+<div class="step"><div class="sn">2</div><div>SUS: 8–10 students use the platform for 15 minutes (give 3 tasks: ask a question, view a forecast + its explanation, generate a revision sheet), then fill the form.</div></div>
+<div class="step"><div class="sn">3</div><div>If experts beat 50% guessing significantly — report by how much and analyze <i>which cues</i> gave generated items away (goldmine discussion section). Indistinguishability is the aspiration, honesty is the requirement.</div></div>
+<div class="cmd">python -m eval.gen_metrics && python eval/human_eval/build_review_pack.py --subject physics_chemistry</div>
+<div class="out">BERTScore F1: .84 (FR) / .81 (AR) | ROUGE-L .31 (expected-low: novel content) 
+LLM-judge: curriculum_alignment 4.4/5, style_authenticity 4.1/5 (run-agreement .88)
+review_pack_physics.pdf: 20 items shuffled ✓ | key saved | SUS materials ready</div>
+</div>
+<div class="ac"><strong>✅ Gate = Month-7 deliverable:</strong> gen_metrics.csv + judge_scores.csv + completed expert sheets analyzed (means, kappa, indistinguishability p-value) + SUS score.</div>
+<div class="cb">Say <strong>"Continue"</strong> when automatic metrics are computed and the human-study pack is printed.</div>
+</div>
+
+<!-- ═══════════ PLATFORM ═══════════ -->
+<div class="phase-h">PLATFORM &amp; DELIVERY <span class="mo">Months 6–8 · startup-oriented prototype objective</span></div>
+
+<!-- P18 -->
+<div class="pb compact" id="p18">
+<div class="ph"><div class="pn">P18</div><div style="font-weight:bold">FastAPI Backend</div><span class="cov">prototype objective</span></div>
+<p><strong>Deltas vs ULTIMATE:</strong> same production skeleton (lifespan singletons, CORS, request-ID logging, Redis rate limit 30/min, global exception handler, /health with provider+qdrant+redis checks) — endpoints updated to the merged system.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write api/main.py + api/routers/{predictions,qa,exercises,exams,explain}.py as before,
+with this endpoint set:
+GET  /health
+GET  /predictions/{subject}?stream=&year=2027       (from predictions_2027.json)
+GET  /predictions/{subject}/{topic}/explanation     (xai.explain_forecast)
+POST /qa {question, subject, stream, language?}     (returns answer + trace)
+POST /exercises/generate {subject, stream, topic, difficulty, language}
+POST /exams/mock {subject, stream}                  (returns MockExam + validation + pdf_url)
+POST /sheets/revision {subject, stream, topic}
+POST /validate {exercise}                            (P14 filter as a service)
+GET  /generated/pdf/{filename}                       (serves data/generated/pdf)
+All request/response models in api/schemas.py. Rate limit + logging as previously
+specified. Full files.</pre>
+<div class="cmd">uvicorn api.main:app --reload --port 8000   # then open /docs and test each route</div>
+<div class="ac"><strong>✅ Gate:</strong> /docs shows all routes green; mock-exam route returns a servable PDF URL.</div>
+<div class="cb">Say <strong>"Continue"</strong> when every endpoint answers correctly via /docs.</div>
+</div>
+
+<!-- P19 -->
+<div class="pb compact" id="p19">
+<div class="ph"><div class="pn">P19</div><div style="font-weight:bold">Streamlit Frontend — Six Tabs</div><span class="cov">prototype objective + item (20) visuals</span></div>
+<p><strong>Deltas vs ULTIMATE:</strong> same RTL-aware shell (sidebar stream/subject/language, session state, API client with spinners/errors) — now <b>six tabs</b>, two of them new for forecasting-with-XAI and mock exams.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write frontend/app.py: six tabs.
+1. 🔮 Forecast Explorer: ranked 2027 topics (score bars) + per-topic EXPLANATION panel:
+   the P15 frequency figure, contributing years, trend text, confidence ±CI, plain-
+   language FR/AR toggle. (This tab operationalizes proposal items 18–20.)
+2. 💬 Tutor Q&A: chat UI; answers show exam-year citations AND curriculum-unit chips;
+   expandable trace (sources + KG competencies).
+3. ✏️ Exercise Trainer: topic/difficulty pickers (topics ordered by forecast), show/
+   hide solution + mark scheme, validation badge, novelty score.
+4. 📄 Mock Exam: one click → full validated exam; render summary + DOWNLOAD PDF button
+   (authentic layout from P13); show validation report.
+5. 📚 Revision Sheets: pick topic → sheet with past-appearance timeline.
+6. ℹ️ About: project title, supervisors, architecture diagram, metrics summary
+   (reads grand_comparison.csv + ragas_results.csv live).
+RTL CSS when Arabic. Full file.</pre>
+<div class="cmd">streamlit run frontend/app.py   # API must be up</div>
+<div class="ac"><strong>✅ Gate = Month-6 deliverable:</strong> end-to-end demo path works on screen: forecast → explanation → mock exam → PDF download.</div>
+<div class="cb">Say <strong>"Continue"</strong> when the six-tab demo runs end-to-end.</div>
+</div>
+
+<!-- P20 -->
+<div class="pb compact" id="p20">
+<div class="ph"><div class="pn">P20</div><div style="font-weight:bold">Docker, CI/CD &amp; Cloud Deployment <span class="keptbadge">KEPT FROM BLUEPRINT</span></div><span class="cov">deployment-plan objective</span></div>
+<p><strong>Kept in full, two additions:</strong> the previous spec stands (multi-stage Dockerfile, compose with qdrant/redis/api/frontend + healthchecks, GitHub Actions ruff→pytest→build, deploy notes for a VPS, Caddy HTTPS, backup script, /metrics) — add <b>WeasyPrint system deps + Amiri font</b> to the image, and mount <code>data/generated/pdf</code> as a served volume.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Write the Dockerfile (multi-stage, python:3.10-slim, non-root, healthcheck, plus
+libpango-1.0-0 libpangocairo-1.0-0 and the Amiri font for WeasyPrint), full
+docker-compose.yml (qdrant, redis, api, frontend; volumes incl. generated PDFs;
+depends_on healthchecks), .github/workflows/ci.yml (ruff + pytest + docker build,
+main-branch push), Makefile (up/down/logs/test/ingest/forecast/eval), Caddyfile for
+HTTPS reverse proxy, deploy.md for a small VPS, and scripts/backup.sh (qdrant snapshot
++ data/ tarball). Full files as previously specified.</pre>
+<div class="cmd">docker compose up --build   # full stack test before any cloud step</div>
+<div class="ac"><strong>✅ Gate:</strong> whole stack healthy in Docker; CI green; (Month 8) public HTTPS URL live.</div>
+<div class="cb">Say <strong>"Continue"</strong> when compose is green locally.</div>
+</div>
+
+<!-- P21 -->
+<div class="pb" id="p21">
+<div class="ph"><div class="pn">P21</div><div style="font-weight:bold">Thesis + Paper + Startup Kit <span class="newbadge">UPGRADED</span></div><span class="cov">Month 8 deliverables</span></div>
+<p><strong>Context:</strong> Month 8 = thesis draft + <b>submitted paper</b> + <b>startup demo/pitch</b>. The chapter map now follows the supervisors' phase structure, integrates their 26 references, and adds the paper + pitch assets.</p>
+<h4>Copy this prompt to your AI assistant:</h4>
+<pre>Create docs/thesis/ writing kit for the officially titled project
+"A Hybrid NLP, Time-Series Forecasting and Generative AI Framework for Educational
+Content Prediction and Automatic Exam Generation" (Univ. Blida 1, supervisors
+Dr. N. Lahiani & Dr. M. Mezzi).
+
+1. outline.md — chapters mirroring the proposal's phases:
+   Ch1 Introduction (context, the 3 gaps from the proposal, RQ1–RQ3, contributions)
+   Ch2 State of the Art — FOUR STRANDS exactly as the proposal frames them: AQG,
+       educational trend mining, LLMs for education, TS forecasting + XAI
+       (+ RAG, + KGs in education). For each: what it establishes, the gap left open.
+   Ch3 Data & Corpus (Phase 1: sources incl. curricula/examiner reports, OCR, corpus
+       stats table, year split, ethics/data-governance note: public documents,
+       no personal data, source attribution)
+   Ch4 Methodology (Phases 2–5: BERTopic+validation, KG construction, the 8-contender
+       forecasting protocol, grounded generation + figures/layout, validation filter,
+       XAI design) — with the system architecture figure
+   Ch5 Results (grand comparison ±CI, topic/coverage tables, RAGAS + hallucination,
+       BLEU/BERTScore + judge, validation ablation (RQ2), expert review +
+       indistinguishability + kappa, SUS (RQ3))
+   Ch6 Discussion (why the winner won; deep-models-under-17-points analysis; expert
+       cues; limitations: OCR noise, small test window, LLM-judge bias; threats to
+       validity) — Ch7 Conclusion & Perspectives (fine-tuning, more streams, startup).
+   Map EVERY figure/table to its generating artifact file.
+2. references.md — the proposal's 26 references organized per Ch2 strand, BibTeX
+   entries, + slots for tools cited (BERTopic, darts, Prophet, RAGAS, Qdrant, e5).
+3. paper/ — a 6–8 page paper skeleton (Intro, Related, Method, Experiments, Results,
+   Conclusion) distilled from the thesis, targeting an educational-AI venue
+   (e.g., AIED/EDM workshop or a national conference) — draft the abstract fully.
+4. startup/ — pitch_deck_outline.md (10 slides: problem→demo→market: BAC candidates/
+   year→model→roadmap), demo_script.md (7-minute live path: forecast+XAI → generate →
+   validated PDF → metrics tab), data_governance.md (public-source policy, user data
+   plan, hosting).
+5. defense_qa.md — the previous bank PLUS the new hard questions (see guide section).
+Full contents for every file.</pre>
+<div class="ac"><strong>✅ Gate = Month-8 deliverables:</strong> thesis draft assembled chapter-by-chapter from real artifacts; paper abstract done; pitch + demo script rehearsed; public URL in the slides.</div>
+<div class="cb">This is the final prompt — after it, you write, submit, and rehearse.</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ DEFENSE QA ADDITIONS ═══════════ -->
+<h2 id="qa">Defense Q&amp;A — New Hard Questions From the Merged Scope</h2>
+<table>
+<tr><th>Committee question</th><th>Your answer (grounded in artifacts)</th></tr>
+<tr><td>"You trained LSTMs and Transformers on ~13 data points? Seriously?"</td><td>"Per-series, that would indeed be hopeless — which is why the deep contenders are <b>global models</b> trained jointly across all topic series with the topic as a static covariate, following DeepAR/N-BEATS practice from the proposal's own references. The grand comparison then measures honestly whether even pooled deep models beat statistical ones under this short regime — [state your result]. That comparison, and the finding that they don't, <i>is</i> RQ1."</td></tr>
+<tr><td>"How did you handle the COVID years? Didn't they distort your frequencies?"</td><td>"That's exactly why I built a three-era model. 2020–2022 were subject to عتبة الدروس — the Ministry removed units from exam scope. Feeding those raw would teach the model a false 'this topic is dying' trend. So for topics that were officially cut, I mark those cells <b>censored, not zero</b>, using the Ministry's own reduced-programme documents; I never backtest on pandemic years; and I recency-weight toward the modern 2023–2026 regime I'm actually predicting. Table 3.x shows the regime split and the censored cells."</td></tr>
+<tr><td>"Isn't predicting that mechanics or functions appear every year trivial?"</td><td>"At coarse granularity, yes — and my AlwaysTopK baseline captures exactly that, which is why it's hard to beat and why beating it matters. The non-trivial signal is at finer grain: which sub-topic or question-type rotates in. That's where the GBM/hybrid earns its margin over the naive baseline — [state the sub-topic-level nDCG gap]."</td></tr>
+<tr><td>"Why only experimental sciences? Isn't one stream too narrow?"</td><td>"The method is validated across three very different subjects within the stream — biology (SVT), physics, and mathematics — which tests domain-generalization more meaningfully than adding a second stream of similar subjects would. It also let me go deeper on the highest-coefficient, hardest subject, SVT, rather than spreading thin. Extending to other streams is one config change — it's in the perspectives chapter."</td></tr>
+<tr><td>"Why BERTopic when you already had curriculum keyword lists?"</td><td>"Keywords assume the taxonomy; BERTopic discovers structure and the curriculum validates it — coverage and purity are measured (Table X). It also found things keywords can't: recycled questions across years and merged-topic phenomena like coniques folding into geometry."</td></tr>
+<tr><td>"What does the knowledge graph actually buy you?"</td><td>"Three functioning subsystems consume it: RAG grounding retrieves curriculum nodes, the validation filter's stream-scope and competency checks traverse it, and every generated item's XAI trace terminates in a KG node with a source span. Remove the KG and items (14), (17), (19) of the methodology lose their mechanism."</td></tr>
+<tr><td>"Your BLEU is low."</td><td>"By design — the generator must produce <i>novel</i> items, so n-gram overlap with references is bounded; we report BLEU/ROUGE as style-similarity indicators with that caveat, use BERTScore for semantic adequacy, and rest the validity claim on the blind expert review, where [state ratings + indistinguishability result]."</td></tr>
+<tr><td>"How do I know the LLM didn't hallucinate the explanation texts?"</td><td>"The XAI plain-language generator receives only computed evidence fields — the series, trend, confidence — and verbalizes them; it cannot introduce facts. Grounding faithfulness of the RAG answers themselves is measured separately: RAGAS faithfulness [X], trap-question hallucination rate [Y]."</td></tr>
+<tr><td>"Could a teacher trust this tomorrow?"</td><td>"That's exactly what Phase 6 tested: experts rated curriculum alignment [X]/5 with κ=[…] agreement, the validation filter blocks out-of-syllabus output pre-display (ablation: grounded [A]% vs ungrounded [B]% pass), and every prediction ships with its evidence. Trust is the system's design goal, per the proposal's opacity gap."</td></tr>
+</table>
+
+<!-- ═══════════ CLOSING ═══════════ -->
+<div class="final">
+<h3 style="color:var(--p)">🎯 This Is the Terminal Planning Artifact</h3>
+<p style="max-width:760px;margin:8px auto">Scope locked: <b>experimental sciences, 2008–2026, both sessions, three-era pandemic-aware, 2026 sealed</b>. The coverage matrix proves every proposal item (1)–(23) has a prompt. The plan is complete. The next artifact is <code>bac-genius/</code> on your disk — download the folder (P2), build the manifest, and green the first gate.</p>
+<div class="kpirow">
+<div class="kpi"><b>1</b><span>Stream (علوم تجريبية)</span></div>
+<div class="kpi"><b>3</b><span>Subjects · SVT/Phys/Math</span></div>
+<div class="kpi"><b>21</b><span>Engineering Prompts</span></div>
+<div class="kpi"><b>8</b><span>Forecasting Contenders</span></div>
+<div class="kpi"><b>23/23</b><span>Proposal Items Covered</span></div>
+<div class="kpi"><b>2026</b><span>Sealed Real-World Test</span></div>
+</div>
+<p style="opacity:.6;font-size:.85em;margin-top:20px">BAC Genius — Master Project FINAL (v2, pandemic-aware) · official proposal (Dr. N. Lahiani &amp; Dr. M. Mezzi) × ULTIMATE Blueprint<br>University of Blida 1 · Computer Science Department · Data Science &amp; NLP</p>
+</div>
+
+</div><!-- end container -->
+</body>
+</html>

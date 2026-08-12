@@ -1,0 +1,66 @@
+# bac-genius production dependencies
+# Target runtime: Python 3.10
+# Pin policy: exact versions for reproducible builds; bump deliberately via PR.
+
+# --- Web API -----------------------------------------------------------------
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+
+# --- LLM orchestration / RAG ---------------------------------------------------
+langchain==0.3.7
+langchain-community==0.3.5
+langchain-openai==0.2.5
+langchain-google-genai==2.0.4
+langchain-ollama==0.2.0
+qdrant-client==1.11.3
+sentence-transformers==3.2.1
+redis==5.1.1
+
+# --- Data / time-series forecasting -------------------------------------------
+pandas==2.2.3
+numpy==1.26.4
+scikit-learn==1.5.2
+statsmodels==0.14.4
+prophet==1.1.6
+darts==0.30.0
+torch==2.4.1
+
+# --- NLP / topic modeling -------------------------------------------------------
+bertopic==0.16.4
+gensim==4.3.3
+spacy==3.7.5
+hdbscan==0.8.38.post2
+umap-learn==0.5.6
+
+# --- Knowledge graph / visualization --------------------------------------------
+networkx==3.3
+pyvis==0.3.2
+matplotlib==3.9.2
+seaborn==0.13.2
+plotly==5.24.1
+schemdraw==0.19
+
+# --- Document generation / OCR ---------------------------------------------------
+jinja2==3.1.4
+weasyprint==62.3
+pdfplumber==0.11.4
+paddleocr==2.9.1
+paddlepaddle==2.6.2
+
+# --- Scraping / HTTP / utils ------------------------------------------------------
+beautifulsoup4==4.12.3
+requests==2.32.3
+tenacity==9.0.0
+rich==13.9.2
+streamlit==1.39.0
+
+# --- Evaluation -----------------------------------------------------------------
+ragas==0.2.6
+datasets==3.0.1
+evaluate==0.4.3
+sacrebleu==2.4.3
+rouge-score==0.1.2
+bert-score==0.3.13
