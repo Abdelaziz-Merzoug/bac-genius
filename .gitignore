@@ -1,22 +1,40 @@
-# Environment / secrets
+# ── Secrets ──────────────────────────────────────────────────────────────
 .env
 
-# Data artifacts (raw scraped/ingested content is not versioned)
+# ── Data artifacts (large binaries and generated files; not versioned) ───
 data/raw/*
 !data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/features/*
+!data/features/.gitkeep
+data/kg/*
+!data/kg/.gitkeep
+data/series/*
+!data/series/.gitkeep
+data/forecast/*
+!data/forecast/.gitkeep
+data/generated/*
+!data/generated/.gitkeep
 
-# Python
+# ── Python ────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
 *.pkl
+*.pt
+*.pth
 .venv/
 venv/
 *.egg-info/
 build/
 dist/
 
-# Tooling / IDE
+# ── Node ──────────────────────────────────────────────────────────────────
+node_modules/
+package-lock.json
+
+# ── Tooling / IDE ─────────────────────────────────────────────────────────
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -24,6 +42,6 @@ dist/
 .vscode/
 .idea/
 
-# OS
+# ── OS ────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
