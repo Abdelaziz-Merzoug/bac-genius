@@ -1,0 +1,22 @@
+{
+ "files": 84,
+ "skipped_combined": 0,
+ "sections": 175,
+ "whole_document": [],
+ "section_sets": {
+  "exam:text+comprehension+production": 42,
+  "solution:comprehension": 28,
+  "solution:production": 7,
+  "solution:comprehension+production": 7
+ },
+ "by_doc_type": {
+  "exam": 126,
+  "solution": 49
+ },
+ "notes": {
+  "bac_francais_2008_sujet2": [
+   "dropped leading production section (tail of the other subject) p[1, 2]",
+   "recovered passage from the tail block"
+  ]
+ }
+}

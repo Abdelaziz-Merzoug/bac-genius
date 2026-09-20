@@ -1,0 +1,19 @@
+{
+ "files": 84,
+ "skipped_combined": 0,
+ "sections": 241,
+ "whole_document": [],
+ "section_sets": {
+  "exam:reading+exploration+writing": 42,
+  "solution:reading+exploration+writing": 33,
+  "solution:reading+writing": 5,
+  "solution:reading": 2,
+  "solution:reading+exploration": 1,
+  "solution:exploration+writing": 1
+ },
+ "by_doc_type": {
+  "exam": 126,
+  "solution": 115
+ },
+ "notes": {}
+}

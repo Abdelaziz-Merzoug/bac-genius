@@ -1,0 +1,24 @@
+{
+ "files": 80,
+ "skipped_combined": 0,
+ "sections": 153,
+ "whole_document": [
+  "bac_islamic_2010_sujet1_solution",
+  "bac_islamic_2010_sujet2_solution",
+  "bac_islamic_2011_sujet1_solution",
+  "bac_islamic_2011_sujet2_solution",
+  "bac_islamic_2015_sujet1_solution",
+  "bac_islamic_2015_sujet2_solution"
+ ],
+ "section_sets": {
+  "exam:part1+part2": 40,
+  "solution:part1+part2": 33,
+  "solution:whole": 6,
+  "solution:part1": 1
+ },
+ "by_doc_type": {
+  "exam": 80,
+  "solution": 73
+ },
+ "notes": {}
+}

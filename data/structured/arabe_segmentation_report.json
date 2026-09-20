@@ -1,0 +1,26 @@
+{
+ "files": 80,
+ "skipped_combined": 0,
+ "sections": 195,
+ "whole_document": [
+  "bac_arabe_2008_sujet2_solution",
+  "bac_arabe_2010_sujet1_solution",
+  "bac_arabe_2018_sujet1_solution",
+  "bac_arabe_2024_sujet1_solution"
+ ],
+ "section_sets": {
+  "exam:text+fikri+lughawi": 40,
+  "solution:fikri+lughawi": 35,
+  "solution:whole": 4,
+  "solution:fikri": 1
+ },
+ "by_doc_type": {
+  "exam": 120,
+  "solution": 75
+ },
+ "notes": {
+  "bac_arabe_2008_sujet2": [
+   "dropped leading lughawi section (tail of the other subject) p[1]"
+  ]
+ }
+}

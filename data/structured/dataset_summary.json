@@ -1,10 +1,14 @@
 {
  "physic": {
+  "unit": "exercise",
   "exam_files": 42,
-  "exam_exercises": 166,
+  "exam_units": 166,
   "paired_with_solution": 166,
   "unpaired": [],
-  "leftover_solution_exercises": [],
+  "solution_match": {
+   "unit": 166
+  },
+  "leftover_solution_units": [],
   "years": [
    2008,
    2009,
@@ -41,11 +45,15 @@
   }
  },
  "math": {
+  "unit": "exercise",
   "exam_files": 42,
-  "exam_exercises": 167,
+  "exam_units": 167,
   "paired_with_solution": 167,
   "unpaired": [],
-  "leftover_solution_exercises": [],
+  "solution_match": {
+   "unit": 167
+  },
+  "leftover_solution_units": [],
   "years": [
    2008,
    2009,
@@ -87,11 +95,15 @@
   }
  },
  "svt": {
+  "unit": "exercise",
   "exam_files": 42,
-  "exam_exercises": 126,
+  "exam_units": 126,
   "paired_with_solution": 126,
   "unpaired": [],
-  "leftover_solution_exercises": [],
+  "solution_match": {
+   "unit": 126
+  },
+  "leftover_solution_units": [],
   "years": [
    2008,
    2009,
@@ -130,6 +142,184 @@
    "8.0": 31,
    "8.5": 1,
    "9.0": 2
+  }
+ },
+ "arabe": {
+  "unit": "section",
+  "exam_files": 40,
+  "exam_units": 120,
+  "paired_with_solution": 80,
+  "unpaired": [],
+  "solution_match": {
+   "none_expected": 40,
+   "unit": 71,
+   "document_fallback": 9
+  },
+  "leftover_solution_units": [],
+  "years": [
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "exercises_with_items": 83,
+  "avg_items": 3.88,
+  "exercises_with_figure_blocks": 0,
+  "figure_blocks": 0,
+  "exercises_with_captions": 0,
+  "avg_exam_chars": 862,
+  "points_distribution": {
+   "8.0": 40,
+   "12.0": 40,
+   "null": 40
+  }
+ },
+ "islamic": {
+  "unit": "section",
+  "exam_files": 40,
+  "exam_units": 80,
+  "paired_with_solution": 80,
+  "unpaired": [],
+  "solution_match": {
+   "unit": 67,
+   "document_fallback": 13
+  },
+  "leftover_solution_units": [],
+  "years": [
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "exercises_with_items": 57,
+  "avg_items": 2.88,
+  "exercises_with_figure_blocks": 0,
+  "figure_blocks": 0,
+  "exercises_with_captions": 0,
+  "avg_exam_chars": 696,
+  "points_distribution": {
+   "6.0": 18,
+   "8.0": 22,
+   "12.0": 22,
+   "14.0": 18
+  }
+ },
+ "francais": {
+  "unit": "section",
+  "exam_files": 42,
+  "exam_units": 126,
+  "paired_with_solution": 84,
+  "unpaired": [],
+  "solution_match": {
+   "none_expected": 42,
+   "unit": 49,
+   "document_fallback": 35
+  },
+  "leftover_solution_units": [],
+  "years": [
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "exercises_with_items": 72,
+  "avg_items": 3.1,
+  "exercises_with_figure_blocks": 0,
+  "figure_blocks": 0,
+  "exercises_with_captions": 0,
+  "avg_exam_chars": 1707,
+  "points_distribution": {
+   "6.0": 1,
+   "14.0": 42,
+   "null": 83
+  }
+ },
+ "english": {
+  "unit": "section",
+  "exam_files": 42,
+  "exam_units": 126,
+  "paired_with_solution": 126,
+  "unpaired": [],
+  "solution_match": {
+   "unit": 115,
+   "document_fallback": 11
+  },
+  "leftover_solution_units": [],
+  "years": [
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "exercises_with_items": 69,
+  "avg_items": 2.38,
+  "exercises_with_figure_blocks": 0,
+  "figure_blocks": 0,
+  "exercises_with_captions": 0,
+  "avg_exam_chars": 1450,
+  "points_distribution": {
+   "7.0": 29,
+   "null": 97
   }
  }
 }
