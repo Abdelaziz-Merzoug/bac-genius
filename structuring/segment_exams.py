@@ -78,6 +78,7 @@ def item_label(line):
     m = ITEM_RX.match(t) or ITEM_RTL_RX.match(t)
     if not m: return None
     if t.startswith("(") and len(re.findall(r"\(\s*[1-9]\s*\)", t)) >= 2: return None   # "(1) … (2) …" option list
+    if re.match(r"^\d+-[ء-ي]", t) and re.search(r"[ء-ي]-\d+-", t): return None  # "3-ميثيل بوتان-1-أول"
     g = m.groupdict()
     return ar_digits(g.get("label") or g.get("label2") or g.get("label3"))
 def leading(label): return int(label.split(".")[0])
@@ -86,8 +87,9 @@ def virtual_lines(lines):
     """Answer keys put a whole exercise in one markdown-table cell separated by <br>: split table
     rows into cells and cells into <br> fragments so each answer step becomes its own line."""
     for l in lines:
-        if "<br" in l or l.lstrip().startswith("|"):
-            cells = re.split(r"(?<!\\)\|", l) if l.lstrip().startswith("|") else [l]
+        if "<br" in l or l.lstrip().startswith("|") or " | " in l:
+            # table rows: split at pipes (a row may lose its leading pipe: "$2 \times 0,25$ | I) 1) ...")
+            cells = re.split(r"(?<!\\)\|", l) if l.lstrip().startswith("|") else re.split(r"\s\|\s", l)
             for c in cells:
                 for frag in re.split(r"<br\s*/?>", c):
                     if frag.strip() and not re.fullmatch(r"[\s:\-]+", frag): yield frag.strip()

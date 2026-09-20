@@ -41,6 +41,36 @@ def variants(label):
     so a label is compared in both orientations."""
     return {label, ".".join(reversed(label.split(".")))}
 
+def canonicalize(items):
+    """Hierarchical labels are RTL-flipped in many 2018+ files (2.1, 2.2, 2.3 read as 1.2, 2.2, 3.2).
+    Decide per unit: if consecutive multi-part labels change mostly in their FIRST component, the
+    orientation is flipped -> reverse every multi-part label. Returns a new list of dicts."""
+    multi = [it["label"] for it in items if it["label"] and "." in it["label"]]
+    first, last = 0, 0
+    for a, b in zip(multi, multi[1:]):
+        pa, pb = a.split("."), b.split(".")
+        if len(pa) == len(pb):
+            first += pa[0] != pb[0]; last += pa[-1] != pb[-1]
+    flip = first > last
+    out = []
+    for it in items:
+        lab = ".".join(reversed(it["label"].split("."))) if flip and it["label"] and "." in it["label"] else it["label"]
+        out.append({**it, "label": lab, "label_raw": it["label"]})
+    return out
+
+def is_parent(i, labels):
+    """A parent stub is immediately followed by its own children (1. … then 1.1, 1.2 …)."""
+    return i + 1 < len(labels) and labels[i + 1].startswith(labels[i] + ".")
+
+MARK_RX_CACHE = {}
+def block_mentions(label, text):
+    """Does the block carry a marker for this label somewhere inside (e.g. '5. -' glued under 4.)?"""
+    rx = MARK_RX_CACHE.get(label)
+    if rx is None:
+        alts = "|".join(re.escape(v) for v in variants(label))
+        rx = MARK_RX_CACHE[label] = re.compile(r"(?:^|[\s|(])(?:" + alts + r")\s*[\.\)\-–/:]")
+    return bool(rx.search(text))
+
 def label_agree(q, b):
     """1 = same label (either orientation); 0.5 = one is a prefix of the other (2 vs 2.2); 0 otherwise."""
     if not q or not b: return 0.0
@@ -116,29 +146,57 @@ def align_unit(questions, blocks, E):
     """Monotonic DP: maximise sum of scores, each question matched to a later block than the previous one
     or left unmatched (score 0). Returns list of (block_idx|None, evidence)."""
     if not questions or not blocks: return [(None, None)] * len(questions)
+    qlabels = [q["label"] for q in questions]
+    qlabel_variants = set().union(*(variants(l) for l in qlabels))
     qc = [clean(q["text"]) or q["text"] for q in questions]
     qv = E.encode(qc); bv = E.encode([b["clean"] for b in blocks])
     emb = qv @ bv.T
     n, m = len(questions), len(blocks)
-    S = np.zeros((n, m)); EV = {}
+    S = np.zeros((n, m)); EV = {}; REUSABLE = np.zeros((n, m), dtype=bool)
+    LEX = np.array([[lexical(qc[i], b["clean"]) for b in blocks] for i in range(n)])
+    LAB = np.array([[label_agree(q["label"], b["label"]) for b in blocks] for q in questions])
+    SEM = W_EMB * np.maximum(emb, 0) + W_LEX * LEX          # meaning only (no numbering)
+    # MEANING FIRST. Numbering is trusted for a question only when its label-agreeing block is also among
+    # the top-2 blocks by meaning; otherwise the key is mis-numbered here and the label weight is discounted.
+    # a block is "owned" by the question whose label it carries only if the meaning supports that pairing
+    owner_sem = {}
+    for j, b in enumerate(blocks):
+        if not b["label"]: continue
+        for i in range(n):
+            if LAB[i, j] == 1.0 and SEM[i, j] >= 0.30: owner_sem[j] = max(owner_sem.get(j, 0), SEM[i, j])
+    trust = np.ones(n)
+    for i in range(n):
+        agree = [j for j in range(m) if LAB[i, j] == 1.0]
+        if not agree: continue
+        best_lab = max(SEM[i, j] for j in agree)
+        # a clearly better block by meaning that nobody else owns => the numbering is unreliable for this question
+        rivals = [SEM[i, j] for j in range(m) if LAB[i, j] < 1.0 and not (j in owner_sem and owner_sem[j] >= SEM[i, j])]
+        if rivals and max(rivals) - best_lab >= 0.15 and max(rivals) >= 0.40: trust[i] = 0.3
     for i, q in enumerate(questions):
         for j, b in enumerate(blocks):
-            lex = lexical(qc[i], b["clean"]); lab = label_agree(q["label"], b["label"])
-            s = W_EMB * max(emb[i, j], 0) + W_LEX * lex + W_LAB * lab
-            # below threshold = "no match"; a match that contradicts the numbering needs stronger evidence
-            ok = s >= T_GOOD and emb[i, j] >= MIN_EMB and (lab > 0 or (s >= T_CONTRA and lex >= 0.25))
+            lex, lab = LEX[i, j], LAB[i, j]
+            s = SEM[i, j] + W_LAB * lab * trust[i]
+            # below threshold = "no match"; a match that contradicts the numbering needs stronger evidence,
+            # and may not take a block that meaning-and-number both assign to another question
+            contra_ok = s >= T_CONTRA and lex >= 0.25 and not (j in owner_sem and owner_sem[j] >= SEM[i, j])
+            ok = s >= T_GOOD and emb[i, j] >= MIN_EMB and (lab > 0 or contra_ok)
             # exact numbering + monotonic position + weak-but-positive semantics (drawings, tables, one-word answers)
-            ok = ok or (lab == 1.0 and s >= T_LABEL and emb[i, j] >= MIN_EMB_LABEL)
+            # exact numbering + trusted + weak-but-positive semantics (drawings, tables, one-word answers)
+            ok = ok or (lab == 1.0 and trust[i] == 1.0 and s >= T_LABEL and emb[i, j] >= MIN_EMB_LABEL)
             S[i, j] = s if ok else 0.0
-            EV[(i, j)] = {"emb": round(float(emb[i, j]), 3), "lex": round(lex, 3), "label_agree": lab, "score": round(float(s), 3)}
-    # dp[i][j]: best total for questions[:i] using blocks with index <= j (non-decreasing: a key block that
-    # holds two consecutive answers — e.g. a table for Q2 glued under Q1 — may serve both questions)
+            REUSABLE[i, j] = block_mentions(q["label"], b["text"])   # the block visibly holds this question's answer too
+            EV[(i, j)] = {"emb": round(float(emb[i, j]), 3), "lex": round(float(lex), 3), "label_agree": float(lab),
+                          "label_trust": float(trust[i]), "score": round(float(s), 3)}
+    # dp[i][j]: best total for questions[:i] using blocks with index <= j. A block may serve two consecutive
+    # questions only when it visibly carries the second question's marker (answer glued under the previous one).
     dp = np.zeros((n + 1, m + 1)); choice = {}
     for i in range(1, n + 1):
         for j in range(0, m + 1):
             best, arg = dp[i - 1][j], None                       # question i-1 unmatched
             for k in range(j):                                   # matched to block k, previous ones <= k
-                v = dp[i - 1][k + 1] + S[i - 1, k] - REUSE_PENALTY * (choice.get((i - 1, k + 1)) == k)
+                reused = choice.get((i - 1, k + 1)) == k
+                if reused and not REUSABLE[i - 1, k]: continue
+                v = dp[i - 1][k + 1] + S[i - 1, k] - REUSE_PENALTY * reused
                 if S[i - 1, k] > 0 and v > best: best, arg = v, k
             dp[i][j] = best; choice[(i, j)] = arg
     out, j = [None] * n, m
@@ -161,24 +219,27 @@ def main(subjects):
         stats = Counter(); n_units = 0; recs = []
         for l in open(OUT/f"{subj}_pairs.jsonl", encoding="utf-8"):
             p = json.loads(l); e, s = p["exam"], p["solution"]
-            if p.get("solution_match") == "none_expected": continue
+            if p.get("solution_match") in ("none_expected", "solution_is_exam_copy"): continue
             n_units += 1
             if not e["items"]: stats["units_without_numbered_questions"] += 1; continue
-            blocks = blocks_of(s) if s else []
-            res = align_unit(e["items"], blocks, E)
+            blocks = canonicalize(blocks_of(s)) if s else []
+            items = canonicalize(e["items"])
+            labels = [it["label"] for it in items]
+            # a parent stub ("2. اعتمادا على الشكل:") is context: its answers live in its children 2.1, 2.2 …
+            parents = {i for i in range(len(items)) if is_parent(i, labels)}
+            res = align_unit([it for i, it in enumerate(items) if i not in parents], blocks, E)
+            res_iter = iter(res)
             unit_label = e.get("exercise_label") or e.get("section_label")
-            labels = [it["label"] for it in e["items"]]
-            for it, (k, ev) in zip(e["items"], res):
-                cls = classify(ev); stats["questions"] += 1
-                # a parent stub ("2. اعتمادا على الشكل:") whose answers live in its children 2.1, 2.2 …
-                if cls == "none" and any(l.startswith(it["label"] + ".") for l in labels if l != it["label"]):
-                    cls = "parent_stub"
+            for i, it in enumerate(items):
+                k, ev = (None, None) if i in parents else next(res_iter)
+                cls = "parent_stub" if i in parents else classify(ev); stats["questions"] += 1
                 stats[cls] += 1
                 if ev and ev["label_agree"] == 0: stats["matched_despite_label_mismatch"] += 1
                 if ev and ev["label_agree"] == 1: stats["matched_with_label_agreement"] += 1
                 rec = {"qid": f"{e['id']}__q{it['label']}", "subject": subj, "year": e["year"], "session": e["session"],
                        "sujet": e["sujet"], "unit_id": e["id"], "unit_label": unit_label, "points": e["points"],
-                       "label": it["label"], "question": it["text"], "answer": blocks[k]["text"] if k is not None else None,
+                       "label": it["label"], "label_raw": it["label_raw"], "question": it["text"],
+                       "answer": blocks[k]["text"] if k is not None else None,
                        "answer_label": blocks[k]["label"] if k is not None else None,
                        "match": cls, "evidence": ev, "solution_match": p["solution_match"]}
                 recs.append(rec)

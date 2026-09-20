@@ -5,18 +5,27 @@
 Output: data/structured/{subject}_pairs.jsonl — {pair_id, subject, year, session, sujet, unit fields, points,
         exam: {...record}, solution: {...record}|null}; data/structured/dataset_summary.json
 usage: pair_exam_solution.py [subjects...]"""
-import json, sys
+import json, sys, difflib
 from collections import Counter
 from pathlib import Path
 OUT = Path("C:/Users/samsung/Desktop/bac-genius/data/structured")
+TEXTS = Path("C:/Users/samsung/Desktop/bac-genius/data/processed/texts")
+
+def is_exam_duplicate(subj, stem):
+    """Some '_solution' uploads are just a second copy of the exam (math 2008): no answer key inside."""
+    e, s = TEXTS/subj/f"{stem}.txt", TEXTS/subj/f"{stem.replace('_solution', '')}.txt"
+    if not (e.exists() and s.exists()): return False
+    a, b = e.read_text("utf-8")[:6000], s.read_text("utf-8")[:6000]
+    return difflib.SequenceMatcher(None, a, b).ratio() > 0.5
 SCIENCE = ("physic", "math", "svt"); LANGUAGE = ("arabe", "islamic", "francais", "english")
 summary = json.loads((OUT/"dataset_summary.json").read_text("utf-8")) if (OUT/"dataset_summary.json").exists() else {}
 for subj in sys.argv[1:] or SCIENCE + LANGUAGE:
     sci = subj in SCIENCE
     recs = [json.loads(l) for l in open(OUT/f"{subj}_{'exercises' if sci else 'sections'}.jsonl", encoding="utf-8")]
     sols, by_doc = {}, {}
+    dup_stems = {r["stem"] for r in recs if r["doc_type"] == "solution" and is_exam_duplicate(subj, r["stem"])}
     for r in recs:
-        if r["doc_type"] != "solution": continue
+        if r["doc_type"] != "solution" or r["stem"] in dup_stems: continue
         base = r["stem"].replace("_solution", "")
         by_doc.setdefault(base, []).append(r)
         if sci: sols[(base, r["part"], r["exercise_index"])] = r
@@ -25,7 +34,11 @@ for subj in sys.argv[1:] or SCIENCE + LANGUAGE:
     for r in recs:
         if r["doc_type"] != "exam": continue
         match = "unit"
-        if sci:
+        if r["stem"] + "_solution" in dup_stems:
+            s, match = None, "solution_is_exam_copy"   # answer key upload was a copy of the exam
+            unit = {"part": r.get("part"), "exercise_index": r.get("exercise_index"), "exercise_label": r.get("exercise_label")} if sci \
+                else {"section_key": r["section_key"], "section_label": r["section_label"]}
+        elif sci:
             s = sols.pop((r["stem"], r["part"], r["exercise_index"]), None) or sols.pop((r["stem"], None, r["exercise_index"]), None) \
                 or next((sols.pop(k) for k in list(sols) if k[0] == r["stem"] and k[2] == r["exercise_index"]), None)
             unit = {"part": r["part"], "exercise_index": r["exercise_index"], "exercise_label": r["exercise_label"]}
@@ -37,9 +50,9 @@ for subj in sys.argv[1:] or SCIENCE + LANGUAGE:
             elif s is None and by_doc.get(r["stem"]):
                 # answer keys often fold the writing/production grid into the previous section, or are one block
                 s, match = by_doc[r["stem"]][0], "document_fallback"
-        if s is None and match != "none_expected": unpaired.append(r["id"])
+        if s is None and match not in ("none_expected", "solution_is_exam_copy"): unpaired.append(r["id"])
         pairs.append({"pair_id": r["id"], "subject": subj, "year": r["year"], "session": r["session"], "sujet": r["sujet"],
-                      **unit, "points": r["points"], "solution_match": match if s or match == "none_expected" else "none",
+                      **unit, "points": r["points"], "solution_match": match if s or match in ("none_expected", "solution_is_exam_copy") else "none",
                       "exam": r, "solution": s})
     with open(OUT/f"{subj}_pairs.jsonl", "w", encoding="utf-8") as fo:
         for p in pairs: fo.write(json.dumps(p, ensure_ascii=False) + "\n")
