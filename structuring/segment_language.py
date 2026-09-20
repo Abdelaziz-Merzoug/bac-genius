@@ -114,7 +114,7 @@ def segment_file(path, rules, captions):
         text = re.sub(r"\n{3,}", "\n\n", "\n".join(s.pop("lines")).strip())
         out.append({"id": f"{stem}__s{i}", **meta, **s, "text": text, "figures": FIG_RX.findall(text),
                     "captions": [c for pg in s["pages"] for c in captions.get((stem, pg), [])],
-                    "items": split_items(text.splitlines()[1:]), "whole_document": whole})
+                    "items": split_items(text.splitlines()), "whole_document": whole})
     return {"records": out, "preamble": "\n".join(preamble).strip(), "notes": notes}
 
 def main(subjects):

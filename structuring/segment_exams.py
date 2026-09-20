@@ -29,7 +29,8 @@ HEAD_RX = re.compile(
     r"^[\s#*_\-]*(?P<kind>التمر[يب]ن|الجزء)\s+(?P<ord>الأول|الاول|الثاني|الثالث|الرابع|الخامس|التجريبي)"
     r"[\s:：*_]*(?:\(?\s*(?P<pts>[\d٠-٩]+(?:[.,]\d+)?)\s*\)?\s*(?:نقاط|نقطة|نقطتان|نقط|ن)\b[^\n]*)?")
 FIG_RX = re.compile(r"\[FIGURE:.*?\]", re.S)
-ITEM_RX = re.compile(r"^\s*[\(\-]?\s*(?P<label>[1-9]\d?|[١-٩]|[IVX]{1,4}|[أابجدهـ]|[a-e])\s*[\)\.\-–:]\s*\S")
+# numbered question marker at the start of a line / cell: "1." "1)" "1-" "(1)" "1/" "١-" "**1-**" "أ/ 1-"
+ITEM_RX = re.compile(r"^[\s\(\[]*(?:الجزء\s+\S+\s*[:：]\s*)?(?:I{1,3}V?\s*[\)\.\-–/]\s*)?(?:[أابجدهـ]\s*[/\)\-–]\s*)?(?P<label>[1-9]\d?|[١-٩][٠-٩]?)\s*[\)\]\.\-–/:]\s*(?=\S)")
 
 def ar_digits(s): return s.translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")).replace(",", ".")
 TASHKEEL_RX = re.compile(r"[ؐ-ًؚ-ٰٟۖ-ۭـ]")
@@ -64,16 +65,33 @@ def parse_pages(txt):
     if n: pages.append((n, cur))
     return pages
 
-def split_items(lines):
-    """Top-level numbered sub-questions: a new item starts at a line matching ITEM_RX with a
-    label that continues the current numeric sequence (1,2,3…) — letters go under the current item."""
-    items, cur, expect = [], None, 1
+CELL_NOISE_RX = re.compile(r"\*\*|__|</?u>|</?b>|\\underline\{\\text\{|\}\}")
+def item_label(line):
+    """Numeric question label opening this (virtual) line."""
+    m = ITEM_RX.match(CELL_NOISE_RX.sub("", TASHKEEL_RX.sub("", line)))
+    return int(ar_digits(m.group("label"))) if m else None
+
+def virtual_lines(lines):
+    """Answer keys put a whole exercise in one markdown-table cell separated by <br>: split table
+    rows into cells and cells into <br> fragments so each answer step becomes its own line."""
     for l in lines:
-        m = ITEM_RX.match(l)
-        lab = ar_digits(m.group("label")) if m else None
-        if lab and lab.isdigit() and int(lab) == expect:
+        if "<br" in l or l.lstrip().startswith("|"):
+            cells = re.split(r"(?<!\\)\|", l) if l.lstrip().startswith("|") else [l]
+            for c in cells:
+                for frag in re.split(r"<br\s*/?>", c):
+                    if frag.strip() and not re.fullmatch(r"[\s:\-]+", frag): yield frag.strip()
+        else: yield l
+
+def split_items(lines):
+    """Top-level numbered sub-questions. A new item starts at a line whose label continues the
+    numbering (n+1), or restarts at 1 (roman-numbered sub-parts I/II re-number their questions);
+    letters (أ/ب, a/b) and out-of-sequence numbers stay inside the current item."""
+    items, cur, expect = [], None, 1
+    for l in virtual_lines(lines):
+        lab = item_label(l)
+        if lab is not None and (lab == expect or lab == 1 or (cur is None and lab <= 12)):
             if cur: items.append(cur)
-            cur, expect = {"label": lab, "text": l.strip()}, expect + 1
+            cur, expect = {"label": str(lab), "text": l.strip()}, lab + 1
         elif cur: cur["text"] += "\n" + l.rstrip()
     if cur: items.append(cur)
     return [i for i in items if i["text"].strip()]
@@ -163,7 +181,7 @@ def segment_file(path, captions_by_stem_page):
         caps = [c for pg in r["pages"] for c in captions_by_stem_page.get((stem, pg), [])]
         out.append({"id": f"{stem}__ex{i}", **meta, **r, "text": text,
                     "figures": FIG_RX.findall(text), "captions": caps,
-                    "items": split_items(text.splitlines()[1:])})
+                    "items": split_items(text.splitlines())})
     return {"records": out, "preamble": "\n".join(preamble).strip(), "n_pages": len(pages), "notes": notes}, None
 
 def main(subjects):

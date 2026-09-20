@@ -30,8 +30,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 153,
-  "avg_items": 4.03,
+  "exercises_with_items": 165,
+  "avg_items": 6.49,
   "exercises_with_figure_blocks": 36,
   "figure_blocks": 47,
   "exercises_with_captions": 31,
@@ -42,6 +42,14 @@
    "4.5": 1,
    "6.0": 22,
    "7.0": 44
+  },
+  "question_alignment": {
+   "units": 166,
+   "questions": 1078,
+   "answered": 858,
+   "unanswered": 220,
+   "units_without_numbered_questions": 1,
+   "answered_pct": 79.6
   }
  },
  "math": {
@@ -75,8 +83,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 157,
-  "avg_items": 3.5,
+  "exercises_with_items": 166,
+  "avg_items": 4.17,
   "exercises_with_figure_blocks": 21,
   "figure_blocks": 21,
   "exercises_with_captions": 26,
@@ -92,6 +100,14 @@
    "7.0": 33,
    "7.5": 2,
    "10.0": 1
+  },
+  "question_alignment": {
+   "units": 167,
+   "questions": 696,
+   "answered": 478,
+   "units_without_numbered_questions": 1,
+   "unanswered": 218,
+   "answered_pct": 68.7
   }
  },
  "svt": {
@@ -125,8 +141,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 109,
-  "avg_items": 2.44,
+  "exercises_with_items": 123,
+  "avg_items": 4.15,
   "exercises_with_figure_blocks": 106,
   "figure_blocks": 161,
   "exercises_with_captions": 62,
@@ -142,6 +158,14 @@
    "8.0": 31,
    "8.5": 1,
    "9.0": 2
+  },
+  "question_alignment": {
+   "units": 126,
+   "questions": 523,
+   "answered": 417,
+   "units_without_numbered_questions": 3,
+   "unanswered": 106,
+   "answered_pct": 79.7
   }
  },
  "arabe": {
@@ -177,8 +201,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 83,
-  "avg_items": 3.88,
+  "exercises_with_items": 93,
+  "avg_items": 4.15,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -187,6 +211,13 @@
    "8.0": 40,
    "12.0": 40,
    "null": 40
+  },
+  "question_alignment": {
+   "units": 80,
+   "questions": 368,
+   "answered": 307,
+   "unanswered": 61,
+   "answered_pct": 83.4
   }
  },
  "islamic": {
@@ -221,8 +252,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 57,
-  "avg_items": 2.88,
+  "exercises_with_items": 73,
+  "avg_items": 3.62,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -232,6 +263,14 @@
    "8.0": 22,
    "12.0": 22,
    "14.0": 18
+  },
+  "question_alignment": {
+   "units": 80,
+   "questions": 290,
+   "unanswered": 44,
+   "units_without_numbered_questions": 7,
+   "answered": 246,
+   "answered_pct": 84.8
   }
  },
  "francais": {
@@ -267,8 +306,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 72,
-  "avg_items": 3.1,
+  "exercises_with_items": 79,
+  "avg_items": 3.6,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -277,6 +316,14 @@
    "6.0": 1,
    "14.0": 42,
    "null": 83
+  },
+  "question_alignment": {
+   "units": 84,
+   "questions": 408,
+   "answered": 197,
+   "unanswered": 211,
+   "units_without_numbered_questions": 22,
+   "answered_pct": 48.3
   }
  },
  "english": {
@@ -311,8 +358,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 69,
-  "avg_items": 2.38,
+  "exercises_with_items": 84,
+  "avg_items": 3.2,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -320,6 +367,14 @@
   "points_distribution": {
    "7.0": 29,
    "null": 97
+  },
+  "question_alignment": {
+   "units": 126,
+   "questions": 403,
+   "answered": 267,
+   "unanswered": 136,
+   "units_without_numbered_questions": 42,
+   "answered_pct": 66.3
   }
  }
 }
