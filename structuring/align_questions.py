@@ -19,7 +19,7 @@ def runs(items):
     """Split items into monotonic numbering runs: [[{label,text},...], ...]."""
     out, cur, prev = [], [], 0
     for it in items:
-        n = int(it["label"])
+        n = int(str(it["label"]).split(".")[0])
         if n <= prev and cur: out.append(cur); cur = []
         cur.append(it); prev = n
     if cur: out.append(cur)

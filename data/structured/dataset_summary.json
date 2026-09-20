@@ -31,7 +31,7 @@
    2026
   ],
   "exercises_with_items": 165,
-  "avg_items": 6.49,
+  "avg_items": 6.56,
   "exercises_with_figure_blocks": 36,
   "figure_blocks": 47,
   "exercises_with_captions": 31,
@@ -45,11 +45,17 @@
   },
   "question_alignment": {
    "units": 166,
-   "questions": 1078,
-   "answered": 858,
-   "unanswered": 220,
+   "questions": 1089,
+   "good": 408,
+   "matched_with_label_agreement": 955,
+   "none": 63,
+   "strong": 549,
+   "label_supported": 41,
+   "matched_despite_label_mismatch": 5,
    "units_without_numbered_questions": 1,
-   "answered_pct": 79.6
+   "parent_stub": 28,
+   "answered": 998,
+   "answered_pct": 94.1
   }
  },
  "math": {
@@ -84,7 +90,7 @@
    2026
   ],
   "exercises_with_items": 166,
-  "avg_items": 4.17,
+  "avg_items": 4.16,
   "exercises_with_figure_blocks": 21,
   "figure_blocks": 21,
   "exercises_with_captions": 26,
@@ -103,11 +109,16 @@
   },
   "question_alignment": {
    "units": 167,
-   "questions": 696,
-   "answered": 478,
+   "questions": 695,
+   "strong": 526,
+   "matched_with_label_agreement": 560,
    "units_without_numbered_questions": 1,
-   "unanswered": 218,
-   "answered_pct": 68.7
+   "good": 100,
+   "matched_despite_label_mismatch": 72,
+   "none": 63,
+   "label_supported": 6,
+   "answered": 632,
+   "answered_pct": 90.9
   }
  },
  "svt": {
@@ -142,7 +153,7 @@
    2026
   ],
   "exercises_with_items": 123,
-  "avg_items": 4.15,
+  "avg_items": 4.03,
   "exercises_with_figure_blocks": 106,
   "figure_blocks": 161,
   "exercises_with_captions": 62,
@@ -161,11 +172,16 @@
   },
   "question_alignment": {
    "units": 126,
-   "questions": 523,
-   "answered": 417,
+   "questions": 508,
+   "strong": 205,
+   "matched_with_label_agreement": 442,
+   "good": 202,
+   "matched_despite_label_mismatch": 7,
+   "none": 59,
    "units_without_numbered_questions": 3,
-   "unanswered": 106,
-   "answered_pct": 79.7
+   "label_supported": 42,
+   "answered": 449,
+   "answered_pct": 88.4
   }
  },
  "arabe": {
@@ -201,8 +217,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 93,
-  "avg_items": 4.15,
+  "exercises_with_items": 92,
+  "avg_items": 4.17,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -214,10 +230,16 @@
   },
   "question_alignment": {
    "units": 80,
-   "questions": 368,
-   "answered": 307,
-   "unanswered": 61,
-   "answered_pct": 83.4
+   "units_without_numbered_questions": 1,
+   "questions": 367,
+   "good": 156,
+   "matched_with_label_agreement": 308,
+   "strong": 107,
+   "label_supported": 46,
+   "none": 58,
+   "matched_despite_label_mismatch": 1,
+   "answered": 309,
+   "answered_pct": 84.2
   }
  },
  "islamic": {
@@ -267,10 +289,15 @@
   "question_alignment": {
    "units": 80,
    "questions": 290,
-   "unanswered": 44,
+   "none": 33,
    "units_without_numbered_questions": 7,
-   "answered": 246,
-   "answered_pct": 84.8
+   "strong": 111,
+   "matched_with_label_agreement": 255,
+   "good": 120,
+   "label_supported": 26,
+   "matched_despite_label_mismatch": 2,
+   "answered": 257,
+   "answered_pct": 88.6
   }
  },
  "francais": {
@@ -306,8 +333,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 79,
-  "avg_items": 3.6,
+  "exercises_with_items": 78,
+  "avg_items": 3.58,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -319,11 +346,16 @@
   },
   "question_alignment": {
    "units": 84,
-   "questions": 408,
-   "answered": 197,
-   "unanswered": 211,
+   "questions": 407,
+   "strong": 133,
+   "matched_with_label_agreement": 292,
+   "good": 121,
+   "label_supported": 53,
+   "none": 100,
+   "matched_despite_label_mismatch": 15,
    "units_without_numbered_questions": 22,
-   "answered_pct": 48.3
+   "answered": 307,
+   "answered_pct": 75.4
   }
  },
  "english": {
@@ -359,7 +391,7 @@
    2026
   ],
   "exercises_with_items": 84,
-  "avg_items": 3.2,
+  "avg_items": 3.41,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -370,11 +402,27 @@
   },
   "question_alignment": {
    "units": 126,
-   "questions": 403,
-   "answered": 267,
-   "unanswered": 136,
+   "questions": 430,
+   "none": 118,
+   "good": 140,
+   "matched_with_label_agreement": 291,
+   "label_supported": 69,
+   "strong": 103,
    "units_without_numbered_questions": 42,
-   "answered_pct": 66.3
+   "matched_despite_label_mismatch": 20,
+   "answered": 312,
+   "answered_pct": 72.6
+  }
+ },
+ "_question_alignment_method": {
+  "script": "structuring/align_questions_semantic.py",
+  "model": "paraphrase-multilingual-MiniLM-L12-v2 (local, CPU)",
+  "score": "0.55*embedding_cos + 0.30*lexical_anchor_cos + 0.15*label_agreement (RTL-tolerant); monotonic DP over answer blocks; thresholds strong>=0.60, good>=0.40 (emb>=0.25), label_supported>=0.30 with exact label (emb>=0.12), contradicting-label matches need >=0.50 and lex>=0.25",
+  "human_spot_check_2026_09_20": "~45 matches read by Claude Opus 5 across physic/math/arabe/francais/english: ~42 correct (contradicting-label matches after fixes: 9/9 correct; label_supported: 6/6)",
+  "totals": {
+   "questions": 3786,
+   "answered": 3264,
+   "parent_stub": 28
   }
  }
 }

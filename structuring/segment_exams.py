@@ -30,7 +30,12 @@ HEAD_RX = re.compile(
     r"[\s:：*_]*(?:\(?\s*(?P<pts>[\d٠-٩]+(?:[.,]\d+)?)\s*\)?\s*(?:نقاط|نقطة|نقطتان|نقط|ن)\b[^\n]*)?")
 FIG_RX = re.compile(r"\[FIGURE:.*?\]", re.S)
 # numbered question marker at the start of a line / cell: "1." "1)" "1-" "(1)" "1/" "١-" "**1-**" "أ/ 1-"
-ITEM_RX = re.compile(r"^[\s\(\[]*(?:الجزء\s+\S+\s*[:：]\s*)?(?:I{1,3}V?\s*[\)\.\-–/]\s*)?(?:[أابجدهـ]\s*[/\)\-–]\s*)?(?P<label>[1-9]\d?|[١-٩][٠-٩]?)\s*[\)\]\.\-–/:]\s*(?=\S)")
+ITEM_RX = re.compile(r"^[\s\(\[]*(?:الجزء\s+\S+\s*[:：]\s*)?(?:I{1,3}V?\s*[\)\.\-–/]{1,2}\s*)?(?:[أابجدهـ]\s*[/\)\-–]\s*)?(?P<label>[1-9]\d?(?:\.\d+)*|[١-٩][٠-٩]?(?:\.[٠-٩]+)*)\s*[\)\]\.\-–/:]\s*(?=\S|$)")
+
+# RTL-reversed marker "-2 text" (the source "2-" flipped by the text layer)
+ITEM_RTL_RX = re.compile(r"^\s*(?:[\-–]\s*(?P<label>[1-9]\d?|[١-٩][٠-٩]?)\s+(?=[^\d\s$])|\(\s*(?P<label2>[1-9]\d?|[١-٩][٠-٩]?)\s*$"
+                         r"|(?P<label3>[1-9]\d?)\s+(?![Pp]ts?\b|[Pp]oints?\b)(?=[A-Z][a-z]))")   # English keys: "5 The text is"
+PAGE_NOISE_RX = re.compile(r"^(?:صفحة|الصفحة)\s*[\d٠-٩]+\s*من\s*[\d٠-٩]+|^[\d٠-٩]+\s*/\s*[\d٠-٩]+\s*$|^page\s*\d+|اقلب الصفحة|^اختبار في مادة|^تابع (?:الإجابة|للإجابة)|^الإجابة النموذجية|^عناصر الإجابة|^\[FIGURE", re.I)
 
 def ar_digits(s): return s.translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")).replace(",", ".")
 TASHKEEL_RX = re.compile(r"[ؐ-ًؚ-ٰٟۖ-ۭـ]")
@@ -67,9 +72,15 @@ def parse_pages(txt):
 
 CELL_NOISE_RX = re.compile(r"\*\*|__|</?u>|</?b>|\\underline\{\\text\{|\}\}")
 def item_label(line):
-    """Numeric question label opening this (virtual) line."""
-    m = ITEM_RX.match(CELL_NOISE_RX.sub("", TASHKEEL_RX.sub("", line)))
-    return int(ar_digits(m.group("label"))) if m else None
+    """Question label opening this (virtual) line, as a string: "3" or hierarchical "2.2" / "4.1.2"."""
+    t = CELL_NOISE_RX.sub("", TASHKEEL_RX.sub("", line)).strip()
+    if re.fullmatch(r"[\d.,\s×x+]+", t) or PAGE_NOISE_RX.match(t): return None   # score cell / page footer
+    m = ITEM_RX.match(t) or ITEM_RTL_RX.match(t)
+    if not m: return None
+    if t.startswith("(") and len(re.findall(r"\(\s*[1-9]\s*\)", t)) >= 2: return None   # "(1) … (2) …" option list
+    g = m.groupdict()
+    return ar_digits(g.get("label") or g.get("label2") or g.get("label3"))
+def leading(label): return int(label.split(".")[0])
 
 def virtual_lines(lines):
     """Answer keys put a whole exercise in one markdown-table cell separated by <br>: split table
@@ -89,10 +100,14 @@ def split_items(lines):
     items, cur, expect = [], None, 1
     for l in virtual_lines(lines):
         lab = item_label(l)
-        if lab is not None and (lab == expect or lab == 1 or (cur is None and lab <= 12)):
-            if cur: items.append(cur)
-            cur, expect = {"label": str(lab), "text": l.strip()}, lab + 1
-        elif cur: cur["text"] += "\n" + l.rstrip()
+        if lab is not None:
+            n = leading(lab)
+            # hierarchical labels (1.1, 2.3.1) always open an item; flat ones must continue or restart
+            if "." in lab or n == expect or n == 1 or (cur is None and n <= 12) or (cur and n > leading(cur["label"]) and n <= 15):
+                if cur: items.append(cur)
+                cur, expect = {"label": lab, "text": l.strip()}, n + 1
+                continue
+        if cur: cur["text"] += "\n" + l.rstrip()
     if cur: items.append(cur)
     return [i for i in items if i["text"].strip()]
 
