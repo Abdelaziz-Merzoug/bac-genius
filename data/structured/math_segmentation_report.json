@@ -1,0 +1,30 @@
+{
+ "files": 84,
+ "skipped_combined": 0,
+ "unparsed": [],
+ "zero_exercises": [],
+ "exercises": 334,
+ "by_doc_type": {
+  "exam": 167,
+  "solution": 167
+ },
+ "exercises_per_exam": {
+  "3": 1,
+  "4": 41
+ },
+ "points_missing": 0,
+ "notes": {
+  "bac_math_2009_sujet1_solution": [
+   "merged repeated heading التمرين الثاني p[1, 2]"
+  ],
+  "bac_math_2012_sujet1_solution": [
+   "dropped content after 'الموضوع 2' marker at p2"
+  ],
+  "bac_math_2012_sujet2_solution": [
+   "inferred التمرين الأول from preamble"
+  ],
+  "bac_math_2022_sujet1_solution": [
+   "dropped content after 'الموضوع 2' marker at p4"
+  ]
+ }
+}

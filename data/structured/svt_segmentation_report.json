@@ -1,0 +1,23 @@
+{
+ "files": 84,
+ "skipped_combined": 0,
+ "unparsed": [],
+ "zero_exercises": [],
+ "exercises": 252,
+ "by_doc_type": {
+  "exam": 126,
+  "solution": 126
+ },
+ "exercises_per_exam": {
+  "3": 42
+ },
+ "points_missing": 0,
+ "notes": {
+  "bac_svt_2012_sujet1_solution": [
+   "dropped content after 'الموضوع 2' marker at p4"
+  ],
+  "bac_svt_2012_sujet2_solution": [
+   "inferred التمرين الأول from preamble"
+  ]
+ }
+}

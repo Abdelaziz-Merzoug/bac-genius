@@ -1,0 +1,17 @@
+{
+ "files": 84,
+ "skipped_combined": 0,
+ "unparsed": [],
+ "zero_exercises": [],
+ "exercises": 332,
+ "by_doc_type": {
+  "exam": 166,
+  "solution": 166
+ },
+ "exercises_per_exam": {
+  "3": 22,
+  "5": 20
+ },
+ "points_missing": 0,
+ "notes": {}
+}
