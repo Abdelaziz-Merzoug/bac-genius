@@ -35,6 +35,8 @@ ITEM_RX = re.compile(r"^[\s\(\[]*(?:الجزء\s+\S+\s*[:：]\s*)?(?:I{1,3}V?\s*
 # RTL-reversed marker "-2 text" (the source "2-" flipped by the text layer)
 ITEM_RTL_RX = re.compile(r"^\s*(?:[\-–]\s*(?P<label>[1-9]\d?|[١-٩][٠-٩]?)\s+(?=[^\d\s$])|\(\s*(?P<label2>[1-9]\d?|[١-٩][٠-٩]?)(?:\s*$|\s+(?=[^\d\s)+\-*/=]))"   # RTL "(2" alone or "(2 text"
                          r"|\.(?P<label6>[1-9]\d?(?:\.\d+)*)\s+(?=[^\d\s])"                        # RTL ".4 جد" / ".3.1 إيجاد"
+                         r"|ج\s*(?P<label7>[1-9]\d?)\s*[\-–:\.)]\s*(?=\S)"                          # Arabic keys: "ج 1 -" (جواب)
+                         r"|الجواب\s+(?:على\s+السؤال\s+)?(?P<label8>الأول|الاول|الثاني|الثالث|الرابع|الخامس|السادس|السابع)\s*[:\-–]?"   # Islamic keys
                          r"|(?P<label3>[1-9]\d?)\s+(?![Pp]ts?\b|[Pp]oints?\b)(?=[A-Z][a-z])"    # English keys: "5 The text is"
                          r"|(?P<label5>[1-9]\d?)\s+(?=(?:صحيح|خاطئ|خطأ|الاقتراح|الجواب|الإجابة|لدينا|تبيان|تبيين|بيان|إثبات|اثبات|حساب|من أجل"
                          r"|إيجاد|ايجاد|رسم|إنشاء|انشاء|التحقق|تعيين|عبارة|معادلة|جدول|إشارة|اشارة|دراسة|استنتاج|قيمة|طبيعة|تحديد|تفسير|تمثيل"
@@ -86,7 +88,9 @@ def item_label(line):
     if t.startswith("(") and len(re.findall(r"\(\s*[1-9]\s*\)", t)) >= 2: return None   # "(1) … (2) …" option list
     if re.match(r"^\d+-[ء-ي]", t) and re.search(r"[ء-ي]-\d+-", t): return None  # "3-ميثيل بوتان-1-أول"
     g = m.groupdict()
-    lab = ar_digits(g.get("label") or g.get("label2") or g.get("label3") or g.get("label5") or g.get("label6"))
+    if g.get("label8"):
+        return str({"الأول": 1, "الاول": 1, "الثاني": 2, "الثالث": 3, "الرابع": 4, "الخامس": 5, "السادس": 6, "السابع": 7}[g["label8"]])
+    lab = ar_digits(g.get("label") or g.get("label2") or g.get("label3") or g.get("label5") or g.get("label6") or g.get("label7"))
     if any(int(p) > 12 for p in lab.split(".")[1:]): return None   # "7.35 إلى 7.45" is a value, not 7.35
     return lab
 def leading(label): return int(label.split(".")[0])

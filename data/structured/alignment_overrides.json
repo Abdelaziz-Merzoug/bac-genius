@@ -958,5 +958,220 @@
   "block": 1,
   "note": "1- النص العلمي (key numbered it 1)",
   "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2012_sujet1__s3__q1": {
+  "block": 1,
+  "note": "1. الأساليب الإنشائية",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2013_sujet2__s3__q2": {
+  "block": null,
+  "note": "2- الإعراب absent from key (1,3,4 only)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2014_sujet2__s2__q1": {
+  "block": 0,
+  "note": "ج1- inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2016_sujet2__s2__q7": {
+  "block": null,
+  "note": "7 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2016_sujet2__s3__q1": {
+  "block": 0,
+  "note": "whole البناء اللغوي key is block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2016_sujet2__s3__q2": {
+  "block": 0,
+  "note": "inside block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2016_sujet2__s3__q3": {
+  "block": 0,
+  "note": "inside block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2016_sujet2__s3__q4": {
+  "block": 0,
+  "note": "inside block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2016_sujet2__s3__q5": {
+  "block": [
+   0,
+   1
+  ],
+  "note": "inside block 0 + note to graders",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2017_sujet1_session2__s3__q3": {
+  "block": 3,
+  "note": "3- زاوج الشاعر",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2017_sujet2_session2__s3__q2": {
+  "block": 2,
+  "note": "2. الضمائر وعائدها",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2018_sujet1__s3__q3": {
+  "block": 6,
+  "note": "ثانيا-2 الروابط (key numbered 2)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2018_sujet2__s2__q3": {
+  "block": 3,
+  "note": "3. شبّه الكاتب خدمة الأوطان",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2019_sujet1__s2__q2": {
+  "block": 2,
+  "note": "2) أثر أيلول",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2019_sujet1__s2__q4": {
+  "block": null,
+  "note": "التلخيص absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2021_sujet2__s2__q4": {
+  "block": 4,
+  "note": "4) القيم المستخرجة",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2022_sujet2__s2__q4": {
+  "block": 4,
+  "note": "4) التلخيص",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2024_sujet2__s2__q1": {
+  "block": 1,
+  "note": "1- الموضوع",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2024_sujet2__s2__q4": {
+  "block": null,
+  "note": "التلخيص absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_arabe_2024_sujet2__s3__q4": {
+  "block": null,
+  "note": "4) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2008_sujet1__s1__q1": {
+  "block": 0,
+  "note": "الشرح الموجز (key is one block)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2008_sujet1__s1__q2": {
+  "block": 0,
+  "note": "inside block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2008_sujet1__s1__q3": {
+  "block": 0,
+  "note": "inside block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2008_sujet2__s1__q1": {
+  "block": 0,
+  "note": "الشرح الموجز للحديث (one block)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2008_sujet2__s1__q2": {
+  "block": 0,
+  "note": "inside block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2008_sujet2__s1__q3": {
+  "block": 0,
+  "note": "inside block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2011_sujet2__s1__q5": {
+  "block": [
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "note": "4/ استخراج أربع فوائد (key numbers it 4)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2013_sujet1__s2__q3": {
+  "block": 2,
+  "note": "3- دليل مشروعية القياس",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2014_sujet1__s2__q4": {
+  "block": 3,
+  "note": "key numbered the examples 3 -",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2016_sujet1__s2__q1": {
+  "block": 0,
+  "note": "1- الأمور التي أبطلتها الخطبة",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2017_sujet1_session1__s1__q5": {
+  "block": 22,
+  "note": "الجواب الخامس",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2017_sujet2_session2__s2__q3": {
+  "block": 2,
+  "note": "3 - القيم الأسرية",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2018_sujet2__s1__q4": {
+  "block": 6,
+  "note": "الجواب على السؤال الرابع",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2018_sujet2__s1__q5": {
+  "block": [
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "note": "الجواب على السؤال الخامس + grading notes",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2020_sujet2__s2__q3": {
+  "block": 2,
+  "note": "(2) اسم المصدر التشريعي (key numbered it 2)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2026_sujet1__s1__q2": {
+  "block": null,
+  "note": "absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2026_sujet1__s1__q3": {
+  "block": null,
+  "note": "absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2026_sujet1__s1__q4": {
+  "block": null,
+  "note": "absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2026_sujet2__s1__q2": {
+  "block": null,
+  "note": "absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2026_sujet2__s1__q3": {
+  "block": null,
+  "note": "absent from key text",
+  "by": "human review 2026-09-21"
  }
 }
