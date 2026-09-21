@@ -34,5 +34,601 @@
   "block": 4,
   "note": "II-2 = '2/ اقتراح الحل العلاجي'",
   "by": "human review 2026-09-21"
+ },
+ "bac_physic_2008_sujet1__ex1__q1#2": {
+  "block": 3,
+  "note": "ب/ 1- [H3O+]f = 10^-pH",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2008_sujet1__ex2__q4": {
+  "block": 2,
+  "note": "block 2 tail holds the 35Cl+3n->38Cl equation (RTL '-4' marker)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2009_sujet1__ex4__q2": {
+  "block": 1,
+  "note": "2) Kepler third law",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2009_sujet2__ex3__q1": {
+  "block": [
+   0,
+   1,
+   2
+  ],
+  "note": "answer 1 spans blocks 0-2 (equations (1),(2))",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2009_sujet2__ex3__q2": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "g and v_l from the graph: block 3 + slope block (3)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2009_sujet2__ex5__q1": {
+  "block": 0,
+  "note": "1 - جدول التقدم",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2009_sujet2__ex5__q1#2": {
+  "block": 3,
+  "note": "II-1 (n(H+) at each instant) is inside block 3 after 'الطريقة 2'",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2010_sujet1__ex5__q4": {
+  "block": 2,
+  "note": "block 2 continues with '-4 f+P=ma' (RTL marker)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2010_sujet2__ex1__q3": {
+  "block": 2,
+  "note": "(3 dating computation t = t1/2/ln2 * ln(A0/A)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2010_sujet2__ex2__q3": {
+  "block": 5,
+  "note": "key numbered the indicator answer 4-",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2010_sujet2__ex3__q1": {
+  "block": 0,
+  "note": "1 مخطط الدارة (heading block)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2010_sujet2__ex5__q4": {
+  "block": null,
+  "note": "key skips question 4 (3 then 5)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2011_sujet1__ex5__q1": {
+  "block": null,
+  "note": "introductory paragraph, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2011_sujet1__ex5__q1#2": {
+  "block": 0,
+  "note": "أولا-1 البروتوكول التجريبي in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2011_sujet1__ex5__q1#3": {
+  "block": null,
+  "note": "ثانيا-1 (دور الوسيط) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2012_sujet1__ex1__q2": {
+  "block": 0,
+  "note": "'-2' progress table glued in block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2012_sujet1__ex4__q2": {
+  "block": 1,
+  "note": "2- سقوط حر",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2012_sujet2__ex3__q4": {
+  "block": 2,
+  "note": "key merged E(L)=1/2 L I0^2 as 3-ج",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2012_sujet2__ex5__q3": {
+  "block": 1,
+  "note": "progress table is glued under 2- in the key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2013_sujet1__ex3__q1": {
+  "block": 0,
+  "note": "'-1- A=4, Z=2' in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2013_sujet1__ex4__q3": {
+  "block": null,
+  "note": "key has no answer 3 (pH=3,4)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2013_sujet2__ex4__q1": {
+  "block": 0,
+  "note": "أولاً-1 المعادلات الزمنية in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2013_sujet2__ex4__q2": {
+  "block": 1,
+  "note": "2- v = sqrt(2gz)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2013_sujet2__ex4__q1#2": {
+  "block": null,
+  "note": "ثانيا-1 (unit of k) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2013_sujet2__ex4__q2#2": {
+  "block": 2,
+  "note": "ثانيا-2 دافعة أرخميدس",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2014_sujet1__ex2__q3": {
+  "block": 2,
+  "note": "(3) P_moy",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2015_sujet1__ex4__q1": {
+  "block": 0,
+  "note": "1 - الرسم",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2015_sujet1__ex4__q4": {
+  "block": 3,
+  "note": "4- طبيعة الحركة",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2015_sujet2__ex5__q3": {
+  "block": null,
+  "note": "key has no numbered 3 (only score line)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2015_sujet2__ex5__q4": {
+  "block": null,
+  "note": "key has no numbered 4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2016_sujet1_session1__ex1__q2": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "2- أ- أسماء العناصر (list split into 3 blocks)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2016_sujet1_session2__ex2__q1": {
+  "block": 1,
+  "note": "1- جهة التوترات والتيار",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2016_sujet1_session2__ex2__q2#2": {
+  "block": null,
+  "note": "II-2 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2016_sujet1_session2__ex4__q4": {
+  "block": 2,
+  "note": "'-4 t_M = ...' glued at end of block 2 (RTL marker)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2016_sujet1_session2__ex4__q5": {
+  "block": null,
+  "note": "5 absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2016_sujet2_session1__ex2__q4": {
+  "block": null,
+  "note": "4 absent from key (only score lines)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2017_sujet1_session1__ex3__q1#2": {
+  "block": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "note": "II-1 drawing + labels 1-4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2017_sujet1_session1__ex3__q2#2": {
+  "block": [
+   10,
+   11,
+   12
+  ],
+  "note": "exam item (2) also contains (3),(4): answers 2-,3-,4-",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2017_sujet2_session2__ex3__q1": {
+  "block": 0,
+  "note": "أولا-1 الحمض/الأساس definitions in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2018_sujet1__ex3__q1.1": {
+  "block": 0,
+  "note": "1.1 حساب الحجم V0 inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2018_sujet1__ex3__q1.2": {
+  "block": 0,
+  "note": "2.1 البروتوكول inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2018_sujet1__ex3__q2.1": {
+  "block": 0,
+  "note": "1.2 عبارة x(t) + جدول التقدم inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2018_sujet1__ex3__q2.2": {
+  "block": 0,
+  "note": "2.2 x_f inside heading block (continues)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2018_sujet2__ex1__q3.2": {
+  "block": [
+   7,
+   8
+  ],
+  "note": "2.3 الدور + 3.3 التعليل جيومستقر",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2019_sujet1__ex3__q1.3": {
+  "block": null,
+  "note": "graph drawing, key gives scores only",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2020_sujet2__ex2__q4": {
+  "block": null,
+  "note": "true/false item folded, no separate answer in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2021_sujet1__ex3__q1.3": {
+  "block": [
+   3,
+   4,
+   5
+  ],
+  "note": "exam item 3.1 also carries questions 2 and 3: answers 3.1, 2, 3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2021_sujet1__ex3__q4.2": {
+  "block": [
+   7,
+   8
+  ],
+  "note": "2.4 + question 5 glued in exam item",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2021_sujet2__ex1__q2.1": {
+  "block": null,
+  "note": "drawing; key gives score only",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2021_sujet2__ex2__q5": {
+  "block": null,
+  "note": "key skips 5 (goes 4 -> 6)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2023_sujet2__ex3__q2#3": {
+  "block": 10,
+  "note": "III-2 التعرف على صنف خام غار جبيلات",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2024_sujet1__ex1__q1#2": {
+  "block": 4,
+  "note": "ثانيا-1 علاقة التكافؤ glued at end of block 3.3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2024_sujet1__ex1__q1#3": {
+  "block": null,
+  "note": "ثالثا-1 (why this isotope) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2024_sujet1__ex3__q5.3": {
+  "block": null,
+  "note": "drawing; key gives no text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2024_sujet1__ex3__q6": {
+  "block": null,
+  "note": "absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2024_sujet1__ex3__q7": {
+  "block": null,
+  "note": "absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2025_sujet1__ex2__q9": {
+  "block": null,
+  "note": "absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2025_sujet2__ex2__q2#3": {
+  "block": 13,
+  "note": "ثالثا-2 كيفية تغير مدة النظام الانتقالي",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2025_sujet2__ex3__q1": {
+  "block": null,
+  "note": "document description (1), not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2025_sujet2__ex3__q2": {
+  "block": null,
+  "note": "document description (2), not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2025_sujet2__ex3__q3": {
+  "block": null,
+  "note": "document description (3), not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2025_sujet2__ex3__q4": {
+  "block": null,
+  "note": "document description (4), not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2026_sujet1__ex1__q3.1": {
+  "block": 10,
+  "note": "1.3 حساب المدة الزمنية (RTL labels 1.3/2.3 = 3.1/3.2)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_physic_2026_sujet1__ex1__q3.2": {
+  "block": 11,
+  "note": "2.3 نعم لا يزال النشاط",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2009_sujet2__ex4__q1": {
+  "block": null,
+  "note": "الجزء الأول-1 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2009_sujet2__ex4__q5": {
+  "block": 5,
+  "note": "المساحة glued at end of block 4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2012_sujet2__ex1__q1": {
+  "block": null,
+  "note": "key page starts at 4) (answers 1-3 missing from extraction)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2012_sujet2__ex1__q2": {
+  "block": null,
+  "note": "absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2012_sujet2__ex1__q3": {
+  "block": null,
+  "note": "absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2013_sujet1__ex3__q1": {
+  "block": 0,
+  "note": "(1 answer glued in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2013_sujet1__ex4__q1#2": {
+  "block": null,
+  "note": "II-1 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2015_sujet1__ex2__q1": {
+  "block": 0,
+  "note": "I) answer in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2015_sujet2__ex3__q1": {
+  "block": 0,
+  "note": "I(1 in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2015_sujet2__ex3__q1#2": {
+  "block": 2,
+  "note": "II(1 glued after 3. الرسم",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session1__ex2__q2#2": {
+  "block": null,
+  "note": "II-2 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session1__ex2__q3#2": {
+  "block": null,
+  "note": "II-3 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session1__ex3__q1": {
+  "block": 0,
+  "note": "garbled RTL block holds answers 1-3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session1__ex3__q2": {
+  "block": 0,
+  "note": "garbled RTL block holds answers 1-3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session1__ex3__q3": {
+  "block": 0,
+  "note": "garbled RTL block holds answers 1-3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session2__ex4__q1": {
+  "block": 0,
+  "note": "I 1) in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session2__ex4__q1#2": {
+  "block": null,
+  "note": "II-1 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet1_session2__ex4__q2#2": {
+  "block": null,
+  "note": "II-2 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet2_session1__ex2__q3": {
+  "block": null,
+  "note": "II-3 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2016_sujet2_session1__ex4__q1": {
+  "block": 0,
+  "note": "I 1- in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2017_sujet1_session1__ex4__q2": {
+  "block": null,
+  "note": "2) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2017_sujet2_session1__ex3__q2": {
+  "block": null,
+  "note": "2) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2017_sujet2_session1__ex4__q2#2": {
+  "block": 4,
+  "note": "key numbered it 1)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2017_sujet2_session1__ex4__q3#2": {
+  "block": 5,
+  "note": "key numbered it 2)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2017_sujet2_session1__ex4__q4": {
+  "block": 5,
+  "note": "التحقق أن F دالة أصلية glued in block 5",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2017_sujet2_session2__ex4__q1#2": {
+  "block": null,
+  "note": "II-1 absent (key jumps to (2))",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2018_sujet2__ex3__q2": {
+  "block": null,
+  "note": "2) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2021_sujet1__ex2__q2": {
+  "block": 1,
+  "note": "2. خطأ",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2021_sujet1__ex2__q3": {
+  "block": 2,
+  "note": "3. صح",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2022_sujet1__ex1__q4": {
+  "block": null,
+  "note": "4) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2022_sujet2__ex1__q3": {
+  "block": null,
+  "note": "3) absent (key page truncated)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2022_sujet2__ex1__q4": {
+  "block": null,
+  "note": "4) absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2022_sujet2__ex4__q4": {
+  "block": 4,
+  "note": "block 4 holds tangent coefficients a=-1 b=2 (key mis-numbered 5)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2023_sujet1__ex3__q3": {
+  "block": null,
+  "note": "3) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2023_sujet1__ex4__q4": {
+  "block": null,
+  "note": "4) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2023_sujet2__ex3__q3": {
+  "block": null,
+  "note": "3) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2023_sujet2__ex4__q5": {
+  "block": null,
+  "note": "5) absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2024_sujet1__ex2__q2": {
+  "block": 1,
+  "note": "(2 z_D = 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2025_sujet2__ex1__q2": {
+  "block": 1,
+  "note": "(2 أ) glued at end of block 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2025_sujet2__ex1__q4": {
+  "block": null,
+  "note": "(4 absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2025_sujet2__ex2__q2": {
+  "block": 0,
+  "note": "(2 glued after (1 in block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2025_sujet2__ex2__q1#2": {
+  "block": 1,
+  "note": "(1 الشجرة",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2025_sujet2__ex2__q2#2": {
+  "block": 1,
+  "note": "II-2 glued after the tree in block 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2025_sujet2__ex3__q2": {
+  "block": 1,
+  "note": "2 (أ,ب,ج) glued after 1) in block 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2026_sujet1__ex3__q4": {
+  "block": 3,
+  "note": "(3 block holds S_n and T_n = question 4 (key mis-numbered)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2026_sujet2__ex1__q1": {
+  "block": 0,
+  "note": "(I answers in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2026_sujet2__ex4__q4": {
+  "block": 2,
+  "note": "4 أ) glued after 3 رسم in block 2",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2026_sujet2__ex4__q5": {
+  "block": null,
+  "note": "5) absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_math_2024_sujet1__ex2__q1": {
+  "block": 0,
+  "note": "I) answers in heading block (trig forms), not (2 z_D",
+  "by": "human review 2026-09-21"
  }
 }
