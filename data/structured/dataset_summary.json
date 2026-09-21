@@ -171,6 +171,21 @@
    "8.0": 31,
    "8.5": 1,
    "9.0": 2
+  },
+  "question_alignment": {
+   "units": 126,
+   "questions": 505,
+   "legend": 13,
+   "strong": 200,
+   "matched_with_label_agreement": 424,
+   "units_without_numbered_questions": 3,
+   "good": 187,
+   "human": 46,
+   "none_verified": 21,
+   "label_supported": 38,
+   "matched_despite_label_mismatch": 1,
+   "answered": 471,
+   "answered_pct": 100.0
   }
  },
  "arabe": {

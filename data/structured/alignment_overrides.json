@@ -630,5 +630,333 @@
   "block": 0,
   "note": "I) answers in heading block (trig forms), not (2 z_D",
   "by": "human review 2026-09-21"
+ },
+ "bac_svt_2008_sujet2__ex3__q2": {
+  "block": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "note": "البيانات 1-5 across blocks 1-4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2008_sujet2__ex3__q2#2": {
+  "block": null,
+  "note": "II-2 absent from key (only scores)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet1__ex1__q1": {
+  "block": 0,
+  "note": "1- أ التعرف على البنيتين in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet1__ex1__q2": {
+  "block": 0,
+  "note": "2- table completion glued in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet1__ex3__q3#2": {
+  "block": null,
+  "note": "I-3 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet1__ex3__q1#2": {
+  "block": null,
+  "note": "II-1 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet2__ex1__q1": {
+  "block": [
+   0,
+   1
+  ],
+  "note": "1 - البيانات (two blocks)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet2__ex1__q2#2": {
+  "block": 7,
+  "note": "II-2 الاستنتاج",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet2__ex2__q2": {
+  "block": 1,
+  "note": "2 - الاستخلاص",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet2__ex3__q1": {
+  "block": 0,
+  "note": "-1 أ- تحليل وتفسير ... in heading block (RTL)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet2__ex3__q2": {
+  "block": 0,
+  "note": "2- also inside heading block (whole key is one block)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2009_sujet2__ex3__q3": {
+  "block": 0,
+  "note": "3- also inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2010_sujet1__ex1__q1": {
+  "block": null,
+  "note": "legend of figure, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2011_sujet1__ex2__q4": {
+  "block": 5,
+  "note": "4- الأكسدة التنفسية [FIGURE]",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet1__ex1__q1#2": {
+  "block": 7,
+  "note": "II-1 تعليل الإجراءات",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet1__ex2__q1": {
+  "block": [
+   0,
+   1
+  ],
+  "note": "1 أ/ب/ج/د spread over blocks 0-1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet1__ex2__q2": {
+  "block": 1,
+  "note": "2- continues inside block 1 (after د-)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet1__ex2__q3": {
+  "block": 1,
+  "note": "3- inside block 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet1__ex3__q1": {
+  "block": 0,
+  "note": "whole answer key of ex3 is block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex1__q1": {
+  "block": 0,
+  "note": "I-1..3 inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex1__q2": {
+  "block": 0,
+  "note": "I-2 inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex1__q3": {
+  "block": 0,
+  "note": "I-3 inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex1__q1#2": {
+  "block": 0,
+  "note": "II-1 inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex1__q2#2": {
+  "block": 0,
+  "note": "II-2 inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex1__q3#2": {
+  "block": 0,
+  "note": "II-3 inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex2__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "note": "البيانات 1-4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex2__q1#2": {
+  "block": 8,
+  "note": "II-1 scores + analysis in block 8",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex3__q1": {
+  "block": 0,
+  "note": "-1 أ- الوصف التفصيلي in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2012_sujet2__ex3__q2": {
+  "block": 0,
+  "note": "2- inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet1__ex1__q3": {
+  "block": null,
+  "note": "3- absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet1__ex1__q5": {
+  "block": null,
+  "note": "5- absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet1__ex2__q3": {
+  "block": null,
+  "note": "I-3 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet1__ex2__q1#2": {
+  "block": null,
+  "note": "table row, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet1__ex2__q2#2": {
+  "block": null,
+  "note": "table row, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet1__ex2__q3#2": {
+  "block": null,
+  "note": "table row, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet1__ex2__q1#3": {
+  "block": 2,
+  "note": "II-1 التعرف على الجزيئة",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet2__ex1__q1": {
+  "block": 0,
+  "note": "I-1 تفسير نتائج الجدول in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2013_sujet2__ex1__q4": {
+  "block": 3,
+  "note": "4- أ البيانات + ب الطبيعة الكيميائية",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2014_sujet2__ex1__q7": {
+  "block": null,
+  "note": "pH values, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2014_sujet2__ex1__q1": {
+  "block": 0,
+  "note": "-1 أ- تفسير نتائج الجدول ب in block 0",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2014_sujet2__ex1__q2": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "ب- وصف بنية الليزوزيم + ج- الاستدلال",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2014_sujet2__ex1__q3": {
+  "block": null,
+  "note": "3- absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2017_sujet1_session2__ex3__q1": {
+  "block": 0,
+  "note": "الجزء 1: اقتراح فرضيات in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2017_sujet2_session1__ex3__q2": {
+  "block": null,
+  "note": "(2) cancelled in key (ملغى)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2017_sujet2_session1__ex3__q1#2": {
+  "block": 1,
+  "note": "II-1 cancelled (ملغى) - key says so",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2017_sujet2_session1__ex3__q2#2": {
+  "block": 2,
+  "note": "II-2 ب)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2017_sujet2_session2__ex2__q1": {
+  "block": 0,
+  "note": "الجزء الأول (1) in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2018_sujet2__ex1__q2": {
+  "block": null,
+  "note": "النص العلمي absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2018_sujet2__ex3__q3": {
+  "block": [
+   2,
+   3
+  ],
+  "note": "الجزء الثالث: 1) + 2) analysis",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2019_sujet1__ex3__q1#2": {
+  "block": null,
+  "note": "الجزء الثاني intro paragraph (document), not answered separately",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2019_sujet1__ex3__q2#2": {
+  "block": null,
+  "note": "hypotheses statement in the exam, key has no separate block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2020_sujet1__ex3__q1#2": {
+  "block": null,
+  "note": "II-1 absent from key (only 2)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2023_sujet2__ex3__q1": {
+  "block": 0,
+  "note": "الجزء الثاني 1 discussion inside heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2025_sujet1__ex2__q8": {
+  "block": null,
+  "note": "figure legend, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2025_sujet1__ex3__q10": {
+  "block": null,
+  "note": "page footer, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2025_sujet2__ex2__q2": {
+  "block": 1,
+  "note": "2) استغلال الشكل (ب)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2025_sujet2__ex2__q1#2": {
+  "block": 2,
+  "note": "II-1 استغلال أشكال الوثيقة 2",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2026_sujet1__ex3__q1#2": {
+  "block": null,
+  "note": "II-1 absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2026_sujet1__ex3__q2#2": {
+  "block": null,
+  "note": "II-2 absent from key text",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2026_sujet2__ex1__q1": {
+  "block": 0,
+  "note": "أذكر مكونات ... in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2026_sujet2__ex1__q2": {
+  "block": 1,
+  "note": "1- النص العلمي (key numbered it 1)",
+  "by": "human review 2026-09-21"
  }
 }
