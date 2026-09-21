@@ -58,6 +58,32 @@ def canonicalize(items):
         out.append({**it, "label": lab, "label_raw": it["label"]})
     return out
 
+QWORD_RX = re.compile(
+    r"\?|؟|\b(?:ما|ماذا|لماذا|كيف|هل|أي|أين|متى|بم|بماذا|فيم|علام|اذكر|أذكر|حدد|حدّد|حلل|حلّل|فسر|فسّر|بين|بيّن|استنتج|قارن|اكتب|أكتب|أعط|اعط"
+    r"|أنجز|انجز|مثل|مثّل|ارسم|أرسم|وضح|وضّح|اشرح|قدم|قدّم|سم|سمّ|تعرف|تعرّف|عين|عيّن|احسب|أحسب|برهن|أثبت|اثبت|تحقق|ادرس|استخرج|لخص|لخّص|اقترح|صنف|صنّف"
+    r"|علل|علّل|ناقش|أكمل|اكمل|ضع|انقل|أنقل|عرف|عرّف|قارن|جد|حل|حلّ|رتب|أعد|اعد|ماهي|ما هي|ما هو|قيم|قيّم|اختر|أجب"
+    r"|calcule[zr]?|détermine[zr]?|montre[zr]?|expliqu|justifi|relev|donne[zr]?|cite[zr]?|complét|réponde|identifi|répond|proposez|rédige"
+    r"|write|answer|give|choose|find|say|classify|reorder|complete|fill|ask|match|divide|rewrite|circle|identify|what|which|who|why|how)\b", re.I)
+def is_question(text):
+    t = TASHKEEL_RX.sub("", clean(text))
+    return len(t) >= 60 or bool(QWORD_RX.search(t)) or bool(re.search(r"(?:^|[\s.])(?:[ab]\)|أ\)|ب\)|أ-|ب-)", t))
+
+def legend_runs(items):
+    """Indices of items that are document legends (numbered labels of a figure/table) rather than
+    questions: a numbering run in which most items are not question-like AND which is followed by
+    another run (real questions restart the numbering after the document)."""
+    runs, cur = [], []
+    for i, it in enumerate(items):
+        n = int(it["label"].split(".")[0])
+        if cur and n <= int(items[cur[-1]]["label"].split(".")[0]) and "." not in it["label"]: runs.append(cur); cur = []
+        cur.append(i)
+    if cur: runs.append(cur)
+    out = set()
+    for r in runs[:-1]:
+        if any("." in items[i]["label"] for i in r): continue        # hierarchical numbering = real questions
+        if sum(not is_question(items[i]["text"]) for i in r) >= 0.6 * len(r): out |= set(r)
+    return out
+
 def is_parent(i, labels):
     """A parent stub is immediately followed by its own children (1. … then 1.1, 1.2 …)."""
     return i + 1 < len(labels) and labels[i + 1].startswith(labels[i] + ".")
@@ -68,8 +94,10 @@ def block_mentions(label, text):
     rx = MARK_RX_CACHE.get(label)
     if rx is None:
         alts = "|".join(re.escape(v) for v in variants(label))
-        rx = MARK_RX_CACHE[label] = re.compile(r"(?:^|[\s|(])(?:" + alts + r")\s*[\.\)\-–/:]")
-    return bool(rx.search(text))
+        # only a marker that opens a line/cell counts ("الوثيقة (1)" inside a sentence does not)
+        rx = MARK_RX_CACHE[label] = re.compile(r"(?:^|\n|\|)\s*\**\(?\s*(?:" + alts + r")\s*[\.\)\-–/:]")
+    body = text.split("\n", 1)[1] if "\n" in text else ""      # skip the block's own opening marker
+    return bool(rx.search(body))
 
 def label_agree(q, b):
     """1 = same label (either orientation); 0.5 = one is a prefix of the other (2 vs 2.2); 0 otherwise."""
@@ -163,7 +191,7 @@ def align_unit(questions, blocks, E):
     for j, b in enumerate(blocks):
         if not b["label"]: continue
         for i in range(n):
-            if LAB[i, j] == 1.0 and SEM[i, j] >= 0.30: owner_sem[j] = max(owner_sem.get(j, 0), SEM[i, j])
+            if LAB[i, j] == 1.0 and SEM[i, j] >= 0.20: owner_sem[j] = max(owner_sem.get(j, 0), SEM[i, j])
     trust = np.ones(n)
     for i in range(n):
         agree = [j for j in range(m) if LAB[i, j] == 1.0]
@@ -178,11 +206,12 @@ def align_unit(questions, blocks, E):
             s = SEM[i, j] + W_LAB * lab * trust[i]
             # below threshold = "no match"; a match that contradicts the numbering needs stronger evidence,
             # and may not take a block that meaning-and-number both assign to another question
-            contra_ok = s >= T_CONTRA and lex >= 0.25 and not (j in owner_sem and owner_sem[j] >= SEM[i, j])
+            contra_ok = s >= T_CONTRA and lex >= 0.25 and not (j in owner_sem and owner_sem[j] + 0.15 >= SEM[i, j])
             ok = s >= T_GOOD and emb[i, j] >= MIN_EMB and (lab > 0 or contra_ok)
             # exact numbering + monotonic position + weak-but-positive semantics (drawings, tables, one-word answers)
-            # exact numbering + trusted + weak-but-positive semantics (drawings, tables, one-word answers)
-            ok = ok or (lab == 1.0 and trust[i] == 1.0 and s >= T_LABEL and emb[i, j] >= MIN_EMB_LABEL)
+            # exact numbering + weak-but-positive semantics (drawings, tables, one-word answers); when the
+            # numbering is distrusted the pair keeps a low score and the unit-level optimum decides
+            ok = ok or (lab == 1.0 and s >= T_LABEL * (1 if trust[i] == 1.0 else 0.8) and emb[i, j] >= MIN_EMB_LABEL)
             S[i, j] = s if ok else 0.0
             REUSABLE[i, j] = block_mentions(q["label"], b["text"])   # the block visibly holds this question's answer too
             EV[(i, j)] = {"emb": round(float(emb[i, j]), 3), "lex": round(float(lex), 3), "label_agree": float(lab),
@@ -203,6 +232,13 @@ def align_unit(questions, blocks, E):
     for i in range(n, 0, -1):
         k = choice[(i, j)]
         if k is not None: out[i - 1] = k; j = k + 1
+    # exact reuse guard: a block already taken by an earlier question stays with it unless it visibly
+    # carries the later question's marker too
+    taken = {}
+    for i, k in enumerate(out):
+        if k is None: continue
+        if k in taken and not REUSABLE[i, k]: out[i] = None
+        else: taken.setdefault(k, i)
     return [(k, EV[(i, k)] if k is not None else None) for i, k in enumerate(out)]
 
 def classify(ev):
@@ -213,6 +249,8 @@ def classify(ev):
 
 def main(subjects):
     E = Embedder(); random.seed(7)
+    ov_path = OUT/"alignment_overrides.json"
+    overrides = json.loads(ov_path.read_text("utf-8")) if ov_path.exists() else {}
     summary = json.loads((OUT/"dataset_summary.json").read_text("utf-8"))
     review = []
     for subj in subjects:
@@ -227,19 +265,32 @@ def main(subjects):
             labels = [it["label"] for it in items]
             # a parent stub ("2. اعتمادا على الشكل:") is context: its answers live in its children 2.1, 2.2 …
             parents = {i for i in range(len(items)) if is_parent(i, labels)}
-            res = align_unit([it for i, it in enumerate(items) if i not in parents], blocks, E)
+            legends = legend_runs(items) - parents
+            skip = parents | legends
+            res = align_unit([it for i, it in enumerate(items) if i not in skip], blocks, E)
             res_iter = iter(res)
             unit_label = e.get("exercise_label") or e.get("section_label")
+            seen_labels = Counter()
             for i, it in enumerate(items):
-                k, ev = (None, None) if i in parents else next(res_iter)
-                cls = "parent_stub" if i in parents else classify(ev); stats["questions"] += 1
+                k, ev = (None, None) if i in skip else next(res_iter)
+                cls = "parent_stub" if i in parents else ("legend" if i in legends else classify(ev)); stats["questions"] += 1
+                seen_labels[it["label"]] += 1
+                qid = f"{e['id']}__q{it['label']}" + (f"#{seen_labels[it['label']]}" if seen_labels[it["label"]] > 1 else "")
+                human_answer = None
+                if qid in overrides:                       # human correction wins over everything
+                    ob = overrides[qid]["block"]
+                    idxs = [i for i in (ob if isinstance(ob, list) else [ob]) if i is not None and i < len(blocks)]
+                    k = idxs[0] if idxs else None
+                    human_answer = "\n".join(blocks[i]["text"] for i in idxs) if idxs else None
+                    cls = "human" if idxs else "none_verified"
+                    ev = {"human_note": overrides[qid]["note"], "blocks": idxs}
                 stats[cls] += 1
-                if ev and ev["label_agree"] == 0: stats["matched_despite_label_mismatch"] += 1
-                if ev and ev["label_agree"] == 1: stats["matched_with_label_agreement"] += 1
-                rec = {"qid": f"{e['id']}__q{it['label']}", "subject": subj, "year": e["year"], "session": e["session"],
+                if ev and ev.get("label_agree") == 0: stats["matched_despite_label_mismatch"] += 1
+                if ev and ev.get("label_agree") == 1: stats["matched_with_label_agreement"] += 1
+                rec = {"qid": qid, "subject": subj, "year": e["year"], "session": e["session"],
                        "sujet": e["sujet"], "unit_id": e["id"], "unit_label": unit_label, "points": e["points"],
                        "label": it["label"], "label_raw": it["label_raw"], "question": it["text"],
-                       "answer": blocks[k]["text"] if k is not None else None,
+                       "answer": human_answer if human_answer is not None else (blocks[k]["text"] if k is not None else None),
                        "answer_label": blocks[k]["label"] if k is not None else None,
                        "match": cls, "evidence": ev, "solution_match": p["solution_match"]}
                 recs.append(rec)
@@ -248,7 +299,8 @@ def main(subjects):
         for cls in ("strong", "good", "label_supported", "none"):
             pool = [r for r in recs if r["match"] == cls]
             review += random.sample(pool, min(3, len(pool)))
-        answered = stats["strong"] + stats["good"] + stats["label_supported"]; answerable = stats["questions"] - stats["parent_stub"]
+        answered = stats["strong"] + stats["good"] + stats["label_supported"] + stats["human"]
+        answerable = stats["questions"] - stats["parent_stub"] - stats["legend"] - stats["none_verified"]
         st = {"units": n_units, **stats, "answered": answered, "answered_pct": round(100 * answered / max(answerable, 1), 1)}
         summary[subj]["question_alignment"] = st
         print(subj, json.dumps(st, ensure_ascii=False))

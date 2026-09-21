@@ -30,6 +30,9 @@ for stem in files[start:start + count]:
             flags = []
             if q["match"] == "none": flags.append("NONE")
             if q["match"] == "parent_stub": flags.append("STUB")
+            if q["match"] == "legend": flags.append("LEGEND")
+            if q["match"] == "human": flags.append("HUMAN")
+            if q["match"] == "none_verified": flags.append("NONE-VERIFIED")
             if q["match"] == "label_supported": flags.append("LBL")
             if ev and ev.get("label_agree") == 0: flags.append("CONTRA")
             if q["answer"]:
@@ -37,8 +40,9 @@ for stem in files[start:start + count]:
                 if k in seen: flags.append(f"SHARED(q{seen[k]})")
                 seen.setdefault(k, q["label"])
             f = (" [" + ",".join(flags) + "]") if flags else ""
+            qtag = q["qid"].split("__")[-1]
             if mode == "compact" and not flags:
-                print(f"     q{q['label']}: {one(q['question'], 45)}  ->  a{q['answer_label'] or '?'}: {one(q['answer'], 45)}")
+                print(f"     {qtag}: {one(q['question'], 45)}  ->  a{q['answer_label'] or '?'}: {one(q['answer'], 45)}")
                 continue
-            print(f"     q{q['label']}{f}: {one(q['question'])}")
+            print(f"     {qtag}{f}: {one(q['question'])}")
             if q["answer"]: print(f"        -> a{q['answer_label'] or '?'}: {one(q['answer'])}")

@@ -78,12 +78,16 @@ def item_label(line):
     """Question label opening this (virtual) line, as a string: "3" or hierarchical "2.2" / "4.1.2"."""
     t = CELL_NOISE_RX.sub("", TASHKEEL_RX.sub("", line)).strip()
     if re.fullmatch(r"[\d.,\s×x+]+", t) or PAGE_NOISE_RX.match(t): return None   # score cell / page footer
+    if re.match(r"^\s*[\d.,]+\s*%", t): return None                                # "7.2% …" table value
+    if t.count("–") >= 3 or re.search(r"[–\-]\s*\|", t) or re.search(r"BAC20\d\d/", t): return None   # axis art / footer
     m = ITEM_RX.match(t) or ITEM_RTL_RX.match(t)
     if not m: return None
     if t.startswith("(") and len(re.findall(r"\(\s*[1-9]\s*\)", t)) >= 2: return None   # "(1) … (2) …" option list
     if re.match(r"^\d+-[ء-ي]", t) and re.search(r"[ء-ي]-\d+-", t): return None  # "3-ميثيل بوتان-1-أول"
     g = m.groupdict()
-    return ar_digits(g.get("label") or g.get("label2") or g.get("label3") or g.get("label5"))
+    lab = ar_digits(g.get("label") or g.get("label2") or g.get("label3") or g.get("label5"))
+    if any(int(p) > 12 for p in lab.split(".")[1:]): return None   # "7.35 إلى 7.45" is a value, not 7.35
+    return lab
 def leading(label): return int(label.split(".")[0])
 
 def virtual_lines(lines):

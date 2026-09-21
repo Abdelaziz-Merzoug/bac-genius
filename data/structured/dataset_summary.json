@@ -46,16 +46,16 @@
   "question_alignment": {
    "units": 166,
    "questions": 1088,
-   "good": 365,
-   "matched_with_label_agreement": 935,
-   "none": 65,
+   "good": 363,
+   "matched_with_label_agreement": 940,
+   "none": 61,
    "strong": 538,
-   "label_supported": 38,
+   "label_supported": 44,
    "matched_despite_label_mismatch": 1,
    "units_without_numbered_questions": 1,
    "parent_stub": 82,
-   "answered": 941,
-   "answered_pct": 93.5
+   "answered": 945,
+   "answered_pct": 93.9
   }
  },
  "math": {
@@ -91,7 +91,7 @@
    2026
   ],
   "exercises_with_items": 166,
-  "avg_items": 4.16,
+  "avg_items": 4.14,
   "exercises_with_figure_blocks": 21,
   "figure_blocks": 21,
   "exercises_with_captions": 26,
@@ -110,15 +110,15 @@
   },
   "question_alignment": {
    "units": 159,
-   "questions": 673,
-   "strong": 550,
-   "matched_with_label_agreement": 619,
-   "good": 75,
-   "none": 40,
-   "matched_despite_label_mismatch": 14,
+   "questions": 670,
+   "strong": 547,
+   "matched_with_label_agreement": 616,
+   "good": 72,
+   "none": 43,
+   "matched_despite_label_mismatch": 11,
    "label_supported": 8,
-   "answered": 633,
-   "answered_pct": 94.1
+   "answered": 627,
+   "answered_pct": 93.6
   }
  },
  "svt": {
@@ -153,7 +153,7 @@
    2026
   ],
   "exercises_with_items": 123,
-  "avg_items": 4.05,
+  "avg_items": 4.01,
   "exercises_with_figure_blocks": 106,
   "figure_blocks": 161,
   "exercises_with_captions": 62,
@@ -172,16 +172,18 @@
   },
   "question_alignment": {
    "units": 126,
-   "questions": 510,
-   "strong": 204,
-   "matched_with_label_agreement": 442,
-   "good": 204,
-   "none": 64,
+   "questions": 505,
+   "legend": 13,
+   "strong": 203,
+   "matched_with_label_agreement": 432,
    "units_without_numbered_questions": 3,
-   "label_supported": 38,
-   "matched_despite_label_mismatch": 4,
-   "answered": 446,
-   "answered_pct": 87.5
+   "good": 192,
+   "none": 52,
+   "label_supported": 39,
+   "matched_despite_label_mismatch": 2,
+   "human": 6,
+   "answered": 440,
+   "answered_pct": 89.4
   }
  },
  "arabe": {
@@ -218,7 +220,7 @@
    2026
   ],
   "exercises_with_items": 93,
-  "avg_items": 4.27,
+  "avg_items": 4.24,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -231,15 +233,14 @@
   "question_alignment": {
    "units": 80,
    "units_without_numbered_questions": 1,
-   "questions": 367,
+   "questions": 364,
    "good": 155,
    "matched_with_label_agreement": 306,
-   "strong": 106,
-   "label_supported": 46,
-   "none": 60,
-   "matched_despite_label_mismatch": 1,
-   "answered": 307,
-   "answered_pct": 83.7
+   "strong": 103,
+   "label_supported": 48,
+   "none": 58,
+   "answered": 306,
+   "answered_pct": 84.1
   }
  },
  "islamic": {
@@ -289,15 +290,15 @@
   "question_alignment": {
    "units": 80,
    "questions": 290,
-   "none": 38,
+   "none": 33,
    "units_without_numbered_questions": 7,
    "strong": 108,
-   "matched_with_label_agreement": 250,
-   "good": 122,
-   "label_supported": 22,
-   "matched_despite_label_mismatch": 2,
-   "answered": 252,
-   "answered_pct": 86.9
+   "matched_with_label_agreement": 256,
+   "good": 121,
+   "label_supported": 28,
+   "matched_despite_label_mismatch": 1,
+   "answered": 257,
+   "answered_pct": 88.6
   }
  },
  "francais": {
@@ -334,7 +335,7 @@
    2026
   ],
   "exercises_with_items": 78,
-  "avg_items": 3.58,
+  "avg_items": 3.55,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -346,16 +347,16 @@
   },
   "question_alignment": {
    "units": 84,
-   "questions": 407,
-   "strong": 133,
-   "matched_with_label_agreement": 296,
-   "good": 123,
-   "label_supported": 48,
-   "none": 103,
-   "matched_despite_label_mismatch": 8,
+   "questions": 403,
+   "strong": 132,
+   "matched_with_label_agreement": 289,
+   "good": 118,
+   "label_supported": 49,
+   "none": 104,
+   "matched_despite_label_mismatch": 10,
    "units_without_numbered_questions": 22,
-   "answered": 304,
-   "answered_pct": 74.7
+   "answered": 299,
+   "answered_pct": 74.2
   }
  },
  "english": {
@@ -403,15 +404,15 @@
   "question_alignment": {
    "units": 126,
    "questions": 430,
-   "none": 138,
-   "label_supported": 58,
-   "matched_with_label_agreement": 275,
-   "good": 135,
-   "strong": 99,
+   "none": 140,
+   "label_supported": 66,
+   "matched_with_label_agreement": 278,
+   "good": 127,
+   "strong": 97,
    "units_without_numbered_questions": 42,
-   "matched_despite_label_mismatch": 16,
-   "answered": 292,
-   "answered_pct": 67.9
+   "matched_despite_label_mismatch": 11,
+   "answered": 290,
+   "answered_pct": 67.4
   }
  },
  "_question_alignment_method": {

@@ -1,0 +1,38 @@
+{
+ "bac_svt_2024_sujet1__ex1__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "note": "answer = the 6 stages list (blocks 1-5)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2024_sujet1__ex1__q2": {
+  "block": 5,
+  "note": "النص العلمي is inside block 5 after stage 6",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2024_sujet1__ex2__q2": {
+  "block": 2,
+  "note": "I-2 answer is '2. استغلال الشكل (ب) من الوثيقة 1'; embedding preferred part II block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2024_sujet1__ex2__q1": {
+  "block": 1,
+  "note": "I-1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2024_sujet1__ex2__q1#2": {
+  "block": 3,
+  "note": "II-1 = '1/ استغلال النتائج المبينة في أشكال الوثيقة 2'",
+  "by": "human review 2026-09-21"
+ },
+ "bac_svt_2024_sujet1__ex2__q2#2": {
+  "block": 4,
+  "note": "II-2 = '2/ اقتراح الحل العلاجي'",
+  "by": "human review 2026-09-21"
+ }
+}
