@@ -33,8 +33,11 @@ FIG_RX = re.compile(r"\[FIGURE:.*?\]", re.S)
 ITEM_RX = re.compile(r"^[\s\(\[]*(?:الجزء\s+\S+\s*[:：]\s*)?(?:I{1,3}V?\s*[\)\.\-–/]{1,2}\s*)?(?:[أابجدهـ]\s*[/\)\-–]\s*)?(?P<label>[1-9]\d?(?:\.\d+)*|[١-٩][٠-٩]?(?:\.[٠-٩]+)*)\s*[\)\]\.\-–/:]\s*(?=\S|$)")
 
 # RTL-reversed marker "-2 text" (the source "2-" flipped by the text layer)
-ITEM_RTL_RX = re.compile(r"^\s*(?:[\-–]\s*(?P<label>[1-9]\d?|[١-٩][٠-٩]?)\s+(?=[^\d\s$])|\(\s*(?P<label2>[1-9]\d?|[١-٩][٠-٩]?)\s*$"
-                         r"|(?P<label3>[1-9]\d?)\s+(?![Pp]ts?\b|[Pp]oints?\b)(?=[A-Z][a-z]))")   # English keys: "5 The text is"
+ITEM_RTL_RX = re.compile(r"^\s*(?:[\-–]\s*(?P<label>[1-9]\d?|[١-٩][٠-٩]?)\s+(?=[^\d\s$])|\(\s*(?P<label2>[1-9]\d?|[١-٩][٠-٩]?)(?:\s*$|\s+(?=[^\d\s)+\-*/=]))"   # RTL "(2" alone or "(2 text"
+                         r"|(?P<label3>[1-9]\d?)\s+(?![Pp]ts?\b|[Pp]oints?\b)(?=[A-Z][a-z])"    # English keys: "5 The text is"
+                         r"|(?P<label5>[1-9]\d?)\s+(?=(?:صحيح|خاطئ|خطأ|الاقتراح|الجواب|الإجابة|لدينا|تبيان|تبيين|بيان|إثبات|اثبات|حساب|من أجل"
+                         r"|إيجاد|ايجاد|رسم|إنشاء|انشاء|التحقق|تعيين|عبارة|معادلة|جدول|إشارة|اشارة|دراسة|استنتاج|قيمة|طبيعة|تحديد|تفسير|تمثيل"
+                         r"|أ\)|ب\)|ج\)|جـ\)|\(I|I\)|II\))))")   # Arabic keys: "2 خاطئ لأنّ", "3 أ)"
 PAGE_NOISE_RX = re.compile(r"^(?:صفحة|الصفحة)\s*[\d٠-٩]+\s*من\s*[\d٠-٩]+|^[\d٠-٩]+\s*/\s*[\d٠-٩]+\s*$|^page\s*\d+|اقلب الصفحة|^اختبار في مادة|^تابع (?:الإجابة|للإجابة)|^الإجابة النموذجية|^عناصر الإجابة|^\[FIGURE", re.I)
 
 def ar_digits(s): return s.translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")).replace(",", ".")
@@ -80,20 +83,28 @@ def item_label(line):
     if t.startswith("(") and len(re.findall(r"\(\s*[1-9]\s*\)", t)) >= 2: return None   # "(1) … (2) …" option list
     if re.match(r"^\d+-[ء-ي]", t) and re.search(r"[ء-ي]-\d+-", t): return None  # "3-ميثيل بوتان-1-أول"
     g = m.groupdict()
-    return ar_digits(g.get("label") or g.get("label2") or g.get("label3"))
+    return ar_digits(g.get("label") or g.get("label2") or g.get("label3") or g.get("label5"))
 def leading(label): return int(label.split(".")[0])
 
 def virtual_lines(lines):
     """Answer keys put a whole exercise in one markdown-table cell separated by <br>: split table
     rows into cells and cells into <br> fragments so each answer step becomes its own line."""
+    frags = []
     for l in lines:
         if "<br" in l or l.lstrip().startswith("|") or " | " in l:
             # table rows: split at pipes (a row may lose its leading pipe: "$2 \times 0,25$ | I) 1) ...")
             cells = re.split(r"(?<!\\)\|", l) if l.lstrip().startswith("|") else re.split(r"\s\|\s", l)
-            for c in cells:
-                for frag in re.split(r"<br\s*/?>", c):
-                    if frag.strip() and not re.fullmatch(r"[\s:\-]+", frag): yield frag.strip()
-        else: yield l
+            frags += [f.strip() for c in cells for f in re.split(r"<br\s*/?>", c) if f.strip() and not re.fullmatch(r"[\s:\-]+", f)]
+        else: frags.append(l)
+    i = 0
+    while i < len(frags):
+        f = frags[i]
+        # a question number sitting alone in its own cell or line ("| 2 | خاطئ لأنّ …", "2\nخاطئ لأنّ"): glue it
+        # to the answer fragment that follows (which must start with a letter, not a score)
+        if re.fullmatch(r"\**\(?\s*(?:[1-9]|1[0-5])\s*\)?\**", f.strip()) and i + 1 < len(frags) \
+                and re.match(r"^\**\s*[A-Za-z\u0621-\u064A(]", frags[i + 1]):
+            yield re.sub(r"[*()]", "", f).strip() + " " + frags[i + 1].strip(); i += 2; continue
+        yield f; i += 1
 
 def split_items(lines):
     """Top-level numbered sub-questions. A new item starts at a line whose label continues the

@@ -111,14 +111,14 @@
   "question_alignment": {
    "units": 159,
    "questions": 673,
-   "strong": 504,
-   "matched_with_label_agreement": 552,
-   "good": 84,
-   "none": 78,
-   "matched_despite_label_mismatch": 43,
-   "label_supported": 7,
-   "answered": 595,
-   "answered_pct": 88.4
+   "strong": 550,
+   "matched_with_label_agreement": 619,
+   "good": 75,
+   "none": 40,
+   "matched_despite_label_mismatch": 14,
+   "label_supported": 8,
+   "answered": 633,
+   "answered_pct": 94.1
   }
  },
  "svt": {
@@ -153,7 +153,7 @@
    2026
   ],
   "exercises_with_items": 123,
-  "avg_items": 4.03,
+  "avg_items": 4.05,
   "exercises_with_figure_blocks": 106,
   "figure_blocks": 161,
   "exercises_with_captions": 62,
@@ -172,16 +172,16 @@
   },
   "question_alignment": {
    "units": 126,
-   "questions": 508,
-   "strong": 205,
-   "matched_with_label_agreement": 443,
-   "good": 201,
-   "none": 61,
+   "questions": 510,
+   "strong": 204,
+   "matched_with_label_agreement": 442,
+   "good": 204,
+   "none": 64,
    "units_without_numbered_questions": 3,
-   "label_supported": 41,
+   "label_supported": 38,
    "matched_despite_label_mismatch": 4,
-   "answered": 447,
-   "answered_pct": 88.0
+   "answered": 446,
+   "answered_pct": 87.5
   }
  },
  "arabe": {
@@ -217,8 +217,8 @@
    2025,
    2026
   ],
-  "exercises_with_items": 92,
-  "avg_items": 4.17,
+  "exercises_with_items": 93,
+  "avg_items": 4.27,
   "exercises_with_figure_blocks": 0,
   "figure_blocks": 0,
   "exercises_with_captions": 0,
@@ -289,15 +289,15 @@
   "question_alignment": {
    "units": 80,
    "questions": 290,
-   "none": 34,
+   "none": 38,
    "units_without_numbered_questions": 7,
-   "strong": 112,
-   "matched_with_label_agreement": 254,
+   "strong": 108,
+   "matched_with_label_agreement": 250,
    "good": 122,
    "label_supported": 22,
    "matched_despite_label_mismatch": 2,
-   "answered": 256,
-   "answered_pct": 88.3
+   "answered": 252,
+   "answered_pct": 86.9
   }
  },
  "francais": {
@@ -404,9 +404,9 @@
    "units": 126,
    "questions": 430,
    "none": 138,
-   "label_supported": 56,
+   "label_supported": 58,
    "matched_with_label_agreement": 275,
-   "good": 137,
+   "good": 135,
    "strong": 99,
    "units_without_numbered_questions": 42,
    "matched_despite_label_mismatch": 16,
