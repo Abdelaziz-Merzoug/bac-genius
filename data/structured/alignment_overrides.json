@@ -1974,18 +1974,30 @@
  },
  "bac_francais_2021_sujet2__s2__q2": {
   "block": 1,
-  "note": "answer 2 (table) glued into block 1",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to sort eight expressions into racistes vs victimes de racisme. The prior override pointed at all of block 1 (three questions merged). Carved to block 1 lines 1-10, which are exactly the key's item 2: the Racistes/Victimes table (les hommes politiques, les tenants des idéologies racistes, celui qui se considère comme supérieur, des supporters italiens / Noir, Italien, Arabe, Juif).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   11
+  ]
  },
  "bac_francais_2021_sujet2__s2__q3": {
   "block": 1,
-  "note": "answer 3 (table) glued into block 1",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to sort eight expressions into arguments des racistes vs actes racistes. The prior override pointed at all of block 1. Carved to block 1 lines 11-22, which are exactly the key's item 3: the Arguments/Actes table (être étranger, venant d'une autre culture, ayant d'autres coutumes, la race noire est forcément inférieure / Insultes, Exclure, jeter des bananes à des joueurs noirs, profaner des tombes musulmanes).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   11,
+   23
+  ]
  },
  "bac_francais_2021_sujet2__s2__q7": {
   "block": 4,
-  "note": "answer 7 criteria glued after 6.",
-  "by": "human review 2026-09-21"
+  "note": "Q is an open production task (express what you felt in situations of racism, 2-3 lines), so the key gives assessment criteria rather than a model answer. The prior override pointed at all of block 4, which also carried item 6's answer and the page break, header and score cells. Carved to block 4 lines 1-7: the '**7.**' label and its four criteria (respect de la consigne, pertinence des idées, cohérence, correction de la langue).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   8
+  ]
  },
  "bac_francais_2021_sujet2__s3__q1": {
   "block": [
@@ -2178,8 +2190,12 @@
  },
  "bac_english_2012_sujet1__s2__q2": {
   "block": 1,
-  "note": "PHASE3 FIX: block 4 (auto-matched by label) is a bare score annotation ('2. 01.5 pt'), not real content; the actual verb/noun/adjective table is merged into block 1 with q1",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to complete the verb/noun/adjective chart. The prior override pointed at all of block 1, which also carried item 1's synonym answer. Carved to block 1 lines 1-15: the key's item-2 chart (to finance / finance-financier; to measure / measurable-measured; translation-translator / translated-translatable).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   16
+  ]
  },
  "bac_english_2017_sujet1_session1__s2__q2": {
   "block": [
@@ -2734,8 +2750,12 @@
    20,
    21
   ],
-  "note": "Q asks to extract four benefits from the text. Stored answer was block 17, the bare header '4 / استخراج أربع فوائد'. The four benefits are blocks 18-21 (the Quran's call to contemplate God's cosmic signs; that contemplation as a means of establishing aqeedah; the text's array of proofs of God's power; the reminder of God's wisdom in creation, e.g. mountains balancing the earth). Blocks 17-21 are the complete answer.",
-  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+  "note": "Refinement of the earlier fix. Blocks 17-21 carry the four benefits, but block 21's tail runs on into الجزء الثاني (the previous-revelations section). Carved to lines 0-9: the header '4 / استخراج أربع فوائد', the four benefits, and their score cells, stopping before 'الموضوع الأول - الجزء الثاني'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   10
+  ]
  },
  "bac_islamic_2010_sujet2__s1__q1": {
   "block": [
@@ -2932,8 +2952,18 @@
  },
  "bac_islamic_2011_sujet1__s1__q3": {
   "block": 2,
-  "note": "Q asks to discuss two ways the Quran preserves bodily health. Stored answer was '3 - الإحسان', the third entry of question 4's list of values. The real answer is the key's row '3 المظهران من مظاهر محافظة القرآن الكريم على الصحة الجسمية للإنسان' (تنمية القوّة وتوفير الصحة الإيجابية; الإعفاء من بعض الفروض, plus the page-2 continuation on أسس الرّعاية الصحيّة and الوقاية من الأمراض). That row carries a bare-digit label ('3 المظهران') that the table splitter does not recognise as starting a new block, so it was merged into block 2 together with question 2's answer. Block 2 is therefore assigned here: it contains this question's full answer, at the cost of also carrying question 2's. Over-scoped by a known segmentation limitation, not by a wrong choice; re-splitting blocks_of would shift every stored block index and is not done as part of this fix.",
-  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+  "note": "Refinement of the earlier fix for this item. The key's row 3 ('3 المظهران من مظاهر محافظة القرآن الكريم على الصحة الجسمية للإنسان') carries a bare-digit label so it merged into block 2 with question 2's answer. Now carved precisely: block 2 lines 11-15 (the row header plus تنمية القوّة وتوفير الصحة الإيجابية and الإعفاء من بعض الفروض) and lines 26-31 (the page-2 continuation row: أسس الرّعاية الصحيّة الثلاثة and الوقاية من الأمراض). Lines 16-25 in between are a page break, page number and repeated table headers, and are excluded. The answer no longer carries question 2's content.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   [
+    11,
+    16
+   ],
+   [
+    26,
+    32
+   ]
+  ]
  },
  "bac_islamic_2020_sujet2__s1__q2": {
   "block": [
@@ -3054,6 +3084,210 @@
   "lines": [
    0,
    3
+  ]
+ },
+ "bac_francais_2008_sujet1__s2__q4": {
+  "block": [
+   5,
+   6
+  ],
+  "note": "Q asks to complete a table with 2 causes and 2 consequences of water pollution. Stored answer was block 5, the 17-character fragment '4 - Causes: 0,5x2' with no entries. Block 6 holds the actual content: the causes (Industries / produits dangereux / pesticides / engrais / eaux usées) and, after the 'Conséquences:' label, the consequences (Augmentation des maladies / mortalité). Blocks 5-6 are the complete table.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_francais_2010_sujet1__s2__q8": {
+  "block": 8,
+  "note": "This unit's solution document carries two separate answer keys: the réchauffement climatique text (blocks 0-9, which is this unit's exam) and a second 'Le sport' text (blocks 10-19, which belongs to sujet 2 and is already referenced from there by from_unit). The aligner drifted into the sport key: the stored answer was block 17, '8. ni vainqueur ni vaincu', the sport text's item 8. Q asks what the pronoun 'elles' refers to in 'Elles détruisent souvent les récoltes'; block 8 of the climate key answers exactly that: 'Elles = inondations et sécheresses'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_francais_2010_sujet1__s2__q9": {
+  "block": 9,
+  "note": "Refinement of the earlier fix. Block 9 is the right answer but its tail carries the page number and the Arabic header of the following 'Le sport' answer key. Carved to lines 0-1: 'Titre (accepter tout titre en relation avec le thème)' and 'Justification'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_francais_2013_sujet1__s2__q10": {
+  "block": 10,
+  "note": "Refinement of the earlier fix. Block 10 is the right answer but its tail carries the Arabic header of the following YOUGOURTHA answer key. Carved to line 0: 'Accepter tout titre en relation avec la problématique du texte (pour et contre les célébrations)'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_francais_2016_sujet2_session2__s2__q4": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q asks for (a) two harmful effects of UV on the skin and (b) one on the eye. The stored answer (block 4, 118 chars) is the table's opening with only 'Peau: 1. Vieillissement prématuré' before it cuts off mid-table. Block 5 carries the rest: '2. Cancers' for the skin and 'Œil: 1. La cataracte / opacification du cristallin'. Blocks 4-5 are the complete table, covering both (a) and (b).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_francais_2021_sujet2__s2__q1": {
+  "block": 1,
+  "note": "Q is a multiple-choice item asking which of three options is the text's main subject. The correct answer is one line, 'Le racisme ordinaire'. The key labels its items 2 and 3 as bold '**2.**' / '**3.**' on their own lines, which blocks_of() does not read as new block labels, so items 1-3 all merged into block 1 and the stored answer ran to 709 chars carrying two full classification tables belonging to other questions. Carved to block 1 line 0.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_francais_2021_sujet2__s2__q6": {
+  "block": 4,
+  "note": "Q asks to join two clauses with one of donc / mais / car. The answer is the single line '**6. Mais**'. The key's item 7 is a bold '**7.**' label that blocks_of() does not treat as a block label, so items 6 and 7 plus a page break merged into block 4 and the stored answer ran to 532 chars of writing-assessment criteria and Arabic page furniture. Carved to block 4 line 0.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_english_2008_sujet1__s1__q1": {
+  "block": null,
+  "note": "Q is the MCQ 'The text is about: a) Consumers' rights and duties. b) Consumer movement and its roles.' The key's answer is the single line '1. b', present verbatim in the unit's solution raw text ('**A. Comprehension**<br>1. b<br>2. a) T b) T...'). It is only 4 characters after cleaning, below blocks_of()'s >=6-char threshold, so it was dropped and no block index can reach it; the aligner instead took block 3, item 4's answer ('a) consumerism / movement / b) consumers'). Set as a verbatim transcription of that line from the source.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "text": "1. b"
+ },
+ "bac_english_2009_sujet2__s2__q5": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q is a gap-fill with four gaps to be filled from the list games/clubs/found/their. Stored answer was block 6, the 15-character heading '**Act 5.** 1 pt' with no content. Block 7 is the answer: '1. their. 2. clubs. 3. games. 4. found.' Blocks 6-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2011_sujet2__s2__q3": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "Q asks to rewrite TWO sentences: 1.b) reported speech from 'Can we live on the Moon?' and 2.b) passive from 'Scientists discovered water on the Moon.' Stored answer was block 3, only the first rewrite ('She asks if / whether we can live on the Moon.'). Block 4 is the second ('Water was discovered on the Moon by scientists.'). Blocks 3-4 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2012_sujet1__s2__q4": {
+  "block": 2,
+  "note": "Q asks to classify six words by the pronunciation of their final -s. Stored answer was block 6, '4. 01.5 pts (0.25x6)', a line from the marking table with no content. The key's item-4 answer is inside block 2 (the key labels it as a bare '4.' on its own line, which blocks_of() does not read as a block label, so items 3 and 4 merged). Carved to block 2 lines 2-13: /s/ = profits, groups; /z/ = legs, failures; /iz/ = recognises, judges.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   2,
+   14
+  ]
+ },
+ "bac_english_2012_sujet1__s2__q3": {
+  "block": 2,
+  "note": "Q asks to join two sentence pairs with a connector. The answer is block 2 lines 0-1 (a. 'Some companies are unethical; therefore, it's hard for them to reveal their financial situation'; b. 'Provided that a company acts responsibly, it will gain the confidence of its stakeholders'). Previously the whole of block 2 was stored, which also carried item 4's pronunciation table. Carved so this answer no longer includes another question's.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_english_2012_sujet1__s2__q1": {
+  "block": 1,
+  "note": "Q asks for three synonyms from the text (idea, enough, client). The answer is block 1 line 0, '1. a. concept b. sufficient c. customer'. Previously the whole of block 1 was stored, which also carried item 2's verb/noun/adjective chart. Carved to just the synonym line.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_english_2015_sujet1__s2__q3": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "Q asks to rewrite TWO sentences: 1.b) reported speech from Dr. Paul Weissenberg's quote and 2.b) passive from 'European countries introduced teaching Earth observation...'. Stored answer was block 3, only the first rewrite. Block 4 is the second ('Teaching Earth observation was introduced in high school science classes by European countries.'). Blocks 3-4 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2017_sujet2_session1__s2__q4": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q is a four-gap cloze to be filled from a six-word list. Stored answer was block 4, the 19-character heading '**4.Cloze passage**' with no content. Block 5 is the answer: '1. citizenship 2. change 3. responsible 4. Contribute'. Blocks 4-5 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2018_sujet2__s2__q4": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q is a four-gap cloze to be filled from a six-word list. Stored answer was block 6, the 14-character heading '4- Gap Filling' with no content. Block 7 is the answer: '1/ children 2/ unethical 3/ advertising 4/ evaluate' — and checking each against the passage confirms the fit (children don't understand persuasive intent; it is unethical to advertise to them; distinguishing between advertising and reality; unable to evaluate advertising claims). Blocks 6-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2022_sujet2__s2__q3": {
+  "block": [
+   3,
+   4,
+   5
+  ],
+  "note": "Q asks to complete TWO sentences: 1.b) an 'Unless' rewrite and 2.b) an 'I wish' rewrite. Stored answer was block 4, only the first ('Unless governments tighten their borders' safety measures, illegal migration will increase enormously.'). Block 5 is the second ('I wish public authorities took enough measures to combat smuggling.') and block 3 is the key's '3. Sentence completion:' header. Blocks 3-5 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2022_sujet2__s2__q4": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q is a four-gap cloze to be filled from the list programmes/assistance/exposed/address. Stored answer was block 6, the 20-character heading '**4. Fill in gaps:**' with no content. Block 7 is the answer: '1. address 2. exposed 3. programmes 4. assistance' — each checked against the passage (measures to address trafficking; more exposed to violence; support programmes; legal assistance). Blocks 6-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2024_sujet2__s2__q2": {
+  "block": [
+   2,
+   3,
+   4
+  ],
+  "note": "Q asks to complete TWO sentences: 1.b) a passive rewrite of 'Digital piracy harms creativity' and 2.b) an 'Unless' rewrite. Stored answer was block 4, only the second. Block 3 is the first ('Creativity is harmed by digital piracy.') and block 2 is the key's '2. Rewriting sentences:' header. Blocks 2-4 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2024_sujet2__s2__q4": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Not previously flagged, found while fixing q2 of the same unit. Q is a four-gap discourse cloze; the stored answer was block 6, the 29-character heading '**4.Discourse (gap filling)**' with no content. Block 7 is the answer: '1- promote 2- victims 3- achievable 4- effects'. Blocks 6-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2025_sujet2__s1__q2": {
+  "block": [
+   2,
+   3
+  ],
+  "note": "Q asks to put three ideas in the order they appear in the text. Stored answer was block 2, the 22-character heading '**2- Ordering Ideas.**' with no content. Block 3 is the order: '1) c 2) a 3) b' (civilizations first, then anticipating dangers, then benefits for learners). Blocks 2-3 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2025_sujet2__s2__q4": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q asks to reorder four sentences into a coherent paragraph. Stored answer was block 6, the 25-character heading '**4- Sentence Ordering.**' with no content. Block 7 is the order '1) b 2) d 3) a 4) c' plus the key's marking note, and it reads coherently against the sentences (b opens 'Astronomy clubs unlock students' potential', d 'Firstly, they develop valuable skills...', a 'These clubs also foster teamwork...', c 'and boost students' confidence...'). Blocks 6-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2025_sujet2__s2__q2": {
+  "block": 1,
+  "note": "Exam-item segmentation defect, not an answer defect: this question record is not a real exam question. Its text ('2.Find out the size, weight or quantity of something. c. vast') is the second definition and the third word of item 1's matching exercise, which the exam splitter broke off as its own item because the definitions are numbered. Its stored answer was block 4, the passive rewrite from item 2's grammar answer, which is unrelated. Pointed at block 1, the Lexis matching key ('a. 2 b. 3 c. 1'), which is the answer that actually covers this fragment. The record cannot be merged back into q1 without changing qids and invalidating the existing audit.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2025_sujet2__s2__q3": {
+  "block": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "note": "Same segmentation defect: this record's text carries the tail of item 1's definition list AND the whole of real item 2 ('Complete sentence (b)...', two sentences) AND real item 3 ('Classify the following words according to the pronunciation of the final s'). The stored answer was block 5 alone, answering only the classification part. Blocks 2-4 are the grammar key ('2- Grammar', 'It is high time we created astronomy clubs in schools', 'Our horizons in discovering the Universe are extended by astronomy') and block 5 is the phonology key. Blocks 2-5 together answer everything this question record asks.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2011_sujet1__s1__q2": {
+  "block": 2,
+  "note": "Not previously flagged, tightened while fixing q3 of the same block. Q asks for two manifestations of mental health with explanation. Block 2 previously supplied the whole merged text, which also carried the key's row 3 (bodily-health manifestations) and its page-2 continuation. Carved to lines 0-10: the row header '2 / ذكر مظهرين من مظاهر هذه الصحة واشرحهما' and the six المظهر entries with their explanations.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   11
   ]
  }
 }

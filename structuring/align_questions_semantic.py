@@ -325,9 +325,19 @@ def main(subjects):
                     ln = overrides[qid].get("lines")
                     if human_answer is not None and ln:
                         rows = human_answer.split("\n")
-                        human_answer = "\n".join(rows[ln[0]:ln[1]]) or None
+                        rngs = ln if isinstance(ln[0], list) else [ln]   # one [a,b) range, or several
+                        human_answer = "\n".join("\n".join(rows[a:b]) for a, b in rngs) or None
+                    # Optional "text": the answer transcribed verbatim from the solution's raw text.
+                    # Needed only where the key's answer is too short to survive blocks_of()'s
+                    # >=6-char filter (e.g. a one-letter MCQ answer, "1. b"), so no block index can
+                    # reach it. Verbatim transcription is recorded in the override note and audit log.
+                    lit = overrides[qid].get("text")
+                    if lit:
+                        human_answer = lit
+                        if not idxs: idxs = ["literal"]
                     cls = "human" if idxs else "solution_missing"   # human-verified: official key has no answer
-                    ev = {"human_note": overrides[qid]["note"], "blocks": idxs, "from_unit": src, "lines": ln}
+                    ev = {"human_note": overrides[qid]["note"], "blocks": idxs, "from_unit": src, "lines": ln,
+                          "literal": bool(lit)}
                 stats[cls] += 1
                 if ev and ev.get("label_agree") == 0: stats["matched_despite_label_mismatch"] += 1
                 if ev and ev.get("label_agree") == 1: stats["matched_with_label_agreement"] += 1

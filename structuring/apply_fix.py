@@ -40,14 +40,24 @@ for fx in fixes:
     d[qid] = {"block": block, "note": reason, "by": BY}
     if fx.get("from_unit"): d[qid]["from_unit"] = fx["from_unit"]
     if fx.get("lines"): d[qid]["lines"] = fx["lines"]
+    if fx.get("text"):  d[qid]["text"] = fx["text"]
     cur = question(qid)
     src_unit = fx.get("from_unit") or qid.split("__q")[0]
     nb = [] if block is None else (block if isinstance(block, list) else [block])
+    if fx.get("text"):
+        log.append({"exam_id": qid.split("__q")[0], "question_id": qid, "question": one(cur["question"], 200),
+                    "old_mapping": {"match": cur["match"], "answer_label": cur["answer_label"], "answer": one(cur["answer"], 200)},
+                    "previous_override": old,
+                    "new_mapping": {"match": "human", "blocks": nb, "from_unit": fx.get("from_unit"), "literal": True},
+                    "evidence": [one(fx["text"], 300)], "reason": reason, "by": BY})
+        continue
     try:
         bl = canonicalize(blocks_of(unit(src_unit)["solution"]))
         joined = "\n".join(bl[i]["text"] for i in nb)
         if fx.get("lines"):
-            L = fx["lines"]; joined = "\n".join(joined.split("\n")[L[0]:L[1]])
+            L = fx["lines"]; rows = joined.split("\n")
+            rngs = L if isinstance(L[0], list) else [L]
+            joined = "\n".join("\n".join(rows[a:b]) for a, b in rngs)
         evidence = [one(joined, 300)]
     except Exception as e:
         evidence = [f"<could not render: {e}>"]
