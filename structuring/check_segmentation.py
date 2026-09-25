@@ -3,7 +3,7 @@ solution exercise count == exam exercise count. usage: check_segmentation.py phy
 import json, sys
 from collections import defaultdict
 from pathlib import Path
-OUT = Path("C:/Users/samsung/Desktop/bac-genius/data/structured")
+OUT = Path(__file__).resolve().parent.parent / "data" / "structured"
 for subj in sys.argv[1:] or ["physic", "math", "svt"]:
     by = defaultdict(list)
     for l in open(OUT/f"{subj}_exercises.jsonl", encoding="utf-8"):

@@ -8,8 +8,8 @@ usage: pair_exam_solution.py [subjects...]"""
 import json, sys, difflib
 from collections import Counter
 from pathlib import Path
-OUT = Path("C:/Users/samsung/Desktop/bac-genius/data/structured")
-TEXTS = Path("C:/Users/samsung/Desktop/bac-genius/data/processed/texts")
+OUT = Path(__file__).resolve().parent.parent / "data" / "structured"
+TEXTS = Path(__file__).resolve().parent.parent / "data" / "processed" / "texts"
 
 def is_exam_duplicate(subj, stem):
     """Some '_solution' uploads are just a second copy of the exam (math 2008): no answer key inside."""

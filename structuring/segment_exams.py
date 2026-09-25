@@ -17,7 +17,7 @@ import json, re, sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-P = Path("C:/Users/samsung/Desktop/bac-genius")
+P = Path(__file__).resolve().parent.parent
 TEXTS, OUT = P/"data/processed/texts", P/"data/structured"
 CAPTION_INDEX = P/"data/processed/image_captions/index.json"
 

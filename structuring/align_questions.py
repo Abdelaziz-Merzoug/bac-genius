@@ -12,7 +12,7 @@ usage: align_questions.py [subjects...]"""
 import json, sys
 from collections import Counter
 from pathlib import Path
-OUT = Path("C:/Users/samsung/Desktop/bac-genius/data/structured")
+OUT = Path(__file__).resolve().parent.parent / "data" / "structured"
 SUBJECTS = ["physic", "math", "svt", "arabe", "islamic", "francais", "english"]
 
 def runs(items):

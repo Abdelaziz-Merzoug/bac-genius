@@ -10,7 +10,9 @@ from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent))
 from align_questions_semantic import OUT
 
-SCRATCH = Path(r"C:\Users\samsung\AppData\Local\Temp\claude\C--Users-samsung-Desktop-bac-genius\080f53e8-a8e9-440e-a559-c5a8bdcc0ca4\scratchpad")
+import os
+SCRATCH = Path(os.environ.get("BAC_SCRATCH") or (Path(__file__).resolve().parent.parent / "data" / "structured" / "_audit"))
+SCRATCH.mkdir(parents=True, exist_ok=True)
 
 def one(t, n=20000):
     return re.sub(r"[ \t]+", " ", t or "").strip()[:n]

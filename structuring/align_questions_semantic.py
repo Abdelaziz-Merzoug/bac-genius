@@ -35,7 +35,7 @@ def clean(text):
         keep.append(t)
     return "\n".join(keep)
 
-OUT = Path("C:/Users/samsung/Desktop/bac-genius/data/structured")
+OUT = Path(__file__).resolve().parent.parent / "data" / "structured"
 CACHE = OUT/"_emb_cache.npz"
 SUBJECTS = ["physic", "math", "svt", "arabe", "islamic", "francais", "english"]
 W_EMB, W_LEX, W_LAB = 0.55, 0.30, 0.15
@@ -170,8 +170,8 @@ def blocks_of(solution):
 
 class Embedder:
     def __init__(self):
-        from sentence_transformers import SentenceTransformer
-        self.m = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+        self.m = None          # lazy: the on-disk cache alone covers an unchanged corpus,
+                               # so a rerun after override-only edits needs no model download
         self.cache = {}
         if CACHE.exists():
             z = np.load(CACHE, allow_pickle=True); self.cache = dict(zip(z["keys"], z["vecs"]))
@@ -179,6 +179,9 @@ class Embedder:
     def encode(self, texts):
         todo = [t for t in dict.fromkeys(texts) if self.key(t) not in self.cache]
         if todo:
+            if self.m is None:
+                from sentence_transformers import SentenceTransformer
+                self.m = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
             vecs = self.m.encode([t[:1500] for t in todo], normalize_embeddings=True, batch_size=64, show_progress_bar=False)
             for t, v in zip(todo, vecs): self.cache[self.key(t)] = v
         return np.stack([self.cache[self.key(t)] for t in texts])

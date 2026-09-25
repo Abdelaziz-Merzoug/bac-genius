@@ -53,7 +53,7 @@ from collections import Counter
 print(Counter((s, c) for s, c, _, _ in sample_plan))
 print(Counter(s for s, c, _, _ in sample_plan))
 
-dump_path = Path(r"C:\Users\samsung\AppData\Local\Temp\claude\C--Users-samsung-Desktop-bac-genius\080f53e8-a8e9-440e-a559-c5a8bdcc0ca4\scratchpad\phase4_dump.txt")
+dump_path = (Path(__file__).resolve().parent.parent / "data" / "structured" / "_audit"); dump_path.mkdir(parents=True, exist_ok=True); dump_path = dump_path / "phase4_dump.txt"
 dump_path.parent.mkdir(parents=True, exist_ok=True)
 skeleton_path = OUT / "phase4_sample_qids.jsonl"
 

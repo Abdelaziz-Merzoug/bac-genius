@@ -5,7 +5,7 @@ compact mode: flagged pairs shown in full; clean pairs as one short line (q labe
 import json, re, sys
 from collections import defaultdict
 from pathlib import Path
-OUT = Path("C:/Users/samsung/Desktop/bac-genius/data/structured")
+OUT = Path(__file__).resolve().parent.parent / "data" / "structured"
 subj = sys.argv[1]; start = int(sys.argv[2]) if len(sys.argv) > 2 else 0; count = int(sys.argv[3]) if len(sys.argv) > 3 else 10
 mode = sys.argv[4] if len(sys.argv) > 4 else "full"
 pairs = [json.loads(l) for l in open(OUT/f"{subj}_pairs.jsonl", encoding="utf-8")]
