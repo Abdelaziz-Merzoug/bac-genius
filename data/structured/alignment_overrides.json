@@ -734,18 +734,36 @@
    0,
    1
   ],
-  "note": "1 أ/ب/ج/د spread over blocks 0-1",
-  "by": "human review 2026-09-21"
+  "note": "This whole exercise's key is only two blocks: the key numbers items 2 and 3 as bare '**- 2**' and '**3 مخطط**' lines, which blocks_of() does not read as block labels, so items 1-3 all sit inside block 1. Q1 has five parts أ-هـ (identify the two organelles, classify the cell with justification, label 1-4, describe mitochondrial ultrastructure, state the shared key feature). Carved to the joined blocks' lines 0-23: item 1's أ (chloroplast / mitochondrion), ب (green plant cell, justified by the chloroplasts), ج (outer membrane, inner membrane, stroma, thylakoid), د (mitochondrial ultrastructure) and هـ (both are compartmentalised).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   24
+  ]
  },
  "bac_svt_2012_sujet1__ex2__q2": {
-  "block": 1,
-  "note": "2- continues inside block 1 (after د-)",
-  "by": "human review 2026-09-21"
+  "block": [
+   0,
+   1
+  ],
+  "note": "Q2 has four parts (analyse document 2, interpret the results, name the two biological phenomena, give the overall equation of each). Its stored answer was the whole of block 1, which opens with item 1's parts ج-هـ. Carved to the joined blocks' lines 24-48: '**- 2**' with أ the interval-by-interval analysis (ز0-ز1 dark, ز1-ز2 white light, ز2-ز3 green light, ز3-ز4 white light again), ب the interpretation, ج the two phenomena (photosynthesis and respiration) and د both overall equations.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   24,
+   49
+  ]
  },
  "bac_svt_2012_sujet1__ex2__q3": {
-  "block": 1,
-  "note": "3- inside block 1",
-  "by": "human review 2026-09-21"
+  "block": [
+   0,
+   1
+  ],
+  "note": "Q3 asks for a scheme of the reactions converting stored chemical energy into usable energy. Its stored answer was the whole of block 1, which is items 1 and 2. Carved to the joined blocks' lines 49-52: the key's '3 مخطط' entry with its figure placeholder.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   49,
+   53
+  ]
  },
  "bac_svt_2012_sujet1__ex3__q1": {
   "block": 0,
@@ -753,34 +771,34 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2012_sujet2__ex1__q1": {
-  "block": 0,
-  "note": "I-1..3 inside heading block",
-  "by": "human review 2026-09-21"
+  "block": null,
+  "note": "Verified source gap plus a meaningless stored answer. The paired key bac_svt_2012_sujet2_solution__ex1 begins at item 4 and is headed 'صفحة 5 من 8'; it contains only items II-4, II-5 and part III. The answers to part I items 1-3 and part II items 1-3 are on a page that was never captured, and searching every svt 2012 solution text for their distinctive content returns nothing. This question (identify elements 1-5 and س in figure أ) had been pointed at block 0, which is only the document's title line and the marking-table column headers. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2012_sujet2__ex1__q2": {
-  "block": 0,
-  "note": "I-2 inside heading block",
-  "by": "human review 2026-09-21"
+  "block": null,
+  "note": "Same source gap as q1 of this unit. Q asks what the general amino-acid formula represents and to name its components; no answer exists in the corpus. Previously pointed at the document header block. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2012_sujet2__ex1__q3": {
-  "block": 0,
-  "note": "I-3 inside heading block",
-  "by": "human review 2026-09-21"
+  "block": null,
+  "note": "Same source gap. Q asks to classify the three radicals with the criterion used, write the Lys-Asp-Ala linkage product and give the number of possible tripeptides; no answer exists in the corpus. Previously pointed at the document header block. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2012_sujet2__ex1__q1#2": {
-  "block": 0,
-  "note": "II-1 inside heading block",
-  "by": "human review 2026-09-21"
+  "block": null,
+  "note": "Same source gap, part II item 1. Q asks the purpose of the electrophoresis study; the key's page 5 starts at item 4, so this answer is absent. Previously pointed at the document header block. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2012_sujet2__ex1__q2#2": {
-  "block": 0,
-  "note": "II-2 inside heading block",
-  "by": "human review 2026-09-21"
+  "block": null,
+  "note": "Same source gap, part II item 2. Q asks to interpret the electrophoresis results; absent from the corpus. Previously pointed at the document header block. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2012_sujet2__ex1__q3#2": {
-  "block": 0,
-  "note": "II-3 inside heading block",
-  "by": "human review 2026-09-21"
+  "block": null,
+  "note": "Same source gap, part II item 3. Q asks what α, β and γ represent; absent from the corpus (item 4, which IS present, gives their chemical formulae but not this identification). Previously pointed at the document header block. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2012_sujet2__ex2__q1": {
   "block": [
@@ -3707,5 +3725,13 @@
    0,
    3
   ]
+ },
+ "bac_svt_2011_sujet1__ex3__q3": {
+  "block": [
+   2,
+   3
+  ],
+  "note": "Q has two parts: (أ) write labels 1 to 3, and (ب) name the process binding element 1 to element 2 and the other participants. Stored answer was block 2 alone, which gives only labels 1 and 2 (amino acid; the amino-acid binding site on tRNA) and stops. Block 3 carries label 3 ('موقع الرامزة المضادة', the anticodon site) and the whole of part ب ('العملية هي تنشيط الأحماض الأمينية' with the enzyme and ATP as participants). Blocks 2-3 give both parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  }
 }
