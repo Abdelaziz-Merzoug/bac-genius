@@ -1158,18 +1158,30 @@
  },
  "bac_islamic_2026_sujet1__s1__q2": {
   "block": 0,
-  "note": "PHASE2 FIX: answer present (table: قيمة/تصنيفها/أثرها), merged into block 0 with q1 (bare '(2' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to draw out two Quranic values, classify them, and give one effect of each. Previously pointed at all of block 0 (four questions' answers merged). Carved to block 0 lines 6-24, which are exactly the key's item-2 table: العدل (سياسية) with three effects, التكافل الاجتماعي (اجتماعية) with three effects, الأمانة (فردية) with three effects, plus the note that one correct effect suffices.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   6,
+   25
+  ]
  },
  "bac_islamic_2026_sujet1__s1__q3": {
   "block": 0,
-  "note": "PHASE2 FIX: answer present (أ/ب parts), merged into block 0 with q1 (bare '(3' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q has two parts: (أ) derive the characteristic of the final message from ﴿وَنَزَّلْنَا عَلَيْكَ الْكِتَابَ تِبْيَانًا لِكُلِّ شَيْءٍ﴾ and define Islam in its specific sense, and (ب) state the final message's relation to preceding revelations. Previously pointed at all of block 0. Carved to lines 27-30: the characteristic (جامعة لثمرات ومحاسن الرسالات السابقة), the specific-sense definition of Islam, and the relation (ناسخة-مصدّقة-مصحّحة-مبشّرة).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   27,
+   31
+  ]
  },
  "bac_islamic_2026_sujet1__s1__q4": {
   "block": 0,
-  "note": "PHASE2 FIX: answer present (أ/ب parts), merged into block 0 with q1 (bare '(4' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q has two parts: (أ) name the aspect of Islam's method of combating deviance and crime and how the verses realise it, and (ب) extract the category of مقاصد with its shahid and rank. Previously pointed at all of block 0. Carved to lines 35-42: الجانب الوقائي and its realisation through الحثّ على مكارم الأخلاق، the category المقاصد التحسينية with its two shawahid and rank (الثالثة), and the key's alternative المقاصد الضرورية with its shahid and rank (الأولى).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   35,
+   43
+  ]
  },
  "bac_islamic_2026_sujet2__s1__q2": {
   "block": 1,
@@ -2686,5 +2698,362 @@
   ],
   "note": "Phase 5 finding: stored answer was cut off mid-description of fig(b)'s mechanism (missing the 'in the presence of Mtb' continuation and the final 'الربط' section that explicitly confirms hypothesis 1, which is the actual verification the question asks for); extending to block 5 captures the full mechanism and confirmation.",
   "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+ },
+ "bac_islamic_2010_sujet1__s1__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "note": "Q asks to extract three of the manifestations of God's power in the universe named in the verse. Stored answer was block 1, the bare section header '1 / ثلاثة مظاهر لقدرة الله تعالى في الكون', with no manifestations. The key lists them as separate blocks 2-5 (heavens without pillars, mountains as anchors, animals spread over the earth, water sent down); blocks 1-5 together are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2010_sujet1__s1__q2": {
+  "block": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "note": "Q has two parts: name five of the Quran's means of establishing aqeedah, then explain the means that appears in the text. Stored answer was block 6, only the header '2 - أ / وسائل القرآن في تثبيت العقيدة (خمس وسائل)'. Blocks 7-14 are the eight listed means (part أ) and block 15 is '2 - ب / شرح الوسيلة التي ذكرها النص' with the two acceptable explanations (part ب), so both parts need blocks 6-15.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2010_sujet1__s1__q4": {
+  "block": [
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "note": "Q asks to extract four benefits from the text. Stored answer was block 17, the bare header '4 / استخراج أربع فوائد'. The four benefits are blocks 18-21 (the Quran's call to contemplate God's cosmic signs; that contemplation as a means of establishing aqeedah; the text's array of proofs of God's power; the reminder of God's wisdom in creation, e.g. mountains balancing the earth). Blocks 17-21 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2010_sujet2__s1__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "note": "Q has two parts: define الشفاعة في الحدود, then name four of its negative effects. Stored answer was block 2, only the header '1 - ب / أربعة آثار سلبية'. Block 1 is part أ with the definition ('التوسط لدى الحاكم لإسقاط حد من حدود الله'), and blocks 3-7 are the five listed negative effects; blocks 1-7 together answer both parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2011_sujet1__s1__q4": {
+  "block": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "note": "Q asks to name four individual values of the kind the verse illustrates with طمأنينة القلب. Stored answer was block 13, '4 - طمأنينة القلب من آثار الإيمان بالله', which is the 4th entry of question 5's list of benefits, not a list of values. The key answers this question in block 3 ('**4- أربع قيم فردية..**') followed by blocks 4-8, the five values: الرحمة، الصّبر، الإحسان، الصدق، العفو.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2011_sujet1__s2__q1": {
+  "block": 1,
+  "note": "Solution-unit mispairing. bac_islamic_2011_sujet1_solution__s1 contains only الجزء الأول, so this riba part-2 unit was paired with part 1's key and every answer was unrelated (stored: 'قسم الصحة...الصحة النفسية'). The real key for 'الموضوع الأول – الجزء الثاني' sits at the head of the 2011 sujet2 solution document. Q asks for two rules for excluding usurious exchanges; that is block 1 there ('1 – قاعدتين من قواعد استبعاد المبادلات الربوية' with القاعدة الأولى/الثانية/الثالثة).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "from_unit": "bac_islamic_2011_sujet2__s1"
+ },
+ "bac_islamic_2011_sujet1__s2__q2": {
+  "block": 2,
+  "note": "Same mispairing as q1. Q asks for the types of riba; stored answer was 'الصّبر' (patience), from part 1's list of values. Block 2 of the 2011 sujet2 solution document is '2- أنواع الربا' giving ربا الفضل and ربا النسيئة with definitions.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "from_unit": "bac_islamic_2011_sujet2__s1"
+ },
+ "bac_islamic_2011_sujet1__s2__q3": {
+  "block": 3,
+  "note": "Same mispairing as q1/q2. Q asks for the stages of riba's prohibition; stored answer was 'الإحسان' (benevolence), from part 1's list of values. Block 3 of the 2011 sujet2 solution document is '3 – مراحل تحريم الربا' with all four stages and their Quranic citations (الروم 39، النساء 160-161، آل عمران 130، البقرة 275).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "from_unit": "bac_islamic_2011_sujet2__s1"
+ },
+ "bac_islamic_2011_sujet2__s1__q1": {
+  "block": 4,
+  "note": "Q asks to explain the three phrases صدقة جارية / علم ينتفع به / ولد صالح يدعو له. Stored answer was block 5, which only restates those three phrases plus the score cells. Block 4 carries the actual explanations of all three.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2011_sujet2__s1__q2": {
+  "block": 6,
+  "note": "Q asks to define الوقف linguistically and technically. Stored answer was block 7, the header '2/ تعريف الوقف' plus the score and a stray 'مردوده الاقتصادي:' fragment belonging to the next question. Block 6 is the actual two-part definition (لغة: الحبس والمنع؛ اصطلاحا: توقّف المالك عن التّصرّف في المال...).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2011_sujet2__s1__q3": {
+  "block": [
+   8,
+   9,
+   10,
+   11
+  ],
+  "note": "Q asks for the economic return of waqf. Stored answer was block 15, '3/ ذكر قيمتين وتصنيفهما', which is the next question's header. The four economic returns are blocks 8-11 (investing and growing capital; easing the state's financial burden; addressing poverty and circulating wealth; reducing unemployment), with block 11 also carrying the key's note that one return suffices.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2011_sujet2__s2__q1": {
+  "block": [
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "note": "Q asks to set out the ways of establishing lineage (النسب) in Islamic law. Stored answer was block 21, the bare header. The four ways are blocks 22-25 (valid marriage, acknowledgement of paternity, legal testimony, DNA fingerprint); blocks 21-25 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2012_sujet1__s2__q1": {
+  "block": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "note": "Q asks for the distorted beliefs of BOTH Jews and Christians. Stored answer was block 0 alone, which covers the four Christian beliefs (التثليث، الخطيئة والفداء، محاسبة المسيح، غفران الذنوب) and then stops at the header 'ثانيا: أهم عقائد اليهود وانحرافاتهم'. The Jewish beliefs are blocks 1-8; blocks 0-8 are the complete answer, and block 9 ('2 / فرق النصارى') belongs to the next question and is excluded.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2012_sujet2__s2__q2": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "note": "Q asks to define ONE of the sources listed in q1 (لغة واصطلاحا) AND show the evidence of its authority. Stored answer was block 5 alone, which gives the authority evidence for القياس but none of its definition. The key's '2 / تعريف أحد المصادر' section runs blocks 1-8 and offers three interchangeable options, each with both parts: الإجماع (1-3), القياس (4-6), المصالح المرسلة (7-8). All three are kept so the definition half of the answer is present whichever source the student chose.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2014_sujet2__s2__q3": {
+  "block": [
+   2,
+   3
+  ],
+  "note": "Q asks to discuss BOTH الوقاية من الأمراض (disease prevention) AND الإعفاء من بعض الفرائض (exemption from some obligations) as ways the Quran cares for bodily health. Stored answer was block 3, which is only the second half ('3 - 2 الإعفاء من بعض الفرائض'). Block 2 is '3 - 1 الوقاية من الأمراض'; blocks 2-3 together are the full answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2015_sujet1__s1__q5": {
+  "block": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "note": "Q asks to extract four benefits and guidances from the verses. Stored answer was block 5, the bare header '5- استخرج من الآيات أربع فوائد وإرشادات . (للذكر وليس للحصر)'. The six candidate benefits the key lists are blocks 6-11 (God is Lord of the seven heavens and the great Throne; the call to fear God; the obligation of tawhid and prohibition of shirk; God protects and none protects against Him; multiple gods would mean cosmic chaos; the denier of oneness is deluded or lying), with block 11 also carrying the key's note that any other correct benefit is accepted.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2015_sujet2__s2__q2": {
+  "block": 18,
+  "note": "Q asks to name three negative effects of unemployment. Stored answer was block 28, which is a line lifted from the trailing [SCORES] bracket ('2. بيان الآثار السلبية 3×0.5 (المجموع 01.5)') and carries no content at all. Block 18 is the real answer: '2. بيان الآثار السلبية للبطالة' listing wasted talent, economic stagnation, poverty and dependency, spread of deviance and crime, and loss of family/social security.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2017_sujet1_session1__s1__q4": {
+  "block": [
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "note": "Q asks to name the rights of non-Muslims in the lands of Islam. Stored answer was block 17, the bare header 'الجواب الرابع: حقوق غير المسلمين في بلاد الإسلام:'. The four rights are blocks 18-21 (protection; insurance in incapacity, old age and poverty; freedom of religion; work and earning); blocks 17-21 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2017_sujet1_session1__s2__q1": {
+  "block": 0,
+  "note": "Q asks for the lawful alternative to تبني (adoption) and the wisdom behind legislating it. Stored answer was block 3, '1 . الحقّ في الاسم والهويّة', which is the first item of question 3's list of a foundling's rights. Block 0 is the real answer: 'الجواب الأول: البديل الشرعي للتبني، والحكمة من تشريعه' giving الكفالة plus the four points of wisdom.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2017_sujet1_session1__s2__q2": {
+  "block": 1,
+  "note": "Q asks to highlight the values this alternative (kafala) realises. Stored answer was block 4, '2 . الحقّ في الرعاية الماديّة والمعنويّة', the second item of question 3's rights list. Block 1 is the real answer: 'الجواب الثاني: إبراز القيم التي يحقّقها هذا البديل' listing التّكافل الاجتماعي، المسؤولية، التعاون، الإحسان.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2017_sujet1_session1__s2__q3": {
+  "block": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "note": "Q asks to name the rights Islam gave to a child of unknown lineage (plural). Stored answer was block 5 alone, a single item ('3 . الحقّ في الأخوّة الدّينيّة والموالاة'). Block 2 is the header 'الجواب الثالث: ذكر حقوق الطفل مجهول النّسب' and blocks 3-7 are the five rights (name and identity; material and moral care; religious brotherhood and loyalty; breastfeeding; bequest), with block 7 also carrying the key's note that three correct answers suffice.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2018_sujet1__s1__q1": {
+  "block": 0,
+  "note": "Q asks (أ) what type of health the verse refers to and (ب) its concept. Stored answer was block 3, a marking note ('يطالب المتعلّم بذكر مظهرين فقط...') that belongs to question 2 and answers neither part. Block 0 is 'الجواب على السؤال الأول' giving أ. الصحّة الجسميّة and ب. its definition.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2018_sujet1__s1__q2": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "Q asks to extract the manifestations and identify where each is evidenced in the verse. Stored answer was block 4, a mark-deduction rule with no content. Block 1 is the header 'الجواب على السؤال الثاني', block 2 is the actual المظهر/محل الاستدلال table (التيمّم، الاغتسال، تحريم الخمر with their Quranic phrases), and block 3 states which two manifestations are required. Block 4 is excluded as pure scoring.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2018_sujet1__s1__q5": {
+  "block": [
+   11,
+   12,
+   13
+  ],
+  "note": "Q asks to extract two rulings (حكمين) and two benefits (فائدتين) from the text. Stored answer was block 11, the bare header 'الجواب على السؤال الخامس:'. Block 12 is '1/ الحُكمان الشَّرعيان' with the candidate rulings and block 13 is '2/ الفائدتان' with the candidate benefits; blocks 14-17 are marking rules and are excluded.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2010_sujet2__s1__q2": {
+  "block": [
+   8,
+   9
+  ],
+  "note": "Q has two parts: state the hadd for theft and give its evidence from the Quran. Stored answer was block 9 only (part ب, the verse المائدة/38). Block 8 is part أ ('بيان حد السرقة: هو قطع يد السارق'); blocks 8-9 together answer both parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2011_sujet1__s1__q3": {
+  "block": 2,
+  "note": "Q asks to discuss two ways the Quran preserves bodily health. Stored answer was '3 - الإحسان', the third entry of question 4's list of values. The real answer is the key's row '3 المظهران من مظاهر محافظة القرآن الكريم على الصحة الجسمية للإنسان' (تنمية القوّة وتوفير الصحة الإيجابية; الإعفاء من بعض الفروض, plus the page-2 continuation on أسس الرّعاية الصحيّة and الوقاية من الأمراض). That row carries a bare-digit label ('3 المظهران') that the table splitter does not recognise as starting a new block, so it was merged into block 2 together with question 2's answer. Block 2 is therefore assigned here: it contains this question's full answer, at the cost of also carrying question 2's. Over-scoped by a known segmentation limitation, not by a wrong choice; re-splitting blocks_of would shift every stored block index and is not done as part of this fix.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2020_sujet2__s1__q2": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q has two parts: (أ) name the categories of tawhid and (ب) say which one تعظيم شعائر الإسلام belongs to and define it technically. Stored answer was block 1, the bare 29-character header '**2) أ - ذكر أقسام التوحيد:**'. Block 2 holds both answers: the three categories (الربوبية، الألوهية، الأسماء والصفات) and part ب (توحيد الألوهية with its technical definition). Blocks 1-2 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2021_sujet1__s1__q3": {
+  "block": [
+   2,
+   3,
+   4
+  ],
+  "note": "Q has two parts: (أ) extract two categories of مقاصد with an example from the verse, and (ب) link each way of preserving mental health to what indicates it in the verse. The stored answer (block 2) completes part أ and then stops exactly at part ب's header 'ب- الربط بين طرق الحفاظ على الصحة النَّفسية ونص الآية:'. Part ب's content is blocks 3 and 4: '1) الفهم الصحيح للوجود والمصير' with ﴿لَّيْسَ الْبِرَّ...﴾ and '2) تقوية الصّلة بالله تعالى' with ﴿وَأَقَامَ الصَّلَاةَ وَءَاتَى الزَّكَوٰةَ﴾ and ﴿وَالْمُوفُونَ بِعَهْدِهِمْ...﴾. Blocks 2-4 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2021_sujet2__s1__q2": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "note": "Q has two parts: (أ) define العقيدة الإسلامية لغة واصطلاحا and (ب) explain one effect on the individual and one on society. The stored answer (block 1) completes part أ and stops at 'ب) - شرح أثر من آثار العقيدة على الفرد:'. The individual effects are blocks 2-4 (self/destiny awareness, psychological calm, uprightness), block 4 also carries the header for the social effects, and blocks 5-7 are those (brotherhood and solidarity, righteousness and reform, security), with block 7 carrying the marking note. Blocks 1-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2021_sujet2__s1__q5": {
+  "block": [
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24
+  ],
+  "note": "Q asks to extract two rulings and two benefits from the hadith. Stored answer was block 10, the 59-character header '5) -استخراج حُكمين وفائدتين من النَّص: أ) الحُكمان:' with no list. The rulings are blocks 11-18 (block 18 also carrying the 'ب) الفائدتان' header) and the benefits are blocks 19-24, with block 24 carrying the marking note. Blocks 10-24 are the complete answer; the sub-enumeration had fragmented each list item into its own unlinked block.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2021_sujet2__s2__q1": {
+  "block": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "note": "Q asks to extract the characteristic of the Muhammadan message contained in the السند AND enumerate the remaining characteristics. The stored answer (block 0) gives the extracted one ('عامّة تخاطب جميع النّاس') and then stops at the header '- عدّ بقية الخصائص:'. The remaining characteristics are blocks 1-3 (gathering the fruits of previous messages; eternal and not bound to a time; God guaranteed its preservation). Blocks 0-3 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2023_sujet1__s1__q4": {
+  "block": [
+   3,
+   4,
+   5
+  ],
+  "note": "Q has two parts: (أ) derive the shared علّة and state the شروط المقيس (الفرع), and (ب) use qiyas to demonstrate the flexibility of sharia. The stored answer (block 3, 77 chars) gives the علّة ('الانشغال عن الصلاة') then stops at the header '- بيان شروط المقيس (الفرع):'. The two conditions are blocks 4 and 5, and block 5 also carries part ب's full demonstration. Blocks 3-5 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2024_sujet2__s1__q1": {
+  "block": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "note": "Q has three parts: (أ) define العقيدة الإسلامية and give two causes of deviation from it, (ب) name an effect of aqeedah on the individual matching the hadith, (ج) may the intellect delve into everything, with justification. The stored answer (block 0) gives only the definition and then stops at the header 'ذكر سببين من أسباب الانحراف عن العقيدة الصحيحة'. Blocks 1-5 hold the five candidate causes, and block 5 additionally carries part ب (الاستقامة والبعد عن الانحراف والجريمة) and part ج (no, with the reasoning that the intellect is bounded by the senses and experience). Blocks 0-5 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2024_sujet2__s1__q2": {
+  "block": [
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "note": "Q asks to extract from the hadith what indicates the obligation to commit to Islam's message AND set out its characteristics. The stored answer (block 6) gives the extraction and then stops at 'من خصائص الرّسالة الخاتمة: (يُكتفى بذكر خاصيتين)'. The four characteristics are blocks 7-10 (universal; gathering the merits of earlier messages; eternal; divinely preserved). Blocks 6-10 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2024_sujet2__s1__q3": {
+  "block": [
+   11,
+   12
+  ],
+  "note": "Q has two parts: (أ) extract the types of the ضروري category with an example of each from the hadith, and (ب) rank them by importance. The stored answer (block 11, 516 chars) completes part أ's table and stops exactly at 'ب . ترتيب هذه الأنواع من حيث أهميتها:'. Block 12 is that ranking (حفظ الدّين، النَّفس، النَّسل، المال). Blocks 11-12 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2024_sujet1__s1__q4": {
+  "block": [
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "note": "Q has two parts: (أ) define الوقف technically and state three of its effects, and (ب) identify the type of riba in the second source, name its counterpart and give its subdivisions. The stored answer (block 3, 112 chars) gives only the definition and stops at the header '* بيان ثلاثة من آثاره:'. The four effects are blocks 4-7 (نفسية، اجتماعية، اقتصادية، أخروية), and block 7 additionally carries part ب (ربا الديون، its counterpart ربا البيوع and its subdivisions). Blocks 3-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_islamic_2026_sujet1__s1__q1": {
+  "block": 0,
+  "note": "Q asks only for the وسيلة of establishing aqeedah indicated by the verses and its محل الشاهد. The key numbers its items 2, 3 and 4 with bare digits ('2 القيمة', '3 **أ-الخاصية...', '4 **أ-الجانب...') which blocks_of() does not read as new block labels, so the answers to items 1-4 all landed in block 0 and the stored answer ran to 1827 chars covering four questions. Carved to block 0 lines 0-2: the وسيلة (التذكير بمراقبة الله تعالى لخلقه), its shahid ﴿إِنَّ اللَّهَ يَعْلَمُ مَا تَفْعَلُونَ﴾, and the key's note accepting إثارة العقل والوجدان with ﴿يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ﴾.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
  }
 }

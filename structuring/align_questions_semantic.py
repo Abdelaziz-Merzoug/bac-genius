@@ -318,8 +318,16 @@ def main(subjects):
                     idxs = [i for i in (ob if isinstance(ob, list) else [ob]) if i is not None and i < len(src_blocks)]
                     k = idxs[0] if (idxs and not src) else None
                     human_answer = "\n".join(src_blocks[i]["text"] for i in idxs) if idxs else None
+                    # Optional "lines": [start, end) selects a sub-range of the joined block text's lines.
+                    # Needed where the key numbers an item with a bare digit ("3 المظهران...", "2 القيمة"),
+                    # which blocks_of() does not treat as a new block label, so several of the key's rows
+                    # land in one block. Carving by line keeps every other override's block index valid.
+                    ln = overrides[qid].get("lines")
+                    if human_answer is not None and ln:
+                        rows = human_answer.split("\n")
+                        human_answer = "\n".join(rows[ln[0]:ln[1]]) or None
                     cls = "human" if idxs else "solution_missing"   # human-verified: official key has no answer
-                    ev = {"human_note": overrides[qid]["note"], "blocks": idxs, "from_unit": src}
+                    ev = {"human_note": overrides[qid]["note"], "blocks": idxs, "from_unit": src, "lines": ln}
                 stats[cls] += 1
                 if ev and ev.get("label_agree") == 0: stats["matched_despite_label_mismatch"] += 1
                 if ev and ev.get("label_agree") == 1: stats["matched_with_label_agreement"] += 1
