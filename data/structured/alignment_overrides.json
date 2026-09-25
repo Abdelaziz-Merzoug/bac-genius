@@ -2446,10 +2446,11 @@
   "block": [
    2,
    3,
-   4
+   4,
+   5
   ],
-  "note": "Targeted fix: stored answer was only the section heading (or a partial capture); the real list/content sits in the immediately-following block(s) of the same solution unit but was not captured.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Re-verification catch: previous fix (block range [2,3,4]) still omitted the 3rd benefit ('3 - الشورى وإقامة العبادات...') which sits in the immediately-following block 5; question asks for 3 benefits.",
+  "by": "human review 2026-09-25c (re-verification catch: 2 incomplete fixes from prior batch)"
  },
  "bac_islamic_2011_sujet2__s1__q4": {
   "block": [
@@ -2522,10 +2523,16 @@
  },
  "bac_islamic_2015_sujet2__s2__q1": {
   "block": [
-   11
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
   ],
-  "note": "Targeted fix: question asks for both the concept of work (part أ) and Islam's view of it (part ب); stored answer only had one bullet from part ب's list; block 11 contains part أ's full definition plus part ب's heading (glued block).",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Re-verification catch: previous fix (block [11] alone) only captured part أ (concept of work) plus part ب's bare heading, omitting all of part ب's actual 10-item list of Islam's view of work, which spans blocks 12-17.",
+  "by": "human review 2026-09-25c (re-verification catch: 2 incomplete fixes from prior batch)"
  },
  "bac_islamic_2017_sujet1_session1__s1__q1": {
   "block": [
