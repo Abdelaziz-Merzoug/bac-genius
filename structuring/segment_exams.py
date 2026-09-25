@@ -30,7 +30,7 @@ HEAD_RX = re.compile(
     r"[\s:：*_]*(?:\(?\s*(?P<pts>[\d٠-٩]+(?:[.,]\d+)?)\s*\)?\s*(?:نقاط|نقطة|نقطتان|نقط|ن)\b[^\n]*)?")
 FIG_RX = re.compile(r"\[FIGURE:.*?\]", re.S)
 # numbered question marker at the start of a line / cell: "1." "1)" "1-" "(1)" "1/" "١-" "**1-**" "أ/ 1-"
-ITEM_RX = re.compile(r"^[\s\(\[]*(?:الجزء\s+\S+\s*[:：]\s*)?(?:I{1,3}V?\s*[\)\.\-–/]{1,2}\s*)?(?:[أابجدهـ]\s*[/\)\-–]\s*)?(?P<label>[1-9]\d?(?:\.\d+)*|[١-٩][٠-٩]?(?:\.[٠-٩]+)*)\s*[\)\]\.\-–/:]\s*(?=\S|$)")
+ITEM_RX = re.compile(r"^[\s\(\[]*(?:الجزء\s+\S+\s*[:：]\s*)?(?:I{1,3}V?\s*[\)\.\-–/]{1,2}\s*)?(?:[أابجدهـ]\s*[/\)\-–]\s*)?(?:Act(?:ivity)?\s+)?(?P<label>[1-9]\d?(?:\.\d+)*|[١-٩][٠-٩]?(?:\.[٠-٩]+)*)\s*[\)\]\.\-–/:]\s*(?=\S|$)")
 
 # RTL-reversed marker "-2 text" (the source "2-" flipped by the text layer)
 ITEM_RTL_RX = re.compile(r"^\s*(?:[\-–]\s*(?P<label>[1-9]\d?|[١-٩][٠-٩]?)\s+(?=[^\d\s$])|\(\s*(?P<label2>[1-9]\d?|[١-٩][٠-٩]?)(?:\s*$|\s+(?=[^\d\s)+\-*/=]))"   # RTL "(2" alone or "(2 text"
@@ -82,12 +82,14 @@ def item_label(line):
     t = CELL_NOISE_RX.sub("", TASHKEEL_RX.sub("", line)).strip()
     if re.fullmatch(r"[\d.,\s×x+]+", t) or PAGE_NOISE_RX.match(t): return None   # score cell / page footer
     if re.match(r"^\s*[\d.,]+\s*%", t): return None                                # "7.2% …" table value
-    if t.count("–") >= 3 or re.search(r"[–\-]\s*\|", t) or re.search(r"BAC20\d\d/", t): return None   # axis art / footer
+    if re.match(r"^\s*\(?\d+(?:[.,]\d+)?\)?\s*(?:pts?|points?)\b", t, re.I): return None   # "1.5 pt 0.5x3" score line (english keys)
+    if (t.count("–") >= 3 and len(re.findall(r"[^\W\d_]", t)) < 20) or re.search(r"[–\-]\s*\|", t) or re.search(r"BAC20\d\d/", t): return None   # axis art / footer (a real "6. a – b – c – d" list has many letters)
     m = ITEM_RX.match(t) or ITEM_RTL_RX.match(t)
     if not m: return None
     if t.startswith("(") and len(re.findall(r"\(\s*[1-9]\s*\)", t)) >= 2: return None   # "(1) … (2) …" option list
     if re.match(r"^\d+-[ء-ي]", t) and re.search(r"[ء-ي]-\d+-", t): return None  # "3-ميثيل بوتان-1-أول"
     g = m.groupdict()
+    if g.get("label") and re.match(r"^\s*[\-–]\s*\d+\s+[a-zà-ÿ]", t): return None   # "- 7 mai 1933 :" is a date, not RTL "-7"
     if g.get("label8"):
         return str({"الأول": 1, "الاول": 1, "الثاني": 2, "الثالث": 3, "الرابع": 4, "الخامس": 5, "السادس": 6, "السابع": 7}[g["label8"]])
     lab = ar_digits(g.get("label") or g.get("label2") or g.get("label3") or g.get("label5") or g.get("label6") or g.get("label7"))
@@ -110,22 +112,47 @@ def virtual_lines(lines):
         f = frags[i]
         # a question number sitting alone in its own cell or line ("| 2 | خاطئ لأنّ …", "2\nخاطئ لأنّ"): glue it
         # to the answer fragment that follows (which must start with a letter, not a score)
-        if re.fullmatch(r"\**\(?\s*(?:[1-9]|1[0-5])\s*\)?\**", f.strip()) and i + 1 < len(frags) \
-                and re.match(r"^\**\s*[A-Za-z\u0621-\u064A(]", frags[i + 1]):
-            yield re.sub(r"[*()]", "", f).strip() + " " + frags[i + 1].strip(); i += 2; continue
+        # also "**2.**" / "5." alone in a cell followed by "<u>Deux mots</u>", "- \u00AB la \u00BB : \u2026", "**a.** Faux" (French keys)
+        # (a bare "1" followed by "- text" is a score cell, so the dash/\u00AB/<u> continuation needs the "N." / "(N)" form)
+        if i + 1 < len(frags) and re.fullmatch(r"\**\(?\s*(?:[1-9]|1[0-5])\s*[.)]?\**", f.strip()):
+            nx = f.strip(); marked = bool(re.search(r"[.)]\**$", nx))
+            # a marked "2." / "(2)" takes whatever answer fragment follows (text, "<table>", "1. should take");
+            # a bare "2" only a fragment starting with a letter; neither takes a score ("0.5 each", "1 pt", "0.25x6")
+            follow = r"^(?:\**|<u>|[\-\u2013]\s*)?\s*(?:[A-Za-z\u0621-\u064A(\u00AB]|<table|\d+\s*[.)]\s*[A-Za-z])" if marked else r"^\**\s*[A-Za-z\u0621-\u064A(]"
+            score = r"^\**\s*\(?(?:0?\d+(?:[.,]\d+)?\s*(?:[x\u00D7]\s*\d|pts?\b|points?\b|each\b)|0\d)"
+            # BUGFIX: frags is a flat list across table ROWS, so a leftover bare score cell from row N
+            # ("**1**", the total points) can sit right before row N+1's own opening marker ("**(2**...").
+            # Gluing them would corrupt row N+1's marker beyond recognition (found via
+            # bac_math_2025_sujet2__ex1__q4: "**1**"+"**(2**..." -> "1 **(2**..." unparseable).
+            # Never glue onto a fragment that already stands as a valid marker on its own.
+            if re.match(follow, frags[i + 1]) and not re.match(score, frags[i + 1], re.I) \
+                    and item_label(frags[i + 1]) is None:
+                # BUGFIX: a "marked" glue (had ")"/"." before stripping) must re-emit a "." separator so
+                # item_label() can still recognize the marker on the next pass — stripping "()" without
+                # replacing it (e.g. "2)" -> "2 <table>...") silently swallowed the whole answer into the
+                # previous block (found via bac_math_2018_sujet1__ex2__q2 going from matched to none).
+                sep = ". " if marked else " "
+                yield re.sub(r"[*()]", "", f).strip().rstrip(".") + sep + frags[i + 1].strip(); i += 2; continue
         yield f; i += 1
 
-def split_items(lines):
+def split_items(lines, strict_sequence=False):
     """Top-level numbered sub-questions. A new item starts at a line whose label continues the
     numbering (n+1), or restarts at 1 (roman-numbered sub-parts I/II re-number their questions);
-    letters (أ/ب, a/b) and out-of-sequence numbers stay inside the current item."""
+    letters (أ/ب, a/b) and out-of-sequence numbers stay inside the current item.
+    strict_sequence: only n == expect (or the first item) opens an item (english activities)."""
     items, cur, expect = [], None, 1
     for l in virtual_lines(lines):
         lab = item_label(l)
         if lab is not None:
             n = leading(lab)
             # hierarchical labels (1.1, 2.3.1) always open an item; flat ones must continue or restart
-            if "." in lab or n == expect or n == 1 or (cur is None and n <= 12) or (cur and n > leading(cur["label"]) and n <= 15):
+            opens = ("." in lab or n == expect or n == 1 or (cur is None and n <= 12) or (cur and n > leading(cur["label"]) and n <= 15))
+            if strict_sequence:
+                # matching-table rows ("1. contaminated (§1) a. well-known", "1. three a) honey", "1 Syllable")
+                # are not activities even when they continue the numbering
+                row = re.match(r"^\s*\d+[.)]?\s+[A-Za-z][\w'-]*\s*(?:\(\s*§\s*\d\s*\))?\s*(?:[a-d]\s*[.)]|Syllables?\b|$)", l.strip())
+                opens = "." not in lab and not row and (n == expect or (cur is None and n <= 3))
+            if opens:
                 if cur: items.append(cur)
                 cur, expect = {"label": lab, "text": l.strip()}, n + 1
                 continue

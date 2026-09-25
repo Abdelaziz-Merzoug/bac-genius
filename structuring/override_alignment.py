@@ -38,7 +38,27 @@ if cmd == "show":
 elif cmd == "set":
     qid, blk, note = sys.argv[2], sys.argv[3], sys.argv[4]
     block = None if blk == "none" else ([int(x) for x in blk.split(",")] if "," in blk else int(blk))
-    d = load(); d[qid] = {"block": block, "note": note, "by": "human review 2026-09-21"}; save(d)
+    d = load(); old = d.get(qid); d[qid] = {"block": block, "note": note, "by": "human review 2026-09-21"}
+    if len(sys.argv) > 5: d[qid]["from_unit"] = sys.argv[5]     # blocks taken from another unit's answer key
+    save(d)
+    # audit log: what the automatic aligner (or previous override) had, what the human set, and why
+    subj = qid.split("_")[1]; cur = None
+    for l in open(OUT/f"{subj}_questions.jsonl", encoding="utf-8"):
+        q = json.loads(l)
+        if q["qid"] == qid: cur = q; break
+    src_unit = d[qid].get("from_unit") or qid.split("__q")[0]
+    new_blocks = [] if block is None else (block if isinstance(block, list) else [block])
+    try:
+        bl = canonicalize(blocks_of(unit(src_unit)["solution"]))
+        evidence = [one(bl[i]["text"], 160) for i in new_blocks]
+    except Exception: evidence = []
+    entry = {"exam_id": src_unit if not d[qid].get("from_unit") else qid.split("__q")[0], "question_id": qid,
+             "question": one(cur["question"], 160) if cur else None,
+             "old_mapping": {"match": cur["match"], "answer_label": cur["answer_label"], "answer": one(cur["answer"], 160)} if cur else None,
+             "previous_override": old,
+             "new_mapping": {"match": "solution_missing" if block is None else "human", "blocks": new_blocks, "from_unit": d[qid].get("from_unit")},
+             "evidence": evidence, "reason": note, "by": d[qid]["by"]}
+    with open(OUT/"alignment_audit_log.jsonl", "a", encoding="utf-8") as fo: fo.write(json.dumps(entry, ensure_ascii=False) + "\n")
     print("saved", qid, d[qid])
 elif cmd == "list":
     for k, v in load().items(): print(k, v)

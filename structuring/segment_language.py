@@ -27,7 +27,7 @@ SECTIONS = {
     "francais": [("text", r"texte\s*:?\s*$"), ("questions", r"questions\s*:?\s*$"),
                  ("comprehension", r"(?:I\s*[\.\-–/:]?\s*)?compr[ée]hension(?:\s+de\s+l['’][ée]crit)?"),
                  ("production", r"(?:II\s*[\.\-–/:]?\s*)?production(?:\s+de\s+l['’])?\s*[ée]crite?\b|II\s*[\.\-–/:]?\s*production\b")],
-    "english": [("reading", r"part\s+(?:one|1|I)\b(?!I)"), ("exploration", r"B[\)/\.\-]?\s*text\s+exploration"),
+    "english": [("reading", r"part\s+(?:one|1|I)\b(?!I)"), ("exploration", r"(?:B[\)/\.\-]?\s*)?text\s+exploration"),
                 ("writing", r"part\s+(?:two|2|II)\b")],
 }
 HEADER_RX = re.compile(r"الجمهورية|وزارة|الديوان|امتحان بكالوريا|دورة|الشعب|اختبار في مادة|المدة|المترشح|الموضوع|يحتوي الموضوع|"
@@ -58,6 +58,9 @@ def segment_file(path, rules, captions):
     pages = parse_pages(path.read_text("utf-8"))
     secs, cur, preamble = [], None, []
     for pn, lines in pages:
+        if meta["subject"] == "english" and meta["doc_type"] == "solution":
+            # keys often run "... (0.5 each) Text exploration: 7 pts Act 1. ..." on one line: cut before the heading
+            lines = [p for l in lines for p in re.split(r"(?=\b[Tt]ext\s+[Ee]xploration\b)", l) if p.strip() or not l.strip()]
         for line in lines:
             key, h = find_section(line, rules)
             if key == "questions":           # "الأسئلة:" / "QUESTIONS" only closes the text section
@@ -114,7 +117,10 @@ def segment_file(path, rules, captions):
         text = re.sub(r"\n{3,}", "\n\n", "\n".join(s.pop("lines")).strip())
         out.append({"id": f"{stem}__s{i}", **meta, **s, "text": text, "figures": FIG_RX.findall(text),
                     "captions": [c for pg in s["pages"] for c in captions.get((stem, pg), [])],
-                    "items": split_items(text.splitlines()), "whole_document": whole})
+                    # english sections number their activities 1..n strictly; a "1." inside an activity is a table row
+                    # ("1. contaminated (§1) a. well-known") or a sentence pair ("1.a) …"), not a new question
+                    "items": split_items(text.splitlines(), strict_sequence=(meta["subject"] == "english")),
+                    "whole_document": whole})
     return {"records": out, "preamble": "\n".join(preamble).strip(), "notes": notes}
 
 def main(subjects):

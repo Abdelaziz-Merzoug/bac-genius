@@ -32,7 +32,7 @@ for stem in files[start:start + count]:
             if q["match"] == "parent_stub": flags.append("STUB")
             if q["match"] == "legend": flags.append("LEGEND")
             if q["match"] == "human": flags.append("HUMAN")
-            if q["match"] == "none_verified": flags.append("NONE-VERIFIED")
+            if q["match"] == "solution_missing": flags.append("SOLUTION-MISSING")
             if q["match"] == "label_supported": flags.append("LBL")
             if ev and ev.get("label_agree") == 0: flags.append("CONTRA")
             if q["answer"]:

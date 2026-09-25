@@ -13,7 +13,7 @@ Numbering is therefore evidence, not the decision. Every record carries the evid
 Output: data/structured/{subject}_questions.jsonl (overwrites the label-only version), stats in dataset_summary.json,
         data/structured/alignment_review_sample.jsonl (random sample per class for human review).
 usage: align_questions_semantic.py [subjects...]"""
-import json, re, sys, random, hashlib
+import json, re, sys, random, hashlib, os
 import numpy as np
 from collections import Counter
 from pathlib import Path
@@ -25,7 +25,13 @@ def clean(text):
     keep = []
     for l in text.splitlines():
         t = CELL_NOISE_RX.sub("", l).strip()
-        if not t or PAGE_NOISE_RX.match(t) or HEAD_RX.match(norm_head(t)) or re.fullmatch(r"[\d.,\s×x+()]+", t): continue
+        if not t or PAGE_NOISE_RX.match(t) or re.fullmatch(r"[\d.,\s×x+()]+", t): continue
+        # HEAD_RX.match() only needs to match a PREFIX: a heading glued to the first answer on the same
+        # source line ("الجزء الأول: 1) lim h(x)=... 0,5") would otherwise match on the heading alone and
+        # drop the whole line — including the real answer — leaving the block's clean text empty and the
+        # block silently filtered out of blocks_of() entirely (found via bac_math_2009_sujet2__ex4__q1).
+        hm = HEAD_RX.match(norm_head(t))
+        if hm and len(t) - hm.end() <= 15: continue
         keep.append(t)
     return "\n".join(keep)
 
@@ -131,7 +137,16 @@ def lexical(q, a):
     return inter / (len(A) ** 0.5 * len(B) ** 0.5)   # cosine on binary bags (less biased by long answers)
 
 def blocks_of(solution):
-    """Answer blocks with (label|None, text). Cut at every numbered marker; fall back to paragraphs."""
+    """Answer blocks with (label|None, text). Cut at every numbered marker; fall back to paragraphs.
+    NOTE: a container-aware version of this (only opening a new block when the label plausibly continues
+    or genuinely restarts the top-level sequence) was tried and reverted — it fixed real cases of a
+    numbered sub-list inside one answer being mistaken for new top-level questions, but the restart/part
+    markers that legitimately DO start a new top-level sequence ("ثانيا:", "الجزء الثاني", "(II", label+
+    embedded-roman-numeral, ...) turned out to have too many different shapes across the corpus to detect
+    reliably; the resulting false negatives (content silently dropping to "none") outnumbered the fixes by
+    roughly 6:1 in a full-corpus regression check. Recorded here so the attempt isn't silently re-tried:
+    the sub-enumeration fragmentation bug is instead handled case-by-case via human overrides (see
+    structuring/check_missing.py and alignment_overrides.json)."""
     lines = list(virtual_lines(solution["text"].splitlines()))
     blocks, cur = [], None
     for l in lines:
@@ -212,6 +227,9 @@ def align_unit(questions, blocks, E):
             # exact numbering + weak-but-positive semantics (drawings, tables, one-word answers); when the
             # numbering is distrusted the pair keeps a low score and the unit-level optimum decides
             ok = ok or (lab == 1.0 and s >= T_LABEL * (1 if trust[i] == 1.0 else 0.8) and emb[i, j] >= MIN_EMB_LABEL)
+            # symbolic answers ("2. a) T b) F c) T", "4. In § 3", "1. c") carry no measurable meaning: exact numbering
+            # + monotonic position (the DP) is the only evidence, and it is accepted for short blocks
+            ok = ok or (lab == 1.0 and len(b["clean"].split()) <= 12)
             S[i, j] = s if ok else 0.0
             REUSABLE[i, j] = block_mentions(q["label"], b["text"])   # the block visibly holds this question's answer too
             EV[(i, j)] = {"emb": round(float(emb[i, j]), 3), "lex": round(float(lex), 3), "label_agree": float(lab),
@@ -250,7 +268,21 @@ def classify(ev):
 def main(subjects):
     E = Embedder(); random.seed(7)
     ov_path = OUT/"alignment_overrides.json"
-    overrides = json.loads(ov_path.read_text("utf-8")) if ov_path.exists() else {}
+    # NO_OVERRIDES=1 -> pure automatic alignment written to {subj}_questions_auto.jsonl (baseline for the audit log)
+    auto_only = os.environ.get("NO_OVERRIDES") == "1"
+    overrides = {} if auto_only else (json.loads(ov_path.read_text("utf-8")) if ov_path.exists() else {})
+    suffix = "_questions_auto.jsonl" if auto_only else "_questions.jsonl"
+    # solutions of every unit, for overrides that point at ANOTHER unit's answer key ("from_unit"):
+    # e.g. French keys often hold subject 2's comprehension answers inside subject 1's file
+    all_solutions = {}
+    for sj in SUBJECTS:
+        for l in open(OUT/f"{sj}_pairs.jsonl", encoding="utf-8"):
+            pp = json.loads(l)
+            if pp["solution"]: all_solutions[pp["exam"]["id"]] = pp["solution"]
+    blocks_cache = {}
+    def blocks_for(unit_id):
+        if unit_id not in blocks_cache: blocks_cache[unit_id] = canonicalize(blocks_of(all_solutions[unit_id]))
+        return blocks_cache[unit_id]
     summary = json.loads((OUT/"dataset_summary.json").read_text("utf-8"))
     review = []
     for subj in subjects:
@@ -278,12 +310,13 @@ def main(subjects):
                 qid = f"{e['id']}__q{it['label']}" + (f"#{seen_labels[it['label']]}" if seen_labels[it["label"]] > 1 else "")
                 human_answer = None
                 if qid in overrides:                       # human correction wins over everything
-                    ob = overrides[qid]["block"]
-                    idxs = [i for i in (ob if isinstance(ob, list) else [ob]) if i is not None and i < len(blocks)]
-                    k = idxs[0] if idxs else None
-                    human_answer = "\n".join(blocks[i]["text"] for i in idxs) if idxs else None
-                    cls = "human" if idxs else "none_verified"
-                    ev = {"human_note": overrides[qid]["note"], "blocks": idxs}
+                    ob = overrides[qid]["block"]; src = overrides[qid].get("from_unit")
+                    src_blocks = blocks_for(src) if src else blocks
+                    idxs = [i for i in (ob if isinstance(ob, list) else [ob]) if i is not None and i < len(src_blocks)]
+                    k = idxs[0] if (idxs and not src) else None
+                    human_answer = "\n".join(src_blocks[i]["text"] for i in idxs) if idxs else None
+                    cls = "human" if idxs else "solution_missing"   # human-verified: official key has no answer
+                    ev = {"human_note": overrides[qid]["note"], "blocks": idxs, "from_unit": src}
                 stats[cls] += 1
                 if ev and ev.get("label_agree") == 0: stats["matched_despite_label_mismatch"] += 1
                 if ev and ev.get("label_agree") == 1: stats["matched_with_label_agreement"] += 1
@@ -291,16 +324,16 @@ def main(subjects):
                        "sujet": e["sujet"], "unit_id": e["id"], "unit_label": unit_label, "points": e["points"],
                        "label": it["label"], "label_raw": it["label_raw"], "question": it["text"],
                        "answer": human_answer if human_answer is not None else (blocks[k]["text"] if k is not None else None),
-                       "answer_label": blocks[k]["label"] if k is not None else None,
+                       "answer_label": blocks[k]["label"] if k is not None else ("x" if human_answer else None),
                        "match": cls, "evidence": ev, "solution_match": p["solution_match"]}
                 recs.append(rec)
-        with open(OUT/f"{subj}_questions.jsonl", "w", encoding="utf-8") as fo:
+        with open(OUT/f"{subj}{suffix}", "w", encoding="utf-8") as fo:
             for r in recs: fo.write(json.dumps(r, ensure_ascii=False) + "\n")
         for cls in ("strong", "good", "label_supported", "none"):
             pool = [r for r in recs if r["match"] == cls]
             review += random.sample(pool, min(3, len(pool)))
         answered = stats["strong"] + stats["good"] + stats["label_supported"] + stats["human"]
-        answerable = stats["questions"] - stats["parent_stub"] - stats["legend"] - stats["none_verified"]
+        answerable = stats["questions"] - stats["parent_stub"] - stats["legend"] - stats["solution_missing"]
         st = {"units": n_units, **stats, "answered": answered, "answered_pct": round(100 * answered / max(answerable, 1), 1)}
         summary[subj]["question_alignment"] = st
         print(subj, json.dumps(st, ensure_ascii=False))

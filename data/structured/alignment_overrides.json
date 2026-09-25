@@ -99,12 +99,12 @@
  },
  "bac_physic_2010_sujet2__ex5__q4": {
   "block": null,
-  "note": "key skips question 4 (3 then 5)",
+  "note": "CONFIRMED absent: item 4 in key is a drawing-only item ('-4 | 0.5 | 0.5', no text), matches the exam's drawing request",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2011_sujet1__ex5__q1": {
   "block": null,
-  "note": "introductory paragraph, not a question",
+  "note": "CONFIRMED: exam item is a lab-setup/materials description, not an answerable question (no corresponding prose answer exists for it as a whole)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2011_sujet1__ex5__q1#2": {
@@ -113,8 +113,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2011_sujet1__ex5__q1#3": {
-  "block": null,
-  "note": "ثانيا-1 (دور الوسيط) absent from key",
+  "block": 2,
+  "note": "PHASE2 FIX: answer present, merged into block 2 with q3 part1 (ثانيا-1 marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2012_sujet1__ex1__q2": {
@@ -143,8 +143,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2013_sujet1__ex4__q3": {
-  "block": null,
-  "note": "key has no answer 3 (pH=3,4)",
+  "block": 1,
+  "note": "PHASE2 FIX: pH=3.4 present, merged into block 1 with q2 (RTL '-3-' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2013_sujet2__ex4__q1": {
@@ -158,8 +158,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2013_sujet2__ex4__q1#2": {
-  "block": null,
-  "note": "ثانيا-1 (unit of k) absent from key",
+  "block": 1,
+  "note": "PHASE2 FIX: k unit analysis present, merged into block 1 with q2 (ثانياً-1 marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2013_sujet2__ex4__q2#2": {
@@ -183,13 +183,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2015_sujet2__ex5__q3": {
-  "block": null,
-  "note": "key has no numbered 3 (only score line)",
+  "block": 1,
+  "note": "PHASE2 FIX: progress table + التحول غير تام conclusion present, merged into block 1 with q2 (no explicit '3-' marker in source, likely upstream extraction gap)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2015_sujet2__ex5__q4": {
-  "block": null,
-  "note": "key has no numbered 4",
+  "block": 1,
+  "note": "PHASE2 FIX: زمن نصف التفاعل present, merged into block 1 with q2/q3 (no explicit '4-' marker in source, likely upstream extraction gap)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2016_sujet1_session1__ex1__q2": {
@@ -207,8 +207,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2016_sujet1_session2__ex2__q2#2": {
-  "block": null,
-  "note": "II-2 absent from key",
+  "block": 6,
+  "note": "PHASE2 FIX: C' connection+value present, merged into block 6 with II-1 (RTL '-2' marker embedded in HTML span not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2016_sujet1_session2__ex4__q4": {
@@ -217,13 +217,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2016_sujet1_session2__ex4__q5": {
-  "block": null,
-  "note": "5 absent from key text",
+  "block": 2,
+  "note": "PHASE2 FIX: V_M answer present, merged into block 2 with q3/q4 (RTL '-5' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2016_sujet2_session1__ex2__q4": {
-  "block": null,
-  "note": "4 absent from key (only score lines)",
+  "block": 6,
+  "note": "PHASE2 FIX: mass+age answer present, merged into block 6 (garbled RTL '-أ-4' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2017_sujet1_session1__ex3__q1#2": {
@@ -280,13 +280,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2019_sujet1__ex3__q1.3": {
-  "block": null,
-  "note": "graph drawing, key gives scores only",
+  "block": 2,
+  "note": "PHASE2 FIX: drawing-question heading present (minimal, appropriate for a graph-drawing item), merged into block 2",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2020_sujet2__ex2__q4": {
-  "block": null,
-  "note": "true/false item folded, no separate answer in key",
+  "block": 9,
+  "note": "PHASE2 FIX: block already correctly contains '4.' true/false answer; stale override from before segmentation fixes",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2021_sujet1__ex3__q1.3": {
@@ -307,13 +307,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2021_sujet2__ex1__q2.1": {
-  "block": null,
-  "note": "drawing; key gives score only",
+  "block": 3,
+  "note": "PHASE2 FIX: circuit component list present (minimal, appropriate for a redraw-circuit item), merged into block 3",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2021_sujet2__ex2__q5": {
-  "block": null,
-  "note": "key skips 5 (goes 4 -> 6)",
+  "block": 3,
+  "note": "PHASE2 FIX: g0*RT^2=GMT derivation present, merged into block 3 with q4 ('5.' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2023_sujet2__ex3__q2#3": {
@@ -327,28 +327,28 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2024_sujet1__ex1__q1#3": {
-  "block": null,
-  "note": "ثالثا-1 (why this isotope) absent from key",
+  "block": 9,
+  "note": "PHASE2 FIX: answer present, merged into block 9 with q3 (ثالثا-1 marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2024_sujet1__ex3__q5.3": {
   "block": null,
-  "note": "drawing; key gives no text",
+  "note": "CONFIRMED absent: drawing-only item, extracted key text ends before this point (consistent with q6/q7 gap in the same unit)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2024_sujet1__ex3__q6": {
   "block": null,
-  "note": "absent from key",
+  "note": "CONFIRMED absent: extracted key text ends before this point (consistent gap across q5.3/q6/q7 in the same unit, likely a missing/uncaptured page)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2024_sujet1__ex3__q7": {
   "block": null,
-  "note": "absent from key",
+  "note": "CONFIRMED absent: extracted key text ends before this point (consistent gap across q5.3/q6/q7 in the same unit, likely a missing/uncaptured page) - re-confirms audit's earlier 'unresolved' finding as genuinely absent",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2025_sujet1__ex2__q9": {
-  "block": null,
-  "note": "absent from key text",
+  "block": 11,
+  "note": "PHASE2 FIX: answer present, merged into block 11 with q8 (unlabeled trailing paragraph, '9.' marker lost)",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2025_sujet2__ex2__q2#3": {
@@ -358,22 +358,22 @@
  },
  "bac_physic_2025_sujet2__ex3__q1": {
   "block": null,
-  "note": "document description (1), not a question",
+  "note": "CONFIRMED: this is a document/figure condition-label (experimental condition 1 of 4), not an independently answerable question - no standalone answer expected",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2025_sujet2__ex3__q2": {
   "block": null,
-  "note": "document description (2), not a question",
+  "note": "CONFIRMED: this is a document/figure condition-label (experimental condition 2 of 4), not an independently answerable question - no standalone answer expected",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2025_sujet2__ex3__q3": {
   "block": null,
-  "note": "document description (3), not a question",
+  "note": "CONFIRMED: this is a document/figure condition-label (experimental condition 3 of 4), not an independently answerable question - no standalone answer expected",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2025_sujet2__ex3__q4": {
   "block": null,
-  "note": "document description (4), not a question",
+  "note": "CONFIRMED: this is a document/figure condition-label (experimental condition 4 of 4), not an independently answerable question - no standalone answer expected",
   "by": "human review 2026-09-21"
  },
  "bac_physic_2026_sujet1__ex1__q3.1": {
@@ -387,8 +387,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2009_sujet2__ex4__q1": {
-  "block": null,
-  "note": "الجزء الأول-1 absent from key",
+  "block": 0,
+  "note": "PHASE2 FIX: clean() bug - heading+answer glued on same line caused HEAD_RX to strip the whole line, filtering the block out entirely; fixed in clean(), block now recovered",
   "by": "human review 2026-09-21"
  },
  "bac_math_2009_sujet2__ex4__q5": {
@@ -398,17 +398,17 @@
  },
  "bac_math_2012_sujet2__ex1__q1": {
   "block": null,
-  "note": "key page starts at 4) (answers 1-3 missing from extraction)",
+  "note": "CONFIRMED absent: raw solution text starts abruptly at item 4) with no content for 1,2,3 anywhere (genuine extraction/page gap)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2012_sujet2__ex1__q2": {
   "block": null,
-  "note": "absent from key",
+  "note": "CONFIRMED absent: raw solution text starts abruptly at item 4) with no content for 1,2,3 anywhere (genuine extraction/page gap)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2012_sujet2__ex1__q3": {
   "block": null,
-  "note": "absent from key",
+  "note": "CONFIRMED absent: raw solution text starts abruptly at item 4) with no content for 1,2,3 anywhere (genuine extraction/page gap)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2013_sujet1__ex3__q1": {
@@ -417,8 +417,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2013_sujet1__ex4__q1#2": {
-  "block": null,
-  "note": "II-1 absent from key",
+  "block": 4,
+  "note": "PHASE2 FIX: answer present, merged into block 4 (combined roman+digit marker '(II (1' not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2015_sujet1__ex2__q1": {
@@ -437,13 +437,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2016_sujet1_session1__ex2__q2#2": {
-  "block": null,
-  "note": "II-2 absent from key",
+  "block": 3,
+  "note": "PHASE2 FIX: answer present but content severely OCR-garbled and merged with q1/q3#2's answers into one block (التخمين: نلاحظ...متقاربة...نحو العدد 4 = the guess/convergence answer); cannot cleanly separate",
   "by": "human review 2026-09-21"
  },
  "bac_math_2016_sujet1_session1__ex2__q3#2": {
-  "block": null,
-  "note": "II-3 absent from key",
+  "block": 3,
+  "note": "PHASE2 FIX: answer present but content severely OCR-garbled and merged with q1/q2#2's answers into one block (induction proof + monotonicity + limit=4 all present, scrambled); cannot cleanly separate",
   "by": "human review 2026-09-21"
  },
  "bac_math_2016_sujet1_session1__ex3__q1": {
@@ -467,18 +467,18 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2016_sujet1_session2__ex4__q1#2": {
-  "block": null,
-  "note": "II-1 absent from key",
+  "block": 2,
+  "note": "PHASE2 FIX: answer present but merged into block 2 with q3 + the whole unparsed LaTeX \\begin{array} table (parser doesn't split LaTeX array tables); cannot cleanly separate",
   "by": "human review 2026-09-21"
  },
  "bac_math_2016_sujet1_session2__ex4__q2#2": {
-  "block": null,
-  "note": "II-2 absent from key",
+  "block": 2,
+  "note": "PHASE2 FIX: answer present but merged into block 2 with q3 + the whole unparsed LaTeX \\begin{array} table (parser doesn't split LaTeX array tables); cannot cleanly separate",
   "by": "human review 2026-09-21"
  },
  "bac_math_2016_sujet2_session1__ex2__q3": {
-  "block": null,
-  "note": "II-3 absent from key",
+  "block": 3,
+  "note": "PHASE2 FIX: S_n computation present, merged into block 3 with q2#2 (RTL-flipped '3- حساب' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2016_sujet2_session1__ex4__q1": {
@@ -487,13 +487,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2017_sujet1_session1__ex4__q2": {
-  "block": null,
-  "note": "2) absent from key",
+  "block": 0,
+  "note": "PHASE2 FIX: 4 limits present, merged into block 0 with q1 (row lost its '2)' marker)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2017_sujet2_session1__ex3__q2": {
-  "block": null,
-  "note": "2) absent from key",
+  "block": 0,
+  "note": "PHASE2 FIX: true/false statement present, merged into block 0 with q1 (row lost its '2)' marker)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2017_sujet2_session1__ex4__q2#2": {
@@ -512,13 +512,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2017_sujet2_session2__ex4__q1#2": {
-  "block": null,
-  "note": "II-1 absent (key jumps to (2))",
+  "block": 3,
+  "note": "PHASE2 FIX: answer present, merged into block 3 with q4 (combined marker 'II . (1)' not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2018_sujet2__ex3__q2": {
-  "block": null,
-  "note": "2) absent from key",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 with q1 (bare '(2' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2021_sujet1__ex2__q2": {
@@ -532,18 +532,18 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2022_sujet1__ex1__q4": {
-  "block": null,
-  "note": "4) absent from key",
+  "block": 3,
+  "note": "PHASE2 FIX: block already correctly split and labeled '4' with matching content; stale override from before segmentation fixes",
   "by": "human review 2026-09-21"
  },
  "bac_math_2022_sujet2__ex1__q3": {
-  "block": null,
-  "note": "3) absent (key page truncated)",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (bare '3' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2022_sujet2__ex1__q4": {
-  "block": null,
-  "note": "4) absent",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 with q2/q3 (bare '4' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2022_sujet2__ex4__q4": {
@@ -552,23 +552,23 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2023_sujet1__ex3__q3": {
-  "block": null,
-  "note": "3) absent from key",
+  "block": 1,
+  "note": "PHASE2 FIX: S_n/T_n present, merged into block 1 with q2 (unlabeled trailing paragraph, '3' marker lost)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2023_sujet1__ex4__q4": {
-  "block": null,
-  "note": "4) absent from key",
+  "block": 4,
+  "note": "PHASE2 FIX: answer (أ/ب/جـ parts) present, merged into block 4 with q3 (unlabeled trailing paragraph, '4)' marker lost)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2023_sujet2__ex3__q3": {
-  "block": null,
-  "note": "3) absent from key",
+  "block": 1,
+  "note": "PHASE2 FIX: S_n/T_n present, merged into block 1 with q2 (unlabeled trailing paragraph, '3)' marker lost)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2023_sujet2__ex4__q5": {
-  "block": null,
-  "note": "5) absent from key",
+  "block": 3,
+  "note": "PHASE2 FIX: h(x) answer present, merged into block 3 with q4 (unlabeled trailing paragraph despite visible '5' marker - not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_math_2024_sujet1__ex2__q2": {
@@ -582,8 +582,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2025_sujet2__ex1__q4": {
-  "block": null,
-  "note": "(4 absent from key text",
+  "block": 4,
+  "note": "PHASE2 FIX: block already correctly split with bare '(4' marker and z_D/z_E content; stale override from before Phase1 row-glue fix",
   "by": "human review 2026-09-21"
  },
  "bac_math_2025_sujet2__ex2__q2": {
@@ -622,8 +622,11 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2026_sujet2__ex4__q5": {
-  "block": null,
-  "note": "5) absent from key text",
+  "block": [
+   3,
+   4
+  ],
+  "note": "PHASE2 FIX: answer (g'(x) formula + monotonicity in block 3, variation table in block 4) present, split across two blocks",
   "by": "human review 2026-09-21"
  },
  "bac_math_2024_sujet1__ex2__q1": {
@@ -642,8 +645,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2008_sujet2__ex3__q2#2": {
-  "block": null,
-  "note": "II-2 absent from key (only scores)",
+  "block": 7,
+  "note": "PHASE2 FIX: answer present, merged into block 7 with II-1 (RTL '- 2' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2009_sujet1__ex1__q1": {
@@ -657,13 +660,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2009_sujet1__ex3__q3#2": {
-  "block": null,
-  "note": "I-3 absent from key",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (RTL '- 3' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2009_sujet1__ex3__q1#2": {
-  "block": null,
-  "note": "II-1 absent from key",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 (mixed '- II - 1' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2009_sujet2__ex1__q1": {
@@ -701,7 +704,7 @@
  },
  "bac_svt_2010_sujet1__ex1__q1": {
   "block": null,
-  "note": "legend of figure, not a question",
+  "note": "CONFIRMED: exam item is a figure legend (numbered labels for a diagram), not a real question",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2011_sujet1__ex2__q4": {
@@ -794,33 +797,33 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2013_sujet1__ex1__q3": {
-  "block": null,
-  "note": "3- absent from key",
+  "block": 5,
+  "note": "PHASE2 FIX: answer present, merged into block 5 with earlier content (RTL '-3' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2013_sujet1__ex1__q5": {
-  "block": null,
-  "note": "5- absent from key",
+  "block": 6,
+  "note": "PHASE2 FIX: answer present, merged into block 6 with q4 (RTL '-5' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2013_sujet1__ex2__q3": {
-  "block": null,
-  "note": "I-3 absent from key",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (RTL '-3' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2013_sujet1__ex2__q1#2": {
   "block": null,
-  "note": "table row, not a question",
+  "note": "CONFIRMED: table row from experimental results table (دون معالجة/نعم/نعم), not a real standalone question",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2013_sujet1__ex2__q2#2": {
   "block": null,
-  "note": "table row, not a question",
+  "note": "CONFIRMED: table row from experimental results table (قطع الروابط/لا/لا), not a real standalone question",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2013_sujet1__ex2__q3#2": {
   "block": null,
-  "note": "table row, not a question",
+  "note": "CONFIRMED: table row from experimental results table (تفكيك الجزيئة/نعم-لا), not a real standalone question",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2013_sujet1__ex2__q1#3": {
@@ -840,7 +843,7 @@
  },
  "bac_svt_2014_sujet2__ex1__q7": {
   "block": null,
-  "note": "pH values, not a question",
+  "note": "CONFIRMED: exam item is garbled pH-value/table data, not a real question",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2014_sujet2__ex1__q1": {
@@ -857,8 +860,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2014_sujet2__ex1__q3": {
-  "block": null,
-  "note": "3- absent from key text",
+  "block": 0,
+  "note": "PHASE2 FIX: الاستنتاج (conclusion) present within block 0, merged with q1/q2's content (whole table-1 answer never split into separate blocks - header+first row concatenation issue)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2017_sujet1_session2__ex3__q1": {
@@ -867,8 +870,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2017_sujet2_session1__ex3__q2": {
-  "block": null,
-  "note": "(2) cancelled in key (ملغى)",
+  "block": 1,
+  "note": "PHASE2 FIX: WRONG note - answer (RNA sequences + genetic code table) is fully present and NOT cancelled; the 'ملغى' markers in this key belong to a LATER, unrelated part II item",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2017_sujet2_session1__ex3__q1#2": {
@@ -887,8 +890,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2018_sujet2__ex1__q2": {
-  "block": null,
-  "note": "النص العلمي absent from key text",
+  "block": 0,
+  "note": "PHASE2 FIX: النص العلمي answer present, merged into block 0 with q1 (no separate '(2)' marker detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2018_sujet2__ex3__q3": {
@@ -901,17 +904,17 @@
  },
  "bac_svt_2019_sujet1__ex3__q1#2": {
   "block": null,
-  "note": "الجزء الثاني intro paragraph (document), not answered separately",
+  "note": "CONFIRMED: exam item text is the intro/scenario description for part II (document setup), not an answerable request itself",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2019_sujet1__ex3__q2#2": {
   "block": null,
-  "note": "hypotheses statement in the exam, key has no separate block",
+  "note": "CONFIRMED: exam item text is the experimental-setup/hypothesis description, not an answerable request itself",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2020_sujet1__ex3__q1#2": {
-  "block": null,
-  "note": "II-1 absent from key (only 2)",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (bare '(1)' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2023_sujet2__ex3__q1": {
@@ -921,12 +924,12 @@
  },
  "bac_svt_2025_sujet1__ex2__q8": {
   "block": null,
-  "note": "figure legend, not a question",
+  "note": "CONFIRMED: exam item is a figure legend/diagram description, not a real question",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2025_sujet1__ex3__q10": {
   "block": null,
-  "note": "page footer, not a question",
+  "note": "CONFIRMED: exam item is a page-footer/header extraction artifact mixed with content, not a real question",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2025_sujet2__ex2__q2": {
@@ -940,13 +943,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2026_sujet1__ex3__q1#2": {
-  "block": null,
-  "note": "II-1 absent from key text",
+  "block": 2,
+  "note": "PHASE2 FIX: part II hypothesis-validation answer present, merged into block 2 with q2 part I (no separate marker detected for part II's own item 1)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2026_sujet1__ex3__q2#2": {
-  "block": null,
-  "note": "II-2 absent from key text",
+  "block": 2,
+  "note": "PHASE2 FIX: شكل ج analysis + Zinjbil resistance conclusion present, merged into block 2 (no separate marker detected)",
   "by": "human review 2026-09-21"
  },
  "bac_svt_2026_sujet2__ex1__q1": {
@@ -965,8 +968,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2013_sujet2__s3__q2": {
-  "block": null,
-  "note": "2- الإعراب absent from key (1,3,4 only)",
+  "block": 1,
+  "note": "PHASE2 FIX: answer present, merged into block 1 with q1 (bare '2 الإعراب:' marker not detected, no punctuation after digit)",
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2014_sujet2__s2__q1": {
@@ -975,8 +978,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2016_sujet2__s2__q7": {
-  "block": null,
-  "note": "7 absent from key",
+  "block": 6,
+  "note": "PHASE2 FIX: answer present, merged into block 6 with q6 (tatweel dash '7 ـ' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2016_sujet2__s3__q1": {
@@ -1033,8 +1036,8 @@
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2019_sujet1__s2__q4": {
-  "block": null,
-  "note": "التلخيص absent from key",
+  "block": 3,
+  "note": "PHASE2 FIX: تلخيص criteria present, merged into block 3 with q3 (unlabeled trailing paragraph)",
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2021_sujet2__s2__q4": {
@@ -1053,13 +1056,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2024_sujet2__s2__q4": {
-  "block": null,
-  "note": "التلخيص absent from key",
+  "block": 3,
+  "note": "PHASE2 FIX: تلخيص criteria present, merged into block 3 with q3 (unlabeled trailing paragraph, no explicit '4-' marker in source)",
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2024_sujet2__s3__q4": {
-  "block": null,
-  "note": "4) absent from key",
+  "block": 5,
+  "note": "PHASE2 FIX: answer present, merged into block 5 with q3 (unlabeled trailing paragraph at document end)",
   "by": "human review 2026-09-21"
  },
  "bac_islamic_2008_sujet1__s1__q1": {
@@ -1150,28 +1153,1137 @@
   "by": "human review 2026-09-21"
  },
  "bac_islamic_2026_sujet1__s1__q2": {
-  "block": null,
-  "note": "absent from key text",
+  "block": 0,
+  "note": "PHASE2 FIX: answer present (table: قيمة/تصنيفها/أثرها), merged into block 0 with q1 (bare '(2' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_islamic_2026_sujet1__s1__q3": {
-  "block": null,
-  "note": "absent from key text",
+  "block": 0,
+  "note": "PHASE2 FIX: answer present (أ/ب parts), merged into block 0 with q1 (bare '(3' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_islamic_2026_sujet1__s1__q4": {
-  "block": null,
-  "note": "absent from key text",
+  "block": 0,
+  "note": "PHASE2 FIX: answer present (أ/ب parts), merged into block 0 with q1 (bare '(4' marker not detected)",
   "by": "human review 2026-09-21"
  },
  "bac_islamic_2026_sujet2__s1__q2": {
-  "block": null,
-  "note": "absent from key text",
+  "block": 1,
+  "note": "PHASE2 FIX: re-check after Phase1 row-glue fix - block now correctly split, answer present",
   "by": "human review 2026-09-21"
  },
  "bac_islamic_2026_sujet2__s1__q3": {
+  "block": 2,
+  "note": "PHASE2 FIX: re-check after Phase1 row-glue fix - block now correctly split, answer present",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2008_sujet1__s2__q7": {
+  "block": 9,
+  "note": "7 - La priorité",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2008_sujet2__s2__q3": {
+  "block": 3,
+  "note": "CORRECTION of earlier solution_missing: answer 3 (table) is block 3 after parser fix",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2008_sujet2__s2__q5": {
+  "block": 5,
+  "note": "re-verified after parser fix: answer 5 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2009_sujet1__s3__q1": {
   "block": null,
-  "note": "absent from key text",
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2009_sujet2__s2__q6": {
+  "block": null,
+  "note": "6 absent from key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2009_sujet2__s3__q1": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2009_sujet2__s3__q2": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2010_sujet1__s2__q1": {
+  "block": 1,
+  "note": "re-verified after parser fix: answer 1 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2010_sujet1__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "Sujet 1 compte rendu grid lives in the sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet2__s3"
+ },
+ "bac_francais_2010_sujet2__s2__q1": {
+  "block": 8,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q2": {
+  "block": 9,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q3": {
+  "block": 9,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q4": {
+  "block": 10,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q5": {
+  "block": 11,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q6": {
+  "block": 12,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q7": {
+  "block": 13,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q8": {
+  "block": 14,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q9": {
+  "block": 15,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s2__q10": {
+  "block": 16,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet1__s2"
+ },
+ "bac_francais_2010_sujet2__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2010_sujet2__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2011_sujet1__s2__q2": {
+  "block": 2,
+  "note": "re-verified after parser fix: answer 2 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2011_sujet1__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet2__s3"
+ },
+ "bac_francais_2011_sujet1__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet2__s3"
+ },
+ "bac_francais_2011_sujet2__s2__q1": {
+  "block": 10,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q2": {
+  "block": 10,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q3": {
+  "block": 11,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q4": {
+  "block": 11,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q5": {
+  "block": 12,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q6": {
+  "block": 13,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q7": {
+  "block": 14,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q8": {
+  "block": 15,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2011_sujet2__s2__q9": {
+  "block": 16,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2011_sujet1__s2"
+ },
+ "bac_francais_2012_sujet1__s2__q7": {
+  "block": 7,
+  "note": "7) institution judiciaire",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2012_sujet2__s2__q1": {
+  "block": 10,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q2": {
+  "block": 11,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q3": {
+  "block": 12,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q4": {
+  "block": 13,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q5": {
+  "block": 14,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q6": {
+  "block": 15,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q7": {
+  "block": 16,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q8": {
+  "block": 17,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2012_sujet2__s2__q9": {
+  "block": 17,
+  "note": "FIX: was block 18 (off-by-one from earlier re-verification), correct answer is block 17 (9- l'interdit religieux)",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2013_sujet1__s2__q2": {
+  "block": 2,
+  "note": "re-verified after parser fix: answer 2 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2013_sujet1__s2__q4": {
+  "block": 4,
+  "note": "re-verified after parser fix: answer 4 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2013_sujet2__s2__q1": {
+  "block": 9,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q2": {
+  "block": 9,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q3": {
+  "block": 9,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q4": {
+  "block": 10,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q5": {
+  "block": 11,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q6": {
+  "block": 12,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q7": {
+  "block": 13,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q8": {
+  "block": 14,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q9": {
+  "block": 15,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet2__s2__q10": {
+  "block": 16,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet1__s2"
+ },
+ "bac_francais_2013_sujet1__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet2__s3"
+ },
+ "bac_francais_2013_sujet1__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2013_sujet2__s3"
+ },
+ "bac_francais_2013_sujet2__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2013_sujet2__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2012_sujet2__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2012_sujet2__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2011_sujet2__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2011_sujet2__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2014_sujet1__s2__q6": {
+  "block": 6,
+  "note": "re-verified after parser fix: answer 6 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2014_sujet2__s2__q1": {
+  "block": 10,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q2": {
+  "block": 11,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q3": {
+  "block": 12,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q4": {
+  "block": 13,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q5": {
+  "block": 14,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q6": {
+  "block": 15,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q7": {
+  "block": 16,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q8": {
+  "block": 17,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q9": {
+  "block": 18,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s2__q10": {
+  "block": 19,
+  "note": "sujet 2 comprehension answers are in the sujet1 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet1__s2"
+ },
+ "bac_francais_2014_sujet2__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2014_sujet2__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2014_sujet1__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet2__s3"
+ },
+ "bac_francais_2014_sujet1__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2014_sujet2__s3"
+ },
+ "bac_francais_2015_sujet1__s2__q4": {
+  "block": 2,
+  "note": "CORRECTION of earlier solution_missing: answer 4 (quatre adjectifs) glued in block 2",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet1__s2__q5": {
+  "block": 3,
+  "note": "CORRECTION of earlier solution_missing: answer 5 champ lexical = block 3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet1__s2__q6": {
+  "block": 3,
+  "note": "CORRECTION of earlier solution_missing: answer 6 (ils/le/lui) glued in block 3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet1__s2__q8": {
+  "block": 4,
+  "note": "CORRECTION of earlier solution_missing: answer 8 (subsequemment = consequence) glued in block 4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet2__s2__q2": {
+  "block": 1,
+  "note": "2 glued after 1 in block 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet2__s2__q3": {
+  "block": 2,
+  "note": "3 a- in block 2",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet2__s2__q5": {
+  "block": 4,
+  "note": "5 in block 4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet2__s2__q6": {
+  "block": 5,
+  "note": "6 in block 5",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet2__s2__q7": {
+  "block": 6,
+  "note": "7 in block 6",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet2__s3__q1": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet2__s3__q2": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet1__s3__q1": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet1__s3__q2": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2016_sujet1_session1__s2__q8": {
+  "block": [
+   8,
+   9,
+   10
+  ],
+  "note": "CORRECTION of earlier solution_missing: q8 is a real question; answer = block 8 + the two options (blocks 9,10)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2016_sujet1_session1__s2__q15": {
+  "block": null,
+  "note": "table date line, not a question",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2016_sujet2_session2__s3__q1": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2016_sujet2_session2__s3__q2": {
+  "block": null,
+  "note": "no grading grid in key",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2017_sujet1_session2__s2__q5": {
+  "block": 5,
+  "note": "CORRECTION of earlier solution_missing: answer 5 (Leurs/Il/elle) is block 5 after parser fix",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2017_sujet2_session2__s2__q1": {
+  "block": 0,
+  "note": "1- glued in heading block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q1": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q2": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q3": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q4": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q5": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q6": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q7": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s2__q8": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q1": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q2": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q3": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q4": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q5": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q6": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q7": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s2__q8": {
+  "block": null,
+  "note": "2019 keys contain only the production grids; comprehension answers absent",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s3__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "note": "sujet libre grid (blocks 1-8, re-verified after parser fix)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet1__s3__q2": {
+  "block": [
+   9,
+   10
+  ],
+  "note": "compte rendu grid (scores only)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "sujet libre grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2019_sujet2__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "compte rendu grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2020_sujet1__s2__q4": {
+  "block": 4,
+  "note": "CORRECTION of earlier solution_missing: answer 4 (Tu/...) is block 4 after parser fix",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2020_sujet2__s2__q3": {
+  "block": 3,
+  "note": "re-verified after parser fix: answer 3 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2020_sujet2__s2__q5": {
+  "block": 5,
+  "note": "re-verified after parser fix: answer 5 now its own block",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet1__s2__q5": {
+  "block": 11,
+  "note": "CORRECTION of earlier solution_missing: answer 5 (4 expressions) glued after 4. in block 11",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet1__s2__q8": {
+  "block": 13,
+  "note": "re-verified after parser fix: 8. criteria glued after 7. in block 13",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet1__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2021_sujet2__s3"
+ },
+ "bac_francais_2021_sujet1__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid in sujet2 key file",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2021_sujet2__s3"
+ },
+ "bac_francais_2021_sujet2__s2__q2": {
+  "block": 1,
+  "note": "answer 2 (table) glued into block 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet2__s2__q3": {
+  "block": 1,
+  "note": "answer 3 (table) glued into block 1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet2__s2__q7": {
+  "block": 4,
+  "note": "answer 7 criteria glued after 6.",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet2__s3__q1": {
+  "block": [
+   5,
+   6,
+   7
+  ],
+  "note": "compte rendu grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet2__s3__q2": {
+  "block": [
+   8,
+   9,
+   10
+  ],
+  "note": "debat grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2022_sujet1__s2__q6": {
+  "block": 5,
+  "note": "answer 6 (timeline) glued after 5. in block 5",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2022_sujet1__s2__q8": {
+  "block": 7,
+  "note": "8. Criteres d'evaluation = answer to q8 (opinion)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2022_sujet1__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid (Sujet 1)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2022_sujet1__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "second grid (sujet 2: convaincre)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2021_sujet1__s2__q3": {
+  "block": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "note": "answer 3 = classification table (reformes socio-economiques / culturelles) split into blocks 3-10",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2015_sujet1__s2__q3": {
+  "block": 2,
+  "note": "answer 3 (a-/b- classification) glued after 2 in block 2",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2012_sujet2__s2__q10": {
+  "block": 18,
+  "note": "FIX: was block 19 (out of range after re-segmentation), correct answer is block 18 (10- scientifique-economique-religieuse-anthropologues)",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2012_sujet1__s2"
+ },
+ "bac_francais_2008_sujet2__s3__q2": {
+  "block": null,
+  "note": "key contains comprehension answers only; no production grid",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2022_sujet2__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "second grid (sujet 2: expose) blocks 4-6",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2024_sujet1__s2__q8": {
+  "block": 8,
+  "note": "8- Criteres d'evaluation = answer to opinion question 8",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2025_sujet1__s2__q4": {
+  "block": 6,
+  "note": "answer 4 = 'Deux (02) exemples' block (key lost the 4. marker, only score '(1.5 / 0.5x3)')",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2025_sujet1__s2__q5": {
+  "block": 7,
+  "note": "answer 5 = 'L'expression soulignee veut dire' block (marker lost, score '(2 / 1x2)')",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2025_sujet2__s2__q8": {
+  "block": 8,
+  "note": "8. Criteres d'evaluation = answer to opinion question 8",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2008_sujet1__s3__q1": {
+  "block": null,
+  "note": "key holds comprehension answers only; no production grid (auto match was a false positive)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2008_sujet1__s3__q2": {
+  "block": null,
+  "note": "key holds comprehension answers only; no production grid (auto match was a false positive)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2008_sujet2__s3__q1": {
+  "block": null,
+  "note": "key holds comprehension answers only; no production grid (auto match was a false positive)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2009_sujet1__s3__q2": {
+  "block": null,
+  "note": "no grading grid in key (auto match was a false positive)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2010_sujet1__s3__q2": {
+  "block": [
+   4,
+   5,
+   6
+  ],
+  "note": "essay grid (sujet 2) in the sujet2 key file; auto match to comprehension answer was a false positive",
+  "by": "human review 2026-09-21",
+  "from_unit": "bac_francais_2010_sujet2__s3"
+ },
+ "bac_francais_2016_sujet1_session2__s3__q1": {
+  "block": null,
+  "note": "key holds comprehension answers only; no production grid (auto match was a false positive)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2016_sujet1_session2__s3__q2": {
+  "block": null,
+  "note": "key holds comprehension answers only; no production grid (auto match was a false positive)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_francais_2022_sujet2__s3__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "compte rendu grid blocks 1-3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_islamic_2018_sujet2__s1__q1": {
+  "block": 0,
+  "note": "PHASE2 FIX: block 0 is the correct biography answer (score fell just below label_supported threshold after Phase1 fix improved neighboring blocks, shifting DP); content verified correct",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2008_sujet1__s1__q2": {
+  "block": 1,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2008_sujet1__s1__q4": {
+  "block": 3,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2008_sujet1__s2__q6": {
+  "block": 7,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2008_sujet2__s1__q1": {
+  "block": 1,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2009_sujet1__s1__q1": {
+  "block": 1,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2009_sujet2__s1__q2": {
+  "block": 2,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2012_sujet1__s2__q2": {
+  "block": 1,
+  "note": "PHASE3 FIX: block 4 (auto-matched by label) is a bare score annotation ('2. 01.5 pt'), not real content; the actual verb/noun/adjective table is merged into block 1 with q1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2017_sujet1_session1__s2__q2": {
+  "block": 3,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2017_sujet1_session2__s1__q3": {
+  "block": 4,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2017_sujet1_session2__s2__q3": {
+  "block": 3,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2017_sujet2_session2__s1__q2": {
+  "block": 3,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2017_sujet2_session2__s1__q3": {
+  "block": 4,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2018_sujet1__s2__q4": {
+  "block": 3,
+  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2008_sujet1__s1__q3": {
+  "block": 2,
+  "note": "PHASE3 FIX: block 2 is the real answer; block 5 (same label) is just a heading fragment 'Part B'",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2008_sujet1__s2__q4": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "PHASE3 FIX: two verb-form answers present as separate blocks 4,5 (sub-items of q4, mismatched top-level label)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2010_sujet1__s2__q5": {
+  "block": 4,
+  "note": "PHASE3 FIX: rhyme-matching answer present, merged into block 4 with q4/q6",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2010_sujet1__s2__q6": {
+  "block": 4,
+  "note": "PHASE3 FIX: reorder answer present, merged into block 4 with q4/q5",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2010_sujet2__s2__q4": {
+  "block": 4,
+  "note": "PHASE3 FIX: pronunciation table present, merged into block 4 with q2 part b",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2011_sujet1__s2__q4": {
+  "block": 4,
+  "note": "PHASE3 FIX: pronunciation table present, merged into block 4 with q2 part b",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2013_sujet1__s2__q2": {
+  "block": 1,
+  "note": "PHASE3 FIX: verb/noun/adjective table present, merged into block 1 with q1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2013_sujet1__s2__q4": {
+  "block": 2,
+  "note": "PHASE3 FIX: syllable table present, merged into block 2 with q3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2014_sujet2__s2__q4": {
+  "block": 3,
+  "note": "PHASE3 FIX: pronunciation table present, merged into block 3 with q3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2014_sujet2__s2__q5": {
+  "block": 3,
+  "note": "PHASE3 FIX: fill-gaps answer present, merged into block 3 with q3/q4",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2015_sujet2__s2__q4": {
+  "block": 3,
+  "note": "PHASE3 FIX: pronunciation table present, merged into block 3 with q3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2016_sujet1_session1__s2__q2": {
+  "block": 1,
+  "note": "PHASE3 FIX: roots/affixes table present, merged into block 1 with q1",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2016_sujet1_session1__s2__q4": {
+  "block": 2,
+  "note": "PHASE3 FIX: pronunciation table present, merged into block 2 with q3",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2016_sujet1_session2__s1__q1": {
+  "block": 0,
+  "note": "PHASE3 FIX: true/false table present in block 0 preamble (RTL '-1' marker not detected)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2016_sujet1_session2__s1__q3": {
+  "block": 1,
+  "note": "PHASE3 FIX: reference answer present, merged into block 1 with q2",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2017_sujet2_session2__s2__q3": {
+  "block": 2,
+  "note": "PHASE3 FIX: sentence-combining answer present, merged into block 2 with q2",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2018_sujet1__s1__q2": {
+  "block": null,
+  "note": "CONFIRMED absent: unit paired via document_fallback to a Text Exploration solution with no comprehension-section content (no paragraph-ID answer available)",
+  "by": "human review 2026-09-21"
+ },
+ "bac_english_2018_sujet1__s2__q2": {
+  "block": 1,
+  "note": "PHASE3 FIX: roots/affixes table present, merged into block 1 with q1",
   "by": "human review 2026-09-21"
  }
 }
