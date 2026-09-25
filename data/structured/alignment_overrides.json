@@ -646,8 +646,12 @@
  },
  "bac_svt_2008_sujet2__ex3__q2#2": {
   "block": 7,
-  "note": "PHASE2 FIX: answer present, merged into block 7 with II-1 (RTL '- 2' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Same merged block. Q2 asks what role the macrophages and the lymphocytes play. Carved to lines 5-10: the key's item 2 giving the phagocytes' role (engulf and partially digest the pneumococci, then present the determinants to T4 lymphocytes) and the lymphocytes' role (secrete interleukin to activate, multiply and differentiate LB; MAF, IL4, IL6).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   5,
+   11
+  ]
  },
  "bac_svt_2009_sujet1__ex1__q1": {
   "block": 0,
@@ -661,13 +665,21 @@
  },
  "bac_svt_2009_sujet1__ex3__q3#2": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (RTL '- 3' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Same merged block. Q asks to determine the type and characteristics of the rabbit's immune response, with justification. Carved to lines 13-21: the key's item 3, giving the absence of arcs elsewhere, then 'استجابة مناعية نوعية ذات وساطة خلطية' with its justification (specific because directed against bull albumin; humoral because it acts through serum antibodies rather than cells).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   13,
+   22
+  ]
  },
  "bac_svt_2009_sujet1__ex3__q1#2": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 (mixed '- II - 1' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Same merged block. This record is part II item 1 (analyse the binding results and say what the loop in natural lysozyme represents, with justification). Its override pointed at all of block 1, so it opened with items 2 and 3. Carved to lines 22-30: 'II - 1 أ تحليل النتائج' with the binding analysis and 'ب' identifying the loop as the antigenic determinant with its justification.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   22,
+   31
+  ]
  },
  "bac_svt_2009_sujet2__ex1__q1": {
   "block": [
@@ -2525,8 +2537,12 @@
  },
  "bac_svt_2008_sujet2__ex3__q3#2": {
   "block": 8,
-  "note": "Targeted audit: stored answer was only a score fragment; real diagram-task content ('انجاز رسم تخطيطي لمعقد مناعي صلب') found at block 8 of the same unit.",
-  "by": "human review 2026-09-25 (targeted from_unit/SCORES-bracket/unresolved audit)"
+  "note": "Q asks for an explanatory diagram of what happened in tube 1. The answer block trails into a page marker and the opening of a [SCORES] bracket. Carved to lines 0-1: the key's drawing entry '3 - إنجاز رسم تخطيطي لمعقد مناعي صلب'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   2
+  ]
  },
  "bac_svt_2010_sujet1__ex2__q3": {
   "block": 5,
@@ -3673,5 +3689,23 @@
   ],
   "note": "Same segmentation defect: this record's text carries the tail of item 1's matching list AND the whole of real item 2 (opposites: understanding, efficient, important), real item 3 (ask questions for two underlined phrases) AND real item 4 (a four-gap cloze). The stored answer was block 4 alone, the bare heading '**3. Asking questions**'. Blocks 3-8 cover everything the record asks: the morphology answers (misunderstanding, inefficient, unimportant), both questions ('What do we use satellites for?' / 'What did the report find?') and the four gap fills (provide, processes, local, understanding).",
   "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2008_sujet2__ex3__q1#2": {
+  "block": 7,
+  "note": "Part II items 1 and 2 merged into block 7 because the key writes item 2's number as a bare '- 2' on its own line, which blocks_of() does not read as a block label; both questions therefore stored the same 11-line text. Q1 asks to compare the results in tubes 1, 2 and 3 and draw a conclusion. Carved to lines 0-4: the comparison (agglutinated in 1, free-floating in 2 and 3) and the conclusion (antibody formation requires cooperation between phagocytes and lymphocytes).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   5
+  ]
+ },
+ "bac_svt_2009_sujet1__ex3__q2#2": {
+  "block": 1,
+  "note": "Items 2, 3 and part II item 1 all merged into block 1: the key writes item 3's number as a bare '- 3' and part II's as '- II - 1', neither of which blocks_of() reads as a block label, and a page break with repeated table headers sits between them. Q asks what the formation of precipitation arcs between the central well and wells 2 and 4 (and their absence elsewhere) indicates. Carved to lines 0-2: the arcs indicate immune complexes, i.e. antibodies in the central well directed against the antigens in wells 2 (bull serum) and 4 (bull albumin).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
  }
 }
