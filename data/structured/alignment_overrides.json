@@ -1738,38 +1738,66 @@
  },
  "bac_francais_2015_sujet1__s2__q4": {
   "block": 2,
-  "note": "CORRECTION of earlier solution_missing: answer 4 (quatre adjectifs) glued in block 2",
-  "by": "human review 2026-09-21"
+  "note": "Q asks for four adjectives in paragraph 1 qualifying 'langage correct'. The override pointed at all of merged block 2, so the stored answer opened with items 2 and 3. Carved to lines 10-12: 'adéquat – fourni – riche – varié – attachant'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   10,
+   13
+  ]
  },
  "bac_francais_2015_sujet1__s2__q5": {
   "block": 3,
-  "note": "CORRECTION of earlier solution_missing: answer 5 champ lexical = block 3",
-  "by": "human review 2026-09-21"
+  "note": "Q asks for four terms in the lexical field of 'langue'. The override pointed at all of merged block 3, which also carries item 6's pronoun answers. Carved to lines 0-2: 'mots – vocabulaire – substituts – langage – verbale – langagières – paroles – vocables – lexical – idiomes'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
  },
  "bac_francais_2015_sujet1__s2__q6": {
   "block": 3,
-  "note": "CORRECTION of earlier solution_missing: answer 6 (ils/le/lui) glued in block 3",
-  "by": "human review 2026-09-21"
+  "note": "Q asks what three pronouns refer to. The override pointed at all of merged block 3, which opens with item 5's lexical-field answer. Carved to lines 4-9: 'ils' = les mots acquis dans la prime jeunesse, 'le' = l'esprit de l'enfant, 'lui' = l'enfant.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   4,
+   10
+  ]
  },
  "bac_francais_2015_sujet1__s2__q8": {
   "block": 4,
-  "note": "CORRECTION of earlier solution_missing: answer 8 (subsequemment = consequence) glued in block 4",
-  "by": "human review 2026-09-21"
+  "note": "Q is an MCQ on what 'subséquemment' expresses. The override pointed at all of merged block 4, so the stored answer opened with item 7's two arguments. Carved to lines 6-7: '\"subséquemment\" exprime : la conséquence'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   6,
+   8
+  ]
  },
  "bac_francais_2015_sujet2__s2__q2": {
   "block": 1,
-  "note": "2 glued after 1 in block 1",
-  "by": "human review 2026-09-21"
+  "note": "Q asks for the two correct meanings of 'recouvrer' among couvrir/reconquérir/retrouver/cacher. The override pointed at all of merged block 1, so the stored answer opened with item 1's answer. Carved to lines 2-5: 'Les bonnes réponses sont : Reconquérir. Retrouver.'",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   2,
+   6
+  ]
  },
  "bac_francais_2015_sujet2__s2__q3": {
   "block": 2,
-  "note": "3 a- in block 2",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to sort six terms between 'une poignée d'hommes' and 'le colonialisme'. The override's block opened with a stray score cell from the previous item. Carved to lines 1-2: the two sorted lists (la détermination, la volonté, résolument décidés / sceptre de fer, despotisme sauvage, mainmise définitive).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   3
+  ]
  },
  "bac_francais_2015_sujet2__s2__q5": {
   "block": 4,
-  "note": "5 in block 4",
-  "by": "human review 2026-09-21"
+  "note": "Q asks what three person markers refer to. The override's block opened with a stray score cell. Carved to lines 1-4: 'ils' = jeunes (accept poignée d'hommes), 'sa tyrannie' = l'occupant, 'sa liberté' = le peuple.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   5
+  ]
  },
  "bac_francais_2015_sujet2__s2__q6": {
   "block": 5,
@@ -1778,8 +1806,12 @@
  },
  "bac_francais_2015_sujet2__s2__q7": {
   "block": 6,
-  "note": "7 in block 6",
-  "by": "human review 2026-09-21"
+  "note": "Q is a six-gap fill. The override's block opened with a stray score cell. Carved to line 1: the order 'soulèvement armé - espérance - sacrifices - reconnaissance - suscitée - ambitions'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   2
+  ]
  },
  "bac_francais_2015_sujet2__s3__q1": {
   "block": null,
@@ -1832,8 +1864,12 @@
  },
  "bac_francais_2017_sujet2_session2__s2__q1": {
   "block": 0,
-  "note": "1- glued in heading block",
-  "by": "human review 2026-09-21"
+  "note": "Q is an MCQ on what the author describes in the quoted passage. The override's block opens with the section header 'I-Compréhension: (14pts)'. Carved to line 1, which carries the answer: 'Dans ce passage, l'auteure décrit une situation négative.'",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   2
+  ]
  },
  "bac_francais_2019_sujet1__s2__q1": {
   "block": null,
@@ -1972,13 +2008,21 @@
  },
  "bac_francais_2021_sujet1__s2__q5": {
   "block": 11,
-  "note": "CORRECTION of earlier solution_missing: answer 5 (4 expressions) glued after 4. in block 11",
-  "by": "human review 2026-09-21"
+  "note": "This key writes its item numbers as bold '**4.**' / '**5.**' on their own lines, which blocks_of() does not read as block labels, so items 4-5 merged into block 11. Q asks for four expressions characterising the Numidian people; the stored answer opened with item 4's pronoun referents. Carved to lines 6-13: Instinct égalitaire, Ennemi de toute hiérarchie, Amour ombrageux de la liberté, Haine instinctive de la royauté, with the key's accepted alternatives.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   6,
+   14
+  ]
  },
  "bac_francais_2021_sujet1__s2__q8": {
   "block": 13,
-  "note": "re-verified after parser fix: 8. criteria glued after 7. in block 13",
-  "by": "human review 2026-09-21"
+  "note": "Items 7-8 merged into block 13 for the same reason. Q is an open two-to-three-line opinion task on the admirable moral qualities of a leader, so the key gives assessment criteria. The stored answer opened with item 7's answer ('Et = de sorte que') and trailed into a page break and Arabic header. Carved to lines 3-7: the four criteria including the key's suggested qualities (honnêteté, sincérité, sagesse, patriotisme, justice).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   3,
+   8
+  ]
  },
  "bac_francais_2021_sujet1__s3__q1": {
   "block": [
@@ -2052,8 +2096,12 @@
  },
  "bac_francais_2022_sujet1__s2__q8": {
   "block": 7,
-  "note": "8. Criteres d'evaluation = answer to q8 (opinion)",
-  "by": "human review 2026-09-21"
+  "note": "Open two-to-three-line opinion task, so the key gives assessment criteria. The override's block trailed into a page break and the answer key's Arabic header. Carved to lines 0-4: the four criteria.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   5
+  ]
  },
  "bac_francais_2022_sujet1__s3__q1": {
   "block": [
@@ -2089,8 +2137,12 @@
  },
  "bac_francais_2015_sujet1__s2__q3": {
   "block": 2,
-  "note": "answer 3 (a-/b- classification) glued after 2 in block 2",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to sort six terms by whether they describe a child with a limited or a rich vocabulary. The override pointed at all of merged block 2, so the stored answer opened with item 2's answer. Carved to lines 5-8: 'a-Enfant au vocabulaire limité : discourtois, impoli, agressif' and 'b- Enfant au vocabulaire riche : langage correct, civilité, vocabulaire adéquat'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   5,
+   9
+  ]
  },
  "bac_francais_2012_sujet2__s2__q10": {
   "block": 19,
@@ -2119,18 +2171,30 @@
  },
  "bac_francais_2025_sujet1__s2__q4": {
   "block": 6,
-  "note": "answer 4 = 'Deux (02) exemples' block (key lost the 4. marker, only score '(1.5 / 0.5x3)')",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to cite two examples from the text showing the world situation remains unjustifiable. The override's block opens with a stray score cell '(1.5 / 0.5x3)'. Carved to lines 2-8: the six candidate examples the key offers (health-service access, social security, child mortality, adult illiteracy, out-of-school children, undernourishment).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   2,
+   9
+  ]
  },
  "bac_francais_2025_sujet1__s2__q5": {
   "block": 7,
-  "note": "answer 5 = 'L'expression soulignee veut dire' block (marker lost, score '(2 / 1x2)')",
-  "by": "human review 2026-09-21"
+  "note": "Q is an MCQ on the meaning of 'tirer parti de'. The override's block opens with a stray score cell '(2 / 1x2)'. Carved to lines 2-3: 'L'expression soulignée veut dire : - profiter de l'expérience du Vietnam.'",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   2,
+   4
+  ]
  },
  "bac_francais_2025_sujet2__s2__q8": {
   "block": 8,
-  "note": "8. Criteres d'evaluation = answer to opinion question 8",
-  "by": "human review 2026-09-21"
+  "note": "Open two-to-three-line opinion task, so the key gives assessment criteria. The override's block trailed into a page marker. Carved to lines 0-4: the four criteria.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   5
+  ]
  },
  "bac_francais_2008_sujet1__s3__q1": {
   "block": null,
@@ -3327,6 +3391,51 @@
   "lines": [
    0,
    11
+  ]
+ },
+ "bac_francais_2015_sujet1__s2__q2": {
+  "block": 2,
+  "note": "This key numbers its items with a bare digit at line start ('2 Mot et expression...', '3 a-Enfant...', '4 \"Langage correct\"'), which blocks_of() does not read as a block label, so items 2-4 merged into block 2 and items 5-6 into block 3 and 7-8 into block 4. Q asks for the word and expression opposed to 'la rue'; carved to block 2 lines 0-4 ('l'école', 'milieu familial').",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   5
+  ]
+ },
+ "bac_francais_2015_sujet1__s2__q7": {
+  "block": 4,
+  "note": "Q asks for the two arguments the author develops. Auto-matched to merged block 4, which also carries item 8's answer. Carved to lines 0-4: the two arguments (first words shape personality; a child with a limited vocabulary may become violent).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   5
+  ]
+ },
+ "bac_francais_2015_sujet2__s2__q1": {
+  "block": 1,
+  "note": "Same bare-digit numbering in this key merges items 1-2 into block 1. Q is an MCQ on what the text does; auto-matched to the whole merged block. Carved to lines 0-1: 'ce texte glorifie la Révolution de Novembre 1954'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_francais_2021_sujet1__s2__q4": {
+  "block": 11,
+  "note": "Tightened while fixing q5 of the same merged block. Q asks what 'leur', 'les' and 'il' refer to; carved to lines 0-5, which resolve all three (les Romains; beaucoup de ses sujets, accept les Numides; Massinissa), without item 5's characterisation list.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   6
+  ]
+ },
+ "bac_francais_2021_sujet1__s2__q7": {
+  "block": 13,
+  "note": "Tightened while fixing q8 of the same merged block. Q asks what the connector 'Et' expresses; carved to lines 0-2, 'Et = de sorte que' with its score cells, without item 8's criteria.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
   ]
  }
 }
