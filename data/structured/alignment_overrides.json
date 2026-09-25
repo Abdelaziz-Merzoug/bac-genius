@@ -2290,11 +2290,13 @@
   ]
  },
  "bac_english_2017_sujet1_session1__s2__q2": {
-  "block": [
-   1
-  ],
-  "note": "Targeted fix: question asks to complete the verb/noun/adjective chart (item 2); stored answer instead held an unrelated later item (3.2's sentence completion). The chart itself is glued into the same block as item 1.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "block": 1,
+  "note": "Q asks to complete the verb/noun/adjective chart. The override pointed at all of merged block 1, so the stored answer opened with item 1's synonyms. Carved to lines 1-15: the chart itself (to reduce / reduction-reducer-reducing / reducible-reduced-reductive; to threaten / threat / threatening; to advertise / advertisement / advertised).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   1,
+   16
+  ]
  },
  "bac_english_2017_sujet1_session2__s1__q3": {
   "block": 4,
@@ -2321,8 +2323,12 @@
  },
  "bac_english_2018_sujet1__s2__q4": {
   "block": 3,
-  "note": "PHASE3 FIX: label-matching block exists but scored below match threshold (short table/list answer, low embedding overlap); content verified",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to reorder four sentences. The answer block trails into the marking cells. Carved to line 0: '4. 1- d 2- c 3- a 4- b'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
  },
  "bac_english_2008_sujet1__s1__q3": {
   "block": 2,
@@ -2339,23 +2345,39 @@
  },
  "bac_english_2010_sujet1__s2__q5": {
   "block": 4,
-  "note": "PHASE3 FIX: rhyme-matching answer present, merged into block 4 with q4/q6",
-  "by": "human review 2026-09-21"
+  "note": "Tightened while fixing q6 of the same merged block. Q asks to reorder/match; carved to lines 2-3: '5- 1 – c) 2 – d) 3 – a) 4 – b)'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   2,
+   4
+  ]
  },
  "bac_english_2010_sujet1__s2__q6": {
   "block": 4,
-  "note": "PHASE3 FIX: reorder answer present, merged into block 4 with q4/q5",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to reorder four statements into a coherent paragraph. This key numbers items with a bare digit at line start ('4-', '5-', '6-'), which blocks_of() does not read as a block label, so items 4-6 merged into block 4 and the stored answer opened with item 4's verb answers and trailed into a whole marking summary. Carved to lines 4-5: '6- 1 – d) 2 – a) 3 – c) 4 – b)'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   4,
+   6
+  ]
  },
  "bac_english_2010_sujet2__s2__q4": {
   "block": 4,
-  "note": "PHASE3 FIX: pronunciation table present, merged into block 4 with q2 part b",
-  "by": "human review 2026-09-21"
+  "note": "Tightened while fixing q3. Q asks to classify words by final-s pronunciation; carved to block 4 lines 2-9, the item-4 table (/s/ attempts-Scots, /z/ others, /iz/ changes-messages-faces), without sentence 2's rewrite that belongs to q3.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   2,
+   10
+  ]
  },
  "bac_english_2011_sujet1__s2__q4": {
   "block": 4,
-  "note": "PHASE3 FIX: pronunciation table present, merged into block 4 with q2 part b",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to classify six verbs by final-'ed' pronunciation. Items 2 and 4 merged into block 4 (the key writes '4.' on its own line), so the stored answer opened with item 2's sentence rewrite. Carved to lines 3-14: the /t/ /d/ /id/ table with helped, described, persuaded, produced, defined, consisted.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   3,
+   15
+  ]
  },
  "bac_english_2013_sujet1__s2__q2": {
   "block": 1,
@@ -2364,23 +2386,39 @@
  },
  "bac_english_2013_sujet1__s2__q4": {
   "block": 2,
-  "note": "PHASE3 FIX: syllable table present, merged into block 2 with q3",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to classify four words by syllable count. Items 3 and 4 merged into block 2, and the stored answer contained ONLY item 3's sentence transformations with no syllable table at all. Carved to lines 4-12: the one/two/three-syllable table (work / children, labour / domestic).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   4,
+   13
+  ]
  },
  "bac_english_2014_sujet2__s2__q4": {
   "block": 3,
-  "note": "PHASE3 FIX: pronunciation table present, merged into block 3 with q3",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to classify four words by final-'ed' pronunciation. Items 3-5 merged into block 3, so the stored answer opened with item 3's sentence answers and also carried item 5's gap fills. Carved to lines 5-14: the /t/ /d/ /Id/ table with passed, shortened, attempted, provided.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   5,
+   15
+  ]
  },
  "bac_english_2014_sujet2__s2__q5": {
   "block": 3,
-  "note": "PHASE3 FIX: fill-gaps answer present, merged into block 3 with q3/q4",
-  "by": "human review 2026-09-21"
+  "note": "Q is a four-gap fill from hide/techniques/financial/and. The override pointed at all of merged block 3. Carved to lines 16-25: the item-5 answers (1 financial, 2 techniques, 3 and, 4 hide), which fit the passage on money laundering.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   16,
+   26
+  ]
  },
  "bac_english_2015_sujet2__s2__q4": {
   "block": 3,
-  "note": "PHASE3 FIX: pronunciation table present, merged into block 3 with q3",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to classify six words by final-s pronunciation. Items 3 and 4 merged into block 3, so the stored answer opened with item 3's three sentence transformations. Carved to lines 3-11: the /s/ /z/ /iz/ table (fruits, dislikes / bodies, campaigns, foods / sandwiches).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   3,
+   12
+  ]
  },
  "bac_english_2016_sujet1_session1__s2__q2": {
   "block": 1,
@@ -2399,8 +2437,12 @@
  },
  "bac_english_2016_sujet1_session2__s1__q3": {
   "block": 1,
-  "note": "PHASE3 FIX: reference answer present, merged into block 1 with q2",
-  "by": "human review 2026-09-21"
+  "note": "Q asks what two underlined words refer to. Items 2 and 3 merged into block 1, so the stored answer opened with item 2's three answers. Carved to lines 5-7: '3 a-children b- consumer education'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   5,
+   8
+  ]
  },
  "bac_english_2017_sujet2_session2__s2__q3": {
   "block": 2,
@@ -2414,8 +2456,12 @@
  },
  "bac_english_2018_sujet1__s2__q2": {
   "block": 1,
-  "note": "PHASE3 FIX: roots/affixes table present, merged into block 1 with q1",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to divide international / underperformance / inequality into prefix, root and suffix. The override pointed at all of merged block 1, so the stored answer opened with item 1's synonyms. Carved to lines 3-17: the prefix/root/suffix table (inter-nation-al, under-perform-ance, in-equal-ity).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   3,
+   18
+  ]
  },
  "bac_arabe_2024_sujet2__s3__q2": {
   "block": 2,
@@ -2512,8 +2558,12 @@
    3,
    4
   ],
-  "note": "Targeted fix: question requires completing both sentence (1.b) and (2.b); stored answer only had 1.b, missing 2.b which sits in the adjacent block.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Q asks to complete TWO sentences (reported speech and active/passive). Block 3 holds only sentence 1's rewrite, and block 4 opens with sentence 2's before running into item 4's pronunciation table. Carved to the first two lines of the joined blocks: 'He said that he had seen a billboard advert...' and 'The Scottish Executive sponsors the advert.' — both parts, without item 4.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   2
+  ]
  },
  "bac_english_2011_sujet1__s2__q3": {
   "block": [
@@ -2533,13 +2583,14 @@
  },
  "bac_english_2022_sujet1__s2__q4": {
   "block": [
+   6,
    7,
    8,
    9,
    10
   ],
-  "note": "Targeted fix: question asks to reorder all 4 given sentences; stored answer only captured the 4th (last) sentence, missing sentences 1-3 which are each their own adjacent block (sub-enumeration segmentation issue).",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Tightened while fixing q3. Q asks to reorder four sentences; the existing override spanned blocks 7-10 (the four ordered sentences) but omitted block 6, the key's header carrying the marking rule ('0.5 for the 1st sentence and 0.5 for each logical pair'). Blocks 6-10 give the header and the full ordering.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_english_2023_sujet1__s2__q4": {
   "block": [
@@ -3437,5 +3488,190 @@
    0,
    3
   ]
+ },
+ "bac_english_2010_sujet1__s2__q4": {
+  "block": 4,
+  "note": "Tightened while fixing q6 of the same merged block. Carved to lines 0-1: '4- tried - are still confronted', the item-4 answer alone, without items 5-6 and the marking summary.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_english_2013_sujet1__s2__q3": {
+  "block": 2,
+  "note": "Tightened while fixing q4 of the same merged block. Q asks for three sentence transformations; carved to lines 0-3, the b1/b2/b3 answers, without item 4's syllable table.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_english_2014_sujet2__s2__q3": {
+  "block": 3,
+  "note": "Tightened while fixing q4 and q5 of the same merged block. Q asks for two sentence transformations; carved to lines 0-3, answers A and B, without items 4 and 5.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_english_2015_sujet2__s2__q3": {
+  "block": 3,
+  "note": "Tightened while fixing q4 of the same merged block. Q asks for three sentence transformations; carved to lines 0-2, answers a, b and c, without item 4's table.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_english_2016_sujet1_session2__s1__q2": {
+  "block": 1,
+  "note": "Tightened while fixing q3 of the same merged block. Carved to lines 0-4, item 2's three answers (Yes it does; Yes it should; They are seen as investments), without item 3's referents.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   5
+  ]
+ },
+ "bac_english_2017_sujet1_session1__s2__q1": {
+  "block": 1,
+  "note": "Q asks for three synonyms (includes, evident, kinds). Items 1 and 2 merged into block 1 because the key writes '2.' on its own line, so the stored answer also carried the whole verb/noun/adjective chart. Carved to line 0: 'a-involves b-obvious c-types'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_english_2017_sujet1_session1__s2__q3": {
+  "block": [
+   2,
+   3
+  ],
+  "note": "Q asks to rewrite TWO sentences. The stored answer was block 2 alone, only sentence 1's rewrite ('Children consume a lot of fast food; as a result, they become obese'). Sentence 2's rewrite is block 3, which the key mislabels '2.' ('It's high time the government reduced junk food advertising') — that is exactly the B-form of 'Parents feel the government should reduce junk food advertising'. Blocks 2-3 give both.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2017_sujet1_session2__s1__q1": {
+  "block": 2,
+  "note": "Serious misalignment. Q is a four-statement true/false. The stored answer was block 1, which is only the document's title and section headers ('Space Exploration / Part One: Reading / A. Comprehension') and contains no answer at all. Block 2 is the actual answer: '**1.** a-T / b-T / c-F / d- F'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2017_sujet1_session2__s1__q4": {
+  "block": 5,
+  "note": "Q is an MCQ on the text type. The answer block trails into the whole Part-Two marking summary. Carved to line 0: '4. c. argumentative'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_english_2017_sujet1_session2__s2__q2": {
+  "block": 2,
+  "note": "Q asks for same-root opposites of approve/apply/availability. The answer block carries a stray '**3.**' marker from the next item on its second line. Carved to line 0: 'disapprove / misapply / unavailability'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_english_2018_sujet1__s1__q1": {
+  "block": null,
+  "note": "Solution genuinely absent for this unit, and the stored answer belonged to a different section. The 2018 sujet1 solution document has only two sections: 'Text Exploration' (bac_english_2018_sujet1_solution__s1, 373 chars) and the 'Part two: Written expression' grid (solution__s2, 321 chars). It contains NO Part One / Comprehension answers. Both exam units s1 and s2 were paired to the Text Exploration key, so this comprehension true/false question had been given item 1 of the Text Exploration key ('a- erodes b- hurts c- trust'), which answers the s2 synonyms question instead. Set to solution_missing: no block in the corpus answers this question.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2018_sujet1__s1__q3": {
+  "block": null,
+  "note": "Same cause as q1 of this unit: the 2018 sujet1 key holds no Comprehension answers. This question asks three comprehension questions about corruption, and had been given item 3 of the Text Exploration key ('a. redoubled b. would contribute c. are / will become'), which is the verb-form exercise from s2. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2018_sujet1__s1__q4": {
+  "block": null,
+  "note": "Same cause as q1 and q3 of this unit. This question is an MCQ on the text type (narrative / expository / prescriptive / argumentative) and had been given item 4 of the Text Exploration key ('1- d 2- c 3- a 4- b'), which is s2's sentence-reordering answer. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2018_sujet1__s2__q1": {
+  "block": 1,
+  "note": "Q asks for synonyms of 'gradually destroys', 'harms' and 'confidence'. Items 1 and 2 merged into block 1 because the key writes '**2.**' on its own line, so the stored answer also carried the whole prefix/root/suffix table. Carved to lines 0-2: 'a- erodes (§1) b- hurts (§2) c- trust (§3)'.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_english_2020_sujet1__s2__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "note": "Q asks to match THREE words (malnutrition, wasting, awareness) with three definitions. The stored answer was block 2 alone, only the first match ('1. b- Deficiency in quality and quantity of food'). The key splits each match into its own block: block 1 is the '1) Lexis' header, block 3 is '2. c- Disease causing a person to gradually become thin and weak' and block 4 is '3. a- the state of being conscious of something'. Blocks 1-4 give all three matches, and each pairing is correct (malnutrition = deficiency of food, wasting = disease causing thinness and weakness, awareness = state of being conscious).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2021_sujet1__s2__q4": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q asks to reorder four sentences into a coherent passage. Stored answer was block 4, the bare heading '**4) Sentence ordering**'. Block 5 is the answer: '1 - b 2- d 3 - a 4 - c' with the key's marking note, and it reads coherently against the sentences (b states physical inactivity is a leading cause of obesity, then d, a, c follow). Blocks 4-5 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2021_sujet2__s2__q4": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q is a four-gap fill from involved/obey/professional/consequences. Stored answer was block 4, the bare heading '**4) Gap fill**'. Block 5 is the answer: '1-professional 2-consequences 3- obey 4- involved', and each fits its gap (improve your professional and social success; ... consequences; ... obey; ... involved). Blocks 4-5 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2022_sujet1__s2__q3": {
+  "block": [
+   3,
+   4,
+   5
+  ],
+  "note": "Q asks to complete TWO sentences: 1.b) a 'because' rewrite of 'Junk food addiction is so severe that it is tough to get rid of it', and 2.b) an 'It's high time' rewrite of 'I feel strongly that I should stop eating junk food'. The stored answer was block 4 alone, only sentence 1's rewrite. Block 5 is sentence 2's ('It's high time I stopped eating junk food') and block 3 is the key's '3. Sentence completion:' header. Blocks 3-5 give both.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2024_sujet1__s2__q4": {
+  "block": 6,
+  "note": "Q asks to reorder four sentences into a coherent passage. The answer block runs on into 'Part Two: Written Expression' with its whole assessment-criteria table, a page marker and a [SCORES] bracket. Carved to lines 0-2: the reordering table (b, d, c, a) and the key's marking note.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_english_2025_sujet1__s2__q4": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q is a four-gap fill from ethical/consider/transplant/patients. Stored answer was block 4, the bare heading '**4- Gap fill.**'. Block 5 opens with the answer '1) transplant 2) patients 3) ethical 4) consider' and then runs on into the Part Two Written Expression criteria table. Carved to the first two lines of blocks 4-5 joined: the heading and the four gap fills, each of which fits its slot in the passage.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_english_2026_sujet2__s2__q2": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Exam-item segmentation defect, same as the 2025 sujet2 s2 unit. This record is not a real exam question: its text ('**2.** global / **b.** to think about a problem and decide how to deal with it.') is the second word and second definition of item 1's matching exercise, broken off as its own item because the matching list is numbered. Its stored answer was the Morphology block, which belongs to real item 2. Pointed at blocks 1-2, the Lexis matching key ('1) b 2) c 3) a'), which is the answer that actually covers this fragment.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_english_2026_sujet2__s2__q3": {
+  "block": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "note": "Same segmentation defect: this record's text carries the tail of item 1's matching list AND the whole of real item 2 (opposites: understanding, efficient, important), real item 3 (ask questions for two underlined phrases) AND real item 4 (a four-gap cloze). The stored answer was block 4 alone, the bare heading '**3. Asking questions**'. Blocks 3-8 cover everything the record asks: the morphology answers (misunderstanding, inefficient, unimportant), both questions ('What do we use satellites for?' / 'What did the report find?') and the four gap fills (provide, processes, local, understanding).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  }
 }

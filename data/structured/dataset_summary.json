@@ -406,15 +406,14 @@
   "question_alignment": {
    "units": 126,
    "questions": 374,
-   "human": 55,
-   "good": 129,
-   "matched_with_label_agreement": 316,
-   "strong": 101,
-   "label_supported": 88,
+   "human": 74,
+   "good": 122,
+   "matched_with_label_agreement": 296,
+   "strong": 97,
+   "label_supported": 77,
    "units_without_numbered_questions": 42,
-   "solution_missing": 1,
-   "matched_despite_label_mismatch": 1,
-   "answered": 373,
+   "solution_missing": 4,
+   "answered": 370,
    "answered_pct": 100.0
   }
  },
