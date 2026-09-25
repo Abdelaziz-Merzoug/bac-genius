@@ -977,9 +977,9 @@
   "by": "human review 2026-09-21"
  },
  "bac_arabe_2014_sujet2__s2__q1": {
-  "block": 0,
-  "note": "ج1- inside heading block",
-  "by": "human review 2026-09-21"
+  "block": 1,
+  "note": "The existing override was itself wrong. It pointed at block 0, which is only the section heading '**أ-البناء الفكري:**' plus score cells (29 chars), and its note ('ج1- inside heading block') does not hold: block 1 is a separate block and it is the actual answer. Q asks what issue occupied the writer and for two supporting quotations; block 1 gives exactly that — طموح الشباب إلى المثل العليا with the two quotations (أن يكون للشباب مثل أعلى يطمح إليه) and (إنما النجاح الحق ... نبله في خلقه وصدقه وأمانته).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_arabe_2016_sujet2__s2__q7": {
   "block": 6,
@@ -1016,8 +1016,12 @@
  },
  "bac_arabe_2017_sujet1_session2__s3__q3": {
   "block": 3,
-  "note": "3- زاوج الشاعر",
-  "by": "human review 2026-09-21"
+  "note": "Existing override (block 3) held the right content but its tail carried a page break and the whole Arabic header of page 2 of the answer key. Q asks why the poet alternated خبري and إنشائي and for the type and rhetorical purpose of verses 2 and 3; carved to lines 0-2, which give the reason (فخر بجيش التحرير + حث الشعب), verse 2 (إنشائي طلبي، أمر مجازي، غرضه الحث والتشجيع) and verse 3 (خبري، غرضه الفخر).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
  },
  "bac_arabe_2017_sujet2_session2__s3__q2": {
   "block": 2,
@@ -1061,13 +1065,21 @@
  },
  "bac_arabe_2024_sujet2__s2__q4": {
   "block": 3,
-  "note": "PHASE2 FIX: تلخيص criteria present, merged into block 3 with q3 (unlabeled trailing paragraph, no explicit '4-' marker in source)",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to summarise the text using the تلخيص technique, so the key gives summarising criteria rather than a model summary. The key writes them as an unlabelled trailing paragraph with no '4-' marker, so they merged into block 3 behind item 3's answer about النّمط النّصي — the existing override stored all 624 chars, most of which answer a different question. Carved to lines 9-11: the three criteria (cover the content in about six lines; keep the order of ideas and the نمط; use one's own wording without copying, with correct language).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   9,
+   12
+  ]
  },
  "bac_arabe_2024_sujet2__s3__q4": {
   "block": 5,
-  "note": "PHASE2 FIX: answer present, merged into block 5 with q3 (unlabeled trailing paragraph at document end)",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to extract two different إنشائي styles from the verses with their types and rhetorical purposes. The key writes this answer as an unlabelled trailing paragraph at the end of the document, so it merged into block 5 behind a [SCORES] bracket line and a page header — the existing override stored all of that. Carved to lines 9-11: 'الأسلوبان الإنشائيان المختلفان هما: الأمر في (قل لابن صهيون اغتررت) وغرضه التّحقير؛ النهي في (لا تجر) وغرضه التحذير.'",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   9,
+   12
+  ]
  },
  "bac_islamic_2008_sujet1__s1__q1": {
   "block": 0,
@@ -1086,18 +1098,30 @@
  },
  "bac_islamic_2008_sujet2__s1__q1": {
   "block": 0,
-  "note": "الشرح الموجز للحديث (one block)",
-  "by": "human review 2026-09-21"
+  "note": "This unit's whole answer key is a single block, so all three questions were pointed at it and each stored the other two's answers as well. Q1 asks for a brief explanation of the hadith; carved to lines 3-10, the key's '- الشرح الموجز للحديث' section with its four points (مشروعية منح الأولاد الهدايا، توثيق الهدايا بالإشهاد، الأمر بتقوى الله والعدل بين الأولاد، رجوع الوالد في عطيته) and its score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   3,
+   11
+  ]
  },
  "bac_islamic_2008_sujet2__s1__q2": {
   "block": 0,
-  "note": "inside block 0",
-  "by": "human review 2026-09-21"
+  "note": "Q asks for the ruling on justice between children WITH its evidence, then five dangers of discriminating between them. Previously the whole single-block key (666 chars) was stored, including question 1's explanation and question 3's benefits. Carved to lines 11-26, which are exactly the three parts asked for: '- حكم العدل بين الأبناء: وجوب العدل', '- الدليل: (اتقوا الله واعدلوا بين أولادكم)', and '- مخاطر التفريق بين الأبناء' with its five dangers.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   11,
+   27
+  ]
  },
  "bac_islamic_2008_sujet2__s1__q3": {
   "block": 0,
-  "note": "inside block 0",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to extract three benefits from the hadith. Previously the whole single-block key was stored. Carved to lines 27-32: '- استخراج ثلاث فوائد من الحديث' with its three benefits (مشروعية الهبة، مشروعية الإشهاد على الهبة، وجوب الرجوع إلى الصواب إذا تبين الخطأ).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   27,
+   33
+  ]
  },
  "bac_islamic_2011_sujet2__s1__q5": {
   "block": [
@@ -1122,8 +1146,12 @@
  },
  "bac_islamic_2016_sujet1__s2__q1": {
   "block": 0,
-  "note": "1- الأمور التي أبطلتها الخطبة",
-  "by": "human review 2026-09-21"
+  "note": "Existing override (block 0) holds the right content — Q asks for three other things the khutba abolished, and the block lists الربا، التلاعب بحرمة الأشهر الحرم، ظلم المرأة، الشرك، قتال المسلم لأخيه المسلم with the key's note that three suffice — but its tail carries a page break and the full Arabic header of the answer key. Carved to lines 0-6.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   7
+  ]
  },
  "bac_islamic_2017_sujet1_session1__s1__q5": {
   "block": 22,
@@ -2344,8 +2372,12 @@
    13,
    14
   ],
-  "note": "Targeted audit: stored answer was only the heading+score fragment; the 3 benefits were each split into their own mis-numbered blocks (a known sub-enumeration segmentation issue) at blocks 9-14 of the same unit.",
-  "by": "human review 2026-09-25 (targeted from_unit/SCORES-bracket/unresolved audit)"
+  "note": "Existing override held the right blocks but block 14's tail carries a page break, a page number and a [SCORES] bracket. Q asks to extract three benefits from the verse; carved to lines 0-7: the header '5- ثلاث فوائد من الآية الكريمة', the five candidate benefits, and the score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   8
+  ]
  },
  "bac_islamic_2014_sujet2__s1__q5": {
   "block": [
@@ -2546,8 +2578,12 @@
    6,
    7
   ],
-  "note": "Targeted fix: stored answer was only the section heading (or a partial capture); the real list/content sits in the immediately-following block(s) of the same solution unit but was not captured.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Existing override holds the right blocks — Q asks for the bases Islam laid down for Muslims' relations with others, and blocks 3-7 give the header plus التعاون، التعايش، التعارف، الروابط الاجتماعية — but block 7's tail carries a page marker and the opening of a [SCORES] bracket belonging to another question. Carved to lines 0-4, the header and the four bases.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   5
+  ]
  },
  "bac_islamic_2015_sujet2__s2__q1": {
   "block": [
@@ -2568,11 +2604,10 @@
    1,
    2,
    3,
-   4,
-   5
+   4
   ],
-  "note": "Targeted fix: stored answer was only the section heading (or a partial capture); the real list/content sits in the immediately-following block(s) of the same solution unit but was not captured.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Existing override spanned blocks 0-5, but block 5 is 'الجواب الثاني: بيان حكم المبادلات المالية مع التعليل', question 2's answer, which had no business here. Q asks for the stages of riba's prohibition and which stage appears in the text: blocks 0-3 are the header and the four stages with their verses, and block 4 carries the fourth stage, the key's note, and part ب ('هي المرحلة الثانية... التنبيه على حرمة الربا عند الأمم السابقة'). Trimmed to blocks 0-4.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_islamic_2017_sujet1_session1__s1__q3": {
   "block": [
@@ -2586,8 +2621,12 @@
    13,
    14
   ],
-  "note": "Targeted fix: stored answer was only the section heading (or a partial capture); the real list/content sits in the immediately-following block(s) of the same solution unit but was not captured.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Existing override holds the right blocks — Q asks for six of the Jews' distorted beliefs and blocks 6-14 give the header plus eight of them — but block 14's tail carries a page marker and a [SCORES] bracket belonging to question 1. Carved to lines 0-8, the header and the eight beliefs.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   9
+  ]
  },
  "bac_islamic_2018_sujet1__s2__q1": {
   "block": [
