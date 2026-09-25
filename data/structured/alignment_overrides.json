@@ -921,8 +921,12 @@
  },
  "bac_svt_2017_sujet1_session2__ex3__q1": {
   "block": 0,
-  "note": "الجزء 1: اقتراح فرضيات in heading block",
-  "by": "human review 2026-09-21"
+  "note": "Q has parts أ/ب/ج about document 2 (what the letters and numbers of figure أ represent, the parents' genotypes from figure ب, and why transplants are rejected). The key's whole exercise sits in one block because its parts are headed '**الجزء 1:**' and '**الجزء 2:**', which blocks_of() does not read as block labels, so the stored answer opened with the exercise header and part 1's two hypotheses. Carved to lines 8-41: 'الجزء 2: 1' with أ (the letters are the CMH I and II genes, the numbers their allele counts), ب (both parents' haplotype tables) and ج (the full explanation of graft rejection).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   8,
+   42
+  ]
  },
  "bac_svt_2017_sujet2_session1__ex3__q2": {
   "block": 1,
@@ -930,14 +934,17 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2017_sujet2_session1__ex3__q1#2": {
-  "block": 1,
-  "note": "II-1 cancelled (ملغى) - key says so",
-  "by": "human review 2026-09-21"
+  "block": [
+   2,
+   3
+  ],
+  "note": "Q has parts أ (analyse figure أ of document 2), ب (extract the XPA mechanism from figure ب) and ج (propose a hypothesis). Stored answer was block 1, which is the previous question's ARNm sequences. Block 2 is the key's ruling on part أ ('II- 1- أ- ملغى', i.e. cancelled) and block 3 is part ب's answer (XPA binds the DNA at the T=T dimer, forms an enzyme-substrate complex, catalyses the correction, then detaches). Blocks 2-3 are what the official key provides for this question, including its own cancellation of part أ.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2017_sujet2_session1__ex3__q2#2": {
-  "block": 2,
-  "note": "II-2 ب)",
-  "by": "human review 2026-09-21"
+  "block": 4,
+  "note": "Q asks to verify the hypothesis by interpreting figure أ's results using figure ب, and part III asks for a scientific text. Stored answer was block 2, the cancellation notice for a different part (II-1-أ). Block 4 is this question's own ruling: '(2) ملغى / III - ملغى' — the official key cancelled both item 2 and part III of this exercise. That cancellation IS the key's answer here and is recorded as such.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2017_sujet2_session2__ex2__q1": {
   "block": 0,
@@ -3805,6 +3812,32 @@
  "bac_svt_2014_sujet2__ex3__q2#2": {
   "block": 8,
   "note": "Q2 of part II asks, from document 2(ب), to explain the fate of the absorbed CO2. Stored answer was block 7, '2- الجزء المكمل للمنحى', which is the curve completion belonging to question 1. Block 8 is the real answer: '3- مصير CO2 الممتص' describing its incorporation into the biochemical stage (fixation on RuBP, two APG, reduction by ATP and NADPH,H+).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2016_sujet1_session2__ex3__q1": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q asks to name the stages numbered in document 1. Stored answer was block 1, the bare heading 'I - 1 - تسمية المراحل المشار إليها بالأرقام:'. Block 2 is the answer: '[1] الإستنساخ. [2] انتقال ARNm من النواة إلى الهيولى. [3] الترجمة.' Blocks 1-2 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2016_sujet1_session2__ex3__q2#2": {
+  "block": [
+   5,
+   6,
+   7
+  ],
+  "note": "Q has parts أ (label the numbered elements of figure ب, name the stage precisely, and state the Aminoacyl-ARNt complex's role). Stored answer was block 5, the bare heading '2 - أ - تسمية بيانات العناصر المرقمة في الشكل (ب):'. Block 6 gives labels 1-4 and block 7 gives labels 5-8 plus the stage name ('الإستطالة من مرحلة الترجمة'). Blocks 5-7 are the complete answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2017_sujet1_session1__ex1__q1": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "Q asks to write the labels for the numbered elements AND name stages أ and ب. Stored answer was block 1, the bare heading '1- كتابة البيانات الموافقة :'. Block 2 gives labels 1-4 and block 3 gives labels 5-8 plus the stage names (أ transcription, ب translation). Blocks 1-3 answer both halves of the question.",
   "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  }
 }
