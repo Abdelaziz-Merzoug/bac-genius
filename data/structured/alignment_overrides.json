@@ -812,24 +812,40 @@
   "by": "human review 2026-09-21"
  },
  "bac_svt_2012_sujet2__ex2__q1#2": {
-  "block": 8,
-  "note": "II-1 scores + analysis in block 8",
-  "by": "human review 2026-09-21"
+  "block": 7,
+  "note": "Serious misalignment. Q asks (أ) to analyse the results of experiments 1 and 2 and (ب) what information they yield. The stored answer was block 8, which is a [SCORES] bracket and the answer key's page header, carrying no content. The real answer is inside block 7: the key writes part II's header as a dotted line and numbers the item as a bare '1 أ-', neither of which blocks_of() reads as a block label, so item 3's drawing and part II item 1 merged. Carved to block 7 lines 5-23: the analysis of experiment 1 interval by interval, the analysis of experiment 2, and part ب's two extracted conclusions.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   5,
+   24
+  ]
  },
  "bac_svt_2012_sujet2__ex3__q1": {
   "block": 0,
-  "note": "-1 أ- الوصف التفصيلي in heading block",
-  "by": "human review 2026-09-21"
+  "note": "This exercise's key is a single 2404-character block because items 1 and 2 are numbered as bare '-1' and '-2' lines, which blocks_of() does not read as block labels. Q1 has parts أ/ب/ج (describe both enzyme structures in detail, state trypsin's effect on chymotrypsinogen, define a protein's spatial structure). Carved to lines 0-25, which are exactly those three parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   26
+  ]
  },
  "bac_svt_2012_sujet2__ex3__q2": {
   "block": 0,
-  "note": "2- inside heading block",
-  "by": "human review 2026-09-21"
+  "note": "Same single-block key. Q2 concerns document 2 and has parts أ to ه (analyse figure أ, relate spatial structure to functional specificity, what the figures show about active-site activity, the resulting conclusion, and define the active site). Its stored answer opened with item 1's enzyme descriptions. Carved to lines 26-53, which are exactly item 2's five parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   26,
+   54
+  ]
  },
  "bac_svt_2013_sujet1__ex1__q3": {
   "block": 5,
-  "note": "PHASE2 FIX: answer present, merged into block 5 with earlier content (RTL '-3' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks about the organelles' ability to synthesise protein in the fractionation experiment. Its override pointed at all of block 5, so the stored answer was item 2's ج2 interpretation and part ب. Item 3's answer is at the end of that same block, after a page break: lines 34-37, '**-3** التحليل: كمية الاشعاع عالية في المستخلص الخلوي الكامل، وعالية أيضا عند الجمع بين الميتوكندري والميكروزومات' with the conclusion that protein synthesis occurs in the ribosomes. Carved to those lines.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   34,
+   38
+  ]
  },
  "bac_svt_2013_sujet1__ex1__q5": {
   "block": 6,
@@ -878,21 +894,30 @@
  },
  "bac_svt_2014_sujet2__ex1__q1": {
   "block": 0,
-  "note": "-1 أ- تفسير نتائج الجدول ب in block 0",
-  "by": "human review 2026-09-21"
+  "note": "This exercise's key is one 1635-character block (its items are numbered '**-1**' and '**-2**', which blocks_of() does not read as block labels). Q1 has parts أ (interpret table ب and conclude) and ب (show the lysosome illustrates compartmentalisation). Carved to lines 2-16: item 1's أ with all four experiments interpreted, the الاستنتاج about pH, and part ب on the lysosomal membrane's pH range.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   2,
+   17
+  ]
  },
  "bac_svt_2014_sujet2__ex1__q2": {
   "block": [
+   0,
    3,
    4
   ],
-  "note": "ب- وصف بنية الليزوزيم + ج- الاستدلال",
-  "by": "human review 2026-09-21"
+  "note": "Q2 concerns document 2 (lysozyme) with parts أ, ب and ج. Carved to the joined blocks 0+3+4, lines 17-29: item 2's أ (why the enzyme is called a biological catalyst), then block 3's ب (lysozyme structure and the role of the disulphide bridges) and block 4's ج (why high temperature exposes the organism to bacterial infection). Previously the whole of block 0 was stored, which is item 1's answer.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   17,
+   30
+  ]
  },
  "bac_svt_2014_sujet2__ex1__q3": {
-  "block": 0,
-  "note": "PHASE2 FIX: الاستنتاج (conclusion) present within block 0, merged with q1/q2's content (whole table-1 answer never split into separate blocks - header+first row concatenation issue)",
-  "by": "human review 2026-09-21"
+  "block": null,
+  "note": "Verified source gap. Q3 asks to deduce the conditions of enzyme action from everything above. The key for this exercise has only items 1 and 2 (with parts أ/ب and أ/ب/ج) and no item 3; the trailing [SCORES] bracket likewise scores only item 2's parts ب and ج. The material needed is distributed across item 1's pH conclusion and item 2's ج on temperature, but the key gives no discrete answer to this question, so nothing in the corpus answers it. Previously the whole of block 0 (item 1's answer) was stored. Set to solution_missing.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_svt_2017_sujet1_session2__ex3__q1": {
   "block": 0,
@@ -3732,6 +3757,54 @@
    3
   ],
   "note": "Q has two parts: (أ) write labels 1 to 3, and (ب) name the process binding element 1 to element 2 and the other participants. Stored answer was block 2 alone, which gives only labels 1 and 2 (amino acid; the amino-acid binding site on tRNA) and stops. Block 3 carries label 3 ('موقع الرامزة المضادة', the anticodon site) and the whole of part ب ('العملية هي تنشيط الأحماض الأمينية' with the enzyme and ATP as participants). Blocks 2-3 give both parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2012_sujet2__ex2__q3": {
+  "block": 7,
+  "note": "Tightened while fixing q1#2 of the same merged block. Q asks for a labelled diagram of element 1; carved to block 7 lines 0-2, the drawing entry with its label list, without part II's analysis.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_svt_2013_sujet1__ex1__q2": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "note": "Q2 asks to analyse and interpret both recordings س and ع and then (ب) state the relationship and (جـ) give the experimental demonstration. The key fragments this answer across five blocks because each ج1/ج2 sub-entry starts a new block, and the tail of block 5 also carries item 3's answer after a page break. Stored answer was block 3 alone, a mid-answer fragment starting at 'ج2: تصبح كمية البروتين...'. Carved to the joined blocks 1-5, lines 0-11 (recording س: ج1 and ج2 with interpretation; recording ع: ج1 and ج2 with interpretation; part ب the relationship and the conclusion) and lines 30-41 (part جـ, the two-stage experimental demonstration). Lines 12-29 are score cells and a page break and are excluded, as are lines 42-45 which are item 3.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   [
+    0,
+    12
+   ],
+   [
+    30,
+    42
+   ]
+  ]
+ },
+ "bac_svt_2014_sujet1__ex2__q2": {
+  "block": 7,
+  "note": "Q asks to compare elements 1 and 3 (the mitochondrion's outer and inner membranes) and deduce the importance of element 3. The stored answer was block 3, the single 20-character line '2- فراغ بين غشائين' — that is entry 2 of item 1's label list (the intermembrane space), matched only because its label digit is '2'. Block 7 is the real answer: '2- المقارنة بين الغشاء الخارجي والغشاء الداخلي للميتوكندري' with the similarities and differences table.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2014_sujet2__ex3__q1#2": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q1 of part II asks to analyse curve أ from ز0 to ز3 AND to complete it (the figure marks ز3 and ز4 on the axis with no curve drawn). Stored answer was block 6 alone, the analysis. Block 7 is the key's '2- الجزء المكمل للمنحى' giving the completion, which answers the second half of this same question. Blocks 6-7 together.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2014_sujet2__ex3__q2#2": {
+  "block": 8,
+  "note": "Q2 of part II asks, from document 2(ب), to explain the fate of the absorbed CO2. Stored answer was block 7, '2- الجزء المكمل للمنحى', which is the curve completion belonging to question 1. Block 8 is the real answer: '3- مصير CO2 الممتص' describing its incorporation into the biochemical stage (fixation on RuBP, two APG, reduction by ATP and NADPH,H+).",
   "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  }
 }
