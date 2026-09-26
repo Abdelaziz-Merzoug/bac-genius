@@ -7,13 +7,21 @@
    4,
    5
   ],
-  "note": "answer = the 6 stages list (blocks 1-5)",
-  "by": "human review 2026-09-21"
+  "note": "Q asks to identify the stages numbered 1 to 6. Its override spanned blocks 1-5, so the stored answer ran on into the scientific text belonging to question 2. Carved to the joined blocks 1-5, lines 0-5: exactly the six stage names (attachment, reverse transcription, integration, transcription, translation, budding).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   6
+  ]
  },
  "bac_svt_2024_sujet1__ex1__q2": {
   "block": 5,
-  "note": "النص العلمي is inside block 5 after stage 6",
-  "by": "human review 2026-09-21"
+  "note": "Q asks for a structured scientific text on the HIV replication stages and Zalcitabine's effect. Its override pointed at all of block 5, so the stored answer opened with stage labels 5 and 6 belonging to question 1. Carved to block 5 from line 3 onward: the 'النص العلمي' with its introduction, body and conclusion.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   3,
+   100
+  ]
  },
  "bac_svt_2024_sujet1__ex2__q2": {
   "block": 2,
@@ -42,8 +50,12 @@
  },
  "bac_physic_2008_sujet1__ex2__q4": {
   "block": 2,
-  "note": "block 2 tail holds the 35Cl+3n->38Cl equation (RTL '-4' marker)",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks for the equation transforming Cl-35 into X; the previous override took the whole block and duplicated the identification answer. Carved to the line giving Cl-35 + 3n -> Cl-38.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   13,
+   14
+  ]
  },
  "bac_physic_2009_sujet1__ex4__q2": {
   "block": 1,
@@ -74,13 +86,35 @@
  },
  "bac_physic_2009_sujet2__ex5__q1#2": {
   "block": 3,
-  "note": "II-1 (n(H+) at each instant) is inside block 3 after 'الطريقة 2'",
-  "by": "human review 2026-09-21"
+  "note": "Item 1 of part two asks for the amount of H+ at each instant; the previous override took the whole block and duplicated the plot line. Carved to the heading and the n(H+) row of values.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   2,
+   8
+  ]
  },
  "bac_physic_2010_sujet1__ex5__q4": {
   "block": 2,
-  "note": "block 2 continues with '-4 f+P=ma' (RTL marker)",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks to draw the forces and derive the differential equation for small speeds; the previous override took the whole block and duplicated item 3's answer. Carved to the force balance and the resulting equation.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    3,
+    4
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    10,
+    11
+   ]
+  ]
  },
  "bac_physic_2010_sujet2__ex1__q3": {
   "block": 2,
@@ -94,8 +128,12 @@
  },
  "bac_physic_2010_sujet2__ex3__q1": {
   "block": 0,
-  "note": "1 مخطط الدارة (heading block)",
-  "by": "human review 2026-09-21"
+  "note": "The override took the whole of block 0 including the exercise title; item 1 asks for the circuit diagram with the current direction and voltage arrows, answered by the two lines introducing that drawing.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   1,
+   3
+  ]
  },
  "bac_physic_2010_sujet2__ex5__q4": {
   "block": null,
@@ -103,64 +141,128 @@
   "by": "human review 2026-09-21"
  },
  "bac_physic_2011_sujet1__ex5__q1": {
-  "block": 0,
-  "note": "Targeted audit of Phase4 'unresolved': block 0 (unlabeled, since it is the unit's first block with no numeric marker before it) contains the full protocol for preparing solution S, directly answering the question.",
-  "by": "human review 2026-09-25 (targeted from_unit/SCORES-bracket/unresolved audit)"
+  "block": null,
+  "note": "This item is the exercise stem listing the materials, glassware and the grouping of pupils; it asks nothing, and the key has no block for it, so it should carry no answer instead of duplicating the protocol block.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_physic_2011_sujet1__ex5__q1#2": {
   "block": 0,
-  "note": "أولا-1 البروتوكول التجريبي in heading block",
-  "by": "human review 2026-09-21"
+  "note": "Item 1 of part one asks for the protocol to prepare solution S; carved to the dilution factor, V0 = 5 mL, the glassware, the materials and the working steps, dropping the exercise title and score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    1,
+    3
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    9,
+    12
+   ]
+  ]
  },
  "bac_physic_2011_sujet1__ex5__q1#3": {
   "block": 2,
-  "note": "PHASE2 FIX: answer present, merged into block 2 with q3 part1 (ثانيا-1 marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "This item asks the catalyst's role and the type of catalysis; the previous override took the whole block and duplicated the concentration answer. Carved to the two lines naming it a kinetic factor and homogeneous catalysis.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   6,
+   8
+  ]
  },
  "bac_physic_2012_sujet1__ex1__q2": {
   "block": 0,
-  "note": "'-2' progress table glued in block 0",
-  "by": "human review 2026-09-21"
+  "note": "Item 2 asks to complete the progress table; the previous override took the whole block and duplicated the 'slow reaction' answer. Carved to the table rows and the completeness conclusion, dropping the score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    1,
+    26
+   ],
+   [
+    28,
+    29
+   ]
+  ]
  },
  "bac_physic_2012_sujet1__ex4__q2": {
   "block": 1,
-  "note": "2- سقوط حر",
-  "by": "human review 2026-09-21"
+  "note": "The override took the whole block, whose tail is page furniture and an OCR note; item 2 asks for the qualitative v(t) diagram in vacuum and the key answers with the single line naming it free fall (a straight line).",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
  },
  "bac_physic_2012_sujet2__ex3__q4": {
   "block": 2,
-  "note": "key merged E(L)=1/2 L I0^2 as 3-ج",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks for the maximum energy stored in the coil; the previous override took the whole block and duplicated item 3's answer. Carved to the line E(L) = L I0^2 / 2 = 6,0e-3 J.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   6,
+   7
+  ]
  },
  "bac_physic_2012_sujet2__ex5__q3": {
   "block": 1,
-  "note": "progress table is glued under 2- in the key",
-  "by": "human review 2026-09-21"
+  "note": "Item 3 asks for the progress table and to show H2O2 is limiting; the previous override took the whole block and duplicated the equivalence answer. Carved to the table rows that answer it.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   7
+  ]
  },
  "bac_physic_2013_sujet1__ex3__q1": {
   "block": 0,
-  "note": "'-1- A=4, Z=2' in heading block",
-  "by": "human review 2026-09-21"
+  "note": "The override took the whole of block 0, whose head is the exercise title and whose tail is score cells; item 1 asks for A and Z by conservation and the key answers on the single line A = 4, Z = 2.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   1,
+   2
+  ]
  },
  "bac_physic_2013_sujet1__ex4__q3": {
   "block": 1,
-  "note": "PHASE2 FIX: pH=3.4 present, merged into block 1 with q2 (RTL '-3-' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Item 3 asks to show pH = 3,4; the previous override took the whole block and duplicated the concentration derivation. Carved to the line pH = -log[H3O+] = 3,4.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   11,
+   12
+  ]
  },
  "bac_physic_2013_sujet2__ex4__q1": {
   "block": 0,
-  "note": "أولاً-1 المعادلات الزمنية in heading block",
-  "by": "human review 2026-09-21"
+  "note": "The override took the whole of block 0 including the exercise title; item 1 asks for the time equations of speed and position and the key answers on the two lines giving v = gt and z = gt^2/2.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   2,
+   4
+  ]
  },
  "bac_physic_2013_sujet2__ex4__q2": {
   "block": 1,
-  "note": "2- v = sqrt(2gz)",
-  "by": "human review 2026-09-21"
+  "note": "Item 2 asks only for the impact speed; the tail of block 1 already answers the next part's dimensional analysis, so the answer is carved to v = sqrt(2gz) = 171,4 m/s.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
  },
  "bac_physic_2013_sujet2__ex4__q1#2": {
   "block": 1,
-  "note": "PHASE2 FIX: k unit analysis present, merged into block 1 with q2 (ثانياً-1 marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "This item asks for the SI unit of k by dimensional analysis; the previous override took the whole block and duplicated the impact-speed answer. Carved to the line deriving [k] = M/L with its unit.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   2,
+   3
+  ]
  },
  "bac_physic_2013_sujet2__ex4__q2#2": {
   "block": 2,
@@ -184,13 +286,21 @@
  },
  "bac_physic_2015_sujet2__ex5__q3": {
   "block": 1,
-  "note": "PHASE2 FIX: progress table + التحول غير تام conclusion present, merged into block 1 with q2 (no explicit '3-' marker in source, likely upstream extraction gap)",
-  "by": "human review 2026-09-21"
+  "note": "Item 3 asks for the progress table and to show the esterification is incomplete; the previous override took the whole block and duplicated the data table. Carved to the progress table and the x_f < x_max conclusion with tau_f = 67%.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   31,
+   58
+  ]
  },
  "bac_physic_2015_sujet2__ex5__q4": {
   "block": 1,
-  "note": "PHASE2 FIX: زمن نصف التفاعل present, merged into block 1 with q2/q3 (no explicit '4-' marker in source, likely upstream extraction gap)",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks for the half-reaction time graphically; the previous override took the whole block and duplicated the data table. Carved to the lines giving x(t_1/2) = 0,47 mol and t_1/2 between 38 and 42 min.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   59,
+   62
+  ]
  },
  "bac_physic_2016_sujet1_session1__ex1__q2": {
   "block": [
@@ -208,23 +318,39 @@
  },
  "bac_physic_2016_sujet1_session2__ex2__q2#2": {
   "block": 6,
-  "note": "PHASE2 FIX: C' connection+value present, merged into block 6 with II-1 (RTL '-2' marker embedded in HTML span not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Item 2 asks how the second capacitor must be connected and its capacitance; the previous override took the whole block and duplicated the stored-energy answer. Carved to the lines deriving C_eq = 300 nF, the parallel connection and C' = 200 nF.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   20,
+   26
+  ]
  },
  "bac_physic_2016_sujet1_session2__ex4__q4": {
   "block": 2,
-  "note": "'-4 t_M = ...' glued at end of block 2 (RTL marker)",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks for t_M and the height h; the previous override took the whole block and duplicated the x_M(t) answer. Carved to the lines giving t_M = 1,27 s and h = 1,27 m.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   6,
+   11
+  ]
  },
  "bac_physic_2016_sujet1_session2__ex4__q5": {
   "block": 2,
-  "note": "PHASE2 FIX: V_M answer present, merged into block 2 with q3/q4 (RTL '-5' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Item 5 asks for the impact speed by energy conservation; the previous override took the whole block and duplicated the x_M(t) answer. Carved to the lines giving V_M = sqrt(V0^2 - 2gh) = 10,9 m/s.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   14,
+   17
+  ]
  },
  "bac_physic_2016_sujet2_session1__ex2__q4": {
   "block": 6,
-  "note": "PHASE2 FIX: mass+age answer present, merged into block 6 (garbled RTL '-أ-4' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "The override pointed at the whole of block 6, whose head is score and header furniture; item 4 asks for the mass giving A = 1,06e15 Bq and the sample's age, answered on the tail lines m = 0,4 g and t = 1,67 an.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   20,
+   24
+  ]
  },
  "bac_physic_2017_sujet1_session1__ex3__q1#2": {
   "block": [
@@ -248,28 +374,54 @@
  },
  "bac_physic_2017_sujet2_session2__ex3__q1": {
   "block": 0,
-  "note": "أولا-1 الحمض/الأساس definitions in heading block",
-  "by": "human review 2026-09-21"
+  "note": "The override took the whole of block 0, whose head is the part heading and score cells; the answer to the Bronsted definitions is on the two lines defining acid as an H+ donor and base as an H+ acceptor.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   5
+  ]
  },
  "bac_physic_2018_sujet1__ex3__q1.1": {
   "block": 0,
-  "note": "1.1 حساب الحجم V0 inside heading block",
-  "by": "human review 2026-09-21"
+  "note": "Four items shared one override on the whole of block 0 and so carried identical answers. Item 1.1 asks for the commercial-solution volume V0; the key answers it on the single line computing V0 = V/F = 5 mL.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   4,
+   5
+  ]
  },
  "bac_physic_2018_sujet1__ex3__q1.2": {
   "block": 0,
-  "note": "2.1 البروتوكول inside heading block",
-  "by": "human review 2026-09-21"
+  "note": "Item 2.1 asks for the protocol to prepare (S); the key answers it on the line describing the pipette, the 500 mL flask and the filling steps, so the shared whole-block override is replaced by that line.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   6,
+   7
+  ]
  },
  "bac_physic_2018_sujet1__ex3__q2.1": {
   "block": 0,
-  "note": "1.2 عبارة x(t) + جدول التقدم inside heading block",
-  "by": "human review 2026-09-21"
+  "note": "Item 1.2 asks for x(t) in terms of V_CO2, T, P(t) and R from the progress table; the key answers with the progress table and the ideal-gas derivation, carved out of the shared block with the score and header rows dropped.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    9,
+    39
+   ],
+   [
+    44,
+    46
+   ]
+  ]
  },
  "bac_physic_2018_sujet1__ex3__q2.2": {
   "block": 0,
-  "note": "2.2 x_f inside heading block (continues)",
-  "by": "human review 2026-09-21"
+  "note": "Item 2.2 asks for x_f and to prove the reaction is complete; the key answers on the lines computing x_f = 3e-3 mol and comparing it with x_max, carved out of the shared block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   47,
+   53
+  ]
  },
  "bac_physic_2018_sujet2__ex1__q3.2": {
   "block": [
@@ -281,13 +433,21 @@
  },
  "bac_physic_2019_sujet1__ex3__q1.3": {
   "block": 2,
-  "note": "PHASE2 FIX: drawing-question heading present (minimal, appropriate for a graph-drawing item), merged into block 2",
-  "by": "human review 2026-09-21"
+  "note": "Item 3.1 asks to plot v = f(t) on graph paper; the previous override pointed at the whole block and duplicated the speed computations. The key's answer is the graph introduced on the tail line of block 2.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   10,
+   11
+  ]
  },
  "bac_physic_2020_sujet2__ex2__q4": {
   "block": 9,
-  "note": "PHASE2 FIX: block already correctly contains '4.' true/false answer; stale override from before segmentation fixes",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks whether the two statements about the volumetric rate at t = 0 and at the end are true; the previous override pointed at the whole block and duplicated the limiting-reactant answer. Carved to the two refutations in the tail of block 9.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   7,
+   10
+  ]
  },
  "bac_physic_2021_sujet1__ex3__q1.3": {
   "block": [
@@ -308,13 +468,31 @@
  },
  "bac_physic_2021_sujet2__ex1__q2.1": {
   "block": 3,
-  "note": "PHASE2 FIX: circuit component list present (minimal, appropriate for a redraw-circuit item), merged into block 3",
-  "by": "human review 2026-09-21"
+  "note": "Item 1.2 asks to redraw the circuit showing how the oscilloscope is connected; the previous override pointed at the whole block and duplicated the C and E answer. The key's answer is the labelled diagram (1.2., E, K, (L,r), R2, Y) in the tail of block 3.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   7,
+   13
+  ]
  },
  "bac_physic_2021_sujet2__ex2__q5": {
   "block": 3,
-  "note": "PHASE2 FIX: g0*RT^2=GMT derivation present, merged into block 3 with q4 ('5.' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Item 5 asks to show g0 RT^2 = G M_T and deduce v^2 = g0 RT^2 / r; the previous override pointed at the whole block and duplicated the vector-drawing answer. Carved to the derivation lines in the tail of block 3, dropping the score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    4,
+    6
+   ],
+   [
+    8,
+    11
+   ],
+   [
+    12,
+    13
+   ]
+  ]
  },
  "bac_physic_2023_sujet2__ex3__q2#3": {
   "block": 10,
@@ -323,13 +501,21 @@
  },
  "bac_physic_2024_sujet1__ex1__q1#2": {
   "block": 4,
-  "note": "ثانيا-1 علاقة التكافؤ glued at end of block 3.3",
-  "by": "human review 2026-09-21"
+  "note": "Part two question 1 asks for Einstein's mass-energy equivalence relation; the key gives it on the tail line of block 4 ('ثانيا: 1. علاقة التكافؤ: كتلة-طاقة لأينشتاين: E = m.c^2'), so point the question at that single line instead of the whole block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   4
+  ]
  },
  "bac_physic_2024_sujet1__ex1__q1#3": {
   "block": 9,
-  "note": "PHASE2 FIX: answer present, merged into block 9 with q3 (ثالثا-1 marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Part three question 1 asks why this isotope is preferred for therapy; the key answers on the tail line of block 9 ('ثالثا: 1. يفضل استخدام هذا النظير في العلاج لقصر مدة حياته'), so the question is pointed at that line rather than the whole stability block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   6
+  ]
  },
  "bac_physic_2024_sujet1__ex3__q5.3": {
   "block": null,
@@ -392,9 +578,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2009_sujet2__ex4__q5": {
-  "block": 5,
-  "note": "المساحة glued at end of block 4",
-  "by": "human review 2026-09-21"
+  "block": 6,
+  "note": "Part-II Q5 asks for the area bounded by (C_f), y=x-1, x=0 and x=1. Block 6 lines 2-3 give 'المساحة' and A = (ln2)^2/2 u.a. The question previously held block 5, which is question 3's intermediate-value argument.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   2,
+   4
+  ]
  },
  "bac_math_2012_sujet2__ex1__q1": {
   "block": null,
@@ -418,13 +608,27 @@
  },
  "bac_math_2013_sujet1__ex4__q1#2": {
   "block": 4,
-  "note": "PHASE2 FIX: answer present, merged into block 4 (combined roman+digit marker '(II (1' not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q1 asks to study g's variations on ]-inf;1[ and build its table. Block 4 lines 6-7 give g'(x) = f'(2x-1) < 0 and the strict decrease, and lines 17-18, after the page break, give g's limits and the note that its table matches f's. Previously the whole block was stored, so the answer opened with part I's question 5.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    6,
+    8
+   ],
+   [
+    17,
+    19
+   ]
+  ]
  },
  "bac_math_2015_sujet1__ex2__q1": {
   "block": 0,
-  "note": "I) answer in heading block",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q1 asks a) the exponential forms of z_A and z_C with the n making the ratio's power a negative real, and b) to verify the given combination is real. Block 0 lines 5-9 hold exactly that. Lines 0-4 are the exercise title, a score cell and part I's answer (alpha and beta); part I is Roman-numbered in the exam and has no item record, so it is carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   10
+  ]
  },
  "bac_math_2015_sujet2__ex3__q1": {
   "block": 0,
@@ -433,33 +637,57 @@
  },
  "bac_math_2015_sujet2__ex3__q1#2": {
   "block": 2,
-  "note": "II(1 glued after 3. الرسم",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q1 asks a) to place u_0..u_3 and v_0..v_3 on the x-axis and b) to conjecture each sequence's monotonicity and convergence. Block 2 lines 3-7 give exactly that. Previously the whole block was stored, so the answer opened with part I's drawing.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   8
+  ]
  },
  "bac_math_2016_sujet1_session1__ex2__q2#2": {
   "block": 3,
-  "note": "PHASE2 FIX: answer present but content severely OCR-garbled and merged with q1/q3#2's answers into one block (التخمين: نلاحظ...متقاربة...نحو العدد 4 = the guess/convergence answer); cannot cleanly separate",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q2 asks for a conjecture on the monotonicity and convergence of (u_n). Block 3 lines 22-27 hold the key's التخمين: u_0 < u_1 < u_2 < u_3, the sequence appears strictly increasing and convergent to 4. Previously the whole block was stored, so this item also carried questions 1 and 3. The extracted Arabic is scrambled by the PDF text layer, which is a source-extraction defect, not a mapping one.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   22,
+   28
+  ]
  },
  "bac_math_2016_sujet1_session1__ex2__q3#2": {
   "block": 3,
-  "note": "PHASE2 FIX: answer present but content severely OCR-garbled and merged with q1/q2#2's answers into one block (induction proof + monotonicity + limit=4 all present, scrambled); cannot cleanly separate",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q3 has parts a (induction 0 <= u_n < 4), b (monotonicity), c (the contraction inequality and its consequence) and d (the limit). Block 3 lines 28-98 hold exactly those four parts, ending on lim u_n = 4. Previously the whole block was stored, so the item also carried questions 1 and 2. The Arabic is scrambled by the PDF text layer; the mathematics is still followable.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   28,
+   99
+  ]
  },
  "bac_math_2016_sujet1_session1__ex3__q1": {
   "block": 0,
-  "note": "garbled RTL block holds answers 1-3",
-  "by": "human review 2026-09-21"
+  "note": "Q1 asks to solve z' = z in C. Block 0 lines 1-8 hold that solution: the condition z != 1, the reduction to z^2-2z+2=0 with Delta = 2i and the roots 1-i and 1+i. The rest of the block is items 2 and 3. The Arabic is reversed and run together by the PDF text-layer extraction, a source defect; the carve at least separates the three items.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   1,
+   9
+  ]
  },
  "bac_math_2016_sujet1_session1__ex3__q2": {
   "block": 0,
-  "note": "garbled RTL block holds answers 1-3",
-  "by": "human review 2026-09-21"
+  "note": "Q2 asks a) for z_2/z_1 in exponential form and b) to show B is the image of A under a rotation centred at O with its angle. Block 0 lines 9-26 hold that: the quotient reduced to e^{i pi/2} and the rotation of centre O and angle pi/2. Previously the whole block was stored, so the item also carried questions 1 and 3.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   9,
+   27
+  ]
  },
  "bac_math_2016_sujet1_session1__ex3__q3": {
   "block": 0,
-  "note": "garbled RTL block holds answers 1-3",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks for the locus (Gamma) of points M whose image M' lies on the imaginary axis, and its construction. Block 0 lines 28-46 hold that: the argument condition, the excluded cases and the conclusion that (Gamma) is the circle of diameter [DC] minus the point D, with the construction. Previously the whole block was stored, so the item also carried questions 1 and 2.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   28,
+   47
+  ]
  },
  "bac_math_2016_sujet1_session2__ex4__q1": {
   "block": 0,
@@ -468,18 +696,30 @@
  },
  "bac_math_2016_sujet1_session2__ex4__q1#2": {
   "block": 2,
-  "note": "PHASE2 FIX: answer present but merged into block 2 with q3 + the whole unparsed LaTeX \\begin{array} table (parser doesn't split LaTeX array tables); cannot cleanly separate",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q1 has parts a (the two limits with their geometric meaning), b (f'(x) = -g(x)/(x+1)^3), c (the variations and table) and d (the plot of (C_f)). Those are the rows of the key's table at lines 27-40. Previously the whole block was stored, so the item also carried part I's item 3 and part II's items 2 and 3.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   27,
+   41
+  ]
  },
  "bac_math_2016_sujet1_session2__ex4__q2#2": {
   "block": 2,
-  "note": "PHASE2 FIX: answer present but merged into block 2 with q3 + the whole unparsed LaTeX \\begin{array} table (parser doesn't split LaTeX array tables); cannot cleanly separate",
-  "by": "human review 2026-09-21"
+  "note": "This exam item bundles part II's question 2 (a: the antiderivative; b: the area) and question 3 on k (a: k is even; b: deducing (C_k) from (C_f); c: the graphical discussion in m). The key's table rows at lines 42-59 hold exactly those. Previously the whole block was stored, so the item also carried part I's item 3 and part II's item 1.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   42,
+   60
+  ]
  },
  "bac_math_2016_sujet2_session1__ex2__q3": {
   "block": 3,
-  "note": "PHASE2 FIX: S_n computation present, merged into block 3 with q2#2 (RTL-flipped '3- حساب' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks for S_n in terms of n. Block 3 lines 26-29, after the page break, give the decomposition of S_n via the v_n sum and the closed form. Previously the whole block was stored, so the answer opened with question 2's geometric-sequence work.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   26,
+   30
+  ]
  },
  "bac_math_2016_sujet2_session1__ex4__q1": {
   "block": 0,
@@ -488,13 +728,21 @@
  },
  "bac_math_2017_sujet1_session1__ex4__q2": {
   "block": 0,
-  "note": "PHASE2 FIX: 4 limits present, merged into block 0 with q1 (row lost its '2)' marker)",
-  "by": "human review 2026-09-21"
+  "note": "Q2 asks for the four limits and to deduce that (C_f) has two asymptotes parallel to the y-axis. Block 0 lines 5-10 give the four limits and the equations x=-1 and x=1. Previously the whole block was stored, so the answer opened with question 1's parity.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   11
+  ]
  },
  "bac_math_2017_sujet2_session1__ex3__q2": {
   "block": 0,
-  "note": "PHASE2 FIX: true/false statement present, merged into block 0 with q1 (row lost its '2)' marker)",
-  "by": "human review 2026-09-21"
+  "note": "True/false item 2 on (z+2)(conj(z)+2) = |z+2|^2. Block 0 lines 4-6 carry that statement with its verdict (صحيحة), split across lines by the extraction of the absolute-value bars. Previously the whole block was stored, so the answer opened with item 1.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   4,
+   7
+  ]
  },
  "bac_math_2017_sujet2_session1__ex4__q2#2": {
   "block": 4,
@@ -503,23 +751,39 @@
  },
  "bac_math_2017_sujet2_session1__ex4__q3#2": {
   "block": 5,
-  "note": "key numbered it 2)",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q3 asks to draw the tangent (T) and (C_f) on ]-1;+inf[. Block 5 lines 0-2 hold exactly that with its figure; the rest of the block is question 4's antiderivative check and area computation. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
  },
  "bac_math_2017_sujet2_session1__ex4__q4": {
   "block": 5,
-  "note": "التحقق أن F دالة أصلية glued in block 5",
-  "by": "human review 2026-09-21"
+  "note": "Q4 asks to verify F is an antiderivative of f and compute the area between (C_f), the x-axis and x=0, x=1. Block 5 lines 5-7 give F'(x)=f(x) and S = 7-2e u.a. Previously the whole block was stored, so the answer opened with question 3's construction.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   8
+  ]
  },
  "bac_math_2017_sujet2_session2__ex4__q1#2": {
   "block": 3,
-  "note": "PHASE2 FIX: answer present, merged into block 3 with q4 (combined marker 'II . (1)' not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q1 asks a) g's variations, b) that g(x)=0 has a zero root and another root alpha in ]1,2;1,3[ and c) the sign of g. Block 3 lines 13-19 hold exactly those three parts. Previously the whole block was stored, so the answer opened with question 4's inflection point.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   13,
+   20
+  ]
  },
  "bac_math_2018_sujet2__ex3__q2": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 with q1 (bare '(2' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q2 asks to show triangle ABD is equilateral and compute z_D. Block 1 lines 5-12 give the ratio (z_D-z_A)/(z_B-z_A) = e^{i pi/3} with the modulus and argument conditions, the equilateral conclusion and z_D = 3 + (1+sqrt3)i. Previously the whole block was stored, so the answer opened with question 1's verification.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   13
+  ]
  },
  "bac_math_2021_sujet1__ex2__q2": {
   "block": 1,
@@ -538,38 +802,80 @@
  },
  "bac_math_2022_sujet2__ex1__q3": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (bare '3' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks to discuss graphically the number and sign of the solutions of f(x)+x-m=0. Block 1 lines 2-5 are the key's item 3: no solution for m<0, a zero solution for m=0 and two solutions of opposite signs for m>0. Previously the whole block was stored, so the answer opened with question 2's a=1.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   2,
+   6
+  ]
  },
  "bac_math_2022_sujet2__ex1__q4": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 with q2/q3 (bare '4' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q4 asks a) to show g(-2-x)=g(x) and interpret it graphically, b) to show g(x)=f(x) on ]-1;+inf[, c) to draw (C_g). Block 1 lines 7-13 are the key's item 4 with exactly those three parts. Previously the whole block was stored, so the answer opened with questions 2 and 3.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   7,
+   14
+  ]
  },
  "bac_math_2022_sujet2__ex4__q4": {
-  "block": 4,
-  "note": "block 4 holds tangent coefficients a=-1 b=2 (key mis-numbered 5)",
-  "by": "human review 2026-09-21"
+  "block": 2,
+  "note": "Q4 asks for an equation of (T), the tangent to (C_f) at abscissa 0. The answer is the last line of block 2: (T): y = (3/2)x. The question previously held block 4, which is the score column and the values a=-1, b=2 that belong to question 6.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   12,
+   13
+  ]
  },
  "bac_math_2023_sujet1__ex3__q3": {
   "block": 1,
-  "note": "PHASE2 FIX: S_n/T_n present, merged into block 1 with q2 (unlabeled trailing paragraph, '3' marker lost)",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks for S_n in terms of n and to show T_n = 2^(n+1) + n. Block 1 lines 5-7 are the key's item 3: S_n = 2^(n+1)-1 and T_n = S_n + (n+1) = 2^(n+1)+n with its marks. Previously the whole block was stored, so the answer opened with question 2's geometric-sequence work.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   8
+  ]
  },
  "bac_math_2023_sujet1__ex4__q4": {
   "block": 4,
-  "note": "PHASE2 FIX: answer (أ/ب/جـ parts) present, merged into block 4 with q3 (unlabeled trailing paragraph, '4)' marker lost)",
-  "by": "human review 2026-09-21"
+  "note": "Q4 asks a) the abscissas where (C_f) meets the x-axis, b) to draw (Delta), (T) and (C_f), c) to discuss graphically the number of solutions of f(x) = -x + m. Block 4 lines 23-31, after the page break, hold exactly those: the abscissas 0 and 1, the three plots and the four-case discussion in m. Previously the whole block was stored, so the answer opened with question 3's derivative and table.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   23,
+   32
+  ]
  },
  "bac_math_2023_sujet2__ex3__q3": {
   "block": 1,
-  "note": "PHASE2 FIX: S_n/T_n present, merged into block 1 with q2 (unlabeled trailing paragraph, '3)' marker lost)",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks for S_n in terms of n and to show T_n = 5n - 20(1-(4/5)^n). Block 1 lines 16-18, after the page break, give exactly S_n = -25[1-(4/5)^(n+1)] and T_n = S_n + 5(n+1) = 5n - 20[1-(4/5)^n]. Previously the whole block was stored, so the answer opened with question 2's geometric-sequence work.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   16,
+   19
+  ]
  },
  "bac_math_2023_sujet2__ex4__q5": {
   "block": 3,
-  "note": "PHASE2 FIX: h(x) answer present, merged into block 3 with q4 (unlabeled trailing paragraph despite visible '5' marker - not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q5 asks to explain how (C_h) is obtained from (C_f) and to draw it on [0;e^2]. Block 3's lines after the page break give exactly that: on ]0;1] h = -f so (C_h) is the reflection of (C_f) in the x-axis, on [1;+inf[ h = f so the curves coincide, then the plot, plus the key's closing note. Previously the whole block was stored, so the answer opened with question 4's antiderivative and area.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    33,
+    34
+   ],
+   [
+    35,
+    36
+   ],
+   [
+    37,
+    38
+   ],
+   [
+    41,
+    42
+   ]
+  ]
  },
  "bac_math_2024_sujet1__ex2__q2": {
   "block": 1,
@@ -577,9 +883,9 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2025_sujet2__ex1__q2": {
-  "block": 1,
-  "note": "(2 أ) glued at end of block 1",
-  "by": "human review 2026-09-21"
+  "block": 2,
+  "note": "Q2 asks a) the trigonometric forms of z_A, z_B and z_C and b) to show A, B, C lie on a circle whose centre and radius are to be given. Block 2 holds exactly that: the three forms with modulus 2sqrt2 and the circle centred at O of radius 2sqrt2. It previously duplicated question 1's block (the expansion of (1+i)^2 and the solutions of z^2=8i).",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_math_2025_sujet2__ex1__q4": {
   "block": 4,
@@ -587,52 +893,113 @@
   "by": "human review 2026-09-21"
  },
  "bac_math_2025_sujet2__ex2__q2": {
-  "block": 0,
-  "note": "(2 glued after (1 in block 0",
-  "by": "human review 2026-09-21"
+  "block": 1,
+  "note": "Part-I Q2 asks to show P(F)=4/15 and deduce the probability of two balls of different colours. Block 1 gives P(F) = (C(2,2)+C(3,2))/C(6,2) = 4/15 and P(not F) = 11/15. It previously duplicated question 1's block (P(E)=8/15).",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_math_2025_sujet2__ex2__q1#2": {
-  "block": 1,
-  "note": "(1 الشجرة",
-  "by": "human review 2026-09-21"
+  "block": 2,
+  "note": "Part-II Q1 asks to copy and fill in the probability tree. Block 2 is the key's tree with its branch probabilities. It previously held block 1, which is part I's P(F) answer.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_math_2025_sujet2__ex2__q2#2": {
-  "block": 1,
-  "note": "II-2 glued after the tree in block 1",
-  "by": "human review 2026-09-21"
+  "block": 3,
+  "note": "Part-II Q2 asks a) the probability of a red ball on the second draw and b) to show the probability that the first was green given the second is red equals 12/17. Block 3 gives p1 = 17/45 and, after a page break, p2 = 12/17. It previously held part I's P(F) block.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_math_2025_sujet2__ex3__q2": {
   "block": 1,
-  "note": "2 (أ,ب,ج) glued after 1) in block 1",
-  "by": "human review 2026-09-21"
+  "note": "Q2 asks a) compute u1 and u2 and conjecture the monotonicity, b) prove by induction 2 < u_n <= 3, c) study the monotonicity. Those are lines 2, 5 and 7 of block 1; the interleaved score cells and question 1's derivative line are carved off. It previously held the whole block, i.e. question 1's answer as well.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    2,
+    3
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    7,
+    8
+   ]
+  ]
  },
  "bac_math_2026_sujet1__ex3__q4": {
   "block": 3,
-  "note": "(3 block holds S_n and T_n = question 4 (key mis-numbered)",
-  "by": "human review 2026-09-21"
+  "note": "Q4 asks for S_n in terms of n and to deduce T_n. Block 3 line 3 gives S_n = 1-(1/2)^(n+1) and T_n = n/2 + (1/2)^(n+2). The block's '(3' marker and score cells are carved off; the content itself was already right.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   4
+  ]
  },
  "bac_math_2026_sujet2__ex1__q1": {
   "block": 0,
-  "note": "(I answers in heading block",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q1 asks a) compute P(A), P(B), P(C) and b) the probability of two white balls given no green ball is drawn. The whole of block 0 was stored, so the answer opened with the exercise title and part I's answer (a = 3/10 and the ball-count table). Carved to lines 21-36, the key's '(II (1' entry with the three probabilities and the conditional probability 15/28. Part I's own question is a dash bullet in the exam text and was never captured as an item, so its answer has no question to attach to.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   21,
+   37
+  ]
  },
  "bac_math_2026_sujet2__ex4__q4": {
-  "block": 2,
-  "note": "4 أ) glued after 3 رسم in block 2",
-  "by": "human review 2026-09-21"
+  "block": [
+   2,
+   3
+  ],
+  "note": "Q4 asks a) to verify f(x) = -4 + (1/2)(9e^x/(1+e^x) - e^x/(1-e^x)), b) to compute A(lambda) and then lim A(lambda) as lambda tends to -inf. Part a and the A(lambda) computation are in block 2 and the limit (9/2 ln3 - 5 ln2) opens block 3, so all three lines are joined; the plot of (C_f), which belongs to question 3, is carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    10,
+    11
+   ]
+  ]
  },
  "bac_math_2026_sujet2__ex4__q5": {
   "block": [
    3,
    4
   ],
-  "note": "PHASE2 FIX: answer (g'(x) formula + monotonicity in block 3, variation table in block 4) present, split across two blocks",
-  "by": "human review 2026-09-21"
+  "note": "Q5 asks to verify g'(x) for g(x)=f(ln x), determine g's variations and build its table. Block 3 gives g(x)=(x-2)^2/(x^2-1), g'(x) and the monotonicity while block 4 carries the variation table, so both are joined. The limit of A(lambda) at the head of block 3 belongs to question 4 and is carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    9,
+    10
+   ],
+   [
+    13,
+    14
+   ]
+  ]
  },
  "bac_math_2024_sujet1__ex2__q1": {
   "block": 0,
-  "note": "I) answers in heading block (trig forms), not (2 z_D",
-  "by": "human review 2026-09-21"
+  "note": "Part-II Q1 asks for the trigonometric forms of 1-z_A, 1-z_C and z_B. The whole of block 0 was stored, so the answer opened with the exercise title and part I's solution set for the cubic equation. Carved to lines 5-8, the key's 'II) (1' entry with the three trigonometric forms. Part I's question is labelled with a Roman numeral in the exam and was not captured as a numbered item, so its answer has no item to attach to. Noted: the key writes the forms for z_A-1 and z_C-1 rather than 1-z_A and 1-z_C, which is the official key's own wording, not a mapping error.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   9
+  ]
  },
  "bac_svt_2008_sujet2__ex3__q2": {
   "block": [
@@ -655,13 +1022,21 @@
  },
  "bac_svt_2009_sujet1__ex1__q1": {
   "block": 0,
-  "note": "1- أ التعرف على البنيتين in heading block",
-  "by": "human review 2026-09-21"
+  "note": "Items 1 and 2 of this key share one block because item 2 is numbered with a bare digit on its own line. Q1 has parts a (identify structures س and ص with justification) and b (name the stage in document 1 and why it is essential). Carved to lines 0-20: the ADN and ARN identifications with their four justifications each, and the transcription answer with its reason.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   21
+  ]
  },
  "bac_svt_2009_sujet1__ex1__q2": {
   "block": 0,
-  "note": "2- table completion glued in heading block",
-  "by": "human review 2026-09-21"
+  "note": "Q2 asks to complete document 2's table using the genetic code. It previously carried the whole of block 0, i.e. item 1's identifications and justifications as well. Carved to lines 21-29: the key's '2' entry with the completed table of the two DNA strands, the ARN strand, the tRNA anticodons and the four corresponding amino acids.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   21,
+   30
+  ]
  },
  "bac_svt_2009_sujet1__ex3__q3#2": {
   "block": 1,
@@ -701,18 +1076,30 @@
  },
  "bac_svt_2009_sujet2__ex3__q1": {
   "block": 0,
-  "note": "-1 أ- تحليل وتفسير ... in heading block (RTL)",
-  "by": "human review 2026-09-21"
+  "note": "The whole exercise key sits in one block because its items are numbered with bare digits on their own line. Q1 covers part a (analyse and interpret the curves of figures a and b of document 1) and part b (what this says about enzyme activity in each case). Carved to lines 0-22, which hold exactly those, ending at the 'ب - استخلاص' entry before the key's '- 2'.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   23
+  ]
  },
  "bac_svt_2009_sujet2__ex3__q2": {
   "block": 0,
-  "note": "2- also inside heading block (whole key is one block)",
-  "by": "human review 2026-09-21"
+  "note": "Q2 asks to compare figures a and b of document 2 (carboxypeptidase active site without and with substrate) and to conclude how the enzyme works. Carved to lines 23-32: the key's '- 2' entry with its comparison of the residues' spatial positions and the conclusion about induced complementarity. Previously it held the entire single-block key, i.e. items 1, 2 and 3 together.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   23,
+   33
+  ]
  },
  "bac_svt_2009_sujet2__ex3__q3": {
   "block": 0,
-  "note": "3- also inside heading block",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks for a labelled diagram of how the enzyme acts on the substrate and a precise definition of an enzyme. Carved to lines 33-44: the key's '- 3' entry with the S / active site / P / E diagram labels and the definition of an enzyme as a biological catalyst with specific action under life-compatible conditions. Previously it held the entire single-block key.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   33,
+   45
+  ]
  },
  "bac_svt_2010_sujet1__ex1__q1": {
   "block": null,
@@ -849,13 +1236,21 @@
  },
  "bac_svt_2013_sujet1__ex1__q5": {
   "block": 6,
-  "note": "PHASE2 FIX: answer present, merged into block 6 with q4 (RTL '-5' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q5 asks how proteins contribute to the results shown in document 1. It held the whole of block 6, which starts with item 4's answer (energy consumed as ATP, why synthesis needs it, and the ATP curves) and only reaches item 5 after a page break. Carved to lines 23-27: the key's '-5' entry on proteins acting as structural components of the regenerated cap and as enzymes.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   23,
+   28
+  ]
  },
  "bac_svt_2013_sujet1__ex2__q3": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (RTL '-3' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q3 asks what is concluded about the type of immune response and for a justification. It held the whole of block 1, whose first part is item 2's explanation of why animals 1 and 5 died and 3 and 4 survived, and that part belongs to q2. Carved to lines 9-11, the key's '-3' entry: the conclusion that the response is humoral and the justification from the serum-transfer results.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   9,
+   12
+  ]
  },
  "bac_svt_2013_sujet1__ex2__q1#2": {
   "block": null,
@@ -907,11 +1302,11 @@
    3,
    4
   ],
-  "note": "Q2 concerns document 2 (lysozyme) with parts أ, ب and ج. Carved to the joined blocks 0+3+4, lines 17-29: item 2's أ (why the enzyme is called a biological catalyst), then block 3's ب (lysozyme structure and the role of the disulphide bridges) and block 4's ج (why high temperature exposes the organism to bacterial infection). Previously the whole of block 0 was stored, which is item 1's answer.",
-  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "note": "Same three-part question (a: why the enzyme is called a biological catalyst, b: describe lysozyme's structure and the disulphide bridges' role, c: reason why high temperature exposes the organism to bacterial infection). The previous range ended at joined line 29 and so cut part c off mid-argument, dropping the two closing lines that state the active site is altered, the enzyme cannot cleave the bacterial wall sugars, and the bacteria survive and multiply. Extended to line 31; the trailing 1 and 0.5 score cells stay out.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
   "lines": [
    17,
-   30
+   32
   ]
  },
  "bac_svt_2014_sujet2__ex1__q3": {
@@ -953,70 +1348,107 @@
  },
  "bac_svt_2018_sujet2__ex1__q2": {
   "block": 0,
-  "note": "PHASE2 FIX: النص العلمي answer present, merged into block 0 with q1 (no separate '(2)' marker detected)",
-  "by": "human review 2026-09-21"
+  "note": "Q asks for a scientific text explaining why the ABO phenotype differs at the cellular level. Its override pointed at the whole single block, so the stored answer opened with question 1's definitions and comparison. Carved to lines 10-27: the key's '- النص العلمي يوضح سبب اختلاف النمط الظاهري على مستوى الخلوي في نظام ABO' with the full account of the chromosome-9 gene, the three alleles and the enzymes building markers A, B and H.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   10,
+   28
+  ]
  },
  "bac_svt_2018_sujet2__ex3__q3": {
-  "block": [
-   2,
-   3
-  ],
-  "note": "الجزء الثالث: 1) + 2) analysis",
-  "by": "human review 2026-09-21"
+  "block": 3,
+  "note": "Q3 asks to relate part one and part two's results to verify the hypothesis, and the same item carries part three's functional diagram. It held blocks 2 and 3 entire, duplicating the part-two answers now restored to q2. Carved to block 3 lines 20-28: the 'العلاقة و التحقق من الفرضية' paragraphs with their marking note and part three's functional diagram.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   20,
+   29
+  ]
  },
  "bac_svt_2019_sujet1__ex3__q1#2": {
-  "block": [
-   3
-  ],
-  "note": "Phase 5 finding: misclassified as solution_missing; block 3 (Part II, item 2) directly discusses the two treatment methods (IL2, TIL) this question describes.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "block": null,
+  "note": "Read in full, this item is not a question: it is part two's presentation of document 2 (the two therapeutic methods, repeated IL2 injection and TIL infusion) with its figure data, and it ends by introducing the real questions. It was holding block 3, which is the conclusion-plus-advice answer that correctly belongs to q2#3, so it duplicated another item's answer.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_svt_2019_sujet1__ex3__q2#2": {
-  "block": [
-   2
-  ],
-  "note": "Phase 5 finding: misclassified as solution_missing; block 2 (Part II, item 1) directly explains the immune-escape mechanism this question asks about using medium (a)/(b) results.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "block": null,
+  "note": "Read in full, this item is not a question either: it is the presentation of document 3's two experiments (fluorescent anti-HLA I and anti-antigenic-peptide antibodies on tumour cells X and Y, then LTC co-culture), closing on 'باستغلالك لمعطيات الوثيقتين (2) و (3):' which introduces the real questions. It was holding block 2, the escape-mechanism explanation that belongs to q1#3.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_svt_2020_sujet1__ex3__q1#2": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 with q2 (bare '(1)' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Same merged block. Q asks to analyse the results in table أ of document 2. Its override pointed at the whole block, so the stored answer opened with item 2's hypothesis. Carved to lines 4-12: 'الجزء الثاني: (1) تحليل النتائج' with the cell-count analysis at each trastuzumab concentration and the conclusion.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   4,
+   13
+  ]
  },
  "bac_svt_2023_sujet2__ex3__q1": {
   "block": 0,
-  "note": "الجزء الثاني 1 discussion inside heading block",
-  "by": "human review 2026-09-21"
+  "note": "This exercise's key is one 4149-character block because its parts are headed '**الجزء الأول:**' and '**الجزء الثاني:**', which blocks_of() does not read as block labels. Q asks to DISCUSS which of the two proposed hypotheses holds, using the document's figures. The stored answer opened with part one — the exploitation of document 1 to PROPOSE the two hypotheses — which answers a different (and, in this dataset, unrecorded) question. Carved to lines 48-81: 'الجزء الثاني: مناقشة صحة إحدى الفرضيات المقترحة سابقا' with the figure-by-figure discussion and the conclusion that DCMU blocks electron transfer along the photosynthetic chain.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   48,
+   82
+  ]
  },
  "bac_svt_2025_sujet1__ex2__q8": {
-  "block": 4,
-  "note": "Targeted audit of Phase4 'unresolved': block 4 contains a leading score fragment followed by the real answer describing figure (c)/pyrenoid membrane permeability, directly answering the question.",
-  "by": "human review 2026-09-25 (targeted from_unit/SCORES-bracket/unresolved audit)"
+  "block": null,
+  "note": "CONFIRMED: this exam item is not a question. Its text is the label set of document 2's figure (Rubisco, APG (C3), RudiP (C5), C6, HCO3-, غشاء البيرنويدة, الشكل (ج)) captured by the segmenter as an item numbered 8. It previously held block 4, which is the real answer to part-two Q1 and has now been restored there.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_svt_2025_sujet1__ex3__q10": {
-  "block": 6,
-  "note": "Targeted audit of Phase4 'unresolved': block 6 contains the 'health advice' content (q2's own answer) followed by the real answer -- 'الجزء الثالث: مخطط...' flowchart -- directly answering this question.",
-  "by": "human review 2026-09-25 (targeted from_unit/SCORES-bracket/unresolved audit)"
+  "block": 0,
+  "note": "Read in full, this item is not stray figure text: the segmenter captured the whole part-one stem under the label '10', and it ends with part one's real question, 'اقترح فرضيتين حول آلية تأثير مادة الMtb على دور الAdo في النشاط العصبي الخاص باليقظة والنوم باستغلالك لشكلي الوثيقة 1'. It was holding block 6, which is part-two Q2's tea-drinking advice plus part three's schema and already belongs to q2. Re-pointed to block 0 lines 4-26: the exploitation of document 1 figures (a) and (b) with their conclusions, the الربط, and the two proposed hypotheses; the exercise title and score header are left out.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   4,
+   27
+  ]
  },
  "bac_svt_2025_sujet2__ex2__q2": {
-  "block": 1,
-  "note": "2) استغلال الشكل (ب)",
-  "by": "human review 2026-09-21"
+  "block": 2,
+  "note": "Q2 asks for the cause of the SOD enzyme's dysfunction in the patient, from figure (b) plus the information from figure (a). An earlier override sent it to block 1, which is figure (a)'s analysis and already belongs to q1. The correct content is block 2: the comparison of active-site amino-acid radicals in healthy and affected enzyme, the conclusion about the altered spatial structure, and the الربط naming the cause. Lines 0-16, dropping the page number, running header and the part-two heading.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   17
+  ]
  },
  "bac_svt_2025_sujet2__ex2__q1#2": {
-  "block": 2,
-  "note": "II-1 استغلال أشكال الوثيقة 2",
-  "by": "human review 2026-09-21"
+  "block": 3,
+  "note": "Part-two Q1 asks to justify EDA's use as an ALS drug from the figures of document 2. An earlier override sent it to block 2, which is part one's figure (b) answer. Block 3 is the real content: figure (a) (SOD then catalase kinetics), figure (b) (superoxide fall under daily EDA), figure (c) (the chemical equations), each with its conclusion, and the الربط that justifies Edaravone.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_svt_2026_sujet1__ex3__q1#2": {
   "block": 2,
-  "note": "PHASE2 FIX: part II hypothesis-validation answer present, merged into block 2 with q2 part I (no separate marker detected for part II's own item 1)",
-  "by": "human review 2026-09-21"
+  "note": "Part-two Q1 asks to validate the hypothesis (maize resists atrazine) from document 2 and the attached support. The correct key content is the المصادقة section: figure (a), showing atrazine competes with QB on protein D1, and figure (b), maize's GST conjugating atrazine with glutathione, each with its conclusion, then the 0.75-point الربط synthesis ending on 'وهذا ما يؤكد صحة الفرضية المقترحة'. Figure (c) is carved out because the exam assigns it to part-two Q2, and part three is carved out as a separate task.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    3,
+    19
+   ],
+   [
+    23,
+    39
+   ]
+  ]
  },
  "bac_svt_2026_sujet1__ex3__q2#2": {
   "block": 2,
-  "note": "PHASE2 FIX: شكل ج analysis + Zinjbil resistance conclusion present, merged into block 2 (no separate marker detected)",
-  "by": "human review 2026-09-21"
+  "note": "Part-two Q2 asks to justify Helianthus tuberosum's resistance to atrazine using figure (c) specifically; the key's 'استغلال معطيات الشكل (ج)' paragraph (Ser264 replaced by Thr264 so atrazine cannot bind) and its conclusion about the mutation are exactly that. The same exam item also carries part three's 'أنجز مخططا وظيفيا' task, whose key (the four-column functional schema with تعطيل) is appended from lines 49-52; the trailing 0.5 ن score cells are left out.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    19,
+    23
+   ],
+   [
+    49,
+    53
+   ]
+  ]
  },
  "bac_svt_2026_sujet2__ex1__q1": {
   "block": 0,
@@ -1035,8 +1467,12 @@
  },
  "bac_arabe_2013_sujet2__s3__q2": {
   "block": 1,
-  "note": "PHASE2 FIX: answer present, merged into block 1 with q1 (bare '2 الإعراب:' marker not detected, no punctuation after digit)",
-  "by": "human review 2026-09-21"
+  "note": "The block opens with item 1's semantic-field classification before the parsing answer; item 2 asks for the word-level and clause-level i'rab, so the answer is carved to the two parsing tables and their headings.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   10
+  ]
  },
  "bac_arabe_2014_sujet2__s2__q1": {
   "block": 1,
@@ -1045,36 +1481,66 @@
  },
  "bac_arabe_2016_sujet2__s2__q7": {
   "block": 6,
-  "note": "PHASE2 FIX: answer present, merged into block 6 with q6 (tatweel dash '7 ـ' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Item 7 asks which prose genre the text belongs to and three of its characteristics; the previous override took the whole block and returned item 6's discourse-mode answer. The genre answer (مقال اجتماعي) with its characteristics sits after the page break in the same block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   19,
+   26
+  ]
  },
  "bac_arabe_2016_sujet2__s3__q1": {
   "block": 0,
-  "note": "whole البناء اللغوي key is block 0",
-  "by": "human review 2026-09-21"
+  "note": "Five items shared the whole of block 0 and so carried identical answers. Item 1 asks for the semantic field of the listed words; the key answers on the single line naming the field of society and civilisation.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   1,
+   2
+  ]
  },
  "bac_arabe_2016_sujet2__s3__q2": {
   "block": 0,
-  "note": "inside block 0",
-  "by": "human review 2026-09-21"
+  "note": "Item 2 asks what the variety of derivatives of 'love' signifies; the key answers on the line listing the derivatives and their significance, carved out of the shared block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   4
+  ]
  },
  "bac_arabe_2016_sujet2__s3__q3": {
   "block": 0,
-  "note": "inside block 0",
-  "by": "human review 2026-09-21"
+  "note": "Item 3 asks for the word-level i'rab of 'إذا' and 'الوطنيات'; the key answers on the three lines of the parsing section, carved out of the shared block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   8
+  ]
  },
  "bac_arabe_2016_sujet2__s3__q4": {
   "block": 0,
-  "note": "inside block 0",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks for the grammatical position of the two bracketed clauses; the key answers on the clause-parsing lines, carved out of the shared block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   11,
+   14
+  ]
  },
  "bac_arabe_2016_sujet2__s3__q5": {
   "block": [
    0,
    1
   ],
-  "note": "inside block 0 + note to graders",
-  "by": "human review 2026-09-21"
+  "note": "Item 5 asks to explain the two figures of speech with their type and rhetorical force; the key answers on the figure-analysis lines, joined with the markers' clarification note about the same metaphor.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    16,
+    21
+   ],
+   [
+    25,
+    27
+   ]
+  ]
  },
  "bac_arabe_2017_sujet1_session2__s3__q3": {
   "block": 3,
@@ -1107,8 +1573,12 @@
  },
  "bac_arabe_2019_sujet1__s2__q4": {
   "block": 3,
-  "note": "PHASE2 FIX: تلخيص criteria present, merged into block 3 with q3 (unlabeled trailing paragraph)",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks for a summary respecting the technique; the previous override took the whole block and duplicated item 3's answer. Carved to the summary criteria lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   9,
+   13
+  ]
  },
  "bac_arabe_2021_sujet2__s2__q4": {
   "block": 4,
@@ -1145,18 +1615,36 @@
  },
  "bac_islamic_2008_sujet1__s1__q1": {
   "block": 0,
-  "note": "الشرح الموجز (key is one block)",
-  "by": "human review 2026-09-21"
+  "note": "Three items shared the whole of block 0 and so carried identical answers. Item 1 asks for a brief explanation of the verse; the key answers on the four explanation lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   7
+  ]
  },
  "bac_islamic_2008_sujet1__s1__q2": {
   "block": 0,
-  "note": "inside block 0",
-  "by": "human review 2026-09-21"
+  "note": "Item 2 asks for three values in the verse and their human importance; the key answers with the three values and then their importance, carved out of the shared block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    11,
+    13
+   ],
+   [
+    15,
+    19
+   ]
+  ]
  },
  "bac_islamic_2008_sujet1__s1__q3": {
   "block": 0,
-  "note": "inside block 0",
-  "by": "human review 2026-09-21"
+  "note": "Item 3 asks to extract three benefits from the verse; the key answers on the three benefit lines, carved out of the shared block.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   21,
+   25
+  ]
  },
  "bac_islamic_2008_sujet2__s1__q1": {
   "block": 0,
@@ -1304,11 +1792,13 @@
   "by": "human review 2026-09-21"
  },
  "bac_francais_2009_sujet2__s2__q6": {
-  "block": [
-   5
-  ],
-  "note": "Phase 5 finding: misclassified as solution_missing; the matching content ('.6.Elles font l'objet de beaucoup...si bien que...') is glued into the same block already used for item 5's answer.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "block": 5,
+  "note": "Item 6 asks to rewrite the sentence replacing 'tant... que'; the previous override took the whole block and returned item 5's lists. Carved to the rewritten sentence and the two required substitutions.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   8
+  ]
  },
  "bac_francais_2009_sujet2__s3__q1": {
   "block": null,
@@ -2153,8 +2643,12 @@
  },
  "bac_francais_2022_sujet1__s2__q6": {
   "block": 5,
-  "note": "answer 6 (timeline) glued after 5. in block 5",
-  "by": "human review 2026-09-21"
+  "note": "Item 6 asks to place the events in the chronology table; the previous override took the whole block and duplicated item 5's referents. Carved to the date/event pairs.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   18
+  ]
  },
  "bac_francais_2022_sujet1__s2__q8": {
   "block": 7,
@@ -2443,8 +2937,12 @@
  },
  "bac_english_2013_sujet1__s2__q2": {
   "block": 1,
-  "note": "PHASE3 FIX: verb/noun/adjective table present, merged into block 1 with q1",
-  "by": "human review 2026-09-21"
+  "note": "Item 2 asks to complete the word-formation chart; the previous override took the whole block and duplicated item 1's synonyms. Carved to the chart rows.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   1,
+   15
+  ]
  },
  "bac_english_2013_sujet1__s2__q4": {
   "block": 2,
@@ -2484,13 +2982,21 @@
  },
  "bac_english_2016_sujet1_session1__s2__q2": {
   "block": 1,
-  "note": "PHASE3 FIX: roots/affixes table present, merged into block 1 with q1",
-  "by": "human review 2026-09-21"
+  "note": "Item 2 asks to split the words into roots and affixes; the previous override took the whole block and returned item 1's opposites. Carved to the prefix/root/suffix table.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   18
+  ]
  },
  "bac_english_2016_sujet1_session1__s2__q4": {
   "block": 2,
-  "note": "PHASE3 FIX: pronunciation table present, merged into block 2 with q3",
-  "by": "human review 2026-09-21"
+  "note": "Item 4 asks to classify the words by final-s pronunciation; the previous override took the whole block and returned item 3's rewrites. Carved to the /s/ /z/ /ɪz/ table.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   14
+  ]
  },
  "bac_english_2016_sujet1_session2__s1__q1": {
   "block": 0,
@@ -2507,9 +3013,13 @@
   ]
  },
  "bac_english_2017_sujet2_session2__s2__q3": {
-  "block": 2,
-  "note": "PHASE3 FIX: sentence-combining answer present, merged into block 2 with q2",
-  "by": "human review 2026-09-21"
+  "block": 3,
+  "note": "Item 3 asks to combine each pair of sentences with the given connectors; the previous override pointed at the morphology table of item 2. The grammar block gives the two combined sentences with so...that and both...and.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
  },
  "bac_english_2018_sujet1__s1__q2": {
   "block": null,
@@ -2636,8 +3146,12 @@
    3,
    4
   ],
-  "note": "Targeted fix: question requires rewriting both sentence (1.b) and (2.b); stored answer only had 1.b, missing 2.b which sits in the adjacent block.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "Item 3 asks to rewrite both sentences; the tail of the joined blocks holds item 4's pronunciation table, so the answer is carved to the two rewritten sentences (1.b and 2.b).",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   2
+  ]
  },
  "bac_english_2018_sujet2__s2__q3": {
   "block": [
@@ -2818,10 +3332,21 @@
  },
  "bac_physic_2014_sujet1__ex4__q2": {
   "block": [
+   1,
    2
   ],
-  "note": "Targeted fix: stored answer was only the heading restating the graph equation; the actual computed values (v0=3.16 m/s, f=1.2N) sit in the same block but were not captured.",
-  "by": "human review 2026-09-25b (heading-only-truncation systematic sweep)"
+  "note": "The override started mid-derivation at the numbered line '(4)'; the item's answer opens in block 1 with the heading and the straight-line reading of the v^2 = f(x) graph, so both halves are joined to give v0 = 3,16 m/s and f = 1,2 N with their derivation.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    2
+   ],
+   [
+    2,
+    6
+   ]
+  ]
  },
  "bac_svt_2008_sujet1__ex3__q3": {
   "block": [
@@ -3487,9 +4012,9 @@
   "by": "human review 2026-09-25 (full-coverage audit, per-item)"
  },
  "bac_english_2025_sujet2__s2__q2": {
-  "block": 1,
-  "note": "Exam-item segmentation defect, not an answer defect: this question record is not a real exam question. Its text ('2.Find out the size, weight or quantity of something. c. vast') is the second definition and the third word of item 1's matching exercise, which the exam splitter broke off as its own item because the definitions are numbered. Its stored answer was block 4, the passive rewrite from item 2's grammar answer, which is unrelated. Pointed at block 1, the Lexis matching key ('a. 2 b. 3 c. 1'), which is the answer that actually covers this fragment. The record cannot be merged back into q1 without changing qids and invalidating the existing audit.",
-  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+  "block": null,
+  "note": "This item is not a question: segmentation split the matching table of item 1 and this fragment carries only definition 2 and the word 'c. vast'. The matching answer belongs to item 1, so this fragment is left without an answer instead of duplicating it.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
  },
  "bac_english_2025_sujet2__s2__q3": {
   "block": [
@@ -3839,5 +4364,1524 @@
   ],
   "note": "Q asks to write the labels for the numbered elements AND name stages أ and ب. Stored answer was block 1, the bare heading '1- كتابة البيانات الموافقة :'. Block 2 gives labels 1-4 and block 3 gives labels 5-8 plus the stage names (أ transcription, ب translation). Blocks 1-3 answer both halves of the question.",
   "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2017_sujet2_session2__ex1__q2": {
+  "block": [
+   2,
+   3,
+   4
+  ],
+  "note": "Q asks for a scientific text on the inhibitory interneuron's role and action in the muscle reflex. Stored answer was block 2, only the heading and the text's first section title ('I ـ يلخص انتقال الرسالة العصبية...'), 152 characters with no content. The key then splits the text's numbered points into their own blocks: block 3 carries point 1 (the message travelling to both motor neurons, directly and via the interneuron) and block 4 carries point 2 (synapse S2 is excitatory) plus section II on transmission from the inhibitory interneuron to the antagonist's motor neuron. Blocks 2-4 are the complete text.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2018_sujet1__ex2__q1#2": {
+  "block": 2,
+  "note": "Q asks to extract the amino-acid sequences encoded by the R1 and R2 allele fragments. The block is the right one and does contain the answer — the sequence table at line 9 — but a page break and the answer key's running header and column titles sit between the heading and the table, so the stored answer read as heading-plus-page-furniture. Carved to lines 0-2 (heading and the key's marking note) and 9-14 (the sequence table with its score cells).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   [
+    0,
+    3
+   ],
+   [
+    9,
+    15
+   ]
+  ]
+ },
+ "bac_svt_2018_sujet2__ex1__q1": {
+  "block": 0,
+  "note": "This exercise's key is a single 2126-character block holding both questions' answers (the second is introduced by a bold in-line heading, not a new block label). Q1 asks to define self and non-self and compare the molecules characterising each blood group. Carved to lines 0-9: both definitions and the A/B/AB/O marker comparison.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   10
+  ]
+ },
+ "bac_svt_2020_sujet1__ex1__q2": {
+  "block": 21,
+  "note": "Q asks for a scientific text on how seismic data revealed the Earth's internal structure. The block is the right one but opens with the tail of a [SCORES] bracket, a page break and the answer key's running header and column titles, so the stored answer read as score furniture. Carved to lines 8-14: the key's 'الربط بين الموارد' (seismic velocity rises with density; any velocity change marks a discontinuity) and 'التنظيم والهيكلة' with the expected introduction, body and conclusion.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   8,
+   15
+  ]
+ },
+ "bac_svt_2020_sujet1__ex3__q2": {
+  "block": 1,
+  "note": "Part I item 2 and part II item 1 merged into block 1 because the key writes 'الجزء الثاني:' and '(1)' as plain lines that blocks_of() does not read as block labels. Q2 asks for a hypothesis about a therapeutic approach. Carved to lines 0-3: the hypothesis (use substances inhibiting the Her 2 protein) with the key's acceptance note.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_svt_2020_sujet2__ex1__q1": {
+  "block": [
+   0,
+   1,
+   2
+  ],
+  "note": "Q asks to name elements 1-6, identify cells س and ع, and identify response types أ and ب. Stored answer was block 0, the bare heading '1) - كتابة البيانات المرقمة من 01 إلى 06:'. Block 1 gives labels 1-3, block 2 gives labels 4-6 and then identifies cell س (infected/target cell), cell ع (macrophage/CPA) and the response types. Blocks 0-2 answer all three parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2021_sujet1__ex1__q1": {
+  "block": [
+   0,
+   1
+  ],
+  "note": "Q asks three things: identify stages أ and ب, identify bonds 1-4, and determine protein س's structural level with justification. Stored answer was block 0, which gives the two stages and then stops at the heading '- التّعرف على الروابط المرقمة:'. Block 1 carries the four bond names (ionic, hydrogen, disulphide, hydrophobic) and the structural level ('bنية ثالثية') with its justification. Blocks 0-1 answer all three parts.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2021_sujet1__ex2__q2": {
+  "block": 1,
+  "note": "Q asks two things: prove that enzyme-substrate binding rests on a structural complementarity expressed at the molecular level, and interpret the stated experimental results. Stored answer was block 3, which is only the later item's interpretation of document 3 (β-mercaptoethanol and urea). Block 1 is this question's own answer, headed '2. الاستدلال:' and giving the structural-complementarity proof from figure ب of document 1 followed by the interpretation.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2021_sujet2__ex1__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "note": "Q asks to identify the numbered labels AND the stages A, B, C, D. Stored answer was block 1, the heading pair '1. التعرّف على البيانات المرقمة والمراحل: / - البيانات المرقمة:' with no content. The key splits each label into its own block: blocks 2-9 give labels 1-8 (LB lymphocyte, BCR, antigen, plasma cell, circulating antibody, immune complex, membrane receptor, macrophage), and block 9 also carries '- المراحل:' with stages A, B and C. Blocks 1-9 answer both halves.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)"
+ },
+ "bac_svt_2024_sujet2__ex1__q1": {
+  "block": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "note": "Q asks to name the elements involved in translation. Stored answer was block 1, the single 7-character line '1. ARNm' — one entry of a six-item list that the key splits into one block each. Carved to the joined blocks 1-6, lines 0-5: all six elements (ARNm, ribosomes, ARNt, amino acids, activating enzymes, the necessary energy).",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   0,
+   6
+  ]
+ },
+ "bac_svt_2024_sujet2__ex1__q2": {
+  "block": 6,
+  "note": "Q asks for a structured scientific text on the steps of translation and the effects of Oxazolidinone and Tetracycline. Stored answer was block 2, the single 14-character line '2. الريبوزومات' — one entry of question 1's element list. Block 6's tail holds the actual text: from '**النص العلمي:**' with its introduction, body indicators and conclusion. Carved to block 6 from line 3 onward.",
+  "by": "human review 2026-09-25 (full-coverage audit, per-item)",
+  "lines": [
+   3,
+   100
+  ]
+ },
+ "bac_svt_2024_sujet2__ex2__q2": {
+  "block": 2,
+  "note": "Q2 asks to bring out the relation between CA1P amount and Rubisco activity from figure (b) of document 1. The aligner took block 3, which is the page-header/score tail plus the whole part-two key (document 2 figures a/b/c and the final mechanism link). The real answer is block 2 lines 0-6: exploitation of figure (b) over the three periods, the conclusion that CA1P is built in darkness and broken down in light, and the explicit relation sentence. Lines 8+ of block 2 already belong to part two, so they are carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   7
+  ]
+ },
+ "bac_svt_2025_sujet1__ex2__q1#2": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "Part-two Q1 asks to explain the mechanism letting wild-type T.P algae convert light energy at low CO2 using ALL figures of document 2. The stored answer was block 3 alone (figures a and b). The key's treatment of figure (c), its conclusion about the pyrenoid protein membrane, and the 1.0-point الربط that actually explains the mechanism sit in block 4 after a page break. Joined blocks 3+4 carved to lines 0-14 (figures a and b, dropping the page number and score bracket) and 29-41 (figure c, conclusion and the mechanism link).",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    15
+   ],
+   [
+    29,
+    42
+   ]
+  ]
+ },
+ "bac_svt_2026_sujet1__ex3__q2": {
+  "block": 2,
+  "note": "Part-one Q2 only asks for a hypothesis explaining maize resistance to atrazine. Its stored answer was the whole of block 2, i.e. the hypothesis plus the entire part two (figures a/b/c of document 2, the link, the hypothesis validation) and part three's functional schema. Carved to lines 0-2: the hypothesis itself and the 'any sound hypothesis accepted' note.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_svt_2026_sujet2__ex3__q1": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Part-two Q1 asks to validate the proposed hypothesis from document 2. The stored answer stopped at block 1 (figures a, b and c with their conclusions) and so omitted the الربط that actually performs the validation: block 2 states that ATV-Abeta binds TfR receptors to cross the vessel wall and ends 'وهذا ما يؤكد صحة الفرضية المقترحة'. Joined blocks 1+2 to line 37, dropping block 2's trailing score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   38
+  ]
+ },
+ "bac_svt_2018_sujet2__ex3__q2": {
+  "block": [
+   1,
+   2,
+   3
+  ],
+  "note": "This exam item's text carries three asks: part-one Q2 (establish the source of released O2 and its mechanism with chemical equations) and, after document 3 and 4 are presented, part-two (1) 'استخرج من الوثيقة 3 ما يدعم صحة الفرضية' and (2) 'حلل نتائج الوثيقة 4'. It held block 1 only, so the two part-two asks had no answer while block 2 and the first half of block 3 were carried by q3 instead. Joined blocks 1+2+3 to line 41: experiment 1 and 2 with the equations, the thylakoid evidence, and the analysis of document 4's four experiments.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   42
+  ]
+ },
+ "bac_svt_2014_sujet1__ex2__q1#2": {
+  "block": [
+   8,
+   9
+  ],
+  "note": "Read in full, this single exam item carries part II-1 (a: show the curve segment a-b-c reflects the inner membrane's role towards protons; b: extract DNP's effect), part II-2 (a: explain the difference between experiments a and d; b: what do you conclude; c: DNP's effect on O2 use and ADP phosphorylation) and part III (a functional diagram of the inner membrane's role in ATP production). The stored answer was block 8, which covers only II-1. Joined blocks 8+9 with the page-break furniture carved out, so the answer now also covers II-2 a/b/c and the part III diagram; block 9 was previously unassigned.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    21
+   ],
+   [
+    28,
+    53
+   ]
+  ]
+ },
+ "bac_math_2026_sujet1__ex4__q1": {
+  "block": 0,
+  "note": "In this key the item number sits in the table's last column, so the extracted block that opens with marker '(1 (I' actually carries item 2's text while item 1's text sits before it. Q1 asks to study g's variations and build its table; the correct content is block 0 lines 9-15: g'(x) = (2x-4)/x, g decreasing on ]0;2] and increasing on [2;+inf[, and the variation table. It previously held the g(1)/alpha/sign answer.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   9,
+   16
+  ]
+ },
+ "bac_math_2026_sujet1__ex4__q2": {
+  "block": 1,
+  "note": "Q2 asks a) compute g(1) and show g(x)=0 has a unique root alpha in ]3,5;3,6[ and b) deduce the sign of g. Block 1 lines 5-13 hold exactly that: g(1)=0, continuity and strict monotonicity on [3,5;3,6], the two endpoint values, the uniqueness statement and the sign table. The block's leading marker and score cells are carved off. It previously held the part-II limits.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   14
+  ]
+ },
+ "bac_math_2026_sujet1__ex4__q1#2": {
+  "block": 2,
+  "note": "Part-II Q1 asks for lim f(x)/x at 0+, its geometric meaning and lim f at +inf. Block 2 lines 4-5 give the infinite limit with the vertical half-tangent at O and lim f = +inf. It previously held only f'(x)=g(x), which answers the next question.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   4,
+   6
+  ]
+ },
+ "bac_math_2026_sujet1__ex4__q2#2": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "Part-II Q2 asks to show f'(x)=g(x) and deduce f's variations with its table. The identity f'(x)=g(x) is the last line of block 3 and the variations plus table open block 4, so the two are joined and the markers, page break and score cells carved out. It previously carried the variations, the table and also question 3's inflection point.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    7,
+    8
+   ],
+   [
+    10,
+    19
+   ]
+  ]
+ },
+ "bac_math_2026_sujet1__ex4__q3": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q3 asks a) show (C_f) has an inflection point A and give its coordinates, b) give an equation of the tangent (T) at abscissa 2. Part a (f''=g' and A(2 ; 8-8ln2)) ends block 4 and part b ((T): y=(2-4ln2)x+4) sits in block 5, so both lines are joined. It previously held part b plus question 4's 'draw (T)'.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    13,
+    15
+   ],
+   [
+    17,
+    18
+   ]
+  ]
+ },
+ "bac_math_2026_sujet1__ex4__q4": {
+  "block": [
+   5,
+   6
+  ],
+  "note": "Q4 asks a) draw (T) and (C_f), b) read off graphically the m for which f(x)=m has three solutions. 'رسم (T)' ends block 5, the plot of (C_f) with its figure and the answer f(alpha) < m < 3 are in block 6, so those lines are joined. It previously also carried question 5's integral.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    5,
+    6
+   ],
+   [
+    8,
+    10
+   ],
+   [
+    11,
+    12
+   ]
+  ]
+ },
+ "bac_math_2026_sujet1__ex4__q5": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q5 asks a) integrate x ln x from 1 to e by parts and b) compute the area A. Part a ends block 6 and part b opens block 7, so both lines are joined, plus the key's closing note that any correct method is accepted. It previously held only part b.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    8,
+    9
+   ],
+   [
+    11,
+    12
+   ],
+   [
+    13,
+    14
+   ]
+  ]
+ },
+ "bac_math_2026_sujet1__ex3__q1": {
+  "block": 0,
+  "note": "Q1 asks to study the variations of f(x)=4x/(x+2) on ]-2;+inf[. The answer is block 0 lines 8-9: f'(x)=8/(x+2)^2 and f strictly increasing. The exercise title and the النقاط/المجزأة/الترقيم column headers that the table extraction put in front are carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   8,
+   10
+  ]
+ },
+ "bac_math_2026_sujet1__ex3__q2": {
+  "block": 1,
+  "note": "Q2 asks a) compute u1 and u2 and conjecture the monotonicity, b) prove by induction u_n > 2, c) study the monotonicity of (u_n). Block 1 lines 5-8 hold exactly those three parts. The leading '(1' marker belongs to the previous table row (the key numbers the f study as item 1) and is carved off with the score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   5,
+   9
+  ]
+ },
+ "bac_math_2026_sujet1__ex3__q3": {
+  "block": 2,
+  "note": "Q3 asks a) prove (v_n) is geometric with ratio 1/2 and give v_n in terms of n, b) express u_n and compute its limit. Block 2 lines 4-5 give v_n = (1/2)^(n+1), u_n = 2/(1-(1/2)^(n+1)) and lim u_n = 2. Previously this question held block 3, which is the S_n/T_n answer belonging to question 4.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   4,
+   6
+  ]
+ },
+ "bac_math_2026_sujet2__ex4__q2": {
+  "block": 1,
+  "note": "Q2 asks a) to establish f'(x) = 2e^x(e^x-2)(2e^x-1)/(e^2x-1)^2 and b) to deduce f's variations and build its table. Block 1 holds the derivative, the sign discussion, the monotonicity intervals and, after a page break, the variation table, but it also runs on into question 3's identity f(-x)+f(x)=-3 and the centre of symmetry. Carved to lines 0-3 and 11-15, dropping the page furniture and the next question's content.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    4
+   ],
+   [
+    11,
+    16
+   ]
+  ]
+ },
+ "bac_math_2026_sujet2__ex4__q3": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q3 asks to show f(-x)+f(x)=-3, interpret it geometrically and draw (C_f). The identity and the centre of symmetry (0 ; -3/2) end block 1 while the plot of (C_f) opens block 2, so the two are joined. Previously the question held the plot plus question 4's parts a and b, and the identity it actually asks for was attached to question 2.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    17,
+    19
+   ],
+   [
+    22,
+    24
+   ]
+  ]
+ },
+ "bac_math_2025_sujet1__ex3__q1": {
+  "block": 1,
+  "note": "Q1 asks to solve (iz+2)(z^2+2sqrt3 z+4)=0 in C. The answer is the solution set S = {2i ; -sqrt3-i ; -sqrt3+i}. The block also ran on, across a page break, into the trigonometric forms of z_A, z_B and z_C, which answer question 2's part a; those lines are carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_math_2025_sujet1__ex3__q2": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q2 asks a) the trigonometric forms of z_A, z_B and z_C, b) to show A, B and C lie on a circle to be identified, c) the nature of triangle ABC and its centroid's affix. Part a sits at the end of block 1 after a page break while parts b and c open block 2, so the two are joined. Previously part a was attached to question 1 and this question started at part b.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    6,
+    8
+   ],
+   [
+    9,
+    14
+   ]
+  ]
+ },
+ "bac_math_2025_sujet2__ex3__q1": {
+  "block": 1,
+  "note": "Q1 asks only to study the variations of f(x)=5x/(2x+1) on [0;+inf[. Block 1 opens with f'(x)=5/(2x+1)^2 and the strict increase, then runs straight on into question 2's parts a, b and c because the key numbers them with bare letters. Carved to line 0.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_math_2024_sujet2__ex3__q1": {
+  "block": 1,
+  "note": "Q1 asks only to build f's variation table and deduce 1/2 < f(x) <= 3/4 on [2;+inf[. Block 1 holds that, then runs across a page break into question 2's parts a and b. Carved to lines 0-6.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   7
+  ]
+ },
+ "bac_math_2024_sujet2__ex3__q2": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q2 asks a) to show u_{n+1}/u_n <= 3/4, b) to prove u_n <= (1/2)(3/4)^(n-2) and deduce the limit, and c) to compute S_n and find n with S_n = 511/1024. Parts a and b sit at the end of block 1 after the page break while the limit and part c open block 2, so those four lines are joined and the interleaved score cells and question 1's table are carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    14,
+    15
+   ],
+   [
+    16,
+    17
+   ],
+   [
+    19,
+    20
+   ],
+   [
+    22,
+    23
+   ]
+  ]
+ },
+ "bac_math_2024_sujet2__ex4__q2": {
+  "block": [
+   2,
+   3
+  ],
+  "note": "Q2 asks a) to show f'(x) = -2g(x)/x^3, b) to deduce f's variations and table, c) to prove f(x)=0 has a unique root alpha with 0,7 < alpha < 0,71. Part a is the last line of block 2 while parts b and c fill block 3, so the two are joined; the score cells and the oblique-asymptote line that belongs to question 3 are carved off. Previously part a was missing and question 3's part a was attached.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    3,
+    4
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    10,
+    11
+   ],
+   [
+    12,
+    14
+   ]
+  ]
+ },
+ "bac_math_2024_sujet2__ex4__q3": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "Q3 asks a) to show (C_f) has an oblique asymptote (Delta) and give its equation and b) to study the relative position. Part a ends block 3 and part b opens block 4, so both are joined. Previously the question started at part b.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    12,
+    13
+   ],
+   [
+    15,
+    17
+   ]
+  ]
+ },
+ "bac_math_2024_sujet2__ex4__q5": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q5 asks a) to draw (Delta), (T) and (C_f) and b) to read off graphically the m giving two distinct solutions of ln x / x^2 = m. The plots end block 6 and the answer 0 < m < 1/(2e) sits in block 7, so both are joined. Previously part a was missing.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    4,
+    7
+   ],
+   [
+    9,
+    10
+   ]
+  ]
+ },
+ "bac_math_2024_sujet2__ex4__q6": {
+  "block": [
+   8,
+   9
+  ],
+  "note": "Q6 asks a) to prove H is an antiderivative of h and b) to compute the area A(alpha). Part a is the whole of block 8 and part b with the final expression is in block 9, so both are joined along with the key's closing note. Previously part a was missing.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    7,
+    8
+   ]
+  ]
+ },
+ "bac_math_2023_sujet1__ex3__q2": {
+  "block": 1,
+  "note": "Q2 asks a) to prove (v_n) is geometric with ratio 2 and give v_n, b) to deduce u_n = 1/(2^n+1) and its limit. Block 1 lines 0-3 hold exactly that, after which the key's item 3 (S_n and T_n) begins. Carved so question 3's answer is no longer attached.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_math_2023_sujet1__ex4__q3": {
+  "block": 4,
+  "note": "Q3 asks a) to show f'(x)=g(x), b) to deduce the monotonicity and build the variation table, c) to show (C_f) has a tangent (T) parallel to (Delta) and give its equation. Block 4 lines 0-17 hold exactly those three parts with the table, after which a page break is followed by question 4's answer. Carved so question 4's content is no longer attached.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   18
+  ]
+ },
+ "bac_math_2023_sujet2__ex3__q2": {
+  "block": 1,
+  "note": "Q2 asks a) to prove (v_n) geometric with ratio 4/5 and give v_0, b) to write v_n and deduce u_n, c) to compute the limit of u_n. Block 1 lines 0-5 hold those three parts, after which a page break is followed by question 3's S_n and T_n. Carved so question 3's answer is no longer attached.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   6
+  ]
+ },
+ "bac_math_2023_sujet2__ex4__q4": {
+  "block": 3,
+  "note": "Q4 asks a) to verify F is an antiderivative of f and b) to compute the enclosed area. Block 3 lines 0-2 hold exactly that, after which a page break, the recovered score bracket and the running header are followed by question 5's answer. Carved so question 5's content is no longer attached.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_math_2022_sujet2__ex1__q2": {
+  "block": 1,
+  "note": "Q2 asks only to show a=1. Block 1 line 0 gives that from f'(x) = a - 2/(x+1) and f'(0) = -1; the rest of the block is the key's items 3 and 4, which belong to the next two questions. Carved to line 0.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_math_2022_sujet2__ex4__q2": {
+  "block": 1,
+  "note": "Q2 asks a) to prove the expression of f'(x) and b) to establish the monotonicity on the three intervals and build the variation table. Block 1 lines 0-12 hold exactly that; the page break, header, score cells and the line f(x)-(-2x+4)=... (which belongs to question 3) are carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   13
+  ]
+ },
+ "bac_math_2022_sujet2__ex4__q3": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q3 asks a) to show y=-2x+4 is an asymptote at +inf and b) to study the relative position of (C_f) and (Delta). The difference f(x)-(-2x+4) is the last line of block 1 and the vanishing limit, the factored form, the two position intervals and the intersection A(-ln9 ; 4+2ln9) fill block 2, so the two are joined up to line 32; the tangent equation at the end of block 2 belongs to question 4 and is carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   20,
+   33
+  ]
+ },
+ "bac_math_2022_sujet2__ex4__q6": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q6 asks a) to find a and b with h(x)=a f(x)+b and b) to explain how (C_h) is built from (C_f). Part a's values a=-1 and b=2 sit at the end of block 4 while block 5 carries the 'أ-' label and part b (h(x)=-f(x)+2, the reflection then the translation by 2j), so both are joined. Previously part a's values were missing.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    4,
+    6
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    8,
+    11
+   ]
+  ]
+ },
+ "bac_math_2021_sujet2__ex4__q4": {
+  "block": [
+   5,
+   6
+  ],
+  "note": "This exam item bundles question 4 (a: show (C_f) meets the x-axis at two points with the given brackets; b: draw (Delta), (T) and (C_f)) and question 5 on the function h (a: h even; b: h=f on [-2;0]; c: how to draw (C_h)). The stored answer covered only item 4, while the key's item 5 sat in block 6 with no item pointing at it. Joined so both are covered, with the score cells and page footer carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    5
+   ],
+   [
+    10,
+    14
+   ]
+  ]
+ },
+ "bac_math_2020_sujet1__ex3__q2": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q2 has parts a (show (v_n) geometric with ratio 3/4), b (write u_n in terms of n and alpha and show (u_n) converges) and c (compute S_n and its limit). The stored answer stopped after u_n's expression; the convergence statement and the whole of part c sit in the next block, which no item pointed at. Joined so all three parts are covered.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    5
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    8,
+    10
+   ]
+  ]
+ },
+ "bac_math_2020_sujet1__ex4__q5": {
+  "block": [
+   5,
+   6
+  ],
+  "note": "This exam item bundles question 5 (draw (T), (Delta) and (C_f)) and question 6 on h (a: h is even; b: how to build (C_h) from (C_f)). The stored answer covered only item 5, while the key's item 6 sat in the next block with no item pointing at it. Joined to the two construction lines plus item 6's parts a and b, with the score cells and page footer carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    2
+   ],
+   [
+    6,
+    10
+   ]
+  ]
+ },
+ "bac_math_2019_sujet1__ex3__q1": {
+  "block": 0,
+  "note": "Part-II Q1 asks to write (z_C-z_A)/(z_C-z_B) in exponential form and deduce the nature of triangle ABC. Block 0 lines 2-5 give -i = e^{-i pi/2} and the right isosceles triangle at C. Line 0, the solution set {i, 2-i, 2+i}, answers part I, which the exam labels with a Roman numeral and which has no item record; it is carved off.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   2,
+   6
+  ]
+ },
+ "bac_math_2018_sujet2__ex3__q1": {
+  "block": 1,
+  "note": "Q1 asks to verify (z_B-z_A)/(z_C-z_A) = i and find the naturals n making its nth power purely imaginary. Block 1 lines 0-2 give exactly that (the verification and n = 2k+1); the rest of the block is question 2's answer about the equilateral triangle ABD and z_D. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_math_2017_sujet1_session1__ex4__q1": {
+  "block": 0,
+  "note": "Q1 asks to show f is odd and interpret it graphically. Block 0 lines 0-2 give exactly that (the parity and O as centre of symmetry); the remainder of the block is question 2's four limits and the two vertical asymptotes. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_math_2017_sujet2_session1__ex3__q1": {
+  "block": 0,
+  "note": "True/false item 1 on the solution set of the given equation. Block 0 line 0 carries the statement with the verdict (صحيحة); the rest of the block is item 2's statement and verdict. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_math_2017_sujet2_session2__ex4__q4": {
+  "block": 3,
+  "note": "Q4 asks to show (C_f) has an inflection point omega with its coordinates and to draw (C_f). Block 3 lines 0-10 hold f''(x), its zero, the sign table, the inflection point and the construction; the rest of the block is part II question 1's study of g. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   11
+  ]
+ },
+ "bac_math_2016_sujet1_session1__ex2__q1#2": {
+  "block": 3,
+  "note": "Part-II Q1 asks only to place u_0 to u_3 on the x-axis showing the construction lines. Block 3 line 0 records exactly that. The rest of the block is the key for part II's questions 2 and 3, and its Arabic text is badly scrambled by the PDF text-layer extraction (reversed words, math run together); the carve at least gives each item its own portion.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_math_2016_sujet1_session2__ex4__q3": {
+  "block": 2,
+  "note": "Part-I Q3 asks to deduce the sign of g on ]-1;+inf[. Block 2 lines 0-1 give exactly that (g <= 0 on ]-1;alpha] and g >= 0 on [alpha;+inf[). The rest of the block is a LaTeX table carrying all of part II's answers, which belong to the following items. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_math_2016_sujet2_session1__ex2__q2#2": {
+  "block": 3,
+  "note": "Part-II Q2 asks a) that (v_n) is geometric with ratio 2/5 and v_0, b) v_n and the deduced u_n, c) the limit. Block 3 lines 0-4 give exactly those three parts; the rest of the block, after a page break and the score bracket, is question 3's sum S_n. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   5
+  ]
+ },
+ "bac_math_2016_sujet2_session2__ex4__q1#2": {
+  "block": [
+   3,
+   7
+  ],
+  "note": "Part-II Q1 asks a) the two limits, b) the expression of f'(x) and c) f's variations with the table. Parts a and b end block 3, while part c (f strictly increasing on the stated intervals) sits in block 7 after the recovered score bracket, so the three lines are joined. Previously part c was missing.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    23,
+    24
+   ]
+  ]
+ },
+ "bac_math_2015_sujet2__ex3__q3": {
+  "block": 2,
+  "note": "Part-I Q3 asks only to draw (C_f) and (D) on [0;6]. Block 2 line 0 records that drawing; what follows is part II question 1's placement of the terms and conjecture. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_math_2013_sujet1__ex4__q5": {
+  "block": 4,
+  "note": "Part-I Q5 asks for the m making |f(x)| = m have two solutions of opposite signs. Block 4 lines 0-2 give that answer (m in ]1/e;2[), split across lines by the absolute-value bars. The rest of the block is part II question 1's study of g. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_math_2013_sujet2__ex4__q4": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q4 asks a) x_0, b) to draw the asymptotes, the tangent (T) and (C_f), and c) the m giving two distinct solutions. Part a is the whole of block 6 while parts b and c open block 7, so the three lines are joined. Previously only part a was stored and block 7 had no item pointing at it.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ]
+  ]
+ },
+ "bac_math_2010_sujet1__ex2__q1": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Q1 asks a) that A, B, C are not collinear and b) the Cartesian equation of (ABC). Part a is block 1 and part b is block 2, so the two are joined. Previously only part b was stored and block 1 had no item pointing at it.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
+ },
+ "bac_math_2010_sujet1__ex2__q2": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "Q2 asks a) a parametric representation of (D) and b) that (D) is the intersection of (P) and (Q). Part a is block 3 and part b is block 4, so the two are joined. Previously only part a was stored and block 4 had no item pointing at it.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
+ },
+ "bac_math_2010_sujet1__ex3__q2#2": {
+  "block": [
+   5,
+   6
+  ],
+  "note": "This exam item bundles part-II question 2 (g's variations and table) and question 3 (a: g(1) and the unique root alpha with 2 < alpha < 3; b: drawing (C_g)). The stored answer covered only question 2, while the key's item 3 sat in the next block with no item pointing at it. Joined so both are covered.",
+  "by": "human review 2026-09-25 (full-coverage audit)"
+ },
+ "bac_math_2009_sujet2__ex4__q4": {
+  "block": 6,
+  "note": "Part-II Q4 asks only to draw (C_f). Block 6 line 0 records that; lines 2-3 are the area computation, which answers question 5. Carved.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_physic_2026_sujet1__ex1__q2.2": {
+  "block": [
+   6,
+   7
+  ],
+  "note": "Q2.2 asks to determine graphically a) N_0, the initial number of radioactive nuclei, and b) tau, the time constant. Part a (N_0 = 1,75e15 nuclei as t tends to infinity) is block 6 and part b (N_d(tau)=0,63 N_0 giving tau = 11,4 days) is block 7, so the two are joined; the 'ثانيا' section heading that follows is carved off. Previously only part b was stored and block 6 had no item pointing at it.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   7
+  ]
+ },
+ "bac_physic_2026_sujet2__ex1__q4.1": {
+  "block": [
+   5,
+   8
+  ],
+  "note": "Q4.1 asks for the satellite's speed v and then to deduce its orbital period T. Block 5 gives the graphical reading and v = 7453,5 m/s, then a page break and the recovered score bracket intervene; the acceptable-alternative note and the deduction T = 5855,8 s (with its alternative value) are in block 8. Joined so both the speed and the period are covered.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    3
+   ],
+   [
+    12,
+    16
+   ]
+  ]
+ },
+ "bac_physic_2026_sujet2__ex3__q3.2": {
+  "block": [
+   7,
+   11
+  ],
+  "note": "Q3.2 asks to compute L_0. Block 7 gives the relation tau = L_0/R_T rearranged to L_0 = tau R_T but stops at a page break and the recovered score bracket; the graphical reading (1/R_T = 5e-3, tau = 0,5 ms), the value L_0 = 0,1 H and the identification note are in block 11. Joined so the computation is complete.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    2
+   ],
+   [
+    12,
+    15
+   ]
+  ]
+ },
+ "bac_physic_2025_sujet1__ex3__q1": {
+  "block": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "note": "Q1 asks for the full experimental protocol of the dilution (safety precautions, equipment, working steps). The key's protocol is split across six blocks because its five numbered steps each start with a bare digit. Joined: the precautions, the chemicals and glassware, and steps 1 to 5, stopping before the page break. Previously only step 1 was stored.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   11
+  ]
+ },
+ "bac_physic_2025_sujet1__ex3__q2.1": {
+  "block": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "note": "Q2.1 asks for the experimental protocol of the colorimetric titration following steps 6 to 10. The key splits it into six blocks for the same reason. Joined: the precautions, equipment and glassware, then steps 6 to 10. Previously the answer stopped at the heading 'خطوات العمل'.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   14
+  ]
+ },
+ "bac_physic_2025_sujet1__ex3__q1#2": {
+  "block": [
+   13,
+   14,
+   15,
+   16,
+   17,
+   18
+  ],
+  "note": "Part-two Q1 asks for a schematic of the pH-metric titration setup with its components named. The key gives the heading and then the five numbered components in separate blocks. Joined so the naming is complete; previously only the heading was stored.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   6
+  ]
+ },
+ "bac_physic_2025_sujet2__ex3__q4#2": {
+  "block": [
+   4,
+   5
+  ],
+  "note": "Q4 asks to name the experimental setup and its components and state its purpose. Block 4 gives the name (reflux heating) and the 'components' heading but the list itself, and the purpose, open block 5 because the list starts with a bare digit. Joined so the name, the seven components and the purpose are all covered.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_physic_2024_sujet1__ex1__q3.3": {
+  "block": 4,
+  "note": "Q3.3 asks to redraw figure 1 and plot the two nuclear transformations; block 4 line 3 already starts part two ('ثانيا: 1. علاقة التكافؤ') and belongs to the next question, so the answer is carved to the plotting lines only.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_physic_2024_sujet1__ex1__q3#2": {
+  "block": 9,
+  "note": "Part two question 3 asks which of Zn-62 and Cu-62 is more stable; block 9 answers it in lines 0-3 but its last line already opens part three ('ثالثا: 1.'), so the answer is carved to the stability comparison only.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   5
+  ]
+ },
+ "bac_physic_2024_sujet1__ex2__q5": {
+  "block": 5,
+  "note": "Q5 asks to deduce the friction force from a_G = 4 m/s^2; the aligner picked the later duplicate label-5 block (a score cell). Block 5 lines 0-2 carry the real derivation f = m(g sin a - a_G) = 54 N.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_physic_2023_sujet1__ex3__q1#2": {
+  "block": [
+   10,
+   13
+  ],
+  "note": "The derivation of di/dt + i/RC = 0 is split by a page break: block 10 stops at the voltage-sum line and the differentiation that finishes it sits after the score cells at the top of the next page (block 13 tail). Joined both real halves and dropped the page furniture in between.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    2
+   ],
+   [
+    17,
+    19
+   ]
+  ]
+ },
+ "bac_physic_2023_sujet2__ex2__q1.2": {
+  "block": [
+   3,
+   4
+  ],
+  "note": "Segmentation glued exam item 2 (compare the computed v_B with the speedometer reading and compute the friction force) into this item's text, so the question asks both things; the key answers them in blocks 3 and 4, joined here with the trailing section heading dropped.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   17
+  ]
+ },
+ "bac_physic_2023_sujet2__ex2__q2.1": {
+  "block": [
+   6,
+   9
+  ],
+  "note": "The table the item asks to fill is split by a page break: block 6 holds only the opening line and the filled table sits after the score cells on the next page. Joined the opening with the table body and dropped the page and score furniture between them.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    2
+   ],
+   [
+    11,
+    32
+   ]
+  ]
+ },
+ "bac_physic_2022_sujet1__ex3__q1.3": {
+  "block": [
+   10,
+   11
+  ],
+  "note": "Segmentation glued exam item 2 (read tau off the graph and deduce the coil's inductance L) into this item's text, so the question asks both; the key answers them in blocks 10 and 11, joined here with the score cells dropped.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    2
+   ],
+   [
+    4,
+    8
+   ]
+  ]
+ },
+ "bac_physic_2022_sujet2__ex1__q2.5.3": {
+  "block": [
+   12,
+   13
+  ],
+  "note": "Segmentation glued exam item 3 (explain the effect of a body's mass on the speed during vertical fall) into this item's text, so the question asks both; block 13 holds the answer to item 3 and is joined here with the page furniture between them dropped.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    4
+   ],
+   [
+    14,
+    16
+   ]
+  ]
+ },
+ "bac_physic_2022_sujet2__ex3__q1.3": {
+  "block": [
+   12,
+   13,
+   14
+  ],
+  "note": "Segmentation glued exam items 2 and 3 (semi-developed formulas and names of the alcohol and ester, and the amount of ethanoic acid to add for r = 95%) into this item's text; blocks 13 and 14 answer them and are joined to the yield/alcohol-class block with the page furniture and score cells dropped.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    11,
+    15
+   ],
+   [
+    17,
+    25
+   ]
+  ]
+ },
+ "bac_physic_2021_sujet1__ex1__q1.2": {
+  "block": [
+   1,
+   2
+  ],
+  "note": "Segmentation glued exam item 2 (restate Newton's second law) into this item's text, so the question asks both the distance travelled and the law; block 2 holds the law statement and is joined here with the score cells dropped.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    3,
+    4
+   ]
+  ]
+ },
+ "bac_physic_2021_sujet2__ex1__q1.4": {
+  "block": 3,
+  "note": "Item 4.1 asks only for C and E; the tail of block 3 already carries the circuit-diagram labels answering item 1.2 of part two, so the answer is carved to the C and E computation.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   6
+  ]
+ },
+ "bac_physic_2021_sujet2__ex2__q4": {
+  "block": 3,
+  "note": "Item 4 asks only to draw the velocity and acceleration vectors on figure 4; the tail of block 3 already answers item 5, so the answer is carved to the drawing lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_physic_2020_sujet2__ex2__q3.3": {
+  "block": 9,
+  "note": "Item 3.3 asks only for the limiting reactant; the tail of block 9 already answers item 4 about the volumetric rate, so the answer is carved to the HO- limiting-reactant lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_physic_2019_sujet1__ex3__q1.2": {
+  "block": 2,
+  "note": "Item 2.1 asks only for the instantaneous speeds at G3, G5 and G7; the tail of block 2 opens the v = f(t) graph answering item 3.1, so the answer is carved to the three speed computations.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   10
+  ]
+ },
+ "bac_physic_2018_sujet1__ex1__q1.6": {
+  "block": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "note": "Segmentation glued exam items 2, 3 and 4 (energy balance diagram and impact speed, characteristics of the velocity vector, total energy at both instants) into this item's text; blocks 6, 7 and 8 answer them and are joined to the distance answer with page and score furniture dropped.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    2
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    13,
+    14
+   ],
+   [
+    15,
+    17
+   ],
+   [
+    19,
+    23
+   ],
+   [
+    24,
+    26
+   ],
+   [
+    28,
+    30
+   ],
+   [
+    31,
+    33
+   ]
+  ]
+ },
+ "bac_physic_2017_sujet1_session1__ex1__q1#2": {
+  "block": [
+   5,
+   6
+  ],
+  "note": "The released-energy computation was cut mid-formula: the numeric line starts with '7.590' and was read as a new numbered block. Joined both halves so the answer reaches E = 184,7 MeV, dropping the score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   6
+  ]
+ },
+ "bac_physic_2016_sujet1_session2__ex2__q1#2": {
+  "block": 6,
+  "note": "Item II-1 asks only for the stored energy at the start of discharge and how it is consumed; the tail of block 6 already answers item 2 about the second capacitor, so the answer is carved to the Joule-effect lines and E_c = 1,25e-6 J.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_physic_2016_sujet1_session2__ex4__q3": {
+  "block": 2,
+  "note": "Item 3 asks only for the time equation x_M(t) of the car; the rest of block 2 already answers items 4 and 5, so the answer is carved to x_M(t) = -Vt + d.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_physic_2016_sujet2_session1__ex2__q3": {
+  "block": [
+   2,
+   6
+  ],
+  "note": "Part c of item 3 (number of decayed nuclei at t = 1 year) was cut by a page break: block 2 stops at the remaining mass reading and the computation sits after the score cells on the next page. Joined both halves so the answer reaches N_d = 1,806e23 nuclei.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    8
+   ],
+   [
+    27,
+    28
+   ],
+   [
+    29,
+    30
+   ]
+  ]
+ },
+ "bac_physic_2015_sujet2__ex5__q2": {
+  "block": 1,
+  "note": "Item 2 asks only to complete the table and plot n_ester = f(t); the tail of block 1 already answers items 3 and 4, so the answer is carved to the completed table and the graph line.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   30
+  ]
+ },
+ "bac_physic_2014_sujet2__ex4__q1": {
+  "block": [
+   0,
+   4
+  ],
+  "note": "Part c of item 1 (the acceleration vector and the nature of the motion) was cut by a page break and sits after the score cells further on; joined it with the definition and force expression so all three parts are present.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    3
+   ],
+   [
+    23,
+    29
+   ]
+  ]
+ },
+ "bac_physic_2014_sujet2__ex4__q2": {
+  "block": [
+   5,
+   6,
+   7
+  ],
+  "note": "Parts c and d of item 2 (verifying Kepler's third law for both satellites and deducing the Earth's mass) sit in separate numbered fragments after the block; joined them with the geostationary identification and the g computation, dropping the score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    4
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    9,
+    13
+   ],
+   [
+    15,
+    18
+   ]
+  ]
+ },
+ "bac_physic_2013_sujet1__ex4__q2": {
+  "block": 1,
+  "note": "Item 2 asks for [H3O+] in terms of sigma and the ionic conductivities; the tail of block 1 already answers item 3 on the pH, so the answer is carved to the progress table, the conductivity relation and the concentration expression.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    6
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    9,
+    10
+   ]
+  ]
+ },
+ "bac_physic_2012_sujet1__ex1__q1": {
+  "block": 0,
+  "note": "Item 1 asks only how the reaction is classified by duration; the rest of block 0 is the progress table answering item 2, so the answer is carved to the line 'slow reaction'.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_physic_2012_sujet2__ex3__q3": {
+  "block": 2,
+  "note": "Item 3 asks for tau graphically, its dimensional check and L; the tail of block 2 already answers item 4 on the stored energy, so the answer is carved to those three lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    5
+   ]
+  ]
+ },
+ "bac_physic_2012_sujet2__ex5__q2": {
+  "block": 1,
+  "note": "Item 2 asks to define equivalence and express [I2]; the tail of block 1 already holds item 3's progress table, so the answer is carved to the definition and the [I2] = c3 V_E / 2V relation.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ]
+  ]
+ },
+ "bac_physic_2011_sujet1__ex5__q3": {
+  "block": 2,
+  "note": "Item 3 asks for c0 and then c; the tail of block 2 already answers part two's first item on the catalyst, so the answer is carved to the two concentration computations.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   4
+  ]
+ },
+ "bac_physic_2010_sujet1__ex5__q3": {
+  "block": 2,
+  "note": "Item 3 asks what makes the solid suitable for vertical translational motion; the tail of block 2 already answers item 4, so the answer is carved to the line listing shape, volume and mass.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_physic_2010_sujet2__ex2__q1": {
+  "block": [
+   0,
+   3
+  ],
+  "note": "Part c of item 1 (deduce c_a) was cut off by a page break and sits after the score cells; joined it with the titration equation and the equivalence point so all three parts are present.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    3
+   ],
+   [
+    18,
+    20
+   ]
+  ]
+ },
+ "bac_physic_2010_sujet2__ex2__q2": {
+  "block": 4,
+  "note": "The aligner matched this item to a score cell labelled 2; the real answer is the progress table and the computation of the hydronium and remaining benzoic acid amounts, carved here without the score cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    5
+   ],
+   [
+    6,
+    13
+   ]
+  ]
+ },
+ "bac_physic_2010_sujet2__ex5__q3": {
+  "block": 2,
+  "note": "Item 3 asks for the shape of curve 2 and why; the tail of block 2 is the bare item-4 marker and score cells, so the answer is carved to the three explanatory lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_physic_2009_sujet2__ex5__q4": {
+  "block": 3,
+  "note": "Item 4 of part one asks only to plot x = f(t); the rest of block 3 belongs to part two, so the answer is carved to the line pointing at that plot.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_physic_2009_sujet2__ex5__q3#2": {
+  "block": [
+   5,
+   3
+  ],
+  "note": "Item 3 of part two asks for the extent at each instant; its own block holds only the heading while the computed x values sit in the part-two table, so the heading is joined with the x(mmol) row.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   [
+    0,
+    1
+   ],
+   [
+    10,
+    14
+   ]
+  ]
+ },
+ "bac_physic_2008_sujet1__ex2__q3": {
+  "block": 2,
+  "note": "Item 3 asks to identify nucleus X from the graph and the list; the rest of block 2 is page furniture and item 4's equation, so the answer is carved to the line identifying Cl-38.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_arabe_2016_sujet2__s2__q6": {
+  "block": 6,
+  "note": "Item 6 asks for the dominant discourse mode with two indicators; the tail of block 6 holds page furniture and item 7's answer, so the answer is carved to the expository-mode lines and the indicator list.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   10
+  ]
+ },
+ "bac_english_2016_sujet1_session1__s2__q1": {
+  "block": 1,
+  "note": "Item 1 asks for the two opposites; the rest of block 1 is item 2's prefix/root/suffix table, so the answer is carved to the line giving 'the same / like' and 'lost'.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_english_2016_sujet1_session1__s2__q3": {
+  "block": 2,
+  "note": "Item 3 asks to rewrite the three sentences; the tail of block 2 is item 4's pronunciation table, so the answer is carved to the three rewritten sentences.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_francais_2009_sujet2__s2__q5": {
+  "block": 5,
+  "note": "Item 5 asks for the terms describing the sea before and after human intervention; the tail of block 5 holds item 6's rewrite, so the answer is carved to the two lists.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_arabe_2019_sujet1__s2__q3": {
+  "block": 3,
+  "note": "Item 3 asks for the poet's literary school and two of its principles; the tail of block 3 already answers item 4 on the summary, so the answer is carved to the school and its principles.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   9
+  ]
+ },
+ "bac_francais_2022_sujet1__s2__q5": {
+  "block": 5,
+  "note": "Item 5 asks who the pronouns 'elle' and 'lui' refer to; the tail of block 5 already answers item 6's chronology table, so the answer is carved to the two referent lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   2
+  ]
+ },
+ "bac_english_2013_sujet1__s2__q1": {
+  "block": 1,
+  "note": "Item 1 asks for the two synonyms; the rest of block 1 is item 2's verb/noun/adjective chart, so the answer is carved to the line giving 'hazardous/dangerous' and 'key'.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   1
+  ]
+ },
+ "bac_english_2025_sujet2__s2__q1": {
+  "block": 1,
+  "note": "Item 1 is the word-definition matching exercise; the rest of block 1 is the section heading and score cells, so the answer is carved to the matching line a. 2, b. 3, c. 1.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   3,
+   4
+  ]
  }
 }
