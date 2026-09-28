@@ -1558,8 +1558,12 @@
  },
  "bac_arabe_2018_sujet1__s3__q3": {
   "block": 6,
-  "note": "ثانيا-2 الروابط (key numbered 2)",
-  "by": "human review 2026-09-21"
+  "note": "s3 item 3 asks for four connectors with type and function; the whole-block override also swallowed item 4's two rhetorical images, so it is carved to lines 0-8 which end at the 0.75 mark cells.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   9
+  ]
  },
  "bac_arabe_2018_sujet2__s2__q3": {
   "block": 3,
@@ -3000,8 +3004,12 @@
  },
  "bac_english_2016_sujet1_session2__s1__q1": {
   "block": 0,
-  "note": "PHASE3 FIX: true/false table present in block 0 preamble (RTL '-1' marker not detected)",
-  "by": "human review 2026-09-21"
+  "note": "Item 1 asks T/F on four statements; the whole-block override also carried leading exam-section furniture (15pts, Part One: Reading, 08 pts heading) and trailing score cells. Carved to line 7 alone, which is just the T F T T table.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   7,
+   8
+  ]
  },
  "bac_english_2016_sujet1_session2__s1__q3": {
   "block": 1,
@@ -5882,6 +5890,51 @@
   "lines": [
    3,
    4
+  ]
+ },
+ "bac_arabe_2013_sujet2__s3__q1": {
+  "block": 1,
+  "note": "Item 1 asks only to classify the six words into the political and social semantic fields; the block runs on into item 2's i'rab tables, so the answer is carved to the heading and the two field lines.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   3
+  ]
+ },
+ "bac_arabe_2018_sujet1__s3__q1": {
+  "block": 5,
+  "note": "s3 item 1 asks for four words per religious and political semantic field; it was pointing at the البناء الفكري block 1 (sanctity of Palestine). The correct answer is the first part of block 5, lines 0-7, which lists الحقل الديني and الحقل السياسي with their marks.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   8
+  ]
+ },
+ "bac_arabe_2018_sujet1__s3__q2": {
+  "block": 5,
+  "note": "s3 item 2 asks the i'rab of آمرة and وحدة plus the position of two clauses; it was pointing at block 2 (the two نزعات). The correct answer is the second half of block 5, lines 8-19, headed الإعراب.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   8,
+   20
+  ]
+ },
+ "bac_arabe_2018_sujet1__s3__q4": {
+  "block": 6,
+  "note": "s3 item 4 asks to explain والعرب في سكرة and رماك الزمان; it was pointing at block 4 (the s2 summary rubric). The correct answer is the الصورتان البيانيتان part of block 6, lines 9-17.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   9,
+   18
+  ]
+ },
+ "bac_arabe_2024_sujet2__s3__q3": {
+  "block": 3,
+  "note": "Item 3 asks to explain حلم الخلاص and يغذيها الأدب; the DP match landed on the later duplicate label-3 block which holds only score cells and item 4's text. The real answer is block 3 lines 0-7, carved to stop before the [SCORES] line.",
+  "by": "human review 2026-09-25 (full-coverage audit)",
+  "lines": [
+   0,
+   8
   ]
  }
 }
